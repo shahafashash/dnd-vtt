@@ -1,11 +1,11 @@
-import tracemalloc
-import cv2
 import pygame as pg
 import json
 from collections import deque
 from enum import Enum
 from gui import *
 from font import Font
+from loader import Loader
+
 
 class Event(Enum):
     PLAY = 0
@@ -30,7 +30,8 @@ class GameManager:
         GameManager._instance = self
         self.screen = screen
         self.clock = clock
-        self.maps = load_maps("maps.json")
+        self.loader = Loader("maps.json")
+        self.maps = list(self.loader.maps.keys())
 
         self.current_map_name = None
         self.current_map_frames = None
@@ -51,7 +52,7 @@ class GameManager:
             event = self.event_que.popleft()
             if event.type == Event.CHANGE_MAP:
                 self.current_map_name = event.data
-                self.current_map_frames = load_frames(self.current_map_name)
+                self.current_map_frames = self.loader.load_map(self.current_map_name)
                 print(self.current_map_name)
                 self.state = State.GAME_RUM_MAP
             elif event.type == Event.PLAY:
@@ -109,11 +110,7 @@ class GameManager:
         GUI.step()
 
         # draw the frame
-        frame = next(self.current_map_frames, None)
-        if frame is None:
-            self.current_map_frames = load_frames(self.current_map_name)
-            frame = next(self.current_map_frames)
-
+        frame = next(self.current_map_frames)
         self.screen.blit(frame, (0, 0))
         draw_grid(self.screen, self.grid_size)
 
@@ -122,25 +119,6 @@ class GameManager:
         # update the display and tick the clock
         pg.display.flip()
         self.clock.tick(30)
-
-
-def load_frame(path: str, frame: int):
-    """load a frame from a video file into a pygame surface"""
-    cap = cv2.VideoCapture(path)
-    cap.set(cv2.CAP_PROP_POS_FRAMES, frame)
-    ret, frame = cap.read()
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame = pg.surfarray.make_surface(frame)
-    cap.release()
-    return frame
-
-
-def get_number_of_frames(path: str):
-    """return the number of frames in a video file"""
-    cap = cv2.VideoCapture(path)
-    frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    cap.release()
-    return frames
 
 
 def draw_grid(surf, size=50):
@@ -155,22 +133,6 @@ def draw_grid(surf, size=50):
 def draw_hex_grid(surf):
     """draws a hexagonic grid on a surface, each hexagon is of size GRID_SIZE"""
     raise NotImplementedError
-
-
-def load_frames(path: str):
-    """load a video file into a list of pygame surfaces"""
-    map_path = f"assets/maps/{path}.mp4"
-    cap = cv2.VideoCapture(map_path)
-    frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
-    for _ in range(frames):
-        _, frame = cap.read()
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        frame = pg.surfarray.make_surface(frame)
-        frame = pg.transform.rotate(frame, 90)
-        yield frame
-
-    cap.release()
 
 
 def handle_gui_events(event: str):
@@ -208,7 +170,7 @@ def main():
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
-    with open(r'assets/Font/Fonts.json', "r") as f:
+    with open(r"assets/Font/Fonts.json", "r") as f:
         fonts_json = json.load(f)
 
     GUI.win = screen
@@ -224,14 +186,4 @@ def main():
 
 
 if __name__ == "__main__":
-    tracemalloc.start()
     main()
-    snapshot = tracemalloc.take_snapshot()
-    top_stats = snapshot.statistics("lineno")
-
-    for stat in top_stats[:10]:
-        print(stat)
-
-    current, peak = tracemalloc.get_traced_memory()
-    print(f"Current memory usage is {current / 10**6}MB; Peak was {peak / 10**6}MB")
-    tracemalloc.stop()
