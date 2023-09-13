@@ -4,19 +4,25 @@ import pygame
 class Font:
     def __init__(self, dic):
         self.atlas = pygame.image.load(dic['path'])
-        self.dic = dic
+        self.cords = dic['cords']
+    def resize(self, height):
+        ratio = height / self.atlas.get_height()
+        new_width = ratio * self.atlas.get_width()
+        self.atlas = pygame.transform.smoothscale(self.atlas, (new_width, height))
+        for t in self.cords:
+            t[0] *= ratio
+            t[1] *= ratio
     def render(self, text, antialiasing, color):
         text = text.upper()
         height = self.atlas.get_height()
         space_between_characters = height / 16
         size = [0, height]
-        cords = self.dic['cords']
         for c in text:
             if c == ' ':
                 char_size = height / 2
             else:
                 index = ord(c) - ord('A')
-                char_size = cords[index][1] - cords[index][0]
+                char_size = self.cords[index][1] - self.cords[index][0]
             
             size[0] += char_size + space_between_characters
         
@@ -27,8 +33,8 @@ class Font:
                 char_size = height / 2
             else:
                 index = ord(c) - ord('A')
-                char_size = cords[index][1] - cords[index][0]
-                surf.blit(self.atlas, (offset, 0), ((cords[index][0], 0), (char_size, height)))
+                char_size = self.cords[index][1] - self.cords[index][0]
+                surf.blit(self.atlas, (offset, 0), ((self.cords[index][0], 0), (char_size, height)))
             offset += char_size + space_between_characters
         return surf
         

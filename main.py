@@ -214,7 +214,9 @@ def main():
     GUI.win = screen
     # GUI.font = pg.font.SysFont("Arial", 30)
     GUI.font = Font(fonts_json[0])
+    GUI.font.resize(50)
     GUI.font2 = Font(fonts_json[1])
+    GUI.font2.resize(50)
     GUI.gui_event_handler = handle_gui_events
 
     while True:
