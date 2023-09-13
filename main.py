@@ -5,7 +5,7 @@ import json
 from collections import deque
 from enum import Enum
 from gui import *
-
+from font import Font
 
 class Event(Enum):
     PLAY = 0
@@ -208,8 +208,15 @@ def main():
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
+    with open(r'assets/Font/Fonts.json', "r") as f:
+        fonts_json = json.load(f)
+
     GUI.win = screen
-    GUI.font = pg.font.SysFont("Arial", 30)
+    # GUI.font = pg.font.SysFont("Arial", 30)
+    GUI.font = Font(fonts_json[0])
+    GUI.font.resize(50)
+    GUI.font2 = Font(fonts_json[1])
+    GUI.font2.resize(50)
     GUI.gui_event_handler = handle_gui_events
 
     while True:
