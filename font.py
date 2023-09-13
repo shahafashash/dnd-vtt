@@ -15,27 +15,28 @@ class Font:
     def render(self, text, antialiasing, color):
         text = text.upper()
         height = self.atlas.get_height()
-        space_between_characters = height / 16
+        space_size = height / 4
+        tracking = height / 16
         size = [0, height]
         for c in text:
             if c == ' ':
-                char_size = height / 2
+                char_size = space_size
             else:
                 index = ord(c) - ord('A')
                 char_size = self.cords[index][1] - self.cords[index][0]
             
-            size[0] += char_size + space_between_characters
+            size[0] += char_size + tracking
         
         surf = pygame.Surface(size, pygame.SRCALPHA)
         offset = 0
         for c in text:
             if c == ' ':
-                char_size = height / 2
+                char_size = space_size
             else:
                 index = ord(c) - ord('A')
                 char_size = self.cords[index][1] - self.cords[index][0]
                 surf.blit(self.atlas, (offset, 0), ((self.cords[index][0], 0), (char_size, height)))
-            offset += char_size + space_between_characters
+            offset += char_size + tracking
         return surf
         
         

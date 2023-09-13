@@ -65,6 +65,9 @@ class GameManager:
         elif self.state == State.GAME_RUM_MAP:
             self.run_map()
 
+    def setup(self):
+        pass
+
     def main_menu(self):
         background = get_background()
 
@@ -198,8 +201,9 @@ def create_menu_maps(maps: list[str], pos: tuple[int, int]):
     context_menu = ContextMenu(pos)
     for map in maps:
         context_menu.add_button(map, "change_map")
-    GUI.elements.append(context_menu)
-
+    scroller = ScrollContainer()
+    scroller.add_element(context_menu)
+    GUI.elements.append(scroller)
 
 def main():
     pg.init()
@@ -218,7 +222,9 @@ def main():
     GUI.font2 = Font(fonts_json[1])
     GUI.font2.resize(50)
     GUI.gui_event_handler = handle_gui_events
-
+    
+    game_manager.setup()
+    
     while True:
         game_manager.step()
 
