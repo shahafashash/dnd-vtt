@@ -35,7 +35,8 @@ class Map:
             _, frame = self.cap.read()
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             frame = frame if not resize else cv2.resize(frame, (1920, 1080))
-            frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+            frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            frame = cv2.flip(frame, 0)
 
             frame = pg.surfarray.make_surface(frame)
             yield frame

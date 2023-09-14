@@ -1,3 +1,6 @@
+from typing import Tuple
+from math import cos, sin, pi
+from itertools import cycle
 import pygame as pg
 import json
 from collections import deque
@@ -5,6 +8,8 @@ from enum import Enum
 from gui import *
 from font import Font
 from loader import Loader
+
+FPS = 60
 
 
 class Event(Enum):
@@ -15,6 +20,18 @@ class Event(Enum):
 class State(Enum):
     GAME_MAIN_MENU = 0
     GAME_RUM_MAP = 1
+
+
+class Grid(Enum):
+    GRID = 0
+    HEX = 1
+    NONE = 2
+
+
+class GridColors(Tuple, Enum):
+    BLACK = (0, 0, 0)
+    WHITE = (255, 255, 255)
+    GRAY = (128, 128, 128)
 
 
 class GameEvent:
@@ -37,6 +54,11 @@ class GameManager:
         self.current_map_frames = None
 
         self.grid_size = 50
+
+        self.grid_states = cycle((grid_state for grid_state in Grid))
+        self.grid_colors = cycle((grid_color.value for grid_color in GridColors))
+        self.grid_state = next(self.grid_states)
+        self.grid_color = next(self.grid_colors)
 
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
@@ -89,7 +111,13 @@ class GameManager:
 
         # update the display and tick the clock
         pg.display.flip()
-        self.clock.tick(30)
+        self.clock.tick(FPS)
+
+    def draw_grid(self):
+        if self.grid_state == Grid.GRID:
+            draw_grid(self.screen, self.grid_size, self.grid_color)
+        elif self.grid_state == Grid.HEX:
+            draw_grid_hex(self.screen, self.grid_size * 0.7, self.grid_color)
 
     def run_map(self):
         for event in pg.event.get():
@@ -106,6 +134,25 @@ class GameManager:
                     self.grid_size -= 5
                     if self.grid_size < 5:
                         self.grid_size = 5
+                elif event.key == pg.K_g:
+                    self.grid_state = next(self.grid_states)
+                elif event.key == pg.K_c:
+                    self.grid_color = next(self.grid_colors)
+                elif event.key == pg.K_n:
+                    map_index = self.maps.index(self.current_map_name)
+                    next_map_index = (map_index + 1) % len(self.maps)
+                    self.current_map_name = self.maps[next_map_index]
+                    self.current_map_frames = self.loader.load_map(
+                        self.current_map_name
+                    )
+                elif event.key == pg.K_b:
+                    map_index = self.maps.index(self.current_map_name)
+                    next_map_index = (map_index - 1) % len(self.maps)
+                    self.current_map_name = self.maps[next_map_index]
+                    self.current_map_frames = self.loader.load_map(
+                        self.current_map_name
+                    )
+
             # right click
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
                 create_menu_maps(self.maps, event.pos)
@@ -115,22 +162,37 @@ class GameManager:
         # draw the frame
         frame = next(self.current_map_frames)
         self.screen.blit(frame, (0, 0))
-        draw_grid(self.screen, self.grid_size)
+        self.draw_grid()
 
         GUI.draw()
 
         # update the display and tick the clock
         pg.display.flip()
-        self.clock.tick(30)
+        self.clock.tick(FPS)
 
 
-def draw_grid(surf, size=50):
+def draw_grid(surf, size=50, color=GridColors.BLACK.value):
     width, height = surf.get_size()
-    color = pg.Color("black")
     for i in range(0, width, size):
         pg.draw.line(surf, color, (i, 0), (i, height))
     for i in range(0, height, size):
         pg.draw.line(surf, color, (0, i), (width, i))
+
+
+def draw_grid_hex(surf, size=50, color=GridColors.BLACK.value):
+    a = size
+    b = a * cos(pi / 3)
+    c = a * sin(pi / 3)
+    lines = [
+        [(b, 2 * c), (0, c), (b, 0), (a + b, 0), (2 * b + a, c), (a + b, 2 * c)],
+        [(2 * b + a, c), (2 * b + 2 * a, c)],
+    ]
+
+    for y in range(0, surf.get_height(), int(2 * c)):
+        for x in range(0, surf.get_width(), int(2 * b + 2 * a)):
+            for line in lines:
+                line_offset = [(t[0] + x, t[1] + y) for t in line]
+                pg.draw.lines(surf, color, False, line_offset)
 
 
 def draw_hex_grid(surf):
@@ -160,12 +222,12 @@ def get_background():
 
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    context_menu = ContextMenu(pos)
+    context_menu = ContextMenuScrollable((0, 100))
     for map in maps:
         context_menu.add_button(map, "change_map")
-    scroller = ScrollContainer()
-    scroller.add_element(context_menu)
-    GUI.elements.append(scroller)
+    context_menu.set_pos((GUI.win.get_width() // 2 - context_menu.size[0] // 2, 0))
+    GUI.elements.append(context_menu)
+
 
 def main():
     pg.init()
@@ -180,13 +242,13 @@ def main():
     GUI.win = screen
     # GUI.font = pg.font.SysFont("Arial", 30)
     GUI.font = Font(fonts_json[0])
-    GUI.font.resize(50)
+    GUI.font.resize(35)
     GUI.font2 = Font(fonts_json[1])
-    GUI.font2.resize(50)
+    GUI.font2.resize(35)
     GUI.gui_event_handler = handle_gui_events
-    
+
     game_manager.setup()
-    
+
     while True:
         game_manager.step()
 
