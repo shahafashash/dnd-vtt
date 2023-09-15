@@ -4,14 +4,15 @@ import pygame
 class Font:
     def __init__(self, dic):
         self.atlas = pygame.image.load(dic['path'])
-        self.cords = dic['cords']
+        self.cords = dic['cords'].copy()
     def resize(self, height):
         ratio = height / self.atlas.get_height()
         new_width = ratio * self.atlas.get_width()
         self.atlas = pygame.transform.smoothscale(self.atlas, (new_width, height))
+        new_cords = []
         for t in self.cords:
-            t[0] *= ratio
-            t[1] *= ratio
+            new_cords.append((t[0] * ratio, t[1] * ratio))
+        self.cords = new_cords
     def render(self, text, antialiasing, color):
         text = text.upper()
         height = self.atlas.get_height()

@@ -1,3 +1,15 @@
+"""
+    ____  _   ______         _    ______________
+   / __ \/ | / / __ \       | |  / /_  __/_  __/
+  / / / /  |/ / / / /       | | / / / /   / /   
+ / /_/ / /|  / /_/ /        | |/ / / /   / /    
+/_____/_/ |_/_____/         |___/ /_/   /_/     
+    by Shahaf Ashash and Simon Labunsky
+                                            
+"""
+
+__version__ = '1.0.0'
+
 from typing import Tuple
 from math import cos, sin, pi
 from itertools import cycle
@@ -89,7 +101,14 @@ class GameManager:
             self.run_map()
 
     def setup(self):
-        pass
+        cm = StackPanel()
+        cm.append(Label('DND VIRTUAL TABLE TOP', font=GUI.fonts[2]))
+        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.fonts[3]))
+        cm.set_pos((self.screen.get_width() / 2 - cm.size[0] / 2, 300))
+        cm.frame = GUI.frames[0]
+        self.main_menu_label = cm
+
+        GUI.append(cm)
 
     def main_menu(self):
         background = get_background()
@@ -102,6 +121,8 @@ class GameManager:
                 if event.key == pg.K_ESCAPE:
                     exit(0)
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
+                if self.main_menu_label in GUI.elements:
+                    GUI.elements.remove(self.main_menu_label)
                 create_menu_maps(self.maps, event.pos)
 
         GUI.step()
@@ -216,13 +237,13 @@ def load_maps(json_path: str):
 
 
 def get_background():
-    image_path = "assets/images/background.jpg"
+    image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
     return image
 
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    context_menu = ContextMenuScrollable((0, 100))
+    context_menu = ContextMenuScrollable((0, 50))
     for map in maps:
         context_menu.add_button(map, "change_map")
     context_menu.set_pos((GUI.win.get_width() // 2 - context_menu.size[0] // 2, 0))
@@ -240,12 +261,17 @@ def main():
         fonts_json = json.load(f)
 
     GUI.win = screen
-    # GUI.font = pg.font.SysFont("Arial", 30)
-    GUI.font = Font(fonts_json[0])
-    GUI.font.resize(35)
-    GUI.font2 = Font(fonts_json[1])
-    GUI.font2.resize(35)
+    GUI.fonts.append(Font(fonts_json[0]))
+    GUI.fonts[-1].resize(35)
+    GUI.fonts.append(Font(fonts_json[1]))
+    GUI.fonts[-1].resize(35)
+    GUI.fonts.append(Font(fonts_json[0]))
+    GUI.fonts.append(Font(fonts_json[0]))
+    GUI.fonts[-1].resize(40)
+    
     GUI.gui_event_handler = handle_gui_events
+
+    GUI.frames.append(Frame(r"./assets/images/frame.json"))
 
     game_manager.setup()
 
