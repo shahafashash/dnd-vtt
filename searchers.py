@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 import operator
 import difflib
+from functools import lru_cache
 
 
 class Searcher(ABC):
@@ -72,19 +73,21 @@ class MapSearcher(Searcher):
 
     def __get_best_matches(self, query_tags: List[str], maps: List[str]) -> List[str]:
         matches = []
-        map_ratios = []
+        num_tags = len(query_tags)
         for map_name in maps:
-            map_ratios.clear()
+            map_ratio = 0
             for tag in query_tags:
                 # check the matching ratio between the tag and the map name
-                map_ratios.append(difflib.SequenceMatcher(None, tag, map_name).ratio())
-            map_ratio = sum(map_ratios) / len(map_ratios)
+                ratio = difflib.SequenceMatcher(None, tag, map_name).ratio()
+                map_ratio += ratio
+            map_ratio = map_ratio / num_tags
             matches.append((map_name, map_ratio))
 
         matches.sort(key=operator.itemgetter(1), reverse=True)
         matches = [map_name for map_name, _ in matches]
         return matches
 
+    @lru_cache(maxsize=256)
     def search(self, query: str, n: int = -1) -> List[str]:
         if n < 0:
             n = len(self._data)
