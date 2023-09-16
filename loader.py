@@ -60,7 +60,6 @@ class Map:
             self.cap.release()
             self.cap = None
             self.num_frames = None
-            self._video_surface = None
 
     def __del__(self) -> None:
         if self.cap is not None:
