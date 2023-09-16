@@ -1,4 +1,4 @@
 /__pycache__/*.pyc
 .gitignore
-assets/maps
+*.mp4
 venv
