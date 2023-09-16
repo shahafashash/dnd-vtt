@@ -1,19 +1,27 @@
-from typing import Iterable, Any, Generator
+from typing import Iterable, Any, Callable, Generator
 
 
-def cycle(iterable: Iterable[Any]) -> Generator[Any, None, None]:
-    """Cycle through an iterable infinitely.
+def cycle(
+    iterable: Iterable[Any] | Callable[[], Generator[Any, None, None]]
+) -> Generator[Any, None, None]:
+    """Cycle through an iterable or a generator infinitely.
 
     Args:
-        iterable (Iterable[Any]): An iterable object.
+        iterable (Iterable[Any] | Callable[[], Generator[Any, None, None]]): The iterable or generator to cycle through.
 
     Yields:
         Generator[Any, None, None]: The next item in the iterable.
     """
-    iterator = iter(iterable)
+    if callable(iterable):
+        iterator = iterable()
+    else:
+        iterator = iter(iterable)
     while True:
         try:
             yield next(iterator)
         except StopIteration:
-            iterator = iter(iterable)
+            if callable(iterable):
+                iterator = iterable()
+            else:
+                iterator = iter(iterable)
             yield next(iterator)

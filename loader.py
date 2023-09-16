@@ -107,5 +107,5 @@ class Loader:
                 self.__current.release()
 
         self.__current = map_obj
-        self.__buffer = cycle(self.__current.load())
+        self.__buffer = cycle(self.__current.load)
         return self.__buffer
