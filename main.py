@@ -102,8 +102,10 @@ class GameManager:
 
     def setup(self):
         cm = StackPanel()
-        cm.append(Label('DND VIRTUAL TABLE TOP', font=GUI.get_font_at(2)))
-        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.get_font_at(0)))
+        label_title = Label('DND VIRTUAL TABLE TOP', GUI.get_font_at(2))
+        cm.append(label_title)
+        label_credits = Label('By Shahaf Ashash and Simon Labunsky', GUI.get_font_at(0))
+        cm.append(label_credits)
         cm.pos = (self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2)
         cm.frame = GUI.frames[0]
         self.main_menu_label = cm
@@ -226,6 +228,7 @@ def handle_gui_events(event: str):
     if event["key"] == "change_map":
         game_event = GameEvent(Event.CHANGE_MAP, event["text"])
         GameManager.get_instance().add_event(game_event)
+        GUI.elements.remove(GameManager.get_instance().maps_menu)
 
 
 def load_maps(json_path: str):
@@ -243,25 +246,20 @@ def get_background():
 
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    '''context_menu = ContextMenuScrollable((0, 50))
-    for map in maps:
-        context_menu.add_button(map, "change_map")
-    context_menu.set_pos((GUI.win.get_width() // 2 - context_menu.size[0] // 2, 0))
-    GUI.elements.append(context_menu)'''
-
-    surf = pg.Surface((250,100))
+    surf = pg.Surface((320,320 * (9/16)))
 
     cm = Columns(3)
-    cm.pos = (100, 0)
+    cm.scrollable = True
     for map in maps:
         sp = StackPanel()
         sp.append(Picture(surf))
-        sp.append(Label(map, font=GUI.get_font_at(3)))
-
+        button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
+        sp.linked_button = button
+        sp.append(button)
         cm.append(sp)
 
     cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 0)
-    
+    GameManager.get_instance().maps_menu = cm
     GUI.elements.append(cm)
 
 def main():
@@ -275,6 +273,7 @@ def main():
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72B.json'))
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay124.json'))
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30B.json'))
 
     GUI.win = screen
     

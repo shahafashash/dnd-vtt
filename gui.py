@@ -25,7 +25,7 @@ class GUI:
 
     frames = []
 
-    debug = True
+    debug = False
 
     def event_handle(event):
         # pygame left click
@@ -109,11 +109,14 @@ class Label(Element):
     def __init__(self, text, font=None):
         super().__init__()
         self.text = text
-        if font is None:
-            font = GUI.fonts[0]
-        self.surf = font.render(text, True, (0, 0, 0))
+        self.font = font
+        if not self.font:
+            self.font = GUI.fonts[0]
+        self.surf = self.font.render(self.text)
         self.size = self.surf.get_size()
+        
         self.debug_color = (0,255,0)
+
     def draw(self):
         super().draw()
         pos = self.get_abs_pos()
@@ -124,16 +127,24 @@ class Label(Element):
         GUI.win.blit(self.surf, center)
 
 
-class Button(Element):
-    def __init__(self, text, key):
-        super().__init__()
+class Button(Label):
+    def __init__(self, text, key, font=None, selected_font=None):
+        super().__init__(text)
         self.text = text
-        self.surf = GUI.get_font_at(0).render(text, True, (0, 0, 0))
-        self.surf_selected = GUI.get_font_at(1).render(text, True, (0, 0, 0))
+        self.font = font
+        self.selected_font = selected_font
+        if not self.font:
+            self.font = GUI.fonts[0]
+        if not self.selected_font:
+            self.selected_font = GUI.fonts[0]
+
+        self.surf = self.font.render(text)
+        self.surf_selected = self.selected_font.render(text)
         self.key = key
         self.size = self.surf.get_size()
 
     def step(self):
+        super().step()
         mouse_pos = pygame.mouse.get_pos()
         # if mouse on button
         pos = self.get_abs_pos()
@@ -169,6 +180,8 @@ class StackPanel(Element):
         self.pos = pos
         self.elements = []
         self.margin = 10
+        self.scrollable = False
+        self.linked_button = None
         self.debug_color = (255,0,0)
 
     def append(self, element):
@@ -193,6 +206,20 @@ class StackPanel(Element):
         self.pos = pos
 
     def step(self):
+        super().step()
+        if self.scrollable and GUI.gui_scroll_event[1] != 0:
+            self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 20) 
+        if self.linked_button:
+            mouse_pos = pygame.mouse.get_pos()
+            # if mouse on button
+            pos = self.get_abs_pos()
+            if (
+                mouse_pos[0] > pos[0]
+                and mouse_pos[0] < pos[0] + self.size[0]
+                and mouse_pos[1] > pos[1]
+                and mouse_pos[1] < pos[1] + self.size[1]
+            ):
+                GUI.focused_element = self.linked_button
         for element in self.elements:
             element.step()
 
@@ -252,22 +279,6 @@ class ContextMenu(StackPanel):
         GUI.elements.remove(self)
 
 
-class ContextMenuScrollable(ContextMenu):
-    def __init__(self, pos):
-        super().__init__(pos)
-        self.offset = 0
-
-    def scroll(self, offset: int):
-        self.offset += offset
-        for element in self.elements:
-            element.set_pos((0, offset))
-
-    def step(self):
-        if GUI.gui_scroll_event[1] != 0:
-            self.scroll(GUI.gui_scroll_event[1] * 15)
-        super().step()
-
-
 class Frame:
     def __init__(self, json_path):
         with open(json_path, "r") as f:
@@ -286,6 +297,8 @@ class Frame:
 
         deco_left = self.coords["left_decoration"]
         deco_right = self.coords["right_decoration"]
+        deco_top = self.coords["top_decoration"]
+        deco_bottom = self.coords["bottom_decoration"]
 
         top_left_pos = (element.pos[0] - top_left[1][0], element.pos[1] - top_left[1][1])
         top_right_pos = (element.pos[0] + element.size[0], element.pos[1] - top_right[1][1])
@@ -311,6 +324,8 @@ class Frame:
 
         deco_left_pos = (element.pos[0] - deco_left[1][0], element.pos[1] + element.size[1] // 2 - deco_left[1][1] // 2)
         deco_right_pos = (element.pos[0] + element.size[0], element.pos[1] + element.size[1] // 2 - deco_left[1][1] // 2)
+        deco_top_pos = (element.pos[0] + element.size[0] // 2 - deco_top[1][0] // 2, element.pos[1] - deco_top[1][1])
+        deco_bottom_pos = (element.pos[0] + element.size[0] // 2 - deco_bottom[1][0] // 2, element.pos[1] + element.size[1])
 
         left_surf = pygame.Surface(left[1], pygame.SRCALPHA)
         left_surf.blit(self.surf, (0, 0), left)
@@ -342,6 +357,8 @@ class Frame:
 
         win.blit(self.surf, deco_left_pos, deco_left)
         win.blit(self.surf, deco_right_pos, deco_right)
+        win.blit(self.surf, deco_top_pos, deco_top)
+        win.blit(self.surf, deco_bottom_pos, deco_bottom)
 
         if GUI.debug:
             pygame.draw.rect(GUI.win, (255,255,255), (top_left_pos, top_left[1]), 1)

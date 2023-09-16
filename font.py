@@ -18,7 +18,7 @@ class Font:
                 new_rect.append((pair[0] * ratio, pair[1] * ratio))
             new_cords.append(new_rect)
         self.cords = new_cords
-    def render(self, text, antialiasing, color):
+    def render(self, text, antialiasing=False, color=None):
         height = self.cords[0][1][1]
         space_size = height / 4
         tracking = 0

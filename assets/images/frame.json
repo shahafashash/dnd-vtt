@@ -11,6 +11,8 @@
             "top": [[60, 0], [10, 60]],
             "bottom": [[60, 440], [10, 60]],
             "left_decoration": [[0, 221], [60, 56]],
-            "right_decoration": [[452, 221], [60, 56]]
+            "right_decoration": [[452, 221], [60, 56]],
+            "top_decoration": [[162, 0], [188, 60]],
+            "bottom_decoration": [[190, 440],[130, 60]]
         }
 }
