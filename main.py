@@ -55,8 +55,8 @@ class GameManager:
 
         self.grid_size = 50
 
-        self.grid_states = cycle((grid_state for grid_state in Grid))
-        self.grid_colors = cycle((grid_color.value for grid_color in GridColors))
+        self.grid_states = cycle([grid_state for grid_state in Grid])
+        self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
         self.grid_state = next(self.grid_states)
         self.grid_color = next(self.grid_colors)
 
