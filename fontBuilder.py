@@ -14,8 +14,8 @@ if __name__ == '__main__':
     pygame.font.init()
 
     font_path = r'./assets/fonts/CriticalRolePlay-7BByA.ttf'
-    font_name = 'CriticalRolePlay124'
-    font = pygame.font.Font(font_path, 124)
+    font_name = 'CriticalRolePlay30'
+    font = pygame.font.Font(font_path, 30)
 
     surf = pygame.Surface((512, 512), pygame.SRCALPHA)
     height = font.render('A', True, (0,0,0)).get_height()

@@ -25,7 +25,7 @@ class GUI:
 
     frames = []
 
-    debug = False
+    debug = True
 
     def event_handle(event):
         # pygame left click
@@ -79,13 +79,13 @@ class Element:
         self.size = (0, 0)
         self.parent = None
         self.frame = None
-
+        self.debug_color = (255,255,255)
     def step(self):
         pass
 
     def draw(self):
         if GUI.debug:
-            pygame.draw.rect(GUI.win, (255,255,255), (self.pos, self.size), 1)
+            pygame.draw.rect(GUI.win, self.debug_color, (self.get_abs_pos(), self.size), 1)
         if self.frame:
             self.frame.draw(self)
 
@@ -95,25 +95,31 @@ class Element:
     def no_click(self):
         pass
 
-    def set_pos(self, offset):
-        self.pos = (self.pos[0] + offset[0], self.pos[1] + offset[1])
+    def set_size(self, size):
+        self.size = size
+
+    def get_abs_pos(self):
+        if self.parent is None:
+            return self.pos
+        parent_pos = self.parent.get_abs_pos()
+        return (parent_pos[0] + self.pos[0], parent_pos[1] + self.pos[1])
 
 
 class Label(Element):
-    def __init__(self, text, pos=(0,0), font=None):
+    def __init__(self, text, font=None):
         super().__init__()
         self.text = text
         if font is None:
             font = GUI.fonts[0]
         self.surf = font.render(text, True, (0, 0, 0))
         self.size = self.surf.get_size()
-        self.pos = pos
-
+        self.debug_color = (0,255,0)
     def draw(self):
         super().draw()
+        pos = self.get_abs_pos()
         center = (
-                    self.pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
-                    self.pos[1],
+                    pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
+                    pos[1] + self.size[1] // 2 - self.surf.get_height() // 2,
                  )
         GUI.win.blit(self.surf, center)
 
@@ -125,27 +131,26 @@ class Button(Element):
         self.surf = GUI.get_font_at(0).render(text, True, (0, 0, 0))
         self.surf_selected = GUI.get_font_at(1).render(text, True, (0, 0, 0))
         self.key = key
-
-        self.pos = (0, 0)
         self.size = self.surf.get_size()
-        self.parent = None
 
     def step(self):
         mouse_pos = pygame.mouse.get_pos()
         # if mouse on button
+        pos = self.get_abs_pos()
         if (
-            mouse_pos[0] > self.pos[0]
-            and mouse_pos[0] < self.pos[0] + self.size[0]
-            and mouse_pos[1] > self.pos[1]
-            and mouse_pos[1] < self.pos[1] + self.size[1]
+            mouse_pos[0] > pos[0]
+            and mouse_pos[0] < pos[0] + self.size[0]
+            and mouse_pos[1] > pos[1]
+            and mouse_pos[1] < pos[1] + self.size[1]
         ):
             GUI.focused_element = self
 
     def draw(self):
         super().draw()
+        pos = self.get_abs_pos()
         center = (
-                    self.pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
-                    self.pos[1],
+                    pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
+                    pos[1],
                  )
 
         if self is GUI.focused_element:
@@ -164,32 +169,69 @@ class StackPanel(Element):
         self.pos = pos
         self.elements = []
         self.margin = 10
+        self.debug_color = (255,0,0)
 
     def append(self, element):
         element.parent = self
         self.elements.append(element)
-        self.size = (max(self.size[0], element.size[0]), self.size[1] + element.size[1])
+        self.size = (max(self.size[0], element.size[0]), self.size[1] + element.size[1] + self.margin)
 
         height_offset = 0
         for element in self.elements:
             element.pos = (self.pos[0], self.pos[1] + height_offset)
-            element.size = (self.size[0], element.size[1])
+            element.set_size((self.size[0], element.size[1]))
             height_offset += element.size[1] + self.margin
+
+        self.size = (self.size[0], height_offset - self.margin)
+
+    def set_size(self, size):
+        self.size = size
+        for e in self.elements:
+            e.set_size((size[0], e.size[1]))
+
+    def set_pos(self, pos):
+        self.pos = pos
 
     def step(self):
         for element in self.elements:
             element.step()
 
     def draw(self):
-        # pygame.draw.rect(GUI.win, (150, 150, 150), (self.pos, self.size))
         for element in self.elements:
             element.draw()
         super().draw()
 
-    def set_pos(self, offset):
-        super().set_pos(offset)
-        for element in self.elements:
-            element.set_pos(offset)
+
+class Columns(StackPanel):
+    def __init__(self, cols):
+        super().__init__()
+        self.cols = cols
+        self.current_index = [0,0]
+        self.hor_margin = 10
+        self.ver_margin = 10
+
+        self.element_size = (0,0)
+        self.debug_color = (255,255,0)
+    def append(self, element):
+        self.element_size = (max(self.element_size[0], element.size[0]), max(self.element_size[1], element.size[1]))
+        self.elements.append(element)
+        element.parent = self
+
+        x = 0
+        y = 0
+
+        size_x = 0
+        size_y = 0
+        for i, e in enumerate(self.elements):
+            e.pos = ((x, y))
+            e.set_size(self.element_size)
+            x += self.element_size[0] + self.hor_margin
+            size_x = max(x, size_x)
+            if (i + 1) % self.cols == 0:
+                x = 0
+                y += self.element_size[1] + self.ver_margin
+                size_y = max(y, size_y)
+        self.size = (size_x - self.hor_margin, size_y - self.ver_margin)
 
 
 class ContextMenu(StackPanel):
@@ -208,6 +250,7 @@ class ContextMenu(StackPanel):
 
     def no_click(self):
         GUI.elements.remove(self)
+
 
 class ContextMenuScrollable(ContextMenu):
     def __init__(self, pos):
@@ -305,6 +348,18 @@ class Frame:
             pygame.draw.rect(GUI.win, (255,255,255), (top_right_pos, top_right[1]), 1)
             pygame.draw.rect(GUI.win, (255,255,255), (bottom_left_pos, bottom_left[1]), 1)
             pygame.draw.rect(GUI.win, (255,255,255), (bottom_right_pos, bottom_right[1]), 1)
+
+
+class Picture(Element):
+    def __init__(self, surf):
+        super().__init__()
+        self.surf = surf
+        self.size = self.surf.get_size()
+    def draw(self):
+        pos = self.get_abs_pos()
+        super().draw()
+        GUI.win.blit(self.surf, (pos[0] + self.size[0] // 2 - self.surf.get_width() // 2, pos[1]))
+
 
 
 def test():

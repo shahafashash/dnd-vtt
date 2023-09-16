@@ -103,8 +103,8 @@ class GameManager:
     def setup(self):
         cm = StackPanel()
         cm.append(Label('DND VIRTUAL TABLE TOP', font=GUI.get_font_at(2)))
-        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.get_font_at(3)))
-        cm.set_pos((self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2))
+        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.get_font_at(0)))
+        cm.pos = (self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2)
         cm.frame = GUI.frames[0]
         self.main_menu_label = cm
 
@@ -243,12 +243,26 @@ def get_background():
 
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    context_menu = ContextMenuScrollable((0, 50))
+    '''context_menu = ContextMenuScrollable((0, 50))
     for map in maps:
         context_menu.add_button(map, "change_map")
     context_menu.set_pos((GUI.win.get_width() // 2 - context_menu.size[0] // 2, 0))
-    GUI.elements.append(context_menu)
+    GUI.elements.append(context_menu)'''
 
+    surf = pg.Surface((250,100))
+
+    cm = Columns(3)
+    cm.pos = (100, 0)
+    for map in maps:
+        sp = StackPanel()
+        sp.append(Picture(surf))
+        sp.append(Label(map, font=GUI.get_font_at(3)))
+
+        cm.append(sp)
+
+    cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 0)
+    
+    GUI.elements.append(cm)
 
 def main():
     pg.init()
@@ -260,6 +274,7 @@ def main():
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72.json'))
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72B.json'))
     GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay124.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30.json'))
 
     GUI.win = screen
     
