@@ -1,5 +1,5 @@
 from typing import List, Dict, Generator
-from itertools import cycle
+from utils import cycle
 from functools import lru_cache
 from pathlib import Path
 import json
@@ -31,6 +31,9 @@ class Map:
             or self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT) != 1080
         ):
             resize = True
+
+        # Initialize the previous surface as None
+        prev_surface = None
         for _ in range(self.num_frames):
             _, frame = self.cap.read()
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -39,13 +42,25 @@ class Map:
             frame = cv2.flip(frame, 0)
 
             frame = pg.surfarray.make_surface(frame)
+
+            # Release the previous surface to free memory
+            if prev_surface is not None:
+                del prev_surface
+
+            prev_surface = frame
+
             yield frame
+
+        # Release the last surface after the loop
+        if prev_surface is not None:
+            del prev_surface
 
     def release(self) -> None:
         if self.cap is not None:
             self.cap.release()
             self.cap = None
             self.num_frames = None
+            self._video_surface = None
 
     def __del__(self) -> None:
         if self.cap is not None:
