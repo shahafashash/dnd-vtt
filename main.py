@@ -1,6 +1,6 @@
 from typing import Tuple
 from math import cos, sin, pi
-from itertools import cycle
+from utils import cycle
 import pygame as pg
 import json
 from collections import deque
