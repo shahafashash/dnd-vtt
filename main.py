@@ -102,9 +102,9 @@ class GameManager:
 
     def setup(self):
         cm = StackPanel()
-        cm.append(Label('DND VIRTUAL TABLE TOP', font=GUI.fonts[2]))
-        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.fonts[3]))
-        cm.set_pos((self.screen.get_width() / 2 - cm.size[0] / 2, 300))
+        cm.append(Label('DND VIRTUAL TABLE TOP', font=GUI.get_font_at(2)))
+        cm.append(Label('By Shahaf Ashash and Simon Labunsky', font=GUI.get_font_at(3)))
+        cm.set_pos((self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2))
         cm.frame = GUI.frames[0]
         self.main_menu_label = cm
 
@@ -257,17 +257,11 @@ def main():
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
-    with open(r"assets/Font/Fonts.json", "r") as f:
-        fonts_json = json.load(f)
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72B.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay124.json'))
 
     GUI.win = screen
-    GUI.fonts.append(Font(fonts_json[0]))
-    GUI.fonts[-1].resize(35)
-    GUI.fonts.append(Font(fonts_json[1]))
-    GUI.fonts[-1].resize(35)
-    GUI.fonts.append(Font(fonts_json[0]))
-    GUI.fonts.append(Font(fonts_json[0]))
-    GUI.fonts[-1].resize(40)
     
     GUI.gui_event_handler = handle_gui_events
 

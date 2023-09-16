@@ -9,6 +9,8 @@ def draw_rect(surface, color, rect):
     pygame.draw.rect(shape_surf, color, shape_surf.get_rect())
     surface.blit(shape_surf, rect)
 
+class NoFonts(Exception):
+    pass
 
 class GUI:
     win = None
@@ -46,7 +48,15 @@ class GUI:
         # pygame scroll
         if event.type == pygame.MOUSEWHEEL:
             GUI.gui_scroll_event = (event.x, event.y)
-
+        
+    def get_font_at(index):
+        if len(GUI.fonts) == 0:
+            raise NoFonts
+        if len(GUI.fonts) > index:
+            return GUI.fonts[index]
+        else:
+            return GUI.fonts[0]
+        
     def step():
         GUI.focused_element = None
         for element in GUI.elements:
@@ -112,8 +122,8 @@ class Button(Element):
     def __init__(self, text, key):
         super().__init__()
         self.text = text
-        self.surf = GUI.fonts[0].render(text, True, (0, 0, 0))
-        self.surf_selected = GUI.fonts[1].render(text, True, (0, 0, 0))
+        self.surf = GUI.get_font_at(0).render(text, True, (0, 0, 0))
+        self.surf_selected = GUI.get_font_at(1).render(text, True, (0, 0, 0))
         self.key = key
 
         self.pos = (0, 0)
@@ -153,6 +163,7 @@ class StackPanel(Element):
         super().__init__()
         self.pos = pos
         self.elements = []
+        self.margin = 10
 
     def append(self, element):
         element.parent = self
@@ -163,7 +174,7 @@ class StackPanel(Element):
         for element in self.elements:
             element.pos = (self.pos[0], self.pos[1] + height_offset)
             element.size = (self.size[0], element.size[1])
-            height_offset += element.size[1]
+            height_offset += element.size[1] + self.margin
 
     def step(self):
         for element in self.elements:
@@ -230,6 +241,9 @@ class Frame:
         top = self.coords["top"]
         bottom = self.coords["bottom"]
 
+        deco_left = self.coords["left_decoration"]
+        deco_right = self.coords["right_decoration"]
+
         top_left_pos = (element.pos[0] - top_left[1][0], element.pos[1] - top_left[1][1])
         top_right_pos = (element.pos[0] + element.size[0], element.pos[1] - top_right[1][1])
         bottom_left_pos = (element.pos[0] - bottom_left[1][0], element.pos[1] + element.size[1])
@@ -243,11 +257,17 @@ class Frame:
             (element.pos[0] + element.size[0], element.pos[1]),
             (right[1][0], element.size[1]),
         )
-        top_rect = ((element.pos[0], element.pos[1] - top[1][1]), (element.size[0], top[1][1]))
+        top_rect = (
+            (element.pos[0], element.pos[1] - top[1][1]),
+            (element.size[0], top[1][1])
+        )
         bottom_rect = (
             (element.pos[0], element.pos[1] + element.size[1]),
             (element.size[0], bottom[1][1]),
         )
+
+        deco_left_pos = (element.pos[0] - deco_left[1][0], element.pos[1] + element.size[1] // 2 - deco_left[1][1] // 2)
+        deco_right_pos = (element.pos[0] + element.size[0], element.pos[1] + element.size[1] // 2 - deco_left[1][1] // 2)
 
         left_surf = pygame.Surface(left[1], pygame.SRCALPHA)
         left_surf.blit(self.surf, (0, 0), left)
@@ -276,6 +296,9 @@ class Frame:
         win.blit(right_surf, right_rect[0])
         win.blit(top_surf, top_rect[0])
         win.blit(bottom_surf, bottom_rect[0])
+
+        win.blit(self.surf, deco_left_pos, deco_left)
+        win.blit(self.surf, deco_right_pos, deco_right)
 
         if GUI.debug:
             pygame.draw.rect(GUI.win, (255,255,255), (top_left_pos, top_left[1]), 1)
