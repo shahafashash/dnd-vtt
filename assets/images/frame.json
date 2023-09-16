@@ -1,0 +1,18 @@
+{
+    "path": "./assets/images/frame.png",
+    "coords": 
+        {
+            "top_left": [[0,0], [60,60]],
+            "top_right": [[452, 0], [60, 60]],
+            "bottom_left": [[0, 440], [60, 60]],
+            "bottom_right": [[452, 440], [60, 60]],
+            "left": [[0, 60], [60, 10]],
+            "right": [[452, 60], [60, 10]],
+            "top": [[60, 0], [10, 60]],
+            "bottom": [[60, 440], [10, 60]],
+            "left_decoration": [[0, 221], [60, 56]],
+            "right_decoration": [[452, 221], [60, 56]],
+            "top_decoration": [[162, 0], [188, 60]],
+            "bottom_decoration": [[190, 440],[130, 60]]
+        }
+}

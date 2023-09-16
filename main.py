@@ -1,3 +1,15 @@
+"""
+    ____  _   ______         _    ______________
+   / __ \/ | / / __ \       | |  / /_  __/_  __/
+  / / / /  |/ / / / /       | | / / / /   / /   
+ / /_/ / /|  / /_/ /        | |/ / / /   / /    
+/_____/_/ |_/_____/         |___/ /_/   /_/     
+    by Shahaf Ashash and Simon Labunsky
+                                            
+"""
+
+__version__ = '1.0.0'
+
 from typing import Tuple
 from math import cos, sin, pi
 from itertools import cycle
@@ -89,7 +101,16 @@ class GameManager:
             self.run_map()
 
     def setup(self):
-        pass
+        cm = StackPanel()
+        label_title = Label('DND VIRTUAL TABLE TOP', GUI.get_font_at(2))
+        cm.append(label_title)
+        label_credits = Label('By Shahaf Ashash and Simon Labunsky', GUI.get_font_at(0))
+        cm.append(label_credits)
+        cm.pos = (self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2)
+        cm.frame = GUI.frames[0]
+        self.main_menu_label = cm
+
+        GUI.append(cm)
 
     def main_menu(self):
         background = get_background()
@@ -102,6 +123,8 @@ class GameManager:
                 if event.key == pg.K_ESCAPE:
                     exit(0)
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
+                if self.main_menu_label in GUI.elements:
+                    GUI.elements.remove(self.main_menu_label)
                 create_menu_maps(self.maps, event.pos)
 
         GUI.step()
@@ -205,6 +228,7 @@ def handle_gui_events(event: str):
     if event["key"] == "change_map":
         game_event = GameEvent(Event.CHANGE_MAP, event["text"])
         GameManager.get_instance().add_event(game_event)
+        GUI.elements.remove(GameManager.get_instance().maps_menu)
 
 
 def load_maps(json_path: str):
@@ -216,18 +240,27 @@ def load_maps(json_path: str):
 
 
 def get_background():
-    image_path = "assets/images/background.jpg"
+    image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
     return image
 
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    context_menu = ContextMenuScrollable((0, 100))
-    for map in maps:
-        context_menu.add_button(map, "change_map")
-    context_menu.set_pos((GUI.win.get_width() // 2 - context_menu.size[0] // 2, 0))
-    GUI.elements.append(context_menu)
+    surf = pg.Surface((320,320 * (9/16)))
 
+    cm = Columns(3)
+    cm.scrollable = True
+    for map in maps:
+        sp = StackPanel()
+        sp.append(Picture(surf))
+        button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
+        sp.linked_button = button
+        sp.append(button)
+        cm.append(sp)
+
+    cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 0)
+    GameManager.get_instance().maps_menu = cm
+    GUI.elements.append(cm)
 
 def main():
     pg.init()
@@ -236,16 +269,17 @@ def main():
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
-    with open(r"assets/Font/Fonts.json", "r") as f:
-        fonts_json = json.load(f)
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72B.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay124.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30.json'))
+    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30B.json'))
 
     GUI.win = screen
-    # GUI.font = pg.font.SysFont("Arial", 30)
-    GUI.font = Font(fonts_json[0])
-    GUI.font.resize(35)
-    GUI.font2 = Font(fonts_json[1])
-    GUI.font2.resize(35)
+    
     GUI.gui_event_handler = handle_gui_events
+
+    GUI.frames.append(Frame(r"./assets/images/frame.json"))
 
     game_manager.setup()
 
