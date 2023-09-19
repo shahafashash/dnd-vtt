@@ -1,6 +1,7 @@
 import pygame
 from enum import Enum
 from typing import Any
+from profilers import time_profiler
 import json
 
 
@@ -221,7 +222,7 @@ class TextBox(Element):
         GUI.gui_event_handler(
                     {"key": self.key, "text": self.text, "state": 'done'}
                 )
-        
+    
     def type_character(self, char):
         if char == '\x08':
             if len(self.text) > 0:
@@ -231,6 +232,7 @@ class TextBox(Element):
         GUI.gui_event_handler(
                     {"key": self.key, "text": self.text, "state": 'typing'}
                 )
+        self.refresh()
         
     def click(self):
         self.no_click()
@@ -272,6 +274,7 @@ class TextBox(Element):
                 self.cursor_on = not self.cursor_on
                 self.timer = 60
                 self.refresh()
+
 
     def draw(self):
         super().draw()

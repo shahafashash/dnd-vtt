@@ -20,6 +20,7 @@ from enum import Enum
 from gui import *
 from font import Font
 from loader import Loader
+from searchers import MapSearcher
 
 FPS = 60
 
@@ -59,6 +60,11 @@ class GameManager:
         GameManager._instance = self
         self.screen = screen
         self.clock = clock
+
+        # load maps
+        with open("maps.json", 'r') as file:
+            maps = json.load(file)
+        self.map_searcher = MapSearcher(maps)
         self.loader = Loader("maps.json")
         self.maps = list(self.loader.maps.keys())
 
@@ -161,14 +167,14 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == pg.K_c:
                     self.grid_color = next(self.grid_colors)
-                elif event.key == pg.K_n:
+                elif event.key == pg.K_RIGHT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]
                     self.current_map_frames = self.loader.load_map(
                         self.current_map_name
                     )
-                elif event.key == pg.K_b:
+                elif event.key == pg.K_LEFT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index - 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]
@@ -229,7 +235,9 @@ def handle_gui_events(event: str):
         game_event = GameEvent(Event.CHANGE_MAP, event["text"])
         GameManager.get_instance().add_event(game_event)
         GUI.elements.remove(GameManager.get_instance().maps_menu)
-
+    elif event["key"] == "search":
+        found_maps = GameManager.get_instance().map_searcher.search(event["text"])
+        GameManager.get_instance().maps_menu.elements[1] = create_columns_maps(found_maps)
 
 def load_maps(json_path: str):
     with open(json_path, "r") as f:
@@ -244,33 +252,46 @@ def get_background():
     image = pg.image.load(image_path)
     return image
 
-
-def create_menu_maps(maps: list[str], pos: tuple[int, int]):
+def create_columns_maps(found_maps):
     surf = pg.Surface((320,320 * (9/16)))
-
-    maps_menu_stackPanel = StackPanel()
-    maps_menu_stackPanel.append(TextBox('search', 'search for maps', GUI.get_font_at(3)))
     thumbnail_columns = Columns(3)
-    #thumbnail_columns.scrollable = True
-    for map in maps:
+    for map in found_maps:
         thumbnail_stackpanel = StackPanel()
         thumbnail_stackpanel.append(Picture(surf))
         button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
         thumbnail_stackpanel.linked_button = button
         thumbnail_stackpanel.append(button)
         thumbnail_columns.append(thumbnail_stackpanel)
+    return thumbnail_columns
 
-    #cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 100)
+def create_menu_maps(maps: list[str], pos: tuple[int, int]):
+    surf = pg.Surface((320,320 * (9/16)))
+
+    maps_menu_stackPanel = StackPanel()
+    maps_menu_stackPanel.append(TextBox('search', 'search for maps', GUI.get_font_at(3)))
+
+    thumbnail_columns = create_columns_maps(maps)
+
+    # thumbnail_columns = Columns(3)
+    # for map in maps:
+    #     thumbnail_stackpanel = StackPanel()
+    #     thumbnail_stackpanel.append(Picture(surf))
+    #     button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
+    #     thumbnail_stackpanel.linked_button = button
+    #     thumbnail_stackpanel.append(button)
+    #     thumbnail_columns.append(thumbnail_stackpanel)
+
     maps_menu_stackPanel.append(thumbnail_columns)
     maps_menu_stackPanel.scrollable = True
     maps_menu_stackPanel.set_pos((GUI.win.get_width() // 2 - maps_menu_stackPanel.size[0] // 2, 100))
+    GameManager.get_instance().thumbnail_columns = thumbnail_columns
     GameManager.get_instance().maps_menu = maps_menu_stackPanel
     GUI.elements.append(maps_menu_stackPanel)
 
 def main():
     pg.init()
 
-    screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
+    screen = pg.display.set_mode((1280, 720), pygame.RESIZABLE)
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
