@@ -248,19 +248,24 @@ def get_background():
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
     surf = pg.Surface((320,320 * (9/16)))
 
-    cm = Columns(3)
-    cm.scrollable = True
+    maps_menu_stackPanel = StackPanel()
+    maps_menu_stackPanel.append(TextBox('search', 'search for maps', GUI.get_font_at(3)))
+    thumbnail_columns = Columns(3)
+    #thumbnail_columns.scrollable = True
     for map in maps:
-        sp = StackPanel()
-        sp.append(Picture(surf))
+        thumbnail_stackpanel = StackPanel()
+        thumbnail_stackpanel.append(Picture(surf))
         button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
-        sp.linked_button = button
-        sp.append(button)
-        cm.append(sp)
+        thumbnail_stackpanel.linked_button = button
+        thumbnail_stackpanel.append(button)
+        thumbnail_columns.append(thumbnail_stackpanel)
 
-    cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 0)
-    GameManager.get_instance().maps_menu = cm
-    GUI.elements.append(cm)
+    #cm.pos = (GUI.win.get_width() // 2 - cm.size[0] // 2, 100)
+    maps_menu_stackPanel.append(thumbnail_columns)
+    maps_menu_stackPanel.scrollable = True
+    maps_menu_stackPanel.set_pos((GUI.win.get_width() // 2 - maps_menu_stackPanel.size[0] // 2, 100))
+    GameManager.get_instance().maps_menu = maps_menu_stackPanel
+    GUI.elements.append(maps_menu_stackPanel)
 
 def main():
     pg.init()
