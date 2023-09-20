@@ -78,8 +78,13 @@ class GameManager:
         self.grid_state = next(self.grid_states)
         self.grid_color = next(self.grid_colors)
 
+        self.avernus_filter = False
+
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
+
+        self.search_textbox = None
+        self.thumbnail_columns = None
 
     def get_instance():
         return GameManager._instance
@@ -167,6 +172,9 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == pg.K_c:
                     self.grid_color = next(self.grid_colors)
+                elif event.key == pg.K_a:
+                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
+                        self.avernus_filter = not self.avernus_filter
                 elif event.key == pg.K_RIGHT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
@@ -191,6 +199,9 @@ class GameManager:
         # draw the frame
         frame = next(self.current_map_frames)
         self.screen.blit(frame, (0, 0))
+
+        if self.avernus_filter:
+            self.screen.fill((255,100,100), special_flags=pygame.BLEND_MULT)
         self.draw_grid()
 
         GUI.draw()
@@ -251,7 +262,6 @@ def load_maps(json_path: str):
     maps = [map["name"] for map in maps_content]
     return maps
 
-
 def get_background():
     image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
@@ -271,14 +281,21 @@ def create_columns_maps(found_maps):
     return thumbnail_columns
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
+    game_manager = GameManager.get_instance()
+    if game_manager.search_textbox:
+        if game_manager.search_textbox not in GUI.elements:
+            GUI.elements.append(game_manager.search_textbox)
+            GUI.elements.append(game_manager.thumbnail_columns)
+        return
+
     search_textbox = TextBox('search', 'search for maps', GUI.get_font_at(0))
     thumbnail_columns = create_columns_maps(maps)
 
     search_textbox.set_pos((GUI.win.get_width() // 2 - search_textbox.size[0] // 2, 100))
     thumbnail_columns.set_pos((GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200))
 
-    GameManager.get_instance().search_textbox = search_textbox
-    GameManager.get_instance().thumbnail_columns = thumbnail_columns
+    game_manager.search_textbox = search_textbox
+    game_manager.thumbnail_columns = thumbnail_columns
 
     GUI.elements.append(thumbnail_columns)
     GUI.elements.append(search_textbox)
