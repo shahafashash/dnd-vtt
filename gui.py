@@ -1,16 +1,13 @@
 import pygame
 from enum import Enum
 from typing import Any
+from profilers import time_profiler
 import json
 
 
-def draw_rect(surface, color, rect):
-    shape_surf = pygame.Surface(pygame.Rect(rect).size, pygame.SRCALPHA)
-    pygame.draw.rect(shape_surf, color, shape_surf.get_rect())
-    surface.blit(shape_surf, rect)
-
 class NoFonts(Exception):
     pass
+
 
 class GUI:
     win = None
@@ -18,6 +15,7 @@ class GUI:
 
     elements = []
     focused_element = None
+    active_element = None
     gui_events = []
 
     gui_event_handler = None
@@ -31,11 +29,17 @@ class GUI:
         # pygame left click
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if GUI.focused_element:
-                GUI.gui_event_handler(
-                    {"key": GUI.focused_element.key, "text": GUI.focused_element.text}
-                )
+                for element in GUI.elements:
+                    if element is GUI.focused_element:
+                        continue
+                    else:
+                        element.no_click()
                 GUI.focused_element.click()
-
+                
+                if isinstance(GUI.focused_element, TextBox):
+                    textBox = GUI.focused_element
+                    GUI.active_element = textBox
+                    textBox.start_typing()
             else:
                 for element in GUI.elements:
                     element.no_click()
@@ -48,7 +52,13 @@ class GUI:
         # pygame scroll
         if event.type == pygame.MOUSEWHEEL:
             GUI.gui_scroll_event = (event.x, event.y)
-        
+            
+        # keyboard on click
+        if event.type == pygame.KEYDOWN:
+            if GUI.active_element:
+                character = event.unicode
+                GUI.active_element.type_character(character)
+
     def get_font_at(index):
         if len(GUI.fonts) == 0:
             raise NoFonts
@@ -73,7 +83,6 @@ class GUI:
 
 class Element:
     """Gui Element base class"""
-
     def __init__(self):
         self.pos = (0, 0)
         self.size = (0, 0)
@@ -95,9 +104,12 @@ class Element:
     def no_click(self):
         pass
 
+    def set_pos(self, pos):
+        self.pos = pos
+
     def set_size(self, size):
         self.size = size
-
+    
     def get_abs_pos(self):
         if self.parent is None:
             return self.pos
@@ -106,13 +118,14 @@ class Element:
 
 
 class Label(Element):
+    ''' A free label with no events '''
     def __init__(self, text, font=None):
         super().__init__()
         self.text = text
         self.font = font
         if not self.font:
             self.font = GUI.fonts[0]
-        self.surf = self.font.render(self.text)
+        self.surf = self.font.render(self.text, True, (0,0,0))
         self.size = self.surf.get_size()
         
         self.debug_color = (0,255,0)
@@ -127,9 +140,10 @@ class Label(Element):
         GUI.win.blit(self.surf, center)
 
 
-class Button(Label):
+class Button(Element):
+    ''' a button, send event: {'key': _, 'text': _} '''
     def __init__(self, text, key, font=None, selected_font=None):
-        super().__init__(text)
+        super().__init__()
         self.text = text
         self.font = font
         self.selected_font = selected_font
@@ -138,8 +152,8 @@ class Button(Label):
         if not self.selected_font:
             self.selected_font = GUI.fonts[0]
 
-        self.surf = self.font.render(text)
-        self.surf_selected = self.selected_font.render(text)
+        self.surf = self.font.render(text, True, (0,0,0))
+        self.surf_selected = self.selected_font.render(text, True, (100,100,100))
         self.key = key
         self.size = self.surf.get_size()
 
@@ -170,17 +184,123 @@ class Button(Label):
             GUI.win.blit(self.surf, center)
 
     def click(self):
-        if self.parent:
-            self.parent.click()
+        GUI.gui_event_handler(
+                    {"key": self.key, "text": self.text}
+                )
+
+
+class TextBox(Element):
+    ''' editable textbox, send event: {'key': _, 'text': _, 'state': ['typing', 'done']} '''
+    def __init__(self, key, initial_text, font=None, alignment='c'):
+        super().__init__()
+        self.key = key
+        self.initial_text = initial_text
+        self.text = ""
+        self.font = font
+        if not self.font:
+            self.font = GUI.fonts[0]
+        self.surf = self.font.render(initial_text, True, (0,0,0))
+        self.size = self.surf.get_size()
+        self.typing = False
+        self.timer = 0
+        self.cursor_on = False
+        self.alignment = alignment
+
+    def start_typing(self):
+        self.typing = True
+        self.timer = 60
+        self.refresh()
+    
+    def stop_typing(self):
+        self.typing = False
+        self.timer = 0
+        self.cursor_on = False
+        self.refresh()
+        if GUI.active_element is self:
+            GUI.active_element = None
+        GUI.gui_event_handler(
+                    {"key": self.key, "text": self.text, "state": 'done'}
+                )
+    
+    def type_character(self, char):
+        if char == '\x08':
+            if len(self.text) > 0:
+                self.text = self.text[:-1]
+        if char.isprintable():
+            self.text += char
+        GUI.gui_event_handler(
+                    {"key": self.key, "text": self.text, "state": 'typing'}
+                )
+        self.refresh()
+        
+    def click(self):
+        self.no_click()
+        
+    def no_click(self):
+        if self.typing:
+            self.stop_typing()
+        
+    def refresh(self):
+        if not self.typing:
+            text = ''
+            if self.text != "":
+                text = self.text
+            else:
+                text = self.initial_text
+            self.surf = self.font.render(text, True, (0,0,0))
+            return
+        text = self.text
+        if self.cursor_on:
+            text += '|'
+        self.surf = self.font.render(text, True, (0,0,0))
+
+    def step(self):
+        super().step()
+        mouse_pos = pygame.mouse.get_pos()
+        # if mouse on button
+        pos = self.get_abs_pos()
+        if (
+            mouse_pos[0] > pos[0]
+            and mouse_pos[0] < pos[0] + self.size[0]
+            and mouse_pos[1] > pos[1]
+            and mouse_pos[1] < pos[1] + self.size[1]
+        ):
+            GUI.focused_element = self
+            
+        if self.typing:
+            self.timer -= 1
+            if self.timer == 0:
+                self.cursor_on = not self.cursor_on
+                self.timer = 60
+                self.refresh()
+
+
+    def draw(self):
+        super().draw()
+        pos = self.get_abs_pos()
+        alignment = (pos[0],pos[1])
+        if self.alignment == 'c':
+            alignment = (
+                    pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
+                    pos[1],
+                 )
+        elif self.alignment == 'l':
+            alignment = (
+                    pos[0],
+                    pos[1],
+                   )
+        GUI.win.blit(self.surf, alignment)
 
 
 class StackPanel(Element):
+    ''' container for elements. elements are stacked vertically '''
     def __init__(self, pos=(0,0)):
         super().__init__()
         self.pos = pos
         self.elements = []
         self.margin = 10
         self.scrollable = False
+        # linked button: if stackpanel is focused, the button will be the focused_element
         self.linked_button = None
         self.debug_color = (255,0,0)
 
@@ -191,7 +311,7 @@ class StackPanel(Element):
 
         height_offset = 0
         for element in self.elements:
-            element.pos = (self.pos[0], self.pos[1] + height_offset)
+            element.pos = (0, height_offset)
             element.set_size((self.size[0], element.size[1]))
             height_offset += element.size[1] + self.margin
 
@@ -201,9 +321,6 @@ class StackPanel(Element):
         self.size = size
         for e in self.elements:
             e.set_size((size[0], e.size[1]))
-
-    def set_pos(self, pos):
-        self.pos = pos
 
     def step(self):
         super().step()
@@ -227,9 +344,18 @@ class StackPanel(Element):
         for element in self.elements:
             element.draw()
         super().draw()
+        
+    def click(self):
+        for element in self.elements:
+            element.click()
+            
+    def no_click(self):
+        for element in self.elements:
+            element.no_click()
 
 
 class Columns(StackPanel):
+    ''' container for elements, elements are placed in a grid '''
     def __init__(self, cols):
         super().__init__()
         self.cols = cols
@@ -260,8 +386,12 @@ class Columns(StackPanel):
                 size_y = max(y, size_y)
         self.size = (size_x - self.hor_margin, size_y - self.ver_margin)
 
+    def set_size(self, size):
+        self.size = size
+
 
 class ContextMenu(StackPanel):
+    ''' container for elements, context menu will vanish after click '''
     def __init__(self, pos=(0,0)):
         super().__init__()
         self.pos = pos
@@ -270,6 +400,7 @@ class ContextMenu(StackPanel):
 
     def add_button(self, text, key):
         button = Button(text, key)
+        button.parent = self
         self.append(button)
         
     def click(self):
@@ -280,6 +411,7 @@ class ContextMenu(StackPanel):
 
 
 class Frame:
+    ''' decorative frame for elements. envelops elements based on their size '''
     def __init__(self, json_path):
         with open(json_path, "r") as f:
             frame_dict = json.load(f)
@@ -368,6 +500,7 @@ class Frame:
 
 
 class Picture(Element):
+    ''' present surface '''
     def __init__(self, surf):
         super().__init__()
         self.surf = surf
@@ -379,8 +512,8 @@ class Picture(Element):
 
 
 
-def test():
-    pass
+def test(event):
+    print(event)
 
 
 if __name__ == "__main__":
@@ -393,37 +526,48 @@ if __name__ == "__main__":
     ### setup
     GUI.win = win
     GUI.fonts.append(pygame.font.SysFont("Calibri", 16))
-    GUI.fonts.append(pygame.font.SysFont("Calibri", 17))
+    # GUI.fonts.append(pygame.font.SysFont("Calibri", 16))
     GUI.gui_event_handler = test
 
-    cm = ContextMenu((400, 400))
-    cm.frame = True
-    cm.add_button("test1", "t1")
-    cm.add_button("test2", "t2")
-    cm.add_button("this is label", "t3")
-    cm.add_button("test4", "t4")
-    cm.add_button("test5", "t5")
-    GUI.elements.append(cm)
+    b = Button("free button", "free button")
+    b.set_pos((400,100))
+    GUI.elements.append(b)
+    b = TextBox("free button", "free textbox")
+    b.set_pos((400,120))
+    GUI.elements.append(b)
 
-    GUI.frame_surf = pygame.image.load(
-        r"./assets/images/frame.png"
-    )
-    GUI.frame_coords["top_right"] = ((1000 - 125, 0), (125, 140))
-    GUI.frame_coords["top_left"] = ((0, 0), (125, 140))
-    GUI.frame_coords["bottom_left"] = ((0, 1000 - 140), (125, 140))
-    GUI.frame_coords["bottom_right"] = ((1000 - 125, 1000 - 140), (125, 140))
-    GUI.frame_coords["right"] = ((1000 - 125, 150), (125, 10))
-    GUI.frame_coords["left"] = ((0, 150), (125, 10))
-    GUI.frame_coords["top"] = ((125, 0), (10, 140))
-    GUI.frame_coords["bottom"] = ((125, 1000 - 140), (10, 140))
+    cm = StackPanel((200, 300))
+    cm.append(Button("Enter First Name", "Enter First Name"))
+    cm.append(Button("test2", "t2"))
+    cm.append(Button("this is button", "t3"))
+    cm.append(Button("test4", "t4"))
+    cm.append(Button("test5", "t5"))
+    GUI.elements.append(cm)
+    
+    cm = StackPanel((500, 200))
+    cm.append(TextBox("name", "Enter First Name"))
+    cm.append(TextBox("last", "Enter Last Name"))
+    cm.append(TextBox("phone", "Enter Phone"))
+    cm.append(TextBox("address", "Enter Address"))
+    GUI.elements.append(cm)
 
     ### main loop
 
     run = True
     while run:
         for event in pygame.event.get():
+            GUI.event_handle(event)
             if event.type == pygame.QUIT:
                 run = False
+            if event.type == pygame.MOUSEBUTTONUP and event.button == 3:
+                mouse_pos = pygame.mouse.get_pos()
+                cm = ContextMenu(mouse_pos)
+                cm.append(Button("test1", "t1"))
+                cm.append(Button("test2", "t2"))
+                cm.append(Button("this is button", "t3"))
+                cm.append(Button("test4", "t4"))
+                cm.append(Button("test5", "t5"))
+                GUI.elements.append(cm)
         keys = pygame.key.get_pressed()
         if keys[pygame.K_ESCAPE]:
             run = False
