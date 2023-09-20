@@ -1,8 +1,8 @@
-from typing import Iterable, Any, Callable, Generator
+from typing import Iterable, Any, Callable, Generator, Union
 
 
 def cycle(
-    iterable: Iterable[Any] | Callable[[], Generator[Any, None, None]]
+    iterable: Union[Iterable[Any], Callable[[], Generator[Any, None, None]]]
 ) -> Generator[Any, None, None]:
     """Cycle through an iterable or a generator infinitely.
 
