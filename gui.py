@@ -23,24 +23,23 @@ class GUI:
 
     frames = []
 
-    debug = True
+    debug = False
 
     def event_handle(event):
         # pygame left click
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if GUI.focused_element:
-                GUI.focused_element.click()
                 for element in GUI.elements:
                     if element is GUI.focused_element:
                         continue
                     else:
                         element.no_click()
+                GUI.focused_element.click()
                 
-                if type(GUI.focused_element) ==  TextBox:
+                if isinstance(GUI.focused_element, TextBox):
                     textBox = GUI.focused_element
                     GUI.active_element = textBox
                     textBox.start_typing()
-                
             else:
                 for element in GUI.elements:
                     element.no_click()

@@ -234,10 +234,15 @@ def handle_gui_events(event: str):
     if event["key"] == "change_map":
         game_event = GameEvent(Event.CHANGE_MAP, event["text"])
         GameManager.get_instance().add_event(game_event)
-        GUI.elements.remove(GameManager.get_instance().maps_menu)
+        GUI.elements.remove(GameManager.get_instance().thumbnail_columns)
+        GUI.elements.remove(GameManager.get_instance().search_textbox)
     elif event["key"] == "search":
         found_maps = GameManager.get_instance().map_searcher.search(event["text"])
-        GameManager.get_instance().maps_menu.elements[1] = create_columns_maps(found_maps)
+        GUI.elements.remove(GameManager.get_instance().thumbnail_columns)
+        thumbnail_columns = create_columns_maps(found_maps)
+        GameManager.get_instance().thumbnail_columns = thumbnail_columns
+        thumbnail_columns.set_pos((GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200))
+        GUI.elements.append(thumbnail_columns)
 
 def load_maps(json_path: str):
     with open(json_path, "r") as f:
@@ -262,36 +267,26 @@ def create_columns_maps(found_maps):
         thumbnail_stackpanel.linked_button = button
         thumbnail_stackpanel.append(button)
         thumbnail_columns.append(thumbnail_stackpanel)
+        thumbnail_columns.scrollable = True
     return thumbnail_columns
 
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
-    surf = pg.Surface((320,320 * (9/16)))
-
-    maps_menu_stackPanel = StackPanel()
-    maps_menu_stackPanel.append(TextBox('search', 'search for maps', GUI.get_font_at(3)))
-
+    search_textbox = TextBox('search', 'search for maps', GUI.get_font_at(0))
     thumbnail_columns = create_columns_maps(maps)
 
-    # thumbnail_columns = Columns(3)
-    # for map in maps:
-    #     thumbnail_stackpanel = StackPanel()
-    #     thumbnail_stackpanel.append(Picture(surf))
-    #     button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
-    #     thumbnail_stackpanel.linked_button = button
-    #     thumbnail_stackpanel.append(button)
-    #     thumbnail_columns.append(thumbnail_stackpanel)
+    search_textbox.set_pos((GUI.win.get_width() // 2 - search_textbox.size[0] // 2, 100))
+    thumbnail_columns.set_pos((GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200))
 
-    maps_menu_stackPanel.append(thumbnail_columns)
-    maps_menu_stackPanel.scrollable = True
-    maps_menu_stackPanel.set_pos((GUI.win.get_width() // 2 - maps_menu_stackPanel.size[0] // 2, 100))
+    GameManager.get_instance().search_textbox = search_textbox
     GameManager.get_instance().thumbnail_columns = thumbnail_columns
-    GameManager.get_instance().maps_menu = maps_menu_stackPanel
-    GUI.elements.append(maps_menu_stackPanel)
+
+    GUI.elements.append(thumbnail_columns)
+    GUI.elements.append(search_textbox)
 
 def main():
     pg.init()
 
-    screen = pg.display.set_mode((1280, 720), pygame.RESIZABLE)
+    screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
