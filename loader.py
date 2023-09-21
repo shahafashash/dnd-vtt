@@ -1,4 +1,4 @@
-from typing import List, Dict, Generator, Set
+from typing import List, Dict, Generator, Set, Tuple
 from utils import cycle
 from functools import lru_cache
 from pathlib import Path
@@ -15,7 +15,8 @@ class Map:
         self.__path = str(current_dir.joinpath(path).resolve())
         self.__tags = list(map(str.lower, tags))
         self.__thumbnail_path = str(current_dir.joinpath(thumbnail).resolve())
-        self.__thumbnail = pg.image.load(self.__thumbnail_path)
+        thumbnail_size = (320, 300 * (9 // 16))
+        self.__thumbnail = self.__load_thumbnail(self.__thumbnail_path, thumbnail_size)
 
         self.__cap = None
         self.__num_frames = None
@@ -35,6 +36,13 @@ class Map:
     @property
     def thumbnail(self) -> pg.Surface:
         return self.__thumbnail
+
+    def __load_thumbnail(
+        self, thumbnail_path: str, size: Tuple[int, int]
+    ) -> pg.Surface:
+        thumbnail = pg.image.load(thumbnail_path)
+        thumbnail = pg.transform.scale(thumbnail, size)
+        return thumbnail
 
     def load(self) -> Generator[pg.Surface, None, None]:
         if self.__cap is None:
