@@ -1,70 +1,64 @@
-from typing import List, Tuple, Any, Set, Dict
+from typing import List, Any, Set, Dict
 from abc import ABC, abstractmethod
 from collections import defaultdict
 import operator
 import difflib
 from functools import lru_cache
+from loader import Loader
 
 
 class Searcher(ABC):
-    def __init__(self, data: Any) -> None:
-        self._data = data
-
-    @property
-    def data(self):
-        return self._data
-
-    @data.setter
-    def data(self, data: Any):
-        raise AttributeError("Cannot set data attribute")
-
     @abstractmethod
     def search(self, query: str, n: int = -1) -> List[str]:
         raise NotImplementedError("Must implement search method")
 
 
 class MapSearcher(Searcher):
-    def __init__(self, data: List[Dict[str, Any]]) -> None:
-        super().__init__(data)
+    def __init__(self, accuracy: float = 0.05, loader: Loader = None) -> None:
+        if loader is None:
+            loader = Loader("maps.json")
 
-        self._maps = self.__get_maps()
-        self._tags_mapping = self.__create_tags_mapping()
-        self._tags = self.__get_tags()
+        self.__loader = loader
+        self.__accuracy = accuracy
+        self.__maps_names = self.__loader.maps_names
+        self.__tags = self.__loader.tags
+        self.__tags_mapping = self.__create_tags_mapping()
 
-    def __get_maps(self) -> List[Dict[str, Any]]:
-        maps = [item["name"] for item in self._data]
-        maps.sort()
-        return maps
+    @property
+    def accuracy(self) -> float:
+        return self.__accuracy
 
     def __create_tags_mapping(self) -> Dict[str, Set[str]]:
         tags_mapping = defaultdict(set)
-
-        for item in self._data:
-            for tag in item["tags"]:
-                tags_mapping[tag].add(item["name"])
+        for map_name in self.__maps_names:
+            map_obj = self.__loader.get_map(map_name)
+            for tag in map_obj.tags:
+                tags_mapping[tag].add(map_name)
 
         return tags_mapping
-
-    def __get_tags(self) -> List[str]:
-        tags = set()
-        for item in self._data:
-            tags |= set(item["tags"])
-
-        return list(tags)
 
     def __get_query_tags(self, query: str) -> List[str]:
         query_tags = list(set(list(map(str.strip, query.split()))))
         tags_matches = set()
+        # self.__accuracy is a float between 0 and 1. tries is the number of times we will try to find a match
+        tries = int(1.0 / self.__accuracy) + 1
+        # tries = int(100 // self.__accuracy) + 1
         for tag in query_tags:
-            matches = difflib.get_close_matches(tag, self._tags, n=5, cutoff=0.5)
-            tags_matches |= set(matches)
+            for i in range(tries):
+                cutoff = 1.0 - (self.accuracy * i)
+                matches = difflib.get_close_matches(
+                    tag, self.__tags, n=5, cutoff=cutoff
+                )
+                if len(matches) != 0:
+                    tags_matches |= set(matches)
+                    break
 
         return list(tags_matches)
 
     def __get_maps_scores(self, query_tags: List[str]) -> Dict[str, int]:
         scores = defaultdict(lambda: 0)
         for tag in query_tags:
-            for map_name in self._tags_mapping[tag]:
+            for map_name in self.__tags_mapping[tag]:
                 scores[map_name] += 1
 
         # sort the scores by the number of tags matched in descending order and then by the map name in ascending order
@@ -90,10 +84,10 @@ class MapSearcher(Searcher):
     @lru_cache(maxsize=256)
     def search(self, query: str, n: int = -1) -> List[str]:
         if n < 0:
-            n = len(self._data)
+            n = len(self.__maps_names)
 
         if query.strip() == "":
-            return self._maps[:n]
+            return self.__maps_names[:n]
 
         query_tags = self.__get_query_tags(query)
         maps_scores = self.__get_maps_scores(query_tags)

@@ -1,14 +1,14 @@
 """
     ____  _   ______         _    ______________
    / __ \/ | / / __ \       | |  / /_  __/_  __/
-  / / / /  |/ / / / /       | | / / / /   / /   
- / /_/ / /|  / /_/ /        | |/ / / /   / /    
-/_____/_/ |_/_____/         |___/ /_/   /_/     
+  / / / /  |/ / / / /       | | / / / /   / /
+ / /_/ / /|  / /_/ /        | |/ / / /   / /
+/_____/_/ |_/_____/         |___/ /_/   /_/
     by Shahaf Ashash and Simon Labunsky
-                                            
+
 """
 
-__version__ = '1.0.0'
+__version__ = "1.0.0"
 
 from typing import Tuple
 from math import cos, sin, pi
@@ -62,11 +62,12 @@ class GameManager:
         self.clock = clock
 
         # load maps
-        with open("maps.json", 'r') as file:
+        with open("maps.json", "r") as file:
             maps = json.load(file)
-        self.map_searcher = MapSearcher(maps)
+
         self.loader = Loader("maps.json")
-        self.maps = list(self.loader.maps.keys())
+        self.map_searcher = MapSearcher(loader=self.loader)
+        self.maps = self.loader.maps_names
 
         self.current_map_name = None
         self.current_map_frames = None
@@ -113,11 +114,14 @@ class GameManager:
 
     def setup(self):
         cm = StackPanel()
-        label_title = Label('DND VIRTUAL TABLE TOP', GUI.get_font_at(2))
+        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(2))
         cm.append(label_title)
-        label_credits = Label('By Shahaf Ashash and Simon Labunsky', GUI.get_font_at(0))
+        label_credits = Label("By Shahaf Ashash and Simon Labunsky", GUI.get_font_at(0))
         cm.append(label_credits)
-        cm.pos = (self.screen.get_width() // 2 - cm.size[0] // 2, self.screen.get_height() // 2 - cm.size[1] // 2)
+        cm.pos = (
+            self.screen.get_width() // 2 - cm.size[0] // 2,
+            self.screen.get_height() // 2 - cm.size[1] // 2,
+        )
         cm.frame = GUI.frames[0]
         self.main_menu_label = cm
 
@@ -201,7 +205,7 @@ class GameManager:
         self.screen.blit(frame, (0, 0))
 
         if self.avernus_filter:
-            self.screen.fill((255,100,100), special_flags=pygame.BLEND_MULT)
+            self.screen.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
         self.draw_grid()
 
         GUI.draw()
@@ -252,8 +256,11 @@ def handle_gui_events(event: str):
         GUI.elements.remove(GameManager.get_instance().thumbnail_columns)
         thumbnail_columns = create_columns_maps(found_maps)
         GameManager.get_instance().thumbnail_columns = thumbnail_columns
-        thumbnail_columns.set_pos((GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200))
+        thumbnail_columns.set_pos(
+            (GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200)
+        )
         GUI.elements.append(thumbnail_columns)
+
 
 def load_maps(json_path: str):
     with open(json_path, "r") as f:
@@ -262,13 +269,15 @@ def load_maps(json_path: str):
     maps = [map["name"] for map in maps_content]
     return maps
 
+
 def get_background():
     image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
     return image
 
+
 def create_columns_maps(found_maps):
-    surf = pg.Surface((320,320 * (9/16)))
+    surf = pg.Surface((320, 320 * (9 / 16)))
     thumbnail_columns = Columns(3)
     for map in found_maps:
         thumbnail_stackpanel = StackPanel()
@@ -280,6 +289,7 @@ def create_columns_maps(found_maps):
         thumbnail_columns.scrollable = True
     return thumbnail_columns
 
+
 def create_menu_maps(maps: list[str], pos: tuple[int, int]):
     game_manager = GameManager.get_instance()
     if game_manager.search_textbox:
@@ -288,17 +298,22 @@ def create_menu_maps(maps: list[str], pos: tuple[int, int]):
             GUI.elements.append(game_manager.thumbnail_columns)
         return
 
-    search_textbox = TextBox('search', 'search for maps', GUI.get_font_at(0))
+    search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0))
     thumbnail_columns = create_columns_maps(maps)
 
-    search_textbox.set_pos((GUI.win.get_width() // 2 - search_textbox.size[0] // 2, 100))
-    thumbnail_columns.set_pos((GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200))
+    search_textbox.set_pos(
+        (GUI.win.get_width() // 2 - search_textbox.size[0] // 2, 100)
+    )
+    thumbnail_columns.set_pos(
+        (GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200)
+    )
 
     game_manager.search_textbox = search_textbox
     game_manager.thumbnail_columns = thumbnail_columns
 
     GUI.elements.append(thumbnail_columns)
     GUI.elements.append(search_textbox)
+
 
 def main():
     pg.init()
@@ -307,14 +322,14 @@ def main():
     clock = pg.time.Clock()
     game_manager = GameManager(screen, clock)
 
-    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72.json'))
-    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay72B.json'))
-    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay124.json'))
-    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30.json'))
-    GUI.fonts.append(Font(r'./assets/fonts/CriticalRolePlay30B.json'))
+    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72.json"))
+    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72B.json"))
+    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay124.json"))
+    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30.json"))
+    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30B.json"))
 
     GUI.win = screen
-    
+
     GUI.gui_event_handler = handle_gui_events
 
     GUI.frames.append(Frame(r"./assets/images/frame.json"))

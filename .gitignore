@@ -1,4 +1,5 @@
 /__pycache__/*.pyc
 .gitignore
 *.mp4
+assets/thumbnails/*.jpg
 venv
