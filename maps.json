@@ -2138,7 +2138,12 @@
       ")",
       "animated",
       "battlemaps",
-      "roll"
+      "roll",
+      "dead",
+      "bodies",
+      "field",
+      "soldiers",
+      "blood"
     ],
     "thumbnail":"assets/thumbnails/(Battlefield) Animated Battlemaps Roll.jpg"
   },

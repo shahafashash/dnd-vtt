@@ -61,11 +61,9 @@ class GameManager:
         self.screen = screen
         self.clock = clock
 
-        # load maps
-        with open("maps.json", "r") as file:
-            maps = json.load(file)
-
+        self.draw_loading_screen()
         self.loader = Loader("maps.json")
+
         self.map_searcher = MapSearcher(loader=self.loader)
         self.maps = self.loader.maps_names
 
@@ -93,6 +91,23 @@ class GameManager:
     def add_event(self, event):
         self.event_que.append(event)
 
+    def draw_loading_screen(self):
+        cm = StackPanel()
+        label_title = Label("LOADING...", GUI.get_font_at(2))
+        cm.append(label_title)
+        cm.pos = (
+            self.screen.get_width() // 2 - cm.size[0] // 2,
+            self.screen.get_height() // 2 - cm.size[1] // 2,
+        )
+        self.loading_screen = cm
+        cm.frame = GUI.frames[0]
+
+        GUI.append(cm)
+        self.screen.blit(get_background(), (0, 0))
+        GUI.step()
+        GUI.draw()
+        pg.display.flip()
+
     def handle_game_events(self):
         while len(self.event_que):
             event = self.event_que.popleft()
@@ -113,6 +128,7 @@ class GameManager:
             self.run_map()
 
     def setup(self):
+        GUI.elements.remove(self.loading_screen)
         cm = StackPanel()
         label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(2))
         cm.append(label_title)
@@ -239,11 +255,6 @@ def draw_grid_hex(surf, size=50, color=GridColors.BLACK.value):
                 pg.draw.lines(surf, color, False, line_offset)
 
 
-def draw_hex_grid(surf):
-    """draws a hexagonic grid on a surface, each hexagon is of size GRID_SIZE"""
-    raise NotImplementedError
-
-
 def handle_gui_events(event: str):
     print(event)
     if event["key"] == "change_map":
@@ -277,11 +288,12 @@ def get_background():
 
 
 def create_columns_maps(found_maps):
-    surf = pg.Surface((320, 320 * (9 / 16)))
     thumbnail_columns = Columns(3)
     for map in found_maps:
+        map_obj = GameManager.get_instance().loader.get_map(map)
+        thumbnail = map_obj.thumbnail
         thumbnail_stackpanel = StackPanel()
-        thumbnail_stackpanel.append(Picture(surf))
+        thumbnail_stackpanel.append(Picture(thumbnail))
         button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
         thumbnail_stackpanel.linked_button = button
         thumbnail_stackpanel.append(button)
@@ -320,7 +332,9 @@ def main():
 
     screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
     clock = pg.time.Clock()
-    game_manager = GameManager(screen, clock)
+
+    GUI.win = screen
+    GUI.gui_event_handler = handle_gui_events
 
     GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72.json"))
     GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72B.json"))
@@ -328,11 +342,9 @@ def main():
     GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30.json"))
     GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30B.json"))
 
-    GUI.win = screen
-
-    GUI.gui_event_handler = handle_gui_events
-
     GUI.frames.append(Frame(r"./assets/images/frame.json"))
+
+    game_manager = GameManager(screen, clock)
 
     game_manager.setup()
 

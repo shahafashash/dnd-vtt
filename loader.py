@@ -15,7 +15,7 @@ class Map:
         self.__path = str(current_dir.joinpath(path).resolve())
         self.__tags = list(map(str.lower, tags))
         self.__thumbnail_path = str(current_dir.joinpath(thumbnail).resolve())
-        thumbnail_size = (320, 300 * (9 // 16))
+        thumbnail_size = (320, 320 * (9 / 16))
         self.__thumbnail = self.__load_thumbnail(self.__thumbnail_path, thumbnail_size)
 
         self.__cap = None
