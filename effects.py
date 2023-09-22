@@ -23,8 +23,7 @@ class DarknessEffect(Effect):
         self.surf = pygame.Surface(self.win.get_size(), pygame.SRCALPHA)
         self.surf.fill((0, 0, 0, self.amount))
 
-        self.light_surf_base = pygame.Surface((16,16), pygame.SRCALPHA)
-        pygame.draw.circle(self.light_surf_base, (0,0,0, 255), (8, 8), 7)
+        self.light_surf_base = pygame.image.load(r'./assets/images/light.png')
 
         self.focused_light = None
         self.dragged_light = None

@@ -157,7 +157,7 @@ class GameManager:
 
     def main_menu(self):
         background = get_background()
-
+ 
         for event in pg.event.get():
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
