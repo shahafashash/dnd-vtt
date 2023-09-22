@@ -57,10 +57,16 @@ class DarknessEffect(Effect):
         elif event.type == pygame.MOUSEWHEEL:
             if self.focused_light:
                 self.focused_light[1] += event.y * 5
+                if self.focused_light[1] <= 0:
+                    self.focused_light[1] = 1
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_l:
                 mouse_pos = pygame.mouse.get_pos()
                 self.create_light_source(mouse_pos, 50)
+            elif event.key == pygame.K_DELETE:
+                if self.focused_light:
+                    self.light_sources.remove(self.focused_light)
+                    self.focused_light = None
 
     def step(self):
         self.focused_light = None
