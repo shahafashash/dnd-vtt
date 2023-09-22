@@ -21,7 +21,7 @@ from gui import *
 from font import Font
 from loader import Loader
 from searchers import MapSearcher
-from effects import DarknessEffect
+from effects import Effects, DarknessEffect, ColorFilter
 
 FPS = 60
 
@@ -78,15 +78,13 @@ class GameManager:
         self.grid_state = next(self.grid_states)
         self.grid_color = next(self.grid_colors)
 
-        self.avernus_filter = False
-
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
 
         self.search_textbox = None
         self.thumbnail_columns = None
 
-        self.effects = DarknessEffect(self.screen)
+        self.effects = Effects()
 
     def get_instance():
         return GameManager._instance
@@ -198,9 +196,21 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == pg.K_c:
                     self.grid_color = next(self.grid_colors)
+                elif event.key == pg.K_n:
+                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
+                        for effect in self.effects:
+                            if effect.name == 'darkness':
+                                self.effects.remove(effect)
+                                return
+                        self.effects.append(DarknessEffect(self.screen))
                 elif event.key == pg.K_a:
                     if pygame.key.get_mods() & pygame.KMOD_CTRL:
-                        self.avernus_filter = not self.avernus_filter
+                        for effect in self.effects:
+                            if effect.name == 'avernus':
+                                self.effects.remove(effect)
+                                return
+                        self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
+                        self.effects[-1].name = 'avernus'
                 elif event.key == pg.K_RIGHT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
@@ -229,8 +239,6 @@ class GameManager:
 
         self.effects.draw()
 
-        if self.avernus_filter:
-            self.screen.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
         self.draw_grid()
 
         GUI.draw()

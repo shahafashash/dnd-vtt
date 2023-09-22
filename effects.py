@@ -1,7 +1,19 @@
 import pygame
 
+class Effects(list):
+    def handle_events(self, event):
+        for effect in self:
+            effect.handle_events(event)
+    def step(self):
+        for effect in self:
+            effect.step()
+    def draw(self):
+        for effect in self:
+            effect.draw()
+
 class Effect:
     def __init__(self, win):
+        self.name = ''
         self.win = win
         self.surf = None
 
@@ -18,6 +30,7 @@ class Effect:
 class DarknessEffect(Effect):
     def __init__(self, win):
         super().__init__(win)
+        self.name = 'darkness'
         self.amount = 200
         self.light_sources = []
         self.surf = pygame.Surface(self.win.get_size(), pygame.SRCALPHA)
@@ -70,6 +83,10 @@ class DarknessEffect(Effect):
             pygame.draw.circle(self.win, (255,255,255), self.focused_light[0], 50, 1)
 
 
-class ColorFilter:
-    def __init__(self):
-        pass
+class ColorFilter(Effect):
+    def __init__(self, win, color):
+        super().__init__(win)
+        self.color = color
+    def draw(self):
+        self.win.fill(self.color, special_flags=pygame.BLEND_MULT)
+        self.win.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
