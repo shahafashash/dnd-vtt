@@ -23,7 +23,7 @@ class GUI:
 
     frames = []
 
-    debug = False
+    debug = True
 
     def event_handle(event):
         # pygame left click
@@ -142,7 +142,7 @@ class Label(Element):
 
 class Button(Element):
     ''' a button, send event: {'key': _, 'text': _} '''
-    def __init__(self, text, key, font=None, selected_font=None):
+    def __init__(self, text, key, font=None, selected_font=None, custom_width=-1):
         super().__init__()
         self.text = text
         self.font = font
@@ -152,10 +152,24 @@ class Button(Element):
         if not self.selected_font:
             self.selected_font = GUI.fonts[0]
 
-        self.surf = self.font.render(text, True, (0,0,0))
-        self.surf_selected = self.selected_font.render(text, True, (100,100,100))
+        self.text_width = 0
+        self.custom_width = custom_width
+        self.surf = self.render(self.text, self.font, (0,0,0))
+        self.surf_selected = self.render(text, self.selected_font, (100,100,100))
+
         self.key = key
         self.size = self.surf.get_size()
+
+    def render(self, text, font, color):
+        rendered_text = font.render(text, True, color)
+        self.text_width = rendered_text.get_width()
+        if self.custom_width != -1:
+            self.text_width = min(rendered_text.get_width(), self.custom_width)
+            surf = pygame.Surface((self.custom_width, rendered_text.get_height()), pygame.SRCALPHA)
+            surf.blit(rendered_text, (0,0))
+        else:
+            surf = rendered_text
+        return surf
 
     def step(self):
         super().step()
@@ -174,7 +188,7 @@ class Button(Element):
         super().draw()
         pos = self.get_abs_pos()
         center = (
-                    pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
+                    pos[0] + self.size[0] // 2 - self.text_width // 2,
                     pos[1],
                  )
 
@@ -208,7 +222,7 @@ class TextBox(Element):
 
     def start_typing(self):
         self.typing = True
-        self.timer = 60
+        self.timer = 20
         self.refresh()
     
     def stop_typing(self):
@@ -271,7 +285,7 @@ class TextBox(Element):
             self.timer -= 1
             if self.timer == 0:
                 self.cursor_on = not self.cursor_on
-                self.timer = 60
+                self.timer = 20
                 self.refresh()
 
 

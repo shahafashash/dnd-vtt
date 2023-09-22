@@ -21,6 +21,7 @@ from gui import *
 from font import Font
 from loader import Loader
 from searchers import MapSearcher
+from effects import DarknessEffect
 
 FPS = 60
 
@@ -70,7 +71,7 @@ class GameManager:
         self.current_map_name = None
         self.current_map_frames = None
 
-        self.grid_size = 50
+        self.grid_size = 60
 
         self.grid_states = cycle([grid_state for grid_state in Grid])
         self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
@@ -84,6 +85,8 @@ class GameManager:
 
         self.search_textbox = None
         self.thumbnail_columns = None
+
+        self.effects = DarknessEffect(self.screen)
 
     def get_instance():
         return GameManager._instance
@@ -119,6 +122,15 @@ class GameManager:
             elif event.type == Event.PLAY:
                 self.state = State.GAME_RUM_MAP
 
+    def global_pygame_event_handler(self, event):
+        if event.type == pg.QUIT:
+            exit(0)
+        elif event.type == pg.KEYDOWN:
+            if event.key == pg.K_ESCAPE:
+                exit(0)
+            elif event.key == pg.K_F11:
+                pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
+
     def step(self):
         self.handle_game_events()
 
@@ -148,12 +160,8 @@ class GameManager:
 
         for event in pg.event.get():
             GUI.event_handle(event)
-            if event.type == pg.QUIT:
-                exit(0)
-            elif event.type == pg.KEYDOWN:
-                if event.key == pg.K_ESCAPE:
-                    exit(0)
-            elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
+            self.global_pygame_event_handler(event)
+            if event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
                 if self.main_menu_label in GUI.elements:
                     GUI.elements.remove(self.main_menu_label)
                 create_menu_maps(self.maps, event.pos)
@@ -176,13 +184,11 @@ class GameManager:
     def run_map(self):
         for event in pg.event.get():
             GUI.event_handle(event)
-            if event.type == pg.QUIT:
-                exit(0)
-            elif event.type == pg.KEYDOWN:
-                if event.key == pg.K_ESCAPE:
-                    exit(0)
+            self.global_pygame_event_handler(event)
+            self.effects.handle_events(event)
+            if event.type == pg.KEYDOWN:
                 # plus and minus of num pad
-                elif event.key == pg.K_KP_PLUS:
+                if event.key == pg.K_KP_PLUS:
                     self.grid_size += 5
                 elif event.key == pg.K_KP_MINUS:
                     self.grid_size -= 5
@@ -215,10 +221,13 @@ class GameManager:
                 create_menu_maps(self.maps, event.pos)
 
         GUI.step()
+        self.effects.step()
 
         # draw the frame
         frame = next(self.current_map_frames)
         self.screen.blit(frame, (0, 0))
+
+        self.effects.draw()
 
         if self.avernus_filter:
             self.screen.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
@@ -294,7 +303,7 @@ def create_columns_maps(found_maps):
         thumbnail = map_obj.thumbnail
         thumbnail_stackpanel = StackPanel()
         thumbnail_stackpanel.append(Picture(thumbnail))
-        button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4))
+        button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4), custom_width=400)
         thumbnail_stackpanel.linked_button = button
         thumbnail_stackpanel.append(button)
         thumbnail_columns.append(thumbnail_stackpanel)
