@@ -14,10 +14,7 @@ class Searcher(ABC):
 
 
 class MapSearcher(Searcher):
-    def __init__(self, accuracy: float = 0.05, loader: Loader = None) -> None:
-        if loader is None:
-            loader = Loader("maps.json")
-
+    def __init__(self, loader: Loader, accuracy: float = 0.05) -> None:
         self.__loader = loader
         self.__accuracy = accuracy
         self.__maps_names = self.__loader.maps_names

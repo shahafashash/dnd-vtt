@@ -2,6 +2,10 @@ from typing import List, Dict, Generator, Set, Tuple
 from utils import cycle
 from functools import lru_cache
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
+from queue import Queue
+from pathlib import Path
+import os
 import json
 import cv2
 import pygame as pg
@@ -120,19 +124,33 @@ class Loader:
 
         return tags
 
-    def __load_maps(self, maps_file: str) -> Dict[str, Map]:
-        with open(maps_file, "r") as f:
-            content = json.load(f)
-
-        config = {}
-        for item in content:
+    def __worker_load_maps(self, chunk: List[Dict[str, str]], results: Queue) -> None:
+        for item in chunk:
             name = item["name"].title()
             path = item["path"]
             tags = item["tags"]
             thumbnail = item["thumbnail"]
-            config[name] = Map(name, path, tags, thumbnail)
+            map_obj = Map(name, path, tags, thumbnail)
+            results.put(map_obj)
 
-        return config
+    def __load_maps(self, maps_file: str) -> Dict[str, Map]:
+        with open(maps_file, "r") as f:
+            content = json.load(f)
+
+        n = len(content)
+        workers = os.cpu_count()
+        results = Queue(n)
+        chunks = [content[i::workers] for i in range(workers)]
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            for chunk in chunks:
+                executor.submit(self.__worker_load_maps, chunk, results)
+
+            maps = {}
+            for _ in range(n):
+                map_obj = results.get()
+                maps[map_obj.name] = map_obj
+
+        return maps
 
     @lru_cache(maxsize=256)
     def __find_map(self, map_name: str) -> Map:
@@ -157,8 +175,7 @@ class Loader:
 
     @lru_cache(maxsize=256)
     def find_maps_by_tags(self, tags: List[str]) -> List[Map]:
-        tags = set(map(str.lower, tags))
-        tags = set(map(str.strip, tags))
+        tags = set(map(str.strip, map(str.lower, tags)))
         matches = [
             map_obj for map_obj in self.__maps.values() if tags.issubset(map_obj.tags)
         ]
@@ -166,4 +183,8 @@ class Loader:
 
 
 if __name__ == "__main__":
-    loader = Loader("maps.json")
+    from time import perf_counter
+    from pathlib import Path
+
+    config_file = str(Path(__file__).parent.joinpath("maps.json"))
+    loader = Loader(config_file)
