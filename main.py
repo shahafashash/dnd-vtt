@@ -399,7 +399,7 @@ def create_menu_game():
 def main():
     pg.init()
 
-    screen = pg.display.set_mode((1280, 720), pygame.RESIZABLE)
+    screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
     clock = pg.time.Clock()
 
     GUI.win = screen
