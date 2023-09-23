@@ -80,6 +80,9 @@ class GUI:
     def append(element):
         GUI.elements.append(element)
 
+    def remove(element):
+        GUI.elements.remove(element)
+
 
 class Element:
     """Gui Element base class"""
@@ -90,6 +93,7 @@ class Element:
         self.parent = None
         self.frame = None
         self.debug_color = (255, 255, 255)
+        self.name = ''
 
     def step(self):
         pass
@@ -119,6 +123,33 @@ class Element:
             return self.pos
         parent_pos = self.parent.get_abs_pos()
         return (parent_pos[0] + self.pos[0], parent_pos[1] + self.pos[1])
+
+
+class Elements(Element):
+    def __init__(self):
+        super().__init__()
+        self.elements = []
+    
+    def append(self, element):
+        self.elements.append(element)
+
+    def draw(self):
+        super().draw()
+        for element in self.elements:
+            element.draw()
+
+    def step(self):
+        super().step()
+        for element in self.elements:
+            element.step()
+
+    def click(self):
+        for element in self.elements:
+            element.click()
+
+    def no_click(self):
+        for element in self.elements:
+            element.no_click()
 
 
 class Label(Element):
@@ -343,7 +374,7 @@ class StackPanel(Element):
     def step(self):
         super().step()
         if self.scrollable and GUI.gui_scroll_event[1] != 0:
-            self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 20)
+            self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 50)
         if self.linked_button:
             mouse_pos = pygame.mouse.get_pos()
             # if mouse on button
@@ -567,6 +598,37 @@ class Picture(Element):
         GUI.win.blit(
             self.surf, (pos[0] + self.size[0] // 2 - self.surf.get_width() // 2, pos[1])
         )
+
+class Drawer(Element):
+    def __init__(self):
+        super().__init__()
+        # default to right
+        width = 50
+        self.pos = (GUI.win.get_width() - width, 0)
+        self.size = (width, GUI.win.get_height())
+        self.open = False
+        self.element = None
+        self.element_target_pos = (GUI.win.get_width(),0)
+    def set_element(self, element):
+        self.element = element
+        self.element.set_pos(self.element_target_pos)
+    def step(self):
+        super().step()
+        mouse_pos = pygame.mouse.get_pos()
+        pos = self.get_abs_pos()
+        if (
+            mouse_pos[0] > pos[0]
+            and mouse_pos[0] < pos[0] + self.size[0]
+            and mouse_pos[1] > pos[1]
+            and mouse_pos[1] < pos[1] + self.size[1]
+        ):
+            self.open = True
+        if self.open:
+            pass
+        self.element.step()
+    def draw(self):
+        self.element.draw()
+
 
 
 def test(event):
