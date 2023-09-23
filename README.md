@@ -1,5 +1,7 @@
 # Dnd Virtual Table Top
 
+![](./assets/images/preview.png "Preview")
+
 A table Top for dragons and dungeons.
 
 ### Features:

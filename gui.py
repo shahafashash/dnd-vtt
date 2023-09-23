@@ -93,6 +93,7 @@ class Element:
         self.parent = None
         self.frame = None
         self.debug_color = (255, 255, 255)
+        self.name = ''
 
     def step(self):
         pass
@@ -373,7 +374,7 @@ class StackPanel(Element):
     def step(self):
         super().step()
         if self.scrollable and GUI.gui_scroll_event[1] != 0:
-            self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 20)
+            self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 50)
         if self.linked_button:
             mouse_pos = pygame.mouse.get_pos()
             # if mouse on button

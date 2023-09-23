@@ -378,6 +378,9 @@ def create_menu_game():
     game_manager = GameManager.get_instance()
     if game_manager.current_menu and game_manager.current_menu in GUI.elements:
         GUI.remove(game_manager.current_menu)
+        if game_manager.current_menu.name == 'game_menu':
+            game_manager.current_menu = None
+            return
     
     font1 = GUI.get_font_at(0)
     font2 = GUI.get_font_at(1)
@@ -394,6 +397,7 @@ def create_menu_game():
         )
     )
     game_manager.current_menu = stackPanel
+    game_manager.current_menu.name = 'game_menu'
     GUI.append(stackPanel)
 
 def main():
