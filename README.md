@@ -6,4 +6,8 @@ A table Top for dragons and dungeons.
 
 * [X] Animated dynamic maps Support
 * [X] Customizable grid (hex, quads, colors, transparency ...)
-* [ ] Advanced map search
+* [X] Advanced map search
+* [ ] Overlay color filters
+* [ ] Night/Darkness mode with dynamic lighting
+* [ ] Objects on map
+* [ ] Favourites maps
