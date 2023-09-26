@@ -1,71 +1,77 @@
 [
   {
-    "name":"Bridge Nightime With Lights",
-    "path":"assets/maps/Bridge Nightime with Lights.mp4",
-    "tags":[
+    "name": "Bridge Nightime With Lights",
+    "path": "assets/maps/Bridge Nightime with Lights.mp4",
+    "tags": [
       "bridge",
       "nightime",
       "with",
       "lights"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Nightime With Lights.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Nightime With Lights.jpg",
+    "url": ""
   },
   {
-    "name":"Broken Bridge 00 Daytime",
-    "path":"assets/maps/Broken Bridge 00 Daytime.mp4",
-    "tags":[
+    "name": "Broken Bridge 00 Daytime",
+    "path": "assets/maps/Broken Bridge 00 Daytime.mp4",
+    "tags": [
       "broken",
       "bridge",
       "00",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Broken Bridge 00 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Broken Bridge 00 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Broken Bridge 01 Daytime",
-    "path":"assets/maps/Broken Bridge 01 Daytime.mp4",
-    "tags":[
+    "name": "Broken Bridge 01 Daytime",
+    "path": "assets/maps/Broken Bridge 01 Daytime.mp4",
+    "tags": [
       "broken",
       "bridge",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Broken Bridge 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Broken Bridge 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Broken Bridge Daytime 02",
-    "path":"assets/maps/Broken Bridge Daytime 02.mp4",
-    "tags":[
+    "name": "Broken Bridge Daytime 02",
+    "path": "assets/maps/Broken Bridge Daytime 02.mp4",
+    "tags": [
       "broken",
       "bridge",
       "daytime",
       "02"
     ],
-    "thumbnail":"assets/thumbnails/Broken Bridge Daytime 02.jpg"
+    "thumbnail": "assets/thumbnails/Broken Bridge Daytime 02.jpg",
+    "url": ""
   },
   {
-    "name":"Broken Bridge Daytime 03",
-    "path":"assets/maps/Broken Bridge Daytime 03.mp4",
-    "tags":[
+    "name": "Broken Bridge Daytime 03",
+    "path": "assets/maps/Broken Bridge Daytime 03.mp4",
+    "tags": [
       "broken",
       "bridge",
       "daytime",
       "03"
     ],
-    "thumbnail":"assets/thumbnails/Broken Bridge Daytime 03.jpg"
+    "thumbnail": "assets/thumbnails/Broken Bridge Daytime 03.jpg",
+    "url": ""
   },
   {
-    "name":"Campfire",
-    "path":"assets/maps/campfire1.mp4",
-    "tags":[
+    "name": "Campfire",
+    "path": "assets/maps/campfire1.mp4",
+    "tags": [
       "campfire"
     ],
-    "thumbnail":"assets/thumbnails/Campfire.jpg"
+    "thumbnail": "assets/thumbnails/Campfire.jpg",
+    "url": ""
   },
   {
-    "name":"City Gate Bridge Nightime With Lights",
-    "path":"assets/maps/City Gate Bridge Nightime with lights.mp4",
-    "tags":[
+    "name": "City Gate Bridge Nightime With Lights",
+    "path": "assets/maps/City Gate Bridge Nightime with lights.mp4",
+    "tags": [
       "city",
       "gate",
       "bridge",
@@ -73,46 +79,50 @@
       "with",
       "lights"
     ],
-    "thumbnail":"assets/thumbnails/City Gate Bridge Nightime With Lights.jpg"
+    "thumbnail": "assets/thumbnails/City Gate Bridge Nightime With Lights.jpg",
+    "url": ""
   },
   {
-    "name":"City Gate Nightime With Lights",
-    "path":"assets/maps/City Gate Nightime with lights.mp4",
-    "tags":[
+    "name": "City Gate Nightime With Lights",
+    "path": "assets/maps/City Gate Nightime with lights.mp4",
+    "tags": [
       "city",
       "gate",
       "nightime",
       "with",
       "lights"
     ],
-    "thumbnail":"assets/thumbnails/City Gate Nightime With Lights.jpg"
+    "thumbnail": "assets/thumbnails/City Gate Nightime With Lights.jpg",
+    "url": ""
   },
   {
-    "name":"City Gates Bridge Daytime",
-    "path":"assets/maps/City Gates Bridge Daytime.mp4",
-    "tags":[
+    "name": "City Gates Bridge Daytime",
+    "path": "assets/maps/City Gates Bridge Daytime.mp4",
+    "tags": [
       "city",
       "gates",
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Gates Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Gates Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Market Daytime 01",
-    "path":"assets/maps/City Market Daytime 01.mp4",
-    "tags":[
+    "name": "City Market Daytime 01",
+    "path": "assets/maps/City Market Daytime 01.mp4",
+    "tags": [
       "city",
       "market",
       "daytime",
       "01"
     ],
-    "thumbnail":"assets/thumbnails/City Market Daytime 01.jpg"
+    "thumbnail": "assets/thumbnails/City Market Daytime 01.jpg",
+    "url": ""
   },
   {
-    "name":"City Part 1 Docks And Marketplace",
-    "path":"assets/maps/City Part 1 Docks and Marketplace.mp4",
-    "tags":[
+    "name": "City Part 1 Docks And Marketplace",
+    "path": "assets/maps/City Part 1 Docks and Marketplace.mp4",
+    "tags": [
       "city",
       "part",
       "1",
@@ -120,158 +130,172 @@
       "and",
       "marketplace"
     ],
-    "thumbnail":"assets/thumbnails/City Part 1 Docks And Marketplace.jpg"
+    "thumbnail": "assets/thumbnails/City Part 1 Docks And Marketplace.jpg",
+    "url": ""
   },
   {
-    "name":"City Street Nightime With Lights",
-    "path":"assets/maps/City Street Nightime with lights.mp4",
-    "tags":[
+    "name": "City Street Nightime With Lights",
+    "path": "assets/maps/City Street Nightime with lights.mp4",
+    "tags": [
       "city",
       "street",
       "nightime",
       "with",
       "lights"
     ],
-    "thumbnail":"assets/thumbnails/City Street Nightime With Lights.jpg"
+    "thumbnail": "assets/thumbnails/City Street Nightime With Lights.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 01 Nightime",
-    "path":"assets/maps/City Streets 01 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 01 Nightime",
+    "path": "assets/maps/City Streets 01 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "01",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 01 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 01 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 03 Nightime",
-    "path":"assets/maps/City Streets 03 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 03 Nightime",
+    "path": "assets/maps/City Streets 03 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "03",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 03 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 03 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 04 Nightime",
-    "path":"assets/maps/City Streets 04 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 04 Nightime",
+    "path": "assets/maps/City Streets 04 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "04",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 04 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 04 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 05 Bridge Nightime",
-    "path":"assets/maps/City Streets 05 Bridge Nightime.mp4",
-    "tags":[
+    "name": "City Streets 05 Bridge Nightime",
+    "path": "assets/maps/City Streets 05 Bridge Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "05",
       "bridge",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 05 Bridge Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 05 Bridge Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 06 Nightime",
-    "path":"assets/maps/City Streets 06 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 06 Nightime",
+    "path": "assets/maps/City Streets 06 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "06",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 06 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 06 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 07 Nightime",
-    "path":"assets/maps/City Streets 07 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 07 Nightime",
+    "path": "assets/maps/City Streets 07 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "07",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 07 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 07 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 08 Nightime",
-    "path":"assets/maps/City Streets 08 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 08 Nightime",
+    "path": "assets/maps/City Streets 08 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "08",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 08 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 08 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 09 Nightime",
-    "path":"assets/maps/City Streets 09 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 09 Nightime",
+    "path": "assets/maps/City Streets 09 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "09",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 09 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 09 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 10 Nightime",
-    "path":"assets/maps/City Streets 10 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 10 Nightime",
+    "path": "assets/maps/City Streets 10 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "10",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 10 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 10 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 11 Market Nightime",
-    "path":"assets/maps/City Streets 11 Market Nightime.mp4",
-    "tags":[
+    "name": "City Streets 11 Market Nightime",
+    "path": "assets/maps/City Streets 11 Market Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "11",
       "market",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 11 Market Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 11 Market Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 12 Nightime",
-    "path":"assets/maps/City Streets 12 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 12 Nightime",
+    "path": "assets/maps/City Streets 12 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "12",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 12 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 12 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 13 Nightime",
-    "path":"assets/maps/City Streets 13 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 13 Nightime",
+    "path": "assets/maps/City Streets 13 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "13",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 13 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 13 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 14 Docks Bridge Nightime",
-    "path":"assets/maps/City Streets 14 Docks Bridge Nightime.mp4",
-    "tags":[
+    "name": "City Streets 14 Docks Bridge Nightime",
+    "path": "assets/maps/City Streets 14 Docks Bridge Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "14",
@@ -279,12 +303,13 @@
       "bridge",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 14 Docks Bridge Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 14 Docks Bridge Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 15 Docks Bridge Daytime",
-    "path":"assets/maps/City Streets 15 Docks Bridge Daytime.mp4",
-    "tags":[
+    "name": "City Streets 15 Docks Bridge Daytime",
+    "path": "assets/maps/City Streets 15 Docks Bridge Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "15",
@@ -292,12 +317,13 @@
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 15 Docks Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 15 Docks Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 16 Docks Bridge Daytime",
-    "path":"assets/maps/City Streets 16 Docks Bridge Daytime.mp4",
-    "tags":[
+    "name": "City Streets 16 Docks Bridge Daytime",
+    "path": "assets/maps/City Streets 16 Docks Bridge Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "16",
@@ -305,57 +331,62 @@
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 16 Docks Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 16 Docks Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 17 Docks Nighttime",
-    "path":"assets/maps/City Streets 17 Docks Nighttime.mp4",
-    "tags":[
+    "name": "City Streets 17 Docks Nighttime",
+    "path": "assets/maps/City Streets 17 Docks Nighttime.mp4",
+    "tags": [
       "city",
       "streets",
       "17",
       "docks",
       "nighttime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 17 Docks Nighttime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 17 Docks Nighttime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 18 Daytime",
-    "path":"assets/maps/City Streets 18 Daytime.mp4",
-    "tags":[
+    "name": "City Streets 18 Daytime",
+    "path": "assets/maps/City Streets 18 Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "18",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 18 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 18 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 19 Daytime",
-    "path":"assets/maps/City Streets 19 Daytime.mp4",
-    "tags":[
+    "name": "City Streets 19 Daytime",
+    "path": "assets/maps/City Streets 19 Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "19",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 19 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 19 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 20 Daytime",
-    "path":"assets/maps/City Streets 20 Daytime.mp4",
-    "tags":[
+    "name": "City Streets 20 Daytime",
+    "path": "assets/maps/City Streets 20 Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "20",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 20 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 20 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 21 Walled Garden Daytime",
-    "path":"assets/maps/City Streets 21 Walled Garden Daytime.mp4",
-    "tags":[
+    "name": "City Streets 21 Walled Garden Daytime",
+    "path": "assets/maps/City Streets 21 Walled Garden Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "21",
@@ -363,12 +394,13 @@
       "garden",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 21 Walled Garden Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 21 Walled Garden Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 22 Docks Ship Daytime",
-    "path":"assets/maps/City Streets 22 Docks Ship Daytime.mp4",
-    "tags":[
+    "name": "City Streets 22 Docks Ship Daytime",
+    "path": "assets/maps/City Streets 22 Docks Ship Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "22",
@@ -376,12 +408,13 @@
       "ship",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 22 Docks Ship Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 22 Docks Ship Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 23 Tavern Forecourt Daytime",
-    "path":"assets/maps/City Streets 23 Tavern Forecourt Daytime.mp4",
-    "tags":[
+    "name": "City Streets 23 Tavern Forecourt Daytime",
+    "path": "assets/maps/City Streets 23 Tavern Forecourt Daytime.mp4",
+    "tags": [
       "city",
       "streets",
       "23",
@@ -389,12 +422,13 @@
       "forecourt",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 23 Tavern Forecourt Daytime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 23 Tavern Forecourt Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 24 Outside Of Building Nightime",
-    "path":"assets/maps/City Streets 24 Outside of Building Nightime.mp4",
-    "tags":[
+    "name": "City Streets 24 Outside Of Building Nightime",
+    "path": "assets/maps/City Streets 24 Outside of Building Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "24",
@@ -403,227 +437,247 @@
       "building",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 24 Outside Of Building Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 24 Outside Of Building Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Beach 01 Daytime",
-    "path":"assets/maps/Coastal Beach 01 Daytime.mp4",
-    "tags":[
+    "name": "Coastal Beach 01 Daytime",
+    "path": "assets/maps/Coastal Beach 01 Daytime.mp4",
+    "tags": [
       "coastal",
       "beach",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Beach 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Beach 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Beach 02 Nightime",
-    "path":"assets/maps/Coastal Beach 02 Nightime.mp4",
-    "tags":[
+    "name": "Coastal Beach 02 Nightime",
+    "path": "assets/maps/Coastal Beach 02 Nightime.mp4",
+    "tags": [
       "coastal",
       "beach",
       "02",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Beach 02 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Beach 02 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Beach 03 Desert Daytime",
-    "path":"assets/maps/Coastal Beach 03 Desert Daytime.mp4",
-    "tags":[
+    "name": "Coastal Beach 03 Desert Daytime",
+    "path": "assets/maps/Coastal Beach 03 Desert Daytime.mp4",
+    "tags": [
       "coastal",
       "beach",
       "03",
       "desert",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Beach 03 Desert Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Beach 03 Desert Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 01 Nightime",
-    "path":"assets/maps/Coastal Path 01 Nightime.mp4",
-    "tags":[
+    "name": "Coastal Path 01 Nightime",
+    "path": "assets/maps/Coastal Path 01 Nightime.mp4",
+    "tags": [
       "coastal",
       "path",
       "01",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 01 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 01 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 02 Pier Daytime",
-    "path":"assets/maps/Coastal Path 02 Pier Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 02 Pier Daytime",
+    "path": "assets/maps/Coastal Path 02 Pier Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "02",
       "pier",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 02 Pier Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 02 Pier Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 03 Pier Daytime",
-    "path":"assets/maps/Coastal Path 03 Pier Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 03 Pier Daytime",
+    "path": "assets/maps/Coastal Path 03 Pier Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "03",
       "pier",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 03 Pier Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 03 Pier Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 04 Nightime",
-    "path":"assets/maps/Coastal Path 04 Nightime.mp4",
-    "tags":[
+    "name": "Coastal Path 04 Nightime",
+    "path": "assets/maps/Coastal Path 04 Nightime.mp4",
+    "tags": [
       "coastal",
       "path",
       "04",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 04 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 04 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 05 Cliff Daytime",
-    "path":"assets/maps/Coastal Path 05 Cliff Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 05 Cliff Daytime",
+    "path": "assets/maps/Coastal Path 05 Cliff Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "05",
       "cliff",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 05 Cliff Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 05 Cliff Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 06 Cliff  Daytime",
-    "path":"assets/maps/Coastal Path 06 Cliff  Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 06 Cliff  Daytime",
+    "path": "assets/maps/Coastal Path 06 Cliff  Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "06",
       "cliff",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 06 Cliff  Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 06 Cliff  Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 07 Daytime",
-    "path":"assets/maps/Coastal Path 07 Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 07 Daytime",
+    "path": "assets/maps/Coastal Path 07 Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "07",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 07 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 07 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Path 08 Hut Daytime",
-    "path":"assets/maps/Coastal Path 08 Hut Daytime.mp4",
-    "tags":[
+    "name": "Coastal Path 08 Hut Daytime",
+    "path": "assets/maps/Coastal Path 08 Hut Daytime.mp4",
+    "tags": [
       "coastal",
       "path",
       "08",
       "hut",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Path 08 Hut Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Path 08 Hut Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Coastal Village Nightime",
-    "path":"assets/maps/Coastal Village Nightime.mp4",
-    "tags":[
+    "name": "Coastal Village Nightime",
+    "path": "assets/maps/Coastal Village Nightime.mp4",
+    "tags": [
       "coastal",
       "village",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Coastal Village Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Coastal Village Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 01 Daytime",
-    "path":"assets/maps/Country Road 01 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 01 Daytime",
+    "path": "assets/maps/Country Road 01 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 02 Daytime",
-    "path":"assets/maps/Country Road 02 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 02 Daytime",
+    "path": "assets/maps/Country Road 02 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "02",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 02 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 02 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 03 Daytime",
-    "path":"assets/maps/Country Road 03 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 03 Daytime",
+    "path": "assets/maps/Country Road 03 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "03",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 03 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 03 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 04 Daytime",
-    "path":"assets/maps/Country Road 04 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 04 Daytime",
+    "path": "assets/maps/Country Road 04 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "04",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 04 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 04 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 05 Daytime",
-    "path":"assets/maps/Country Road 05 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 05 Daytime",
+    "path": "assets/maps/Country Road 05 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "05",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 05 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 05 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 06 Daytime",
-    "path":"assets/maps/Country Road 06 Daytime.mp4",
-    "tags":[
+    "name": "Country Road 06 Daytime",
+    "path": "assets/maps/Country Road 06 Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "06",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 06 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 06 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 07 Bridge Daytime",
-    "path":"assets/maps/Country Road 07 Bridge Daytime.mp4",
-    "tags":[
+    "name": "Country Road 07 Bridge Daytime",
+    "path": "assets/maps/Country Road 07 Bridge Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "07",
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 07 Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 07 Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 08 Bridge Daytime Crazyriver",
-    "path":"assets/maps/Country Road 08 Bridge Daytime crazyriver.mp4",
-    "tags":[
+    "name": "Country Road 08 Bridge Daytime Crazyriver",
+    "path": "assets/maps/Country Road 08 Bridge Daytime crazyriver.mp4",
+    "tags": [
       "country",
       "road",
       "08",
@@ -631,12 +685,13 @@
       "daytime",
       "crazyriver"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 08 Bridge Daytime Crazyriver.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 08 Bridge Daytime Crazyriver.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 09 Vendors Tents Daytime",
-    "path":"assets/maps/Country Road 09 Vendors Tents Daytime.mp4",
-    "tags":[
+    "name": "Country Road 09 Vendors Tents Daytime",
+    "path": "assets/maps/Country Road 09 Vendors Tents Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "09",
@@ -644,12 +699,13 @@
       "tents",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 09 Vendors Tents Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 09 Vendors Tents Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 10 Vendors Tents Daytime",
-    "path":"assets/maps/Country Road 10 Vendors Tents Daytime.mp4",
-    "tags":[
+    "name": "Country Road 10 Vendors Tents Daytime",
+    "path": "assets/maps/Country Road 10 Vendors Tents Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "10",
@@ -657,12 +713,13 @@
       "tents",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 10 Vendors Tents Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 10 Vendors Tents Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 11 Small House Daytime",
-    "path":"assets/maps/Country Road 11 Small House Daytime.mp4",
-    "tags":[
+    "name": "Country Road 11 Small House Daytime",
+    "path": "assets/maps/Country Road 11 Small House Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "11",
@@ -670,36 +727,39 @@
       "house",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 11 Small House Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 11 Small House Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 12 Ambush Site",
-    "path":"assets/maps/Country Road 12 Ambush Site.mp4",
-    "tags":[
+    "name": "Country Road 12 Ambush Site",
+    "path": "assets/maps/Country Road 12 Ambush Site.mp4",
+    "tags": [
       "country",
       "road",
       "12",
       "ambush",
       "site"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 12 Ambush Site.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 12 Ambush Site.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 13 Ambush Site",
-    "path":"assets/maps/Country Road 13 Ambush Site.mp4",
-    "tags":[
+    "name": "Country Road 13 Ambush Site",
+    "path": "assets/maps/Country Road 13 Ambush Site.mp4",
+    "tags": [
       "country",
       "road",
       "13",
       "ambush",
       "site"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 13 Ambush Site.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 13 Ambush Site.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 14 Broken Bridge Daytime",
-    "path":"assets/maps/Country Road 14 Broken Bridge Daytime.mp4",
-    "tags":[
+    "name": "Country Road 14 Broken Bridge Daytime",
+    "path": "assets/maps/Country Road 14 Broken Bridge Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "14",
@@ -707,12 +767,13 @@
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 14 Broken Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 14 Broken Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 15 Bridge River Crossing Daytime",
-    "path":"assets/maps/Country Road 15 Bridge River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Country Road 15 Bridge River Crossing Daytime",
+    "path": "assets/maps/Country Road 15 Bridge River Crossing Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "15",
@@ -721,12 +782,13 @@
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 15 Bridge River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 15 Bridge River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 16 Ruined Huts Daytime",
-    "path":"assets/maps/Country Road 16 Ruined Huts Daytime.mp4",
-    "tags":[
+    "name": "Country Road 16 Ruined Huts Daytime",
+    "path": "assets/maps/Country Road 16 Ruined Huts Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "16",
@@ -734,12 +796,13 @@
       "huts",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 16 Ruined Huts Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 16 Ruined Huts Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 17  Rest Stop Nightime",
-    "path":"assets/maps/Country Road 17  Rest Stop Nightime.mp4",
-    "tags":[
+    "name": "Country Road 17  Rest Stop Nightime",
+    "path": "assets/maps/Country Road 17  Rest Stop Nightime.mp4",
+    "tags": [
       "country",
       "road",
       "17",
@@ -747,12 +810,13 @@
       "stop",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 17  Rest Stop Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 17  Rest Stop Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Country Road 18 Under The Bridge Daytime",
-    "path":"assets/maps/Country Road 18 Under the Bridge Daytime.mp4",
-    "tags":[
+    "name": "Country Road 18 Under The Bridge Daytime",
+    "path": "assets/maps/Country Road 18 Under the Bridge Daytime.mp4",
+    "tags": [
       "country",
       "road",
       "18",
@@ -761,138 +825,150 @@
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Country Road 18 Under The Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Country Road 18 Under The Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 01 Daytime",
-    "path":"assets/maps/Countryside 01 Daytime.mp4",
-    "tags":[
+    "name": "Countryside 01 Daytime",
+    "path": "assets/maps/Countryside 01 Daytime.mp4",
+    "tags": [
       "countryside",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 02 Daytime",
-    "path":"assets/maps/Countryside 02 Daytime.mp4",
-    "tags":[
+    "name": "Countryside 02 Daytime",
+    "path": "assets/maps/Countryside 02 Daytime.mp4",
+    "tags": [
       "countryside",
       "02",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 02 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 02 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 03 Daytime",
-    "path":"assets/maps/Countryside 03 Daytime.mp4",
-    "tags":[
+    "name": "Countryside 03 Daytime",
+    "path": "assets/maps/Countryside 03 Daytime.mp4",
+    "tags": [
       "countryside",
       "03",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 03 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 03 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 04 Small House Daytime",
-    "path":"assets/maps/Countryside 04 Small House Daytime.mp4",
-    "tags":[
+    "name": "Countryside 04 Small House Daytime",
+    "path": "assets/maps/Countryside 04 Small House Daytime.mp4",
+    "tags": [
       "countryside",
       "04",
       "small",
       "house",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 04 Small House Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 04 Small House Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 05 River Crossing Daytime",
-    "path":"assets/maps/Countryside 05 River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Countryside 05 River Crossing Daytime",
+    "path": "assets/maps/Countryside 05 River Crossing Daytime.mp4",
+    "tags": [
       "countryside",
       "05",
       "river",
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 05 River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 05 River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 06 River Crossing Daytime",
-    "path":"assets/maps/Countryside 06 River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Countryside 06 River Crossing Daytime",
+    "path": "assets/maps/Countryside 06 River Crossing Daytime.mp4",
+    "tags": [
       "countryside",
       "06",
       "river",
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 06 River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 06 River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 07 River Crossing Daytime",
-    "path":"assets/maps/Countryside 07 River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Countryside 07 River Crossing Daytime",
+    "path": "assets/maps/Countryside 07 River Crossing Daytime.mp4",
+    "tags": [
       "countryside",
       "07",
       "river",
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 07 River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 07 River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 08 River Crossing Daytime",
-    "path":"assets/maps/Countryside 08 River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Countryside 08 River Crossing Daytime",
+    "path": "assets/maps/Countryside 08 River Crossing Daytime.mp4",
+    "tags": [
       "countryside",
       "08",
       "river",
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 08 River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 08 River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 09 Ambush Site Daytime",
-    "path":"assets/maps/Countryside 09 Ambush Site Daytime.mp4",
-    "tags":[
+    "name": "Countryside 09 Ambush Site Daytime",
+    "path": "assets/maps/Countryside 09 Ambush Site Daytime.mp4",
+    "tags": [
       "countryside",
       "09",
       "ambush",
       "site",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 09 Ambush Site Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 09 Ambush Site Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 10 Walled House Nightime",
-    "path":"assets/maps/Countryside 10 Walled House Nightime.mp4",
-    "tags":[
+    "name": "Countryside 10 Walled House Nightime",
+    "path": "assets/maps/Countryside 10 Walled House Nightime.mp4",
+    "tags": [
       "countryside",
       "10",
       "walled",
       "house",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 10 Walled House Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 10 Walled House Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 11 Walled Garden Daytime",
-    "path":"assets/maps/Countryside 11 Walled Garden Daytime.mp4",
-    "tags":[
+    "name": "Countryside 11 Walled Garden Daytime",
+    "path": "assets/maps/Countryside 11 Walled Garden Daytime.mp4",
+    "tags": [
       "countryside",
       "11",
       "walled",
       "garden",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 11 Walled Garden Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 11 Walled Garden Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Countryside 12 Small House And Grounds Daytime",
-    "path":"assets/maps/Countryside 12 Small House and Grounds Daytime.mp4",
-    "tags":[
+    "name": "Countryside 12 Small House And Grounds Daytime",
+    "path": "assets/maps/Countryside 12 Small House and Grounds Daytime.mp4",
+    "tags": [
       "countryside",
       "12",
       "small",
@@ -901,12 +977,13 @@
       "grounds",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Countryside 12 Small House And Grounds Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Countryside 12 Small House And Grounds Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Desert - Motion Map Pack 4Kuhd",
-    "path":"assets/maps/Desert - Motion map Pack 4KUHD.mp4",
-    "tags":[
+    "name": "Desert - Motion Map Pack 4Kuhd",
+    "path": "assets/maps/Desert - Motion map Pack 4KUHD.mp4",
+    "tags": [
       "desert",
       "-",
       "motion",
@@ -914,12 +991,13 @@
       "pack",
       "4kuhd"
     ],
-    "thumbnail":"assets/thumbnails/Desert - Motion Map Pack 4Kuhd.jpg"
+    "thumbnail": "assets/thumbnails/Desert - Motion Map Pack 4Kuhd.jpg",
+    "url": ""
   },
   {
-    "name":"Dynamic Dungeons Goblin Ambush - Animated Rpg Map",
-    "path":"assets/maps/Dynamic Dungeons Goblin ambush - animated RPG map.mp4",
-    "tags":[
+    "name": "Dynamic Dungeons Goblin Ambush - Animated Rpg Map",
+    "path": "assets/maps/Dynamic Dungeons Goblin ambush - animated RPG map.mp4",
+    "tags": [
       "dynamic",
       "dungeons",
       "goblin",
@@ -929,244 +1007,268 @@
       "rpg",
       "map"
     ],
-    "thumbnail":"assets/thumbnails/Dynamic Dungeons Goblin Ambush - Animated Rpg Map.jpg"
+    "thumbnail": "assets/thumbnails/Dynamic Dungeons Goblin Ambush - Animated Rpg Map.jpg",
+    "url": ""
   },
   {
-    "name":"Fighting Pit 01 Daytime",
-    "path":"assets/maps/Fighting Pit 01 Daytime.mp4",
-    "tags":[
+    "name": "Fighting Pit 01 Daytime",
+    "path": "assets/maps/Fighting Pit 01 Daytime.mp4",
+    "tags": [
       "fighting",
       "pit",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Fighting Pit 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Fighting Pit 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Fighting Pit 02 Daytime",
-    "path":"assets/maps/Fighting Pit 02 Daytime.mp4",
-    "tags":[
+    "name": "Fighting Pit 02 Daytime",
+    "path": "assets/maps/Fighting Pit 02 Daytime.mp4",
+    "tags": [
       "fighting",
       "pit",
       "02",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Fighting Pit 02 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Fighting Pit 02 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Camp Nightime",
-    "path":"assets/maps/Forest Camp Nightime.mp4",
-    "tags":[
+    "name": "Forest Camp Nightime",
+    "path": "assets/maps/Forest Camp Nightime.mp4",
+    "tags": [
       "forest",
       "camp",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Camp Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Camp Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Campsite Daytime",
-    "path":"assets/maps/Forest Campsite Daytime.mp4",
-    "tags":[
+    "name": "Forest Campsite Daytime",
+    "path": "assets/maps/Forest Campsite Daytime.mp4",
+    "tags": [
       "forest",
       "campsite",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Campsite Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Campsite Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing 04 Daytime",
-    "path":"assets/maps/Forest Clearing 04 Daytime.mp4",
-    "tags":[
+    "name": "Forest Clearing 04 Daytime",
+    "path": "assets/maps/Forest Clearing 04 Daytime.mp4",
+    "tags": [
       "forest",
       "clearing",
       "04",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing 04 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing 04 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing Day1",
-    "path":"assets/maps/forest clearing day1.mp4",
-    "tags":[
+    "name": "Forest Clearing Day1",
+    "path": "assets/maps/forest clearing day1.mp4",
+    "tags": [
       "forest",
       "clearing",
       "day1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing Day1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing Day1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing Day2",
-    "path":"assets/maps/forest clearing day2.mp4",
-    "tags":[
+    "name": "Forest Clearing Day2",
+    "path": "assets/maps/forest clearing day2.mp4",
+    "tags": [
       "forest",
       "clearing",
       "day2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing Day2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing Day2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing Day3",
-    "path":"assets/maps/forest clearing day3.mp4",
-    "tags":[
+    "name": "Forest Clearing Day3",
+    "path": "assets/maps/forest clearing day3.mp4",
+    "tags": [
       "forest",
       "clearing",
       "day3"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing Day3.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing Day3.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing Daytime",
-    "path":"assets/maps/Forest Clearing Daytime.mp4",
-    "tags":[
+    "name": "Forest Clearing Daytime",
+    "path": "assets/maps/Forest Clearing Daytime.mp4",
+    "tags": [
       "forest",
       "clearing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Day1",
-    "path":"assets/maps/forest day1.mp4",
-    "tags":[
+    "name": "Forest Day1",
+    "path": "assets/maps/forest day1.mp4",
+    "tags": [
       "forest",
       "day1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Day1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Day1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Day2",
-    "path":"assets/maps/forest day2.mp4",
-    "tags":[
+    "name": "Forest Day2",
+    "path": "assets/maps/forest day2.mp4",
+    "tags": [
       "forest",
       "day2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Day2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Day2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Day4",
-    "path":"assets/maps/forest day4.mp4",
-    "tags":[
+    "name": "Forest Day4",
+    "path": "assets/maps/forest day4.mp4",
+    "tags": [
       "forest",
       "day4"
     ],
-    "thumbnail":"assets/thumbnails/Forest Day4.jpg"
+    "thumbnail": "assets/thumbnails/Forest Day4.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Day5",
-    "path":"assets/maps/forest day5.mp4",
-    "tags":[
+    "name": "Forest Day5",
+    "path": "assets/maps/forest day5.mp4",
+    "tags": [
       "forest",
       "day5"
     ],
-    "thumbnail":"assets/thumbnails/Forest Day5.jpg"
+    "thumbnail": "assets/thumbnails/Forest Day5.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Day6",
-    "path":"assets/maps/forest day6.mp4",
-    "tags":[
+    "name": "Forest Day6",
+    "path": "assets/maps/forest day6.mp4",
+    "tags": [
       "forest",
       "day6"
     ],
-    "thumbnail":"assets/thumbnails/Forest Day6.jpg"
+    "thumbnail": "assets/thumbnails/Forest Day6.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Night Bonfire1",
-    "path":"assets/maps/forest night bonfire1.mp4",
-    "tags":[
+    "name": "Forest Night Bonfire1",
+    "path": "assets/maps/forest night bonfire1.mp4",
+    "tags": [
       "forest",
       "night",
       "bonfire1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Night Bonfire1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Night Bonfire1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Night1",
-    "path":"assets/maps/forest night1.mp4",
-    "tags":[
+    "name": "Forest Night1",
+    "path": "assets/maps/forest night1.mp4",
+    "tags": [
       "forest",
       "night1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Night1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Night1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Path Day1",
-    "path":"assets/maps/forest path day1.mp4",
-    "tags":[
+    "name": "Forest Path Day1",
+    "path": "assets/maps/forest path day1.mp4",
+    "tags": [
       "forest",
       "path",
       "day1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Path Day1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Path Day1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Path Day2",
-    "path":"assets/maps/forest path day2.mp4",
-    "tags":[
+    "name": "Forest Path Day2",
+    "path": "assets/maps/forest path day2.mp4",
+    "tags": [
       "forest",
       "path",
       "day2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Path Day2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Path Day2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Path Past Hut Day",
-    "path":"assets/maps/forest path past hut day.mp4",
-    "tags":[
+    "name": "Forest Path Past Hut Day",
+    "path": "assets/maps/forest path past hut day.mp4",
+    "tags": [
       "forest",
       "path",
       "past",
       "hut",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Forest Path Past Hut Day.jpg"
+    "thumbnail": "assets/thumbnails/Forest Path Past Hut Day.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Path2",
-    "path":"assets/maps/forest path2.mp4",
-    "tags":[
+    "name": "Forest Path2",
+    "path": "assets/maps/forest path2.mp4",
+    "tags": [
       "forest",
       "path2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Path2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Path2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 06 Bridge Daytime",
-    "path":"assets/maps/Forest Road 06 Bridge Daytime.mp4",
-    "tags":[
+    "name": "Forest Road 06 Bridge Daytime",
+    "path": "assets/maps/Forest Road 06 Bridge Daytime.mp4",
+    "tags": [
       "forest",
       "road",
       "06",
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 06 Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 06 Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 07 Nightime",
-    "path":"assets/maps/Forest Road 07 Nightime.mp4",
-    "tags":[
+    "name": "Forest Road 07 Nightime",
+    "path": "assets/maps/Forest Road 07 Nightime.mp4",
+    "tags": [
       "forest",
       "road",
       "07",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 07 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 07 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 08 Nightime",
-    "path":"assets/maps/Forest Road 08 Nightime.mp4",
-    "tags":[
+    "name": "Forest Road 08 Nightime",
+    "path": "assets/maps/Forest Road 08 Nightime.mp4",
+    "tags": [
       "forest",
       "road",
       "08",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 08 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 08 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 09 River Crossing Nightime",
-    "path":"assets/maps/Forest Road 09 River Crossing Nightime.mp4",
-    "tags":[
+    "name": "Forest Road 09 River Crossing Nightime",
+    "path": "assets/maps/Forest Road 09 River Crossing Nightime.mp4",
+    "tags": [
       "forest",
       "road",
       "09",
@@ -1174,665 +1276,727 @@
       "crossing",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 09 River Crossing Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 09 River Crossing Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 4",
-    "path":"assets/maps/forest road 4.mp4",
-    "tags":[
+    "name": "Forest Road 4",
+    "path": "assets/maps/forest road 4.mp4",
+    "tags": [
       "forest",
       "road",
       "4"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 4.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 4.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road 5",
-    "path":"assets/maps/forest road 5.mp4",
-    "tags":[
+    "name": "Forest Road 5",
+    "path": "assets/maps/forest road 5.mp4",
+    "tags": [
       "forest",
       "road",
       "5"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road 5.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road 5.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road Day2",
-    "path":"assets/maps/forest road day2.mp4",
-    "tags":[
+    "name": "Forest Road Day2",
+    "path": "assets/maps/forest road day2.mp4",
+    "tags": [
       "forest",
       "road",
       "day2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road Day2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road Day2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road Day3",
-    "path":"assets/maps/forest road day3.mp4",
-    "tags":[
+    "name": "Forest Road Day3",
+    "path": "assets/maps/forest road day3.mp4",
+    "tags": [
       "forest",
       "road",
       "day3"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road Day3.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road Day3.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road Day4",
-    "path":"assets/maps/forest road day4.mp4",
-    "tags":[
+    "name": "Forest Road Day4",
+    "path": "assets/maps/forest road day4.mp4",
+    "tags": [
       "forest",
       "road",
       "day4"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road Day4.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road Day4.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road Day5",
-    "path":"assets/maps/forest road day5.mp4",
-    "tags":[
+    "name": "Forest Road Day5",
+    "path": "assets/maps/forest road day5.mp4",
+    "tags": [
       "forest",
       "road",
       "day5"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road Day5.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road Day5.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road Night",
-    "path":"assets/maps/forest road night.mp4",
-    "tags":[
+    "name": "Forest Road Night",
+    "path": "assets/maps/forest road night.mp4",
+    "tags": [
       "forest",
       "road",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road Night.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road Night.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Road",
-    "path":"assets/maps/forest road.mp4",
-    "tags":[
+    "name": "Forest Road",
+    "path": "assets/maps/forest road.mp4",
+    "tags": [
       "forest",
       "road"
     ],
-    "thumbnail":"assets/thumbnails/Forest Road.jpg"
+    "thumbnail": "assets/thumbnails/Forest Road.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Ruined Tower Daytime",
-    "path":"assets/maps/Forest Ruined Tower Daytime.mp4",
-    "tags":[
+    "name": "Forest Ruined Tower Daytime",
+    "path": "assets/maps/Forest Ruined Tower Daytime.mp4",
+    "tags": [
       "forest",
       "ruined",
       "tower",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Ruined Tower Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Ruined Tower Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Trails Daytime",
-    "path":"assets/maps/Forest Trails Daytime.mp4",
-    "tags":[
+    "name": "Forest Trails Daytime",
+    "path": "assets/maps/Forest Trails Daytime.mp4",
+    "tags": [
       "forest",
       "trails",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Trails Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Trails Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Trails Nightime",
-    "path":"assets/maps/Forest Trails Nightime.mp4",
-    "tags":[
+    "name": "Forest Trails Nightime",
+    "path": "assets/maps/Forest Trails Nightime.mp4",
+    "tags": [
       "forest",
       "trails",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Forest Trails Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Forest Trails Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Forestclearing",
-    "path":"assets/maps/forestclearing.mp4",
-    "tags":[
+    "name": "Forestclearing",
+    "path": "assets/maps/forestclearing.mp4",
+    "tags": [
       "forestclearing"
     ],
-    "thumbnail":"assets/thumbnails/Forestclearing.jpg"
+    "thumbnail": "assets/thumbnails/Forestclearing.jpg",
+    "url": ""
   },
   {
-    "name":"Forestclearing2",
-    "path":"assets/maps/forestclearing2.mp4",
-    "tags":[
+    "name": "Forestclearing2",
+    "path": "assets/maps/forestclearing2.mp4",
+    "tags": [
       "forestclearing2"
     ],
-    "thumbnail":"assets/thumbnails/Forestclearing2.jpg"
+    "thumbnail": "assets/thumbnails/Forestclearing2.jpg",
+    "url": ""
   },
   {
-    "name":"Forestclearing3",
-    "path":"assets/maps/forestclearing3.mp4",
-    "tags":[
+    "name": "Forestclearing3",
+    "path": "assets/maps/forestclearing3.mp4",
+    "tags": [
       "forestclearing3"
     ],
-    "thumbnail":"assets/thumbnails/Forestclearing3.jpg"
+    "thumbnail": "assets/thumbnails/Forestclearing3.jpg",
+    "url": ""
   },
   {
-    "name":"Forestrural Path",
-    "path":"assets/maps/forestrural path.mp4",
-    "tags":[
+    "name": "Forestrural Path",
+    "path": "assets/maps/forestrural path.mp4",
+    "tags": [
       "forestrural",
       "path"
     ],
-    "thumbnail":"assets/thumbnails/Forestrural Path.jpg"
+    "thumbnail": "assets/thumbnails/Forestrural Path.jpg",
+    "url": ""
   },
   {
-    "name":"Grassland 01 Daytime",
-    "path":"assets/maps/Grassland 01 Daytime.mp4",
-    "tags":[
+    "name": "Grassland 01 Daytime",
+    "path": "assets/maps/Grassland 01 Daytime.mp4",
+    "tags": [
       "grassland",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Grassland 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Grassland 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Grassland 02 Daytime",
-    "path":"assets/maps/Grassland 02 Daytime.mp4",
-    "tags":[
+    "name": "Grassland 02 Daytime",
+    "path": "assets/maps/Grassland 02 Daytime.mp4",
+    "tags": [
       "grassland",
       "02",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Grassland 02 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Grassland 02 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 01 Ice Dragon Lair",
-    "path":"assets/maps/Icelands 01 Ice Dragon Lair.mp4",
-    "tags":[
+    "name": "Icelands 01 Ice Dragon Lair",
+    "path": "assets/maps/Icelands 01 Ice Dragon Lair.mp4",
+    "tags": [
       "icelands",
       "01",
       "ice",
       "dragon",
       "lair"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 01 Ice Dragon Lair.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 01 Ice Dragon Lair.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 02 Tundra Daytime",
-    "path":"assets/maps/Icelands 02 Tundra Daytime.mp4",
-    "tags":[
+    "name": "Icelands 02 Tundra Daytime",
+    "path": "assets/maps/Icelands 02 Tundra Daytime.mp4",
+    "tags": [
       "icelands",
       "02",
       "tundra",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 02 Tundra Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 02 Tundra Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 03 Tundra Daytime",
-    "path":"assets/maps/Icelands 03 Tundra Daytime.mp4",
-    "tags":[
+    "name": "Icelands 03 Tundra Daytime",
+    "path": "assets/maps/Icelands 03 Tundra Daytime.mp4",
+    "tags": [
       "icelands",
       "03",
       "tundra",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 03 Tundra Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 03 Tundra Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 04 Tundra Daytime",
-    "path":"assets/maps/Icelands 04 Tundra Daytime.mp4",
-    "tags":[
+    "name": "Icelands 04 Tundra Daytime",
+    "path": "assets/maps/Icelands 04 Tundra Daytime.mp4",
+    "tags": [
       "icelands",
       "04",
       "tundra",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 04 Tundra Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 04 Tundra Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 05 Tundra Daytime",
-    "path":"assets/maps/Icelands 05 Tundra Daytime.mp4",
-    "tags":[
+    "name": "Icelands 05 Tundra Daytime",
+    "path": "assets/maps/Icelands 05 Tundra Daytime.mp4",
+    "tags": [
       "icelands",
       "05",
       "tundra",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 05 Tundra Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 05 Tundra Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 06 Tundra Nightime",
-    "path":"assets/maps/Icelands 06 Tundra Nightime.mp4",
-    "tags":[
+    "name": "Icelands 06 Tundra Nightime",
+    "path": "assets/maps/Icelands 06 Tundra Nightime.mp4",
+    "tags": [
       "icelands",
       "06",
       "tundra",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 06 Tundra Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 06 Tundra Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Icelands 07 Tundra Daytime",
-    "path":"assets/maps/Icelands 07 Tundra Daytime.mp4",
-    "tags":[
+    "name": "Icelands 07 Tundra Daytime",
+    "path": "assets/maps/Icelands 07 Tundra Daytime.mp4",
+    "tags": [
       "icelands",
       "07",
       "tundra",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Icelands 07 Tundra Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Icelands 07 Tundra Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Just Cruisin",
-    "path":"assets/maps/Just Cruisin.mp4",
-    "tags":[
+    "name": "Just Cruisin",
+    "path": "assets/maps/Just Cruisin.mp4",
+    "tags": [
       "just",
       "cruisin"
     ],
-    "thumbnail":"assets/thumbnails/Just Cruisin.jpg"
+    "thumbnail": "assets/thumbnails/Just Cruisin.jpg",
+    "url": ""
   },
   {
-    "name":"Misc 01 Arena",
-    "path":"assets/maps/Misc 01 Arena.mp4",
-    "tags":[
+    "name": "Misc 01 Arena",
+    "path": "assets/maps/Misc 01 Arena.mp4",
+    "tags": [
       "misc",
       "01",
       "arena"
     ],
-    "thumbnail":"assets/thumbnails/Misc 01 Arena.jpg"
+    "thumbnail": "assets/thumbnails/Misc 01 Arena.jpg",
+    "url": ""
   },
   {
-    "name":"Misc 04 Sea",
-    "path":"assets/maps/Misc 04 Sea.mp4",
-    "tags":[
+    "name": "Misc 04 Sea",
+    "path": "assets/maps/Misc 04 Sea.mp4",
+    "tags": [
       "misc",
       "04",
       "sea"
     ],
-    "thumbnail":"assets/thumbnails/Misc 04 Sea.jpg"
+    "thumbnail": "assets/thumbnails/Misc 04 Sea.jpg",
+    "url": ""
   },
   {
-    "name":"Misc 06 Seascape",
-    "path":"assets/maps/Misc 06 Seascape.mp4",
-    "tags":[
+    "name": "Misc 06 Seascape",
+    "path": "assets/maps/Misc 06 Seascape.mp4",
+    "tags": [
       "misc",
       "06",
       "seascape"
     ],
-    "thumbnail":"assets/thumbnails/Misc 06 Seascape.jpg"
+    "thumbnail": "assets/thumbnails/Misc 06 Seascape.jpg",
+    "url": ""
   },
   {
-    "name":"Misc 08 Seascape",
-    "path":"assets/maps/Misc 08 seascape.mp4",
-    "tags":[
+    "name": "Misc 08 Seascape",
+    "path": "assets/maps/Misc 08 seascape.mp4",
+    "tags": [
       "misc",
       "08",
       "seascape"
     ],
-    "thumbnail":"assets/thumbnails/Misc 08 Seascape.jpg"
+    "thumbnail": "assets/thumbnails/Misc 08 Seascape.jpg",
+    "url": ""
   },
   {
-    "name":"Mountain Ruins Animated Action Scene",
-    "path":"assets/maps/Mountain Ruins animated action scene.mp4",
-    "tags":[
+    "name": "Mountain Ruins Animated Action Scene",
+    "path": "assets/maps/Mountain Ruins animated action scene.mp4",
+    "tags": [
       "mountain",
       "ruins",
       "animated",
       "action",
       "scene"
     ],
-    "thumbnail":"assets/thumbnails/Mountain Ruins Animated Action Scene.jpg"
+    "thumbnail": "assets/thumbnails/Mountain Ruins Animated Action Scene.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 01 Daytime",
-    "path":"assets/maps/Pretty Village 01 Daytime.mp4",
-    "tags":[
+    "name": "Pretty Village 01 Daytime",
+    "path": "assets/maps/Pretty Village 01 Daytime.mp4",
+    "tags": [
       "pretty",
       "village",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 02 Bridge Daytime",
-    "path":"assets/maps/Pretty Village 02 Bridge Daytime.mp4",
-    "tags":[
+    "name": "Pretty Village 02 Bridge Daytime",
+    "path": "assets/maps/Pretty Village 02 Bridge Daytime.mp4",
+    "tags": [
       "pretty",
       "village",
       "02",
       "bridge",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 02 Bridge Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 02 Bridge Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 03 Daytime",
-    "path":"assets/maps/Pretty Village 03 Daytime.mp4",
-    "tags":[
+    "name": "Pretty Village 03 Daytime",
+    "path": "assets/maps/Pretty Village 03 Daytime.mp4",
+    "tags": [
       "pretty",
       "village",
       "03",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 03 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 03 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 04 Daytime",
-    "path":"assets/maps/Pretty Village 04 Daytime.mp4",
-    "tags":[
+    "name": "Pretty Village 04 Daytime",
+    "path": "assets/maps/Pretty Village 04 Daytime.mp4",
+    "tags": [
       "pretty",
       "village",
       "04",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 04 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 04 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 05 Daytime",
-    "path":"assets/maps/Pretty Village 05 Daytime.mp4",
-    "tags":[
+    "name": "Pretty Village 05 Daytime",
+    "path": "assets/maps/Pretty Village 05 Daytime.mp4",
+    "tags": [
       "pretty",
       "village",
       "05",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 05 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 05 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 06 Nightime",
-    "path":"assets/maps/Pretty Village 06 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 06 Nightime",
+    "path": "assets/maps/Pretty Village 06 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "06",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 06 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 06 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 07 Nightime",
-    "path":"assets/maps/Pretty Village 07 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 07 Nightime",
+    "path": "assets/maps/Pretty Village 07 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "07",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 07 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 07 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 08 Nightime",
-    "path":"assets/maps/Pretty Village 08 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 08 Nightime",
+    "path": "assets/maps/Pretty Village 08 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "08",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 08 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 08 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 09 Nightime",
-    "path":"assets/maps/Pretty Village 09 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 09 Nightime",
+    "path": "assets/maps/Pretty Village 09 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "09",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 09 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 09 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 10 Nightime",
-    "path":"assets/maps/Pretty Village 10 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 10 Nightime",
+    "path": "assets/maps/Pretty Village 10 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "10",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 10 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 10 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Pretty Village 11 Nightime",
-    "path":"assets/maps/Pretty Village 11 Nightime.mp4",
-    "tags":[
+    "name": "Pretty Village 11 Nightime",
+    "path": "assets/maps/Pretty Village 11 Nightime.mp4",
+    "tags": [
       "pretty",
       "village",
       "11",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Pretty Village 11 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Pretty Village 11 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 01 Fields Daytime",
-    "path":"assets/maps/Rural 01 Fields Daytime.mp4",
-    "tags":[
+    "name": "Rural 01 Fields Daytime",
+    "path": "assets/maps/Rural 01 Fields Daytime.mp4",
+    "tags": [
       "rural",
       "01",
       "fields",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 01 Fields Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 01 Fields Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 02 River Crossing Daytime",
-    "path":"assets/maps/Rural 02 River Crossing Daytime.mp4",
-    "tags":[
+    "name": "Rural 02 River Crossing Daytime",
+    "path": "assets/maps/Rural 02 River Crossing Daytime.mp4",
+    "tags": [
       "rural",
       "02",
       "river",
       "crossing",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 02 River Crossing Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 02 River Crossing Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 03 Path Daytime",
-    "path":"assets/maps/Rural 03 Path Daytime.mp4",
-    "tags":[
+    "name": "Rural 03 Path Daytime",
+    "path": "assets/maps/Rural 03 Path Daytime.mp4",
+    "tags": [
       "rural",
       "03",
       "path",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 03 Path Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 03 Path Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 04 Village Nightime",
-    "path":"assets/maps/Rural 04 Village Nightime.mp4",
-    "tags":[
+    "name": "Rural 04 Village Nightime",
+    "path": "assets/maps/Rural 04 Village Nightime.mp4",
+    "tags": [
       "rural",
       "04",
       "village",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 04 Village Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 04 Village Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 05 Village  Outskirts Daytime",
-    "path":"assets/maps/Rural 05 Village  Outskirts Daytime.mp4",
-    "tags":[
+    "name": "Rural 05 Village  Outskirts Daytime",
+    "path": "assets/maps/Rural 05 Village  Outskirts Daytime.mp4",
+    "tags": [
       "rural",
       "05",
       "village",
       "outskirts",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 05 Village  Outskirts Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 05 Village  Outskirts Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Rural 06 Ruined Circle Daytime",
-    "path":"assets/maps/Rural 06 Ruined Circle Daytime.mp4",
-    "tags":[
+    "name": "Rural 06 Ruined Circle Daytime",
+    "path": "assets/maps/Rural 06 Ruined Circle Daytime.mp4",
+    "tags": [
       "rural",
       "06",
       "ruined",
       "circle",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Rural 06 Ruined Circle Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Rural 06 Ruined Circle Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Marsh 01 Daytime",
-    "path":"assets/maps/Swamp Marsh 01 Daytime.mp4",
-    "tags":[
+    "name": "Swamp Marsh 01 Daytime",
+    "path": "assets/maps/Swamp Marsh 01 Daytime.mp4",
+    "tags": [
       "swamp",
       "marsh",
       "01",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Marsh 01 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Marsh 01 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Marsh 02 Daytime",
-    "path":"assets/maps/Swamp Marsh 02 Daytime.mp4",
-    "tags":[
+    "name": "Swamp Marsh 02 Daytime",
+    "path": "assets/maps/Swamp Marsh 02 Daytime.mp4",
+    "tags": [
       "swamp",
       "marsh",
       "02",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Marsh 02 Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Marsh 02 Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Temple Ward 01 Nightime",
-    "path":"assets/maps/Temple Ward 01 Nightime.mp4",
-    "tags":[
+    "name": "Temple Ward 01 Nightime",
+    "path": "assets/maps/Temple Ward 01 Nightime.mp4",
+    "tags": [
       "temple",
       "ward",
       "01",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Temple Ward 01 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Temple Ward 01 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 01 Night",
-    "path":"assets/maps/The Red Road 01 Night.mp4",
-    "tags":[
+    "name": "The Red Road 01 Night",
+    "path": "assets/maps/The Red Road 01 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "01",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 01 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 01 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 02 Night",
-    "path":"assets/maps/The Red Road 02 Night.mp4",
-    "tags":[
+    "name": "The Red Road 02 Night",
+    "path": "assets/maps/The Red Road 02 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "02",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 02 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 02 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 03 Night",
-    "path":"assets/maps/The Red Road 03 Night.mp4",
-    "tags":[
+    "name": "The Red Road 03 Night",
+    "path": "assets/maps/The Red Road 03 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "03",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 03 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 03 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 04 Night",
-    "path":"assets/maps/The Red Road 04 Night.mp4",
-    "tags":[
+    "name": "The Red Road 04 Night",
+    "path": "assets/maps/The Red Road 04 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "04",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 04 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 04 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 05 Night",
-    "path":"assets/maps/The Red Road 05 Night.mp4",
-    "tags":[
+    "name": "The Red Road 05 Night",
+    "path": "assets/maps/The Red Road 05 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "05",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 05 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 05 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 06 Night",
-    "path":"assets/maps/The Red Road 06 Night.mp4",
-    "tags":[
+    "name": "The Red Road 06 Night",
+    "path": "assets/maps/The Red Road 06 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "06",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 06 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 06 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 07 Night",
-    "path":"assets/maps/The Red Road 07 Night.mp4",
-    "tags":[
+    "name": "The Red Road 07 Night",
+    "path": "assets/maps/The Red Road 07 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "07",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 07 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 07 Night.jpg",
+    "url": ""
   },
   {
-    "name":"The Red Road 08 Night",
-    "path":"assets/maps/The Red Road 08 Night.mp4",
-    "tags":[
+    "name": "The Red Road 08 Night",
+    "path": "assets/maps/The Red Road 08 Night.mp4",
+    "tags": [
       "the",
       "red",
       "road",
       "08",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/The Red Road 08 Night.jpg"
+    "thumbnail": "assets/thumbnails/The Red Road 08 Night.jpg",
+    "url": ""
   },
   {
-    "name":"Undead Graveyard",
-    "path":"assets/maps/Undead graveyard.mp4",
-    "tags":[
+    "name": "Undead Graveyard",
+    "path": "assets/maps/Undead graveyard.mp4",
+    "tags": [
       "undead",
       "graveyard"
     ],
-    "thumbnail":"assets/thumbnails/Undead Graveyard.jpg"
+    "thumbnail": "assets/thumbnails/Undead Graveyard.jpg",
+    "url": ""
   },
   {
-    "name":"Village 01 Gate Nightime",
-    "path":"assets/maps/Village 01 Gate Nightime.mp4",
-    "tags":[
+    "name": "Village 01 Gate Nightime",
+    "path": "assets/maps/Village 01 Gate Nightime.mp4",
+    "tags": [
       "village",
       "01",
       "gate",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/Village 01 Gate Nightime.jpg"
+    "thumbnail": "assets/thumbnails/Village 01 Gate Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Village 02 Gatehouse Daytime",
-    "path":"assets/maps/Village 02 Gatehouse Daytime.mp4",
-    "tags":[
+    "name": "Village 02 Gatehouse Daytime",
+    "path": "assets/maps/Village 02 Gatehouse Daytime.mp4",
+    "tags": [
       "village",
       "02",
       "gatehouse",
       "daytime"
     ],
-    "thumbnail":"assets/thumbnails/Village 02 Gatehouse Daytime.jpg"
+    "thumbnail": "assets/thumbnails/Village 02 Gatehouse Daytime.jpg",
+    "url": ""
   },
   {
-    "name":"Living Maps   A Split In The Road",
-    "path":"assets/maps/Living Maps   A Split In The Road.mp4",
-    "tags":[
+    "name": "Living Maps   A Split In The Road",
+    "path": "assets/maps/Living Maps   A Split In The Road.mp4",
+    "tags": [
       "living",
       "maps",
       "a",
@@ -1841,46 +2005,50 @@
       "the",
       "road"
     ],
-    "thumbnail":"assets/thumbnails/Living Maps   A Split In The Road.jpg"
+    "thumbnail": "assets/thumbnails/Living Maps   A Split In The Road.jpg",
+    "url": ""
   },
   {
-    "name":"Living Maps - Rainy Jungle",
-    "path":"assets/maps/Living Maps - Rainy Jungle.mp4",
-    "tags":[
+    "name": "Living Maps - Rainy Jungle",
+    "path": "assets/maps/Living Maps - Rainy Jungle.mp4",
+    "tags": [
       "living",
       "maps",
       "-",
       "rainy",
       "jungle"
     ],
-    "thumbnail":"assets/thumbnails/Living Maps - Rainy Jungle.jpg"
+    "thumbnail": "assets/thumbnails/Living Maps - Rainy Jungle.jpg",
+    "url": ""
   },
   {
-    "name":"Living Map  Woodland Path",
-    "path":"assets/maps/Living Map  Woodland Path.mp4",
-    "tags":[
+    "name": "Living Map  Woodland Path",
+    "path": "assets/maps/Living Map  Woodland Path.mp4",
+    "tags": [
       "living",
       "map",
       "woodland",
       "path"
     ],
-    "thumbnail":"assets/thumbnails/Living Map  Woodland Path.jpg"
+    "thumbnail": "assets/thumbnails/Living Map  Woodland Path.jpg",
+    "url": ""
   },
   {
-    "name":"Blacksmith D&D Animated Map",
-    "path":"assets/maps/Blacksmith D&D Animated Map.mp4",
-    "tags":[
+    "name": "Blacksmith D&D Animated Map",
+    "path": "assets/maps/Blacksmith D&D Animated Map.mp4",
+    "tags": [
       "blacksmith",
       "d&d",
       "animated",
       "map"
     ],
-    "thumbnail":"assets/thumbnails/Blacksmith D&D Animated Map.jpg"
+    "thumbnail": "assets/thumbnails/Blacksmith D&D Animated Map.jpg",
+    "url": ""
   },
   {
-    "name":"Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered)",
-    "path":"assets/maps/Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).mp4",
-    "tags":[
+    "name": "Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered)",
+    "path": "assets/maps/Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).mp4",
+    "tags": [
       "animated",
       "dungeon",
       "maps",
@@ -1894,12 +2062,13 @@
       "remastered",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).jpg"
+    "thumbnail": "assets/thumbnails/Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).jpg",
+    "url": ""
   },
   {
-    "name":"Animated Dungeon Maps - Cave Campsite Near A Chasm",
-    "path":"assets/maps/Animated Dungeon Maps - Cave Campsite Near A Chasm.mp4",
-    "tags":[
+    "name": "Animated Dungeon Maps - Cave Campsite Near A Chasm",
+    "path": "assets/maps/Animated Dungeon Maps - Cave Campsite Near A Chasm.mp4",
+    "tags": [
       "animated",
       "dungeon",
       "maps",
@@ -1910,32 +2079,35 @@
       "a",
       "chasm"
     ],
-    "thumbnail":"assets/thumbnails/Animated Dungeon Maps - Cave Campsite Near A Chasm.jpg"
+    "thumbnail": "assets/thumbnails/Animated Dungeon Maps - Cave Campsite Near A Chasm.jpg",
+    "url": ""
   },
   {
-    "name":"Abyssal Action Scene",
-    "path":"assets/maps/Abyssal Action Scene.mp4",
-    "tags":[
+    "name": "Abyssal Action Scene",
+    "path": "assets/maps/Abyssal Action Scene.mp4",
+    "tags": [
       "abyssal",
       "action",
       "scene"
     ],
-    "thumbnail":"assets/thumbnails/Abyssal Action Scene.jpg"
+    "thumbnail": "assets/thumbnails/Abyssal Action Scene.jpg",
+    "url": ""
   },
   {
-    "name":"Dungeon Of Skulls",
-    "path":"assets/maps/Dungeon Of Skulls.mp4",
-    "tags":[
+    "name": "Dungeon Of Skulls",
+    "path": "assets/maps/Dungeon Of Skulls.mp4",
+    "tags": [
       "dungeon",
       "of",
       "skulls"
     ],
-    "thumbnail":"assets/thumbnails/Dungeon Of Skulls.jpg"
+    "thumbnail": "assets/thumbnails/Dungeon Of Skulls.jpg",
+    "url": ""
   },
   {
-    "name":"Camp In The Woods + New Forest Scene Free Giveaway By:Dynamic Dungeons",
-    "path":"assets/maps/Camp In The Woods + New Forest Scene Free Giveaway By Dynamic Dungeons.mp4",
-    "tags":[
+    "name": "Camp In The Woods + New Forest Scene Free Giveaway By:Dynamic Dungeons",
+    "path": "assets/maps/Camp In The Woods + New Forest Scene Free Giveaway By Dynamic Dungeons.mp4",
+    "tags": [
       "camp",
       "in",
       "the",
@@ -1950,12 +2122,13 @@
       "dynamic",
       "dungeons"
     ],
-    "thumbnail":"assets/thumbnails/Camp In The Woods + New Forest Scene Free Giveaway ByDynamic Dungeons.jpg"
+    "thumbnail": "assets/thumbnails/Camp In The Woods + New Forest Scene Free Giveaway ByDynamic Dungeons.jpg",
+    "url": ""
   },
   {
-    "name":"Dynamic Battle Map - The Black Dog Tavern",
-    "path":"assets/maps/Dynamic Battle Map - The Black Dog Tavern.mp4",
-    "tags":[
+    "name": "Dynamic Battle Map - The Black Dog Tavern",
+    "path": "assets/maps/Dynamic Battle Map - The Black Dog Tavern.mp4",
+    "tags": [
       "dynamic",
       "battle",
       "map",
@@ -1965,12 +2138,13 @@
       "dog",
       "tavern"
     ],
-    "thumbnail":"assets/thumbnails/Dynamic Battle Map - The Black Dog Tavern.jpg"
+    "thumbnail": "assets/thumbnails/Dynamic Battle Map - The Black Dog Tavern.jpg",
+    "url": ""
   },
   {
-    "name":"Dnd Map Animated (River Crossing, Birds)",
-    "path":"assets/maps/Dnd Map Animated (River Crossing, Birds).mp4",
-    "tags":[
+    "name": "Dnd Map Animated (River Crossing, Birds)",
+    "path": "assets/maps/Dnd Map Animated (River Crossing, Birds).mp4",
+    "tags": [
       "dnd",
       "map",
       "animated",
@@ -1980,12 +2154,13 @@
       "birds",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Dnd Map Animated (River Crossing Birds).jpg"
+    "thumbnail": "assets/thumbnails/Dnd Map Animated (River Crossing Birds).jpg",
+    "url": ""
   },
   {
-    "name":"Animated Battle Map (Wooden Bridge)",
-    "path":"assets/maps/Animated Battle Map (Wooden Bridge).mp4",
-    "tags":[
+    "name": "Animated Battle Map (Wooden Bridge)",
+    "path": "assets/maps/Animated Battle Map (Wooden Bridge).mp4",
+    "tags": [
       "animated",
       "battle",
       "map",
@@ -1994,54 +2169,59 @@
       "bridge",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Animated Battle Map (Wooden Bridge).jpg"
+    "thumbnail": "assets/thumbnails/Animated Battle Map (Wooden Bridge).jpg",
+    "url": ""
   },
   {
-    "name":"Animated Battle Map",
-    "path":"assets/maps/Animated Battle Map.mp4",
-    "tags":[
+    "name": "Animated Battle Map",
+    "path": "assets/maps/Animated Battle Map.mp4",
+    "tags": [
       "animated",
       "battle",
       "map"
     ],
-    "thumbnail":"assets/thumbnails/Animated Battle Map.jpg"
+    "thumbnail": "assets/thumbnails/Animated Battle Map.jpg",
+    "url": ""
   },
   {
-    "name":"Animated Battlemap Snowy Road",
-    "path":"assets/maps/Animated Battlemap Snowy Road.mp4",
-    "tags":[
+    "name": "Animated Battlemap Snowy Road",
+    "path": "assets/maps/Animated Battlemap Snowy Road.mp4",
+    "tags": [
       "animated",
       "battlemap",
       "snowy",
       "road"
     ],
-    "thumbnail":"assets/thumbnails/Animated Battlemap Snowy Road.jpg"
+    "thumbnail": "assets/thumbnails/Animated Battlemap Snowy Road.jpg",
+    "url": ""
   },
   {
-    "name":"Dai Burning Fort 02",
-    "path":"assets/maps/Dai Burning Fort 02.mp4",
-    "tags":[
+    "name": "Dai Burning Fort 02",
+    "path": "assets/maps/Dai Burning Fort 02.mp4",
+    "tags": [
       "dai",
       "burning",
       "fort",
       "02"
     ],
-    "thumbnail":"assets/thumbnails/Dai Burning Fort 02.jpg"
+    "thumbnail": "assets/thumbnails/Dai Burning Fort 02.jpg",
+    "url": ""
   },
   {
-    "name":"Dai Waterfall 01",
-    "path":"assets/maps/Dai Waterfall 01.mp4",
-    "tags":[
+    "name": "Dai Waterfall 01",
+    "path": "assets/maps/Dai Waterfall 01.mp4",
+    "tags": [
       "dai",
       "waterfall",
       "01"
     ],
-    "thumbnail":"assets/thumbnails/Dai Waterfall 01.jpg"
+    "thumbnail": "assets/thumbnails/Dai Waterfall 01.jpg",
+    "url": ""
   },
   {
-    "name":"Animated Battle Map ( Dirt Road )",
-    "path":"assets/maps/Animated Battle Map ( Dirt Road ).mp4",
-    "tags":[
+    "name": "Animated Battle Map ( Dirt Road )",
+    "path": "assets/maps/Animated Battle Map ( Dirt Road ).mp4",
+    "tags": [
       "animated",
       "battle",
       "map",
@@ -2050,12 +2230,13 @@
       "road",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Animated Battle Map ( Dirt Road ).jpg"
+    "thumbnail": "assets/thumbnails/Animated Battle Map ( Dirt Road ).jpg",
+    "url": ""
   },
   {
-    "name":"Dnd Battlemap - Sand Dune By The Ocean",
-    "path":"assets/maps/Dnd Battlemap - Sand Dune By The Ocean.mp4",
-    "tags":[
+    "name": "Dnd Battlemap - Sand Dune By The Ocean",
+    "path": "assets/maps/Dnd Battlemap - Sand Dune By The Ocean.mp4",
+    "tags": [
       "dnd",
       "battlemap",
       "-",
@@ -2065,12 +2246,13 @@
       "the",
       "ocean"
     ],
-    "thumbnail":"assets/thumbnails/Dnd Battlemap - Sand Dune By The Ocean.jpg"
+    "thumbnail": "assets/thumbnails/Dnd Battlemap - Sand Dune By The Ocean.jpg",
+    "url": ""
   },
   {
-    "name":"Dnd Battle Map - Night At The Swamp",
-    "path":"assets/maps/Dnd Battle Map - Night At The Swamp.mp4",
-    "tags":[
+    "name": "Dnd Battle Map - Night At The Swamp",
+    "path": "assets/maps/Dnd Battle Map - Night At The Swamp.mp4",
+    "tags": [
       "dnd",
       "battle",
       "map",
@@ -2080,23 +2262,25 @@
       "the",
       "swamp"
     ],
-    "thumbnail":"assets/thumbnails/Dnd Battle Map - Night At The Swamp.jpg"
+    "thumbnail": "assets/thumbnails/Dnd Battle Map - Night At The Swamp.jpg",
+    "url": ""
   },
   {
-    "name":"Dnd Battlemap - Camp",
-    "path":"assets/maps/Dnd Battlemap - Camp.mp4",
-    "tags":[
+    "name": "Dnd Battlemap - Camp",
+    "path": "assets/maps/Dnd Battlemap - Camp.mp4",
+    "tags": [
       "dnd",
       "battlemap",
       "-",
       "camp"
     ],
-    "thumbnail":"assets/thumbnails/Dnd Battlemap - Camp.jpg"
+    "thumbnail": "assets/thumbnails/Dnd Battlemap - Camp.jpg",
+    "url": ""
   },
   {
-    "name":"Battlemap For Dnd Campaign - Fort On A Cliff",
-    "path":"assets/maps/Battlemap For Dnd Campaign - Fort On A Cliff.mp4",
-    "tags":[
+    "name": "Battlemap For Dnd Campaign - Fort On A Cliff",
+    "path": "assets/maps/Battlemap For Dnd Campaign - Fort On A Cliff.mp4",
+    "tags": [
       "battlemap",
       "for",
       "dnd",
@@ -2107,12 +2291,13 @@
       "a",
       "cliff"
     ],
-    "thumbnail":"assets/thumbnails/Battlemap For Dnd Campaign - Fort On A Cliff.jpg"
+    "thumbnail": "assets/thumbnails/Battlemap For Dnd Campaign - Fort On A Cliff.jpg",
+    "url": ""
   },
   {
-    "name":"Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong)",
-    "path":"assets/maps/Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong).mp4",
-    "tags":[
+    "name": "Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong)",
+    "path": "assets/maps/Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong).mp4",
+    "tags": [
       "animated",
       "battle",
       "map",
@@ -2127,12 +2312,13 @@
       "wrong",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Animated Battle Map For Dnd ( Beach Pirate Bury Treasure Gone Wrong).jpg"
+    "thumbnail": "assets/thumbnails/Animated Battle Map For Dnd ( Beach Pirate Bury Treasure Gone Wrong).jpg",
+    "url": ""
   },
   {
-    "name":"(Battlefield) Animated Battlemaps Roll",
-    "path":"assets/maps/(Battlefield) Animated Battlemaps Roll.mp4",
-    "tags":[
+    "name": "(Battlefield) Animated Battlemaps Roll",
+    "path": "assets/maps/(Battlefield) Animated Battlemaps Roll.mp4",
+    "tags": [
       "(",
       "battlefield",
       ")",
@@ -2145,12 +2331,13 @@
       "soldiers",
       "blood"
     ],
-    "thumbnail":"assets/thumbnails/(Battlefield) Animated Battlemaps Roll.jpg"
+    "thumbnail": "assets/thumbnails/(Battlefield) Animated Battlemaps Roll.jpg",
+    "url": ""
   },
   {
-    "name":"[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside",
-    "path":"assets/maps/[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.mp4",
-    "tags":[
+    "name": "[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside",
+    "path": "assets/maps/[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.mp4",
+    "tags": [
       "[",
       "skyrim",
       "-",
@@ -2162,12 +2349,13 @@
       "waterfall",
       "roadside"
     ],
-    "thumbnail":"assets/thumbnails/[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.jpg"
+    "thumbnail": "assets/thumbnails/[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.jpg",
+    "url": ""
   },
   {
-    "name":"Campfire [Dark Wood] - D&D Living Maps (Without Grid)",
-    "path":"assets/maps/Campfire [Dark Wood] - D&D Living Maps (Without Grid).mp4",
-    "tags":[
+    "name": "Campfire [Dark Wood] - D&D Living Maps (Without Grid)",
+    "path": "assets/maps/Campfire [Dark Wood] - D&D Living Maps (Without Grid).mp4",
+    "tags": [
       "campfire",
       "[",
       "dark",
@@ -2182,20 +2370,22 @@
       "grid",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Campfire [Dark Wood] - D&D Living Maps (Without Grid).jpg"
+    "thumbnail": "assets/thumbnails/Campfire [Dark Wood] - D&D Living Maps (Without Grid).jpg",
+    "url": ""
   },
   {
-    "name":"Cjg",
-    "path":"assets/maps/Cjg.mp4",
-    "tags":[
+    "name": "Cjg",
+    "path": "assets/maps/Cjg.mp4",
+    "tags": [
       "cjg"
     ],
-    "thumbnail":"assets/thumbnails/Cjg.jpg"
+    "thumbnail": "assets/thumbnails/Cjg.jpg",
+    "url": ""
   },
   {
-    "name":"Campfire [Dark Wood 2]",
-    "path":"assets/maps/Campfire [Dark Wood 2].mp4",
-    "tags":[
+    "name": "Campfire [Dark Wood 2]",
+    "path": "assets/maps/Campfire [Dark Wood 2].mp4",
+    "tags": [
       "campfire",
       "[",
       "dark",
@@ -2203,33 +2393,36 @@
       "2",
       "]"
     ],
-    "thumbnail":"assets/thumbnails/Campfire [Dark Wood 2].jpg"
+    "thumbnail": "assets/thumbnails/Campfire [Dark Wood 2].jpg",
+    "url": ""
   },
   {
-    "name":"City Streets 02 Nightime",
-    "path":"assets/maps/City Streets 02 Nightime.mp4",
-    "tags":[
+    "name": "City Streets 02 Nightime",
+    "path": "assets/maps/City Streets 02 Nightime.mp4",
+    "tags": [
       "city",
       "streets",
       "02",
       "nightime"
     ],
-    "thumbnail":"assets/thumbnails/City Streets 02 Nightime.jpg"
+    "thumbnail": "assets/thumbnails/City Streets 02 Nightime.jpg",
+    "url": ""
   },
   {
-    "name":"Dungeon Of Skulls",
-    "path":"assets/maps/Dungeon Of Skulls.mp4",
-    "tags":[
+    "name": "Dungeon Of Skulls",
+    "path": "assets/maps/Dungeon Of Skulls.mp4",
+    "tags": [
       "dungeon",
       "of",
       "skulls"
     ],
-    "thumbnail":"assets/thumbnails/Dungeon Of Skulls.jpg"
+    "thumbnail": "assets/thumbnails/Dungeon Of Skulls.jpg",
+    "url": ""
   },
   {
-    "name":"Red Rocks Conifer, Desert And Underdark Versions",
-    "path":"assets/maps/Red Rocks Conifer, Desert And Underdark Versions.mp4",
-    "tags":[
+    "name": "Red Rocks Conifer, Desert And Underdark Versions",
+    "path": "assets/maps/Red Rocks Conifer, Desert And Underdark Versions.mp4",
+    "tags": [
       "red",
       "rocks",
       "conifer,",
@@ -2238,534 +2431,586 @@
       "underdark",
       "versions"
     ],
-    "thumbnail":"assets/thumbnails/Red Rocks Conifer Desert And Underdark Versions.jpg"
+    "thumbnail": "assets/thumbnails/Red Rocks Conifer Desert And Underdark Versions.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Stream Foggy Day",
-    "path":"assets/maps/Forest Stream Foggy Day.mp4",
-    "tags":[
+    "name": "Forest Stream Foggy Day",
+    "path": "assets/maps/Forest Stream Foggy Day.mp4",
+    "tags": [
       "forest",
       "stream",
       "foggy",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Forest Stream Foggy Day.jpg"
+    "thumbnail": "assets/thumbnails/Forest Stream Foggy Day.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Night Raining",
-    "path":"assets/maps/River Bridge Night Raining.mp4",
-    "tags":[
+    "name": "River Bridge Night Raining",
+    "path": "assets/maps/River Bridge Night Raining.mp4",
+    "tags": [
       "river",
       "bridge",
       "night",
       "raining"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Night Raining.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Night Raining.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Midday",
-    "path":"assets/maps/River Bridge Midday.mp4",
-    "tags":[
+    "name": "River Bridge Midday",
+    "path": "assets/maps/River Bridge Midday.mp4",
+    "tags": [
       "river",
       "bridge",
       "midday"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Midday.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Midday.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Day Snow",
-    "path":"assets/maps/River Bridge Day Snow.mp4",
-    "tags":[
+    "name": "River Bridge Day Snow",
+    "path": "assets/maps/River Bridge Day Snow.mp4",
+    "tags": [
       "river",
       "bridge",
       "day",
       "snow"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Day Snow.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Day Snow.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Night Snowing",
-    "path":"assets/maps/River Bridge Night Snowing.mp4",
-    "tags":[
+    "name": "River Bridge Night Snowing",
+    "path": "assets/maps/River Bridge Night Snowing.mp4",
+    "tags": [
       "river",
       "bridge",
       "night",
       "snowing"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Night Snowing.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Night Snowing.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Day",
-    "path":"assets/maps/River Bridge Day.mp4",
-    "tags":[
+    "name": "River Bridge Day",
+    "path": "assets/maps/River Bridge Day.mp4",
+    "tags": [
       "river",
       "bridge",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Day.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Day.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge Night",
-    "path":"assets/maps/River Bridge Night.mp4",
-    "tags":[
+    "name": "River Bridge Night",
+    "path": "assets/maps/River Bridge Night.mp4",
+    "tags": [
       "river",
       "bridge",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge Night.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge Night.jpg",
+    "url": ""
   },
   {
-    "name":"Village Street Day Snowing Nosound",
-    "path":"assets/maps/Village Street Day Snowing Nosound.mp4",
-    "tags":[
+    "name": "Village Street Day Snowing Nosound",
+    "path": "assets/maps/Village Street Day Snowing Nosound.mp4",
+    "tags": [
       "village",
       "street",
       "day",
       "snowing",
       "nosound"
     ],
-    "thumbnail":"assets/thumbnails/Village Street Day Snowing Nosound.jpg"
+    "thumbnail": "assets/thumbnails/Village Street Day Snowing Nosound.jpg",
+    "url": ""
   },
   {
-    "name":"Village Street Day Nosound",
-    "path":"assets/maps/Village Street Day Nosound.mp4",
-    "tags":[
+    "name": "Village Street Day Nosound",
+    "path": "assets/maps/Village Street Day Nosound.mp4",
+    "tags": [
       "village",
       "street",
       "day",
       "nosound"
     ],
-    "thumbnail":"assets/thumbnails/Village Street Day Nosound.jpg"
+    "thumbnail": "assets/thumbnails/Village Street Day Nosound.jpg",
+    "url": ""
   },
   {
-    "name":"Village Street Midday Nosound Mp4",
-    "path":"assets/maps/Village Street Midday Nosound Mp4.mp4",
-    "tags":[
+    "name": "Village Street Midday Nosound Mp4",
+    "path": "assets/maps/Village Street Midday Nosound Mp4.mp4",
+    "tags": [
       "village",
       "street",
       "midday",
       "nosound",
       "mp4"
     ],
-    "thumbnail":"assets/thumbnails/Village Street Midday Nosound Mp4.jpg"
+    "thumbnail": "assets/thumbnails/Village Street Midday Nosound Mp4.jpg",
+    "url": ""
   },
   {
-    "name":"Village Street Night Nosound",
-    "path":"assets/maps/Village Street Night Nosound.mp4",
-    "tags":[
+    "name": "Village Street Night Nosound",
+    "path": "assets/maps/Village Street Night Nosound.mp4",
+    "tags": [
       "village",
       "street",
       "night",
       "nosound"
     ],
-    "thumbnail":"assets/thumbnails/Village Street Night Nosound.jpg"
+    "thumbnail": "assets/thumbnails/Village Street Night Nosound.jpg",
+    "url": ""
   },
   {
-    "name":"Village Street Night Snowing Nosound",
-    "path":"assets/maps/Village Street Night Snowing Nosound.mp4",
-    "tags":[
+    "name": "Village Street Night Snowing Nosound",
+    "path": "assets/maps/Village Street Night Snowing Nosound.mp4",
+    "tags": [
       "village",
       "street",
       "night",
       "snowing",
       "nosound"
     ],
-    "thumbnail":"assets/thumbnails/Village Street Night Snowing Nosound.jpg"
+    "thumbnail": "assets/thumbnails/Village Street Night Snowing Nosound.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral Road Raining",
-    "path":"assets/maps/Cathedral Road Raining.mp4",
-    "tags":[
+    "name": "Cathedral Road Raining",
+    "path": "assets/maps/Cathedral Road Raining.mp4",
+    "tags": [
       "cathedral",
       "road",
       "raining"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral Road Raining.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral Road Raining.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral Road Night",
-    "path":"assets/maps/Cathedral Road Night.mp4",
-    "tags":[
+    "name": "Cathedral Road Night",
+    "path": "assets/maps/Cathedral Road Night.mp4",
+    "tags": [
       "cathedral",
       "road",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral Road Night.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral Road Night.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral Road Midday",
-    "path":"assets/maps/Cathedral Road Midday.mp4",
-    "tags":[
+    "name": "Cathedral Road Midday",
+    "path": "assets/maps/Cathedral Road Midday.mp4",
+    "tags": [
       "cathedral",
       "road",
       "midday"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral Road Midday.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral Road Midday.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral Road Raining Thunder",
-    "path":"assets/maps/Cathedral Road Raining Thunder.mp4",
-    "tags":[
+    "name": "Cathedral Road Raining Thunder",
+    "path": "assets/maps/Cathedral Road Raining Thunder.mp4",
+    "tags": [
       "cathedral",
       "road",
       "raining",
       "thunder"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral Road Raining Thunder.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral Road Raining Thunder.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral Road Morning",
-    "path":"assets/maps/Cathedral Road Morning.mp4",
-    "tags":[
+    "name": "Cathedral Road Morning",
+    "path": "assets/maps/Cathedral Road Morning.mp4",
+    "tags": [
       "cathedral",
       "road",
       "morning"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral Road Morning.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral Road Morning.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Raining Thunder",
-    "path":"assets/maps/Swamp Raining Thunder.mp4",
-    "tags":[
+    "name": "Swamp Raining Thunder",
+    "path": "assets/maps/Swamp Raining Thunder.mp4",
+    "tags": [
       "swamp",
       "raining",
       "thunder"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Raining Thunder.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Raining Thunder.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Night Foggy",
-    "path":"assets/maps/Swamp Night Foggy.mp4",
-    "tags":[
+    "name": "Swamp Night Foggy",
+    "path": "assets/maps/Swamp Night Foggy.mp4",
+    "tags": [
       "swamp",
       "night",
       "foggy"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Night Foggy.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Night Foggy.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Day",
-    "path":"assets/maps/Swamp Day.mp4",
-    "tags":[
+    "name": "Swamp Day",
+    "path": "assets/maps/Swamp Day.mp4",
+    "tags": [
       "swamp",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Day.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Day.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Night",
-    "path":"assets/maps/Swamp Night.mp4",
-    "tags":[
+    "name": "Swamp Night",
+    "path": "assets/maps/Swamp Night.mp4",
+    "tags": [
       "swamp",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Night.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Night.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Night",
-    "path":"assets/maps/Village Road Night.mp4",
-    "tags":[
+    "name": "Village Road Night",
+    "path": "assets/maps/Village Road Night.mp4",
+    "tags": [
       "village",
       "road",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Night.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Night.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Night Raining",
-    "path":"assets/maps/Village Road Night Raining.mp4",
-    "tags":[
+    "name": "Village Road Night Raining",
+    "path": "assets/maps/Village Road Night Raining.mp4",
+    "tags": [
       "village",
       "road",
       "night",
       "raining"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Night Raining.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Night Raining.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Morning",
-    "path":"assets/maps/Village Road Morning.mp4",
-    "tags":[
+    "name": "Village Road Morning",
+    "path": "assets/maps/Village Road Morning.mp4",
+    "tags": [
       "village",
       "road",
       "morning"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Morning.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Morning.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Midday",
-    "path":"assets/maps/Village Road Midday.mp4",
-    "tags":[
+    "name": "Village Road Midday",
+    "path": "assets/maps/Village Road Midday.mp4",
+    "tags": [
       "village",
       "road",
       "midday"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Midday.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Midday.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Foggy",
-    "path":"assets/maps/Village Road Foggy.mp4",
-    "tags":[
+    "name": "Village Road Foggy",
+    "path": "assets/maps/Village Road Foggy.mp4",
+    "tags": [
       "village",
       "road",
       "foggy"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Foggy.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Foggy.jpg",
+    "url": ""
   },
   {
-    "name":"Village Road Dusk",
-    "path":"assets/maps/Village Road Dusk.mp4",
-    "tags":[
+    "name": "Village Road Dusk",
+    "path": "assets/maps/Village Road Dusk.mp4",
+    "tags": [
       "village",
       "road",
       "dusk"
     ],
-    "thumbnail":"assets/thumbnails/Village Road Dusk.jpg"
+    "thumbnail": "assets/thumbnails/Village Road Dusk.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Foggy Night",
-    "path":"assets/maps/Bridge Foggy Night.mp4",
-    "tags":[
+    "name": "Bridge Foggy Night",
+    "path": "assets/maps/Bridge Foggy Night.mp4",
+    "tags": [
       "bridge",
       "foggy",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Foggy Night.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Foggy Night.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Rain",
-    "path":"assets/maps/Bridge Rain.mp4",
-    "tags":[
+    "name": "Bridge Rain",
+    "path": "assets/maps/Bridge Rain.mp4",
+    "tags": [
       "bridge",
       "rain"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Rain.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Rain.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Rain Night",
-    "path":"assets/maps/Bridge Rain Night.mp4",
-    "tags":[
+    "name": "Bridge Rain Night",
+    "path": "assets/maps/Bridge Rain Night.mp4",
+    "tags": [
       "bridge",
       "rain",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Rain Night.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Rain Night.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Night",
-    "path":"assets/maps/Bridge Night.mp4",
-    "tags":[
+    "name": "Bridge Night",
+    "path": "assets/maps/Bridge Night.mp4",
+    "tags": [
       "bridge",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Night.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Night.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Dusk",
-    "path":"assets/maps/Bridge Dusk.mp4",
-    "tags":[
+    "name": "Bridge Dusk",
+    "path": "assets/maps/Bridge Dusk.mp4",
+    "tags": [
       "bridge",
       "dusk"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Dusk.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Dusk.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Day",
-    "path":"assets/maps/Bridge Day.mp4",
-    "tags":[
+    "name": "Bridge Day",
+    "path": "assets/maps/Bridge Day.mp4",
+    "tags": [
       "bridge",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Day.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Day.jpg",
+    "url": ""
   },
   {
-    "name":"Bridge Day Humid",
-    "path":"assets/maps/Bridge Day Humid.mp4",
-    "tags":[
+    "name": "Bridge Day Humid",
+    "path": "assets/maps/Bridge Day Humid.mp4",
+    "tags": [
       "bridge",
       "day",
       "humid"
     ],
-    "thumbnail":"assets/thumbnails/Bridge Day Humid.jpg"
+    "thumbnail": "assets/thumbnails/Bridge Day Humid.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Night",
-    "path":"assets/maps/House By Water Night.mp4",
-    "tags":[
+    "name": "House By Water Night",
+    "path": "assets/maps/House By Water Night.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Night.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Night.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Lightning Night",
-    "path":"assets/maps/House By Water Lightning Night.mp4",
-    "tags":[
+    "name": "House By Water Lightning Night",
+    "path": "assets/maps/House By Water Lightning Night.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "lightning",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Lightning Night.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Lightning Night.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Night Raining",
-    "path":"assets/maps/House By Water Night Raining.mp4",
-    "tags":[
+    "name": "House By Water Night Raining",
+    "path": "assets/maps/House By Water Night Raining.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "night",
       "raining"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Night Raining.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Night Raining.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Dusk",
-    "path":"assets/maps/House By Water Dusk.mp4",
-    "tags":[
+    "name": "House By Water Dusk",
+    "path": "assets/maps/House By Water Dusk.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "dusk"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Dusk.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Dusk.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Dusk Raining",
-    "path":"assets/maps/House By Water Dusk Raining.mp4",
-    "tags":[
+    "name": "House By Water Dusk Raining",
+    "path": "assets/maps/House By Water Dusk Raining.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "dusk",
       "raining"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Dusk Raining.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Dusk Raining.jpg",
+    "url": ""
   },
   {
-    "name":"House By Water Day",
-    "path":"assets/maps/House By Water Day.mp4",
-    "tags":[
+    "name": "House By Water Day",
+    "path": "assets/maps/House By Water Day.mp4",
+    "tags": [
       "house",
       "by",
       "water",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/House By Water Day.jpg"
+    "thumbnail": "assets/thumbnails/House By Water Day.jpg",
+    "url": ""
   },
   {
-    "name":"Jungle Day Clear",
-    "path":"assets/maps/Jungle Day Clear.mp4",
-    "tags":[
+    "name": "Jungle Day Clear",
+    "path": "assets/maps/Jungle Day Clear.mp4",
+    "tags": [
       "jungle",
       "day",
       "clear"
     ],
-    "thumbnail":"assets/thumbnails/Jungle Day Clear.jpg"
+    "thumbnail": "assets/thumbnails/Jungle Day Clear.jpg",
+    "url": ""
   },
   {
-    "name":"Jungle Night Foggy",
-    "path":"assets/maps/Jungle Night Foggy.mp4",
-    "tags":[
+    "name": "Jungle Night Foggy",
+    "path": "assets/maps/Jungle Night Foggy.mp4",
+    "tags": [
       "jungle",
       "night",
       "foggy"
     ],
-    "thumbnail":"assets/thumbnails/Jungle Night Foggy.jpg"
+    "thumbnail": "assets/thumbnails/Jungle Night Foggy.jpg",
+    "url": ""
   },
   {
-    "name":"Jungle Night Clear",
-    "path":"assets/maps/Jungle Night Clear.mp4",
-    "tags":[
+    "name": "Jungle Night Clear",
+    "path": "assets/maps/Jungle Night Clear.mp4",
+    "tags": [
       "jungle",
       "night",
       "clear"
     ],
-    "thumbnail":"assets/thumbnails/Jungle Night Clear.jpg"
+    "thumbnail": "assets/thumbnails/Jungle Night Clear.jpg",
+    "url": ""
   },
   {
-    "name":"Archipelago Dusk",
-    "path":"assets/maps/Archipelago Dusk.mp4",
-    "tags":[
+    "name": "Archipelago Dusk",
+    "path": "assets/maps/Archipelago Dusk.mp4",
+    "tags": [
       "archipelago",
       "dusk"
     ],
-    "thumbnail":"assets/thumbnails/Archipelago Dusk.jpg"
+    "thumbnail": "assets/thumbnails/Archipelago Dusk.jpg",
+    "url": ""
   },
   {
-    "name":"Archipelego Day",
-    "path":"assets/maps/Archipelego Day.mp4",
-    "tags":[
+    "name": "Archipelego Day",
+    "path": "assets/maps/Archipelego Day.mp4",
+    "tags": [
       "archipelego",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Archipelego Day.jpg"
+    "thumbnail": "assets/thumbnails/Archipelego Day.jpg",
+    "url": ""
   },
   {
-    "name":"Lakeside Dusk",
-    "path":"assets/maps/Lakeside Dusk.mp4",
-    "tags":[
+    "name": "Lakeside Dusk",
+    "path": "assets/maps/Lakeside Dusk.mp4",
+    "tags": [
       "lakeside",
       "dusk"
     ],
-    "thumbnail":"assets/thumbnails/Lakeside Dusk.jpg"
+    "thumbnail": "assets/thumbnails/Lakeside Dusk.jpg",
+    "url": ""
   },
   {
-    "name":"Lakeside Day",
-    "path":"assets/maps/Lakeside Day.mp4",
-    "tags":[
+    "name": "Lakeside Day",
+    "path": "assets/maps/Lakeside Day.mp4",
+    "tags": [
       "lakeside",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Lakeside Day.jpg"
+    "thumbnail": "assets/thumbnails/Lakeside Day.jpg",
+    "url": ""
   },
   {
-    "name":"Cathedral",
-    "path":"assets/maps/Cathedral.mp4",
-    "tags":[
+    "name": "Cathedral",
+    "path": "assets/maps/Cathedral.mp4",
+    "tags": [
       "cathedral"
     ],
-    "thumbnail":"assets/thumbnails/Cathedral.jpg"
+    "thumbnail": "assets/thumbnails/Cathedral.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Road Wide 1",
-    "path":"assets/maps/Winter Road Wide 1.mp4",
-    "tags":[
+    "name": "Winter Road Wide 1",
+    "path": "assets/maps/Winter Road Wide 1.mp4",
+    "tags": [
       "winter",
       "road",
       "wide",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Winter Road Wide 1.jpg"
+    "thumbnail": "assets/thumbnails/Winter Road Wide 1.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Road 2",
-    "path":"assets/maps/Winter Road 2.mp4",
-    "tags":[
+    "name": "Winter Road 2",
+    "path": "assets/maps/Winter Road 2.mp4",
+    "tags": [
       "winter",
       "road",
       "2"
     ],
-    "thumbnail":"assets/thumbnails/Winter Road 2.jpg"
+    "thumbnail": "assets/thumbnails/Winter Road 2.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Road 1",
-    "path":"assets/maps/Winter Road 1.mp4",
-    "tags":[
+    "name": "Winter Road 1",
+    "path": "assets/maps/Winter Road 1.mp4",
+    "tags": [
       "winter",
       "road",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Winter Road 1.jpg"
+    "thumbnail": "assets/thumbnails/Winter Road 1.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Forest Road Bend Square 2",
-    "path":"assets/maps/Winter Forest Road Bend Square 2.mp4",
-    "tags":[
+    "name": "Winter Forest Road Bend Square 2",
+    "path": "assets/maps/Winter Forest Road Bend Square 2.mp4",
+    "tags": [
       "winter",
       "forest",
       "road",
@@ -2773,32 +3018,35 @@
       "square",
       "2"
     ],
-    "thumbnail":"assets/thumbnails/Winter Forest Road Bend Square 2.jpg"
+    "thumbnail": "assets/thumbnails/Winter Forest Road Bend Square 2.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Hillside",
-    "path":"assets/maps/Winter Hillside.mp4",
-    "tags":[
+    "name": "Winter Hillside",
+    "path": "assets/maps/Winter Hillside.mp4",
+    "tags": [
       "winter",
       "hillside"
     ],
-    "thumbnail":"assets/thumbnails/Winter Hillside.jpg"
+    "thumbnail": "assets/thumbnails/Winter Hillside.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Forest Square 1",
-    "path":"assets/maps/Winter Forest Square 1.mp4",
-    "tags":[
+    "name": "Winter Forest Square 1",
+    "path": "assets/maps/Winter Forest Square 1.mp4",
+    "tags": [
       "winter",
       "forest",
       "square",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Winter Forest Square 1.jpg"
+    "thumbnail": "assets/thumbnails/Winter Forest Square 1.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Forest Road Straight Square 3",
-    "path":"assets/maps/Winter Forest Road Straight Square 3.mp4",
-    "tags":[
+    "name": "Winter Forest Road Straight Square 3",
+    "path": "assets/maps/Winter Forest Road Straight Square 3.mp4",
+    "tags": [
       "winter",
       "forest",
       "road",
@@ -2806,12 +3054,13 @@
       "square",
       "3"
     ],
-    "thumbnail":"assets/thumbnails/Winter Forest Road Straight Square 3.jpg"
+    "thumbnail": "assets/thumbnails/Winter Forest Road Straight Square 3.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Forest Road Bend Square 1",
-    "path":"assets/maps/Winter Forest Road Bend Square 1.mp4",
-    "tags":[
+    "name": "Winter Forest Road Bend Square 1",
+    "path": "assets/maps/Winter Forest Road Bend Square 1.mp4",
+    "tags": [
       "winter",
       "forest",
       "road",
@@ -2819,69 +3068,76 @@
       "square",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Winter Forest Road Bend Square 1.jpg"
+    "thumbnail": "assets/thumbnails/Winter Forest Road Bend Square 1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest",
-    "path":"assets/maps/Forest.mp4",
-    "tags":[
+    "name": "Forest",
+    "path": "assets/maps/Forest.mp4",
+    "tags": [
       "forest"
     ],
-    "thumbnail":"assets/thumbnails/Forest.jpg"
+    "thumbnail": "assets/thumbnails/Forest.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Wide 2",
-    "path":"assets/maps/Forest Wide 2.mp4",
-    "tags":[
+    "name": "Forest Wide 2",
+    "path": "assets/maps/Forest Wide 2.mp4",
+    "tags": [
       "forest",
       "wide",
       "2"
     ],
-    "thumbnail":"assets/thumbnails/Forest Wide 2.jpg"
+    "thumbnail": "assets/thumbnails/Forest Wide 2.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Wide 1",
-    "path":"assets/maps/Forest Wide 1.mp4",
-    "tags":[
+    "name": "Forest Wide 1",
+    "path": "assets/maps/Forest Wide 1.mp4",
+    "tags": [
       "forest",
       "wide",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Forest Wide 1.jpg"
+    "thumbnail": "assets/thumbnails/Forest Wide 1.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Pathway",
-    "path":"assets/maps/Forest Pathway.mp4",
-    "tags":[
+    "name": "Forest Pathway",
+    "path": "assets/maps/Forest Pathway.mp4",
+    "tags": [
       "forest",
       "pathway"
     ],
-    "thumbnail":"assets/thumbnails/Forest Pathway.jpg"
+    "thumbnail": "assets/thumbnails/Forest Pathway.jpg",
+    "url": ""
   },
   {
-    "name":"Forest Clearing",
-    "path":"assets/maps/Forest Clearing.mp4",
-    "tags":[
+    "name": "Forest Clearing",
+    "path": "assets/maps/Forest Clearing.mp4",
+    "tags": [
       "forest",
       "clearing"
     ],
-    "thumbnail":"assets/thumbnails/Forest Clearing.jpg"
+    "thumbnail": "assets/thumbnails/Forest Clearing.jpg",
+    "url": ""
   },
   {
-    "name":"Winter Road Wide 2",
-    "path":"assets/maps/Winter Road Wide 2.mp4",
-    "tags":[
+    "name": "Winter Road Wide 2",
+    "path": "assets/maps/Winter Road Wide 2.mp4",
+    "tags": [
       "winter",
       "road",
       "wide",
       "2"
     ],
-    "thumbnail":"assets/thumbnails/Winter Road Wide 2.jpg"
+    "thumbnail": "assets/thumbnails/Winter Road Wide 2.jpg",
+    "url": ""
   },
   {
-    "name":"Las Vegas Top Left Rotated Night",
-    "path":"assets/maps/Las Vegas Top Left Rotated Night.mp4",
-    "tags":[
+    "name": "Las Vegas Top Left Rotated Night",
+    "path": "assets/maps/Las Vegas Top Left Rotated Night.mp4",
+    "tags": [
       "las",
       "vegas",
       "top",
@@ -2889,12 +3145,13 @@
       "rotated",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Las Vegas Top Left Rotated Night.jpg"
+    "thumbnail": "assets/thumbnails/Las Vegas Top Left Rotated Night.jpg",
+    "url": ""
   },
   {
-    "name":"Las Vegas Top Left Rotated Day",
-    "path":"assets/maps/Las Vegas Top Left Rotated Day.mp4",
-    "tags":[
+    "name": "Las Vegas Top Left Rotated Day",
+    "path": "assets/maps/Las Vegas Top Left Rotated Day.mp4",
+    "tags": [
       "las",
       "vegas",
       "top",
@@ -2902,288 +3159,318 @@
       "rotated",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Las Vegas Top Left Rotated Day.jpg"
+    "thumbnail": "assets/thumbnails/Las Vegas Top Left Rotated Day.jpg",
+    "url": ""
   },
   {
-    "name":"Las Vegas Top Left Night",
-    "path":"assets/maps/Las Vegas Top Left Night.mp4",
-    "tags":[
+    "name": "Las Vegas Top Left Night",
+    "path": "assets/maps/Las Vegas Top Left Night.mp4",
+    "tags": [
       "las",
       "vegas",
       "top",
       "left",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Las Vegas Top Left Night.jpg"
+    "thumbnail": "assets/thumbnails/Las Vegas Top Left Night.jpg",
+    "url": ""
   },
   {
-    "name":"Las Vegas Top Left Day",
-    "path":"assets/maps/Las Vegas Top Left Day.mp4",
-    "tags":[
+    "name": "Las Vegas Top Left Day",
+    "path": "assets/maps/Las Vegas Top Left Day.mp4",
+    "tags": [
       "las",
       "vegas",
       "top",
       "left",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Las Vegas Top Left Day.jpg"
+    "thumbnail": "assets/thumbnails/Las Vegas Top Left Day.jpg",
+    "url": ""
   },
   {
-    "name":"Ghomorrah Road",
-    "path":"assets/maps/Ghomorrah Road.mp4",
-    "tags":[
+    "name": "Ghomorrah Road",
+    "path": "assets/maps/Ghomorrah Road.mp4",
+    "tags": [
       "ghomorrah",
       "road"
     ],
-    "thumbnail":"assets/thumbnails/Ghomorrah Road.jpg"
+    "thumbnail": "assets/thumbnails/Ghomorrah Road.jpg",
+    "url": ""
   },
   {
-    "name":"Prison Camp Bottom Right",
-    "path":"assets/maps/Prison Camp Bottom Right.mp4",
-    "tags":[
+    "name": "Prison Camp Bottom Right",
+    "path": "assets/maps/Prison Camp Bottom Right.mp4",
+    "tags": [
       "prison",
       "camp",
       "bottom",
       "right"
     ],
-    "thumbnail":"assets/thumbnails/Prison Camp Bottom Right.jpg"
+    "thumbnail": "assets/thumbnails/Prison Camp Bottom Right.jpg",
+    "url": ""
   },
   {
-    "name":"Prison Camp Top Left",
-    "path":"assets/maps/Prison Camp Top Left.mp4",
-    "tags":[
+    "name": "Prison Camp Top Left",
+    "path": "assets/maps/Prison Camp Top Left.mp4",
+    "tags": [
       "prison",
       "camp",
       "top",
       "left"
     ],
-    "thumbnail":"assets/thumbnails/Prison Camp Top Left.jpg"
+    "thumbnail": "assets/thumbnails/Prison Camp Top Left.jpg",
+    "url": ""
   },
   {
-    "name":"Prison Camp Bottom Left",
-    "path":"assets/maps/Prison Camp Bottom Left.mp4",
-    "tags":[
+    "name": "Prison Camp Bottom Left",
+    "path": "assets/maps/Prison Camp Bottom Left.mp4",
+    "tags": [
       "prison",
       "camp",
       "bottom",
       "left"
     ],
-    "thumbnail":"assets/thumbnails/Prison Camp Bottom Left.jpg"
+    "thumbnail": "assets/thumbnails/Prison Camp Bottom Left.jpg",
+    "url": ""
   },
   {
-    "name":"Prison Camp Birdseye",
-    "path":"assets/maps/Prison Camp Birdseye.mp4",
-    "tags":[
+    "name": "Prison Camp Birdseye",
+    "path": "assets/maps/Prison Camp Birdseye.mp4",
+    "tags": [
       "prison",
       "camp",
       "birdseye"
     ],
-    "thumbnail":"assets/thumbnails/Prison Camp Birdseye.jpg"
+    "thumbnail": "assets/thumbnails/Prison Camp Birdseye.jpg",
+    "url": ""
   },
   {
-    "name":"Prison Camp Top Right",
-    "path":"assets/maps/Prison Camp Top Right.mp4",
-    "tags":[
+    "name": "Prison Camp Top Right",
+    "path": "assets/maps/Prison Camp Top Right.mp4",
+    "tags": [
       "prison",
       "camp",
       "top",
       "right"
     ],
-    "thumbnail":"assets/thumbnails/Prison Camp Top Right.jpg"
+    "thumbnail": "assets/thumbnails/Prison Camp Top Right.jpg",
+    "url": ""
   },
   {
-    "name":"Playground 1",
-    "path":"assets/maps/Playground 1.mp4",
-    "tags":[
+    "name": "Playground 1",
+    "path": "assets/maps/Playground 1.mp4",
+    "tags": [
       "playground",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Playground 1.jpg"
+    "thumbnail": "assets/thumbnails/Playground 1.jpg",
+    "url": ""
   },
   {
-    "name":"Rubble",
-    "path":"assets/maps/Rubble.mp4",
-    "tags":[
+    "name": "Rubble",
+    "path": "assets/maps/Rubble.mp4",
+    "tags": [
       "rubble"
     ],
-    "thumbnail":"assets/thumbnails/Rubble.jpg"
+    "thumbnail": "assets/thumbnails/Rubble.jpg",
+    "url": ""
   },
   {
-    "name":"Radar Station",
-    "path":"assets/maps/Radar Station.mp4",
-    "tags":[
+    "name": "Radar Station",
+    "path": "assets/maps/Radar Station.mp4",
+    "tags": [
       "radar",
       "station"
     ],
-    "thumbnail":"assets/thumbnails/Radar Station.jpg"
+    "thumbnail": "assets/thumbnails/Radar Station.jpg",
+    "url": ""
   },
   {
-    "name":"Road Bridge",
-    "path":"assets/maps/Road Bridge.mp4",
-    "tags":[
+    "name": "Road Bridge",
+    "path": "assets/maps/Road Bridge.mp4",
+    "tags": [
       "road",
       "bridge"
     ],
-    "thumbnail":"assets/thumbnails/Road Bridge.jpg"
+    "thumbnail": "assets/thumbnails/Road Bridge.jpg",
+    "url": ""
   },
   {
-    "name":"River Bridge",
-    "path":"assets/maps/River Bridge.mp4",
-    "tags":[
+    "name": "River Bridge",
+    "path": "assets/maps/River Bridge.mp4",
+    "tags": [
       "river",
       "bridge"
     ],
-    "thumbnail":"assets/thumbnails/River Bridge.jpg"
+    "thumbnail": "assets/thumbnails/River Bridge.jpg",
+    "url": ""
   },
   {
-    "name":"Jungle Road",
-    "path":"assets/maps/Jungle Road.mp4",
-    "tags":[
+    "name": "Jungle Road",
+    "path": "assets/maps/Jungle Road.mp4",
+    "tags": [
       "jungle",
       "road"
     ],
-    "thumbnail":"assets/thumbnails/Jungle Road.jpg"
+    "thumbnail": "assets/thumbnails/Jungle Road.jpg",
+    "url": ""
   },
   {
-    "name":"Jungle Fort",
-    "path":"assets/maps/Jungle Fort.mp4",
-    "tags":[
+    "name": "Jungle Fort",
+    "path": "assets/maps/Jungle Fort.mp4",
+    "tags": [
       "jungle",
       "fort"
     ],
-    "thumbnail":"assets/thumbnails/Jungle Fort.jpg"
+    "thumbnail": "assets/thumbnails/Jungle Fort.jpg",
+    "url": ""
   },
   {
-    "name":"Antennae Tower",
-    "path":"assets/maps/Antennae Tower.mp4",
-    "tags":[
+    "name": "Antennae Tower",
+    "path": "assets/maps/Antennae Tower.mp4",
+    "tags": [
       "antennae",
       "tower"
     ],
-    "thumbnail":"assets/thumbnails/Antennae Tower.jpg"
+    "thumbnail": "assets/thumbnails/Antennae Tower.jpg",
+    "url": ""
   },
   {
-    "name":"Docks",
-    "path":"assets/maps/Docks.mp4",
-    "tags":[
+    "name": "Docks",
+    "path": "assets/maps/Docks.mp4",
+    "tags": [
       "docks"
     ],
-    "thumbnail":"assets/thumbnails/Docks.jpg"
+    "thumbnail": "assets/thumbnails/Docks.jpg",
+    "url": ""
   },
   {
-    "name":"Temple",
-    "path":"assets/maps/Temple.mp4",
-    "tags":[
+    "name": "Temple",
+    "path": "assets/maps/Temple.mp4",
+    "tags": [
       "temple"
     ],
-    "thumbnail":"assets/thumbnails/Temple.jpg"
+    "thumbnail": "assets/thumbnails/Temple.jpg",
+    "url": ""
   },
   {
-    "name":"Castle Courtyard",
-    "path":"assets/maps/Castle Courtyard.mp4",
-    "tags":[
+    "name": "Castle Courtyard",
+    "path": "assets/maps/Castle Courtyard.mp4",
+    "tags": [
       "castle",
       "courtyard"
     ],
-    "thumbnail":"assets/thumbnails/Castle Courtyard.jpg"
+    "thumbnail": "assets/thumbnails/Castle Courtyard.jpg",
+    "url": ""
   },
   {
-    "name":"Castle Courtyard East",
-    "path":"assets/maps/Castle Courtyard East.mp4",
-    "tags":[
+    "name": "Castle Courtyard East",
+    "path": "assets/maps/Castle Courtyard East.mp4",
+    "tags": [
       "castle",
       "courtyard",
       "east"
     ],
-    "thumbnail":"assets/thumbnails/Castle Courtyard East.jpg"
+    "thumbnail": "assets/thumbnails/Castle Courtyard East.jpg",
+    "url": ""
   },
   {
-    "name":"Castle Courtyard West",
-    "path":"assets/maps/Castle Courtyard West.mp4",
-    "tags":[
+    "name": "Castle Courtyard West",
+    "path": "assets/maps/Castle Courtyard West.mp4",
+    "tags": [
       "castle",
       "courtyard",
       "west"
     ],
-    "thumbnail":"assets/thumbnails/Castle Courtyard West.jpg"
+    "thumbnail": "assets/thumbnails/Castle Courtyard West.jpg",
+    "url": ""
   },
   {
-    "name":"Cave Entrance",
-    "path":"assets/maps/Cave Entrance.mp4",
-    "tags":[
+    "name": "Cave Entrance",
+    "path": "assets/maps/Cave Entrance.mp4",
+    "tags": [
       "cave",
       "entrance"
     ],
-    "thumbnail":"assets/thumbnails/Cave Entrance.jpg"
+    "thumbnail": "assets/thumbnails/Cave Entrance.jpg",
+    "url": ""
   },
   {
-    "name":"Hut",
-    "path":"assets/maps/Hut.mp4",
-    "tags":[
+    "name": "Hut",
+    "path": "assets/maps/Hut.mp4",
+    "tags": [
       "hut"
     ],
-    "thumbnail":"assets/thumbnails/Hut.jpg"
+    "thumbnail": "assets/thumbnails/Hut.jpg",
+    "url": ""
   },
   {
-    "name":"Bravil 4",
-    "path":"assets/maps/Bravil 4.mp4",
-    "tags":[
+    "name": "Bravil 4",
+    "path": "assets/maps/Bravil 4.mp4",
+    "tags": [
       "bravil",
       "4"
     ],
-    "thumbnail":"assets/thumbnails/Bravil 4.jpg"
+    "thumbnail": "assets/thumbnails/Bravil 4.jpg",
+    "url": ""
   },
   {
-    "name":"Bravil 3",
-    "path":"assets/maps/Bravil 3.mp4",
-    "tags":[
+    "name": "Bravil 3",
+    "path": "assets/maps/Bravil 3.mp4",
+    "tags": [
       "bravil",
       "3"
     ],
-    "thumbnail":"assets/thumbnails/Bravil 3.jpg"
+    "thumbnail": "assets/thumbnails/Bravil 3.jpg",
+    "url": ""
   },
   {
-    "name":"Bravil 2",
-    "path":"assets/maps/Bravil 2.mp4",
-    "tags":[
+    "name": "Bravil 2",
+    "path": "assets/maps/Bravil 2.mp4",
+    "tags": [
       "bravil",
       "2"
     ],
-    "thumbnail":"assets/thumbnails/Bravil 2.jpg"
+    "thumbnail": "assets/thumbnails/Bravil 2.jpg",
+    "url": ""
   },
   {
-    "name":"Bravil 1",
-    "path":"assets/maps/Bravil 1.mp4",
-    "tags":[
+    "name": "Bravil 1",
+    "path": "assets/maps/Bravil 1.mp4",
+    "tags": [
       "bravil",
       "1"
     ],
-    "thumbnail":"assets/thumbnails/Bravil 1.jpg"
+    "thumbnail": "assets/thumbnails/Bravil 1.jpg",
+    "url": ""
   },
   {
-    "name":"Chapel Overcast",
-    "path":"assets/maps/Chapel Overcast.mp4",
-    "tags":[
+    "name": "Chapel Overcast",
+    "path": "assets/maps/Chapel Overcast.mp4",
+    "tags": [
       "chapel",
       "overcast"
     ],
-    "thumbnail":"assets/thumbnails/Chapel Overcast.jpg"
+    "thumbnail": "assets/thumbnails/Chapel Overcast.jpg",
+    "url": ""
   },
   {
-    "name":"Floral Grove Foggy Day",
-    "path":"assets/maps/Floral Grove Foggy Day.mp4",
-    "tags":[
+    "name": "Floral Grove Foggy Day",
+    "path": "assets/maps/Floral Grove Foggy Day.mp4",
+    "tags": [
       "floral",
       "grove",
       "foggy",
       "day"
     ],
-    "thumbnail":"assets/thumbnails/Floral Grove Foggy Day.jpg"
+    "thumbnail": "assets/thumbnails/Floral Grove Foggy Day.jpg",
+    "url": ""
   },
   {
-    "name":"Swamp Town Dock 1 Foggy Morning",
-    "path":"assets/maps/Swamp Town Dock 1 Foggy Morning.mp4",
-    "tags":[
+    "name": "Swamp Town Dock 1 Foggy Morning",
+    "path": "assets/maps/Swamp Town Dock 1 Foggy Morning.mp4",
+    "tags": [
       "swamp",
       "town",
       "dock",
@@ -3191,39 +3478,43 @@
       "foggy",
       "morning"
     ],
-    "thumbnail":"assets/thumbnails/Swamp Town Dock 1 Foggy Morning.jpg"
+    "thumbnail": "assets/thumbnails/Swamp Town Dock 1 Foggy Morning.jpg",
+    "url": ""
   },
   {
-    "name":"Courtyard Midday",
-    "path":"assets/maps/Courtyard Midday.mp4",
-    "tags":[
+    "name": "Courtyard Midday",
+    "path": "assets/maps/Courtyard Midday.mp4",
+    "tags": [
       "courtyard",
       "midday"
     ],
-    "thumbnail":"assets/thumbnails/Courtyard Midday.jpg"
+    "thumbnail": "assets/thumbnails/Courtyard Midday.jpg",
+    "url": ""
   },
   {
-    "name":"Courtyard Night",
-    "path":"assets/maps/Courtyard Night.mp4",
-    "tags":[
+    "name": "Courtyard Night",
+    "path": "assets/maps/Courtyard Night.mp4",
+    "tags": [
       "courtyard",
       "night"
     ],
-    "thumbnail":"assets/thumbnails/Courtyard Night.jpg"
+    "thumbnail": "assets/thumbnails/Courtyard Night.jpg",
+    "url": ""
   },
   {
-    "name":"Island Coast",
-    "path":"assets/maps/Island Coast.mp4",
-    "tags":[
+    "name": "Island Coast",
+    "path": "assets/maps/Island Coast.mp4",
+    "tags": [
       "island",
       "coast"
     ],
-    "thumbnail":"assets/thumbnails/Island Coast.jpg"
+    "thumbnail": "assets/thumbnails/Island Coast.jpg",
+    "url": ""
   },
   {
-    "name":"Ruined Castle Animated Map (Forest, High Cliff, Island, Winter)",
-    "path":"assets/maps/Ruined Castle Animated Map (Forest, High Cliff, Island, Winter).mp4",
-    "tags":[
+    "name": "Ruined Castle Animated Map (Forest, High Cliff, Island, Winter)",
+    "path": "assets/maps/Ruined Castle Animated Map (Forest, High Cliff, Island, Winter).mp4",
+    "tags": [
       "ruined",
       "castle",
       "animated",
@@ -3236,6 +3527,7 @@
       "winter",
       ")"
     ],
-    "thumbnail":"assets/thumbnails/Ruined Castle Animated Map (Forest High Cliff Island Winter).jpg"
+    "thumbnail": "assets/thumbnails/Ruined Castle Animated Map (Forest High Cliff Island Winter).jpg",
+    "url": ""
   }
 ]
