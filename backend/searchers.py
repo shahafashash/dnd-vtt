@@ -1,34 +1,31 @@
-from typing import List, Any, Set, Dict
+from typing import List, Set, Dict
 from abc import ABC, abstractmethod
 from collections import defaultdict
 import operator
 import difflib
 from functools import lru_cache
-from loader import Loader
+from backend.config import Config
 
 
-class Searcher(ABC):
+class SearchingStrategy(ABC):
     @abstractmethod
     def search(self, query: str, n: int = -1) -> List[str]:
         raise NotImplementedError("Must implement search method")
 
 
-class MapSearcher(Searcher):
-    def __init__(self, loader: Loader, accuracy: float = 0.05) -> None:
-        self.__loader = loader
+class BasicSearchingStrategy(SearchingStrategy):
+    def __init__(self, config: Config, accuracy: float = 0.5) -> None:
+        self.__config = config
         self.__accuracy = accuracy
-        self.__maps_names = self.__loader.maps_names
-        self.__tags = self.__loader.tags
+        self.__maps_names = self.__config.maps_names
+        self.__tags = self.__config.tags
         self.__tags_mapping = self.__create_tags_mapping()
-
-    @property
-    def accuracy(self) -> float:
-        return self.__accuracy
+        self.__n = len(self.__maps_names)
 
     def __create_tags_mapping(self) -> Dict[str, Set[str]]:
         tags_mapping = defaultdict(set)
         for map_name in self.__maps_names:
-            map_obj = self.__loader.get_map(map_name)
+            map_obj = self.__config.get_map(map_name)
             for tag in map_obj.tags:
                 tags_mapping[tag].add(map_name)
 
@@ -39,7 +36,6 @@ class MapSearcher(Searcher):
         tags_matches = set()
         # self.__accuracy is a float between 0 and 1. tries is the number of times we will try to find a match
         tries = int(1.0 / self.__accuracy) + 1
-        # tries = int(100 // self.__accuracy) + 1
         for tag in query_tags:
             for i in range(tries):
                 cutoff = 1.0 - (self.accuracy * i)
@@ -78,16 +74,31 @@ class MapSearcher(Searcher):
         matches = [map_name for map_name, _ in matches]
         return matches
 
-    @lru_cache(maxsize=256)
     def search(self, query: str, n: int = -1) -> List[str]:
         if n < 0:
-            n = len(self.__maps_names)
+            n = self.__n
 
         if query.strip() == "":
-            return self.__maps_names[:n]
+            return self.__maps_names
 
         query_tags = self.__get_query_tags(query)
         maps_scores = self.__get_maps_scores(query_tags)
         maps = [map_name for map_name, _ in maps_scores]
         matches = self.__get_best_matches(query_tags, maps)
-        return matches[:n]
+        return matches
+
+
+class Searcher(ABC):
+    @abstractmethod
+    def search(self, query: str, n: int = -1) -> List[str]:
+        raise NotImplementedError("Must implement search method")
+
+
+class MapSearcher(Searcher):
+    def __init__(self, strategy: SearchingStrategy) -> None:
+        self.__strategy = strategy
+
+    @lru_cache(maxsize=1024)
+    def search(self, query: str, n: int = -1) -> List[str]:
+        matches = self.__strategy.search(query, n)
+        return matches
