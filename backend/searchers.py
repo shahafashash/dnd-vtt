@@ -38,7 +38,7 @@ class BasicSearchingStrategy(SearchingStrategy):
         tries = int(1.0 / self.__accuracy) + 1
         for tag in query_tags:
             for i in range(tries):
-                cutoff = 1.0 - (self.accuracy * i)
+                cutoff = 1.0 - (self.__accuracy * i)
                 matches = difflib.get_close_matches(
                     tag, self.__tags, n=5, cutoff=cutoff
                 )
