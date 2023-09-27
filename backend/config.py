@@ -11,7 +11,13 @@ import pygame as pg
 
 class Map:
     def __init__(
-        self, name: str, path: str, tags: List[str], thumbnail: str, url: str
+        self,
+        name: str,
+        path: str,
+        tags: List[str],
+        thumbnail: str,
+        url: str,
+        favorite: bool = False,
     ) -> None:
         current_dir = Path(__file__).parent.parent.absolute()
 
@@ -22,6 +28,7 @@ class Map:
         thumbnail_size = (320, 320 * (9 / 16))
         self.__thumbnail = self.__load_thumbnail(self.__thumbnail_path, thumbnail_size)
         self.__url = url
+        self.__favorite = favorite
 
         self.__cap = None
         self.__num_frames = None
@@ -46,6 +53,10 @@ class Map:
     def url(self) -> str:
         return self.__url
 
+    @property
+    def favorite(self) -> bool:
+        return self.__favorite
+
     def __load_thumbnail(
         self, thumbnail_path: str, size: Tuple[int, int]
     ) -> pg.Surface:
@@ -53,13 +64,20 @@ class Map:
         thumbnail = pg.transform.scale(thumbnail, size)
         return thumbnail
 
-    def to_dict(self) -> Dict[str, List[str] | str]:
+    def to_dict(self) -> Dict[str, List[str] | str | bool]:
+        # get the part of the path from the assets folder to the file
+        assets_index = Path(self.__path).parts.index("assets")
+        path = Path("assets").joinpath(*Path(self.__path).parts[assets_index + 1 :])
+        thumbnail_path = Path("assets").joinpath(
+            *Path(self.__thumbnail_path).parts[assets_index + 1 :]
+        )
         content = {
             "name": self.__name,
-            "path": self.__path,
+            "path": str(path),
             "tags": self.__tags,
-            "thumbnail": self.__thumbnail_path,
+            "thumbnail": str(thumbnail_path),
             "url": self.__url,
+            "favorite": self.__favorite,
         }
         return content
 
@@ -134,7 +152,8 @@ class Config:
             tags = item["tags"]
             thumbnail = item["thumbnail"]
             url = item["url"]
-            map_obj = Map(name, path, tags, thumbnail, url)
+            favorite = item["favorite"]
+            map_obj = Map(name, path, tags, thumbnail, url, favorite)
             results.put(map_obj)
 
     def __load_maps(self, maps_file: str) -> Dict[str, Map]:
@@ -163,12 +182,12 @@ class Config:
 
         return tags
 
-    def __drop_to_file(self) -> None:
+    def __update_config_file(self) -> None:
         content = [map_obj.to_dict() for map_obj in self.__maps.values()]
         with open(self.__config_file, "w") as f:
             json.dump(content, f, indent=2, sort_keys=True)
 
-    @lru_cache(maxsize=1024)
+    @lru_cache(maxsize=256)
     def get_map(self, map_name: str) -> Map:
         name = map_name.title()
         return self.__maps[name]
@@ -182,6 +201,14 @@ class Config:
                 matches.append(map_obj)
         return matches
 
+    @lru_cache(maxsize=256)
+    def get_favorite_maps(self) -> List[Map]:
+        matches = []
+        for map_obj in self.__maps.values():
+            if map_obj.favorite:
+                matches.append(map_obj)
+        return matches
+
     def add_tag(self, map_name: str, tag: str) -> None:
         name = map_name.title()
         map_tags = self.__maps[name].tags
@@ -191,7 +218,7 @@ class Config:
             self.__maps[name].tags = map_tags
 
         self.__tags.add(tag_lower)
-        self.__drop_to_file()
+        self.__update_config_file()
 
     def remove_tag(self, map_name: str, tag: str) -> None:
         name = map_name.title()
@@ -211,4 +238,59 @@ class Config:
         if count <= 1:
             self.__tags.discard(tag_lower)
 
-        self.__drop_to_file()
+        self.__update_config_file()
+
+    def set_favorite(self, map_name: str, favorite: bool) -> None:
+        name = map_name.title()
+        self.__maps[name].favorite = favorite
+        self.__update_config_file()
+
+    def remove_favorite(self, map_name: str) -> None:
+        name = map_name.title()
+        self.__maps[name].favorite = False
+        self.__update_config_file()
+
+    def add_map(self, map_obj: Map) -> None:
+        if map_obj.name in self.__maps_names:
+            raise ValueError(f"Map {map_obj.name} already exists")
+        self.__maps[map_obj.name] = map_obj
+        self.__maps_names.append(map_obj.name)
+        self.__tags |= set(map_obj.tags)
+        self.__update_config_file()
+
+    def remove_map(self, map_name: str) -> None:
+        name = map_name.title()
+        if name not in self.__maps_names:
+            raise ValueError(f"Map {name} does not exist")
+
+        map_obj = self.__maps.pop(name)
+        for tag in map_obj.tags:
+            self.remove_tag(name, tag)
+        self.__maps_names.remove(name)
+        # removing the thumbnail and the map file
+        Path(map_obj.thumbnail).unlink()
+        Path(map_obj.path).unlink()
+        self.__update_config_file()
+
+    def rename_map(self, map_name: str, new_name: str) -> None:
+        name = map_name.title()
+        new_name = new_name.title()
+        if name not in self.__maps_names:
+            raise ValueError(f"Map {name} does not exist")
+
+        if new_name in self.__maps_names:
+            raise ValueError(f"Map {new_name} already exists")
+
+        map_obj = self.__maps.pop(name)
+        new_map_obj = Map(
+            new_name,
+            map_obj.path,
+            map_obj.tags,
+            map_obj.thumbnail,
+            map_obj.url,
+            map_obj.favorite,
+        )
+        self.__maps[new_name] = new_map_obj
+        self.__maps_names.remove(name)
+        self.__maps_names.append(new_name)
+        self.__update_config_file()
