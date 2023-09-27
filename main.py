@@ -280,6 +280,7 @@ def handle_gui_events(event: str):
         GUI.elements.remove(GameManager.get_instance().search_textbox)
     elif event["key"] == "search":
         found_maps = GameManager.get_instance().map_searcher.search(event["text"])
+        GameManager.get_instance().maps = found_maps
         GUI.elements.remove(GameManager.get_instance().thumbnail_columns)
         thumbnail_columns = create_columns_maps(found_maps)
         GameManager.get_instance().thumbnail_columns = thumbnail_columns
