@@ -1,4 +1,5 @@
 import pygame
+from random import randint
 
 class Effects(list):
     def handle_events(self, event):
@@ -96,3 +97,20 @@ class ColorFilter(Effect):
     def draw(self):
         self.win.fill(self.color, special_flags=pygame.BLEND_MULT)
         self.win.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
+
+
+class Rain(Effect):
+    def __init__(self, win):
+        super().__init__(win)
+        self.particles = []
+        self.max_particles = 100
+
+    def step(self):
+        if len(self.particles) < self.max_particles:
+            if randint(1, 100) > 10:
+                # create a new particle
+                x = 5
+
+    def draw(self):
+        for particle in self.particles:
+            pass

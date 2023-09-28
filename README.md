@@ -1,5 +1,7 @@
 # Dnd Virtual Table Top
 
+![](./assets/images/preview.png "Preview")
+
 A table Top for dragons and dungeons.
 
 ### Features:
@@ -8,6 +10,6 @@ A table Top for dragons and dungeons.
 * [X] Customizable grid (hex, quads, colors, transparency ...)
 * [X] Advanced map search
 * [ ] Overlay color filters
-* [ ] Night/Darkness mode with dynamic lighting
+* [X] Night/Darkness mode with dynamic lighting
 * [ ] Objects on map
 * [ ] Favourites maps
