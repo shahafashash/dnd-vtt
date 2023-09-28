@@ -12,15 +12,14 @@ __version__ = "1.0.0"
 
 from typing import Tuple
 from math import cos, sin, pi
-from utils import cycle
+from tools.utils import cycle
 import pygame as pg
 import json
 from collections import deque
 from enum import Enum
 from gui import *
 from font import Font
-from loader import Loader
-from searchers import MapSearcher
+from backend.factories import SimpleFactory
 from effects import Effects, DarknessEffect, ColorFilter
 
 FPS = 60
@@ -57,15 +56,16 @@ class GameEvent:
 class GameManager:
     _instance = None
 
-    def __init__(self, screen, clock):
+    def __init__(self, screen, clock, factory):
         GameManager._instance = self
         self.screen = screen
         self.clock = clock
 
-        self.loader = Loader("maps.json")
-
-        self.map_searcher = MapSearcher(loader=self.loader)
-        self.maps = self.loader.maps_names
+        self.draw_loading_screen()
+        self.config = factory.create_config("maps.json")
+        self.loader = factory.create_loader(self.config)
+        self.map_searcher = factory.create_searcher(self.config)
+        self.maps = self.config.maps_names
 
         self.current_map_name = None
         self.current_map_frames = None
@@ -170,7 +170,7 @@ class GameManager:
 
     def main_menu(self):
         background = get_background()
- 
+
         for event in pg.event.get():
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
@@ -210,18 +210,18 @@ class GameManager:
                 elif event.key == pg.K_n:
                     if pygame.key.get_mods() & pygame.KMOD_CTRL:
                         for effect in self.effects:
-                            if effect.name == 'darkness':
+                            if effect.name == "darkness":
                                 self.effects.remove(effect)
                                 return
                         self.effects.append(DarknessEffect(self.screen))
                 elif event.key == pg.K_a:
                     if pygame.key.get_mods() & pygame.KMOD_CTRL:
                         for effect in self.effects:
-                            if effect.name == 'avernus':
+                            if effect.name == "avernus":
                                 self.effects.remove(effect)
                                 return
                         self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
-                        self.effects[-1].name = 'avernus'
+                        self.effects[-1].name = "avernus"
                 elif event.key == pg.K_RIGHT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
@@ -291,9 +291,9 @@ def handle_gui_events(event: str):
         gameManager.add_event(game_event)
         GUI.elements.remove(gameManager.current_menu)
     elif event["key"] == "search":
-        found_maps = gameManager.map_searcher.search(event["text"])
-        columns = GUI.elements[0].elements[0]
-        GUI.elements[0].elements.remove(columns)
+        found_maps = GameManager.get_instance().map_searcher.search(event["text"])
+        GameManager.get_instance().maps = found_maps
+        GUI.elements.remove(GameManager.get_instance().thumbnail_columns)
         thumbnail_columns = create_columns_maps(found_maps)
         GUI.elements[0].elements.insert(0, thumbnail_columns)
         thumbnail_columns.set_pos(
@@ -333,11 +333,13 @@ def create_columns_maps(found_maps) -> Columns:
     ''' create columns based on found map and return columns object '''
     thumbnail_columns = Columns(3)
     for map in found_maps:
-        map_obj = GameManager.get_instance().loader.get_map(map)
+        map_obj = GameManager.get_instance().config.get_map(map)
         thumbnail = map_obj.thumbnail
         thumbnail_stackpanel = StackPanel()
         thumbnail_stackpanel.append(Picture(thumbnail))
-        button = Button(map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4), custom_width=400)
+        button = Button(
+            map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4), custom_width=400
+        )
         thumbnail_stackpanel.linked_button = button
         thumbnail_stackpanel.append(button)
         thumbnail_columns.append(thumbnail_stackpanel)
@@ -417,7 +419,7 @@ def main():
 
     GUI.frames.append(Frame(r"./assets/images/frame.json"))
 
-    game_manager = GameManager(screen, clock)
+    game_manager = GameManager(screen, clock, factory=SimpleFactory)
 
     game_manager.setup()
 
