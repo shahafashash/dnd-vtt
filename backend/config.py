@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 import cv2
 import pygame as pg
+from nltk.tokenize import word_tokenize
 
 
 class Map:
@@ -209,34 +210,37 @@ class Config:
                 matches.append(map_obj)
         return matches
 
-    def add_tag(self, map_name: str, tag: str) -> None:
+    def add_tags(self, map_name: str, tags: str) -> None:
         name = map_name.title()
         map_tags = self.__maps[name].tags
-        tag_lower = tag.lower()
-        if tag not in map_tags:
-            map_tags.append(tag_lower)
-            self.__maps[name].tags = map_tags
+        new_tags = word_tokenize(tags)
+        for tag in new_tags:
+            tag_lower = tag.lower().strip()
+            if tag not in map_tags:
+                map_tags.append(tag_lower)
+            self.__tags.add(tag_lower)
 
-        self.__tags.add(tag_lower)
         self.__update_config_file()
 
-    def remove_tag(self, map_name: str, tag: str) -> None:
+    def remove_tags(self, map_name: str, tags: str) -> None:
         name = map_name.title()
         map_tags = self.__maps[name].tags
-        tag_lower = tag.lower()
-        if tag in map_tags:
-            map_tags.remove(tag_lower)
-            self.__maps[name].tags = map_tags
+        tags_to_remove = word_tokenize(tags)
+        for tag in tags_to_remove:
+            tag_lower = tag.lower()
+            if tag in map_tags:
+                map_tags.remove(tag_lower)
+                self.__maps[name].tags = map_tags
 
-        # count how many times the tag appears in the maps
-        count = 0
-        for map_obj in self.__maps.values():
-            if tag_lower in map_obj.tags:
-                count += 1
+            # count how many times the tag appears in the maps
+            count = 0
+            for map_obj in self.__maps.values():
+                if tag_lower in map_obj.tags:
+                    count += 1
 
-        # if it doesn't appear in any map, or it appears only once, remove it from the tags
-        if count <= 1:
-            self.__tags.discard(tag_lower)
+            # if it doesn't appear in any map, or it appears only once, remove it from the tags
+            if count <= 1:
+                self.__tags.discard(tag_lower)
 
         self.__update_config_file()
 

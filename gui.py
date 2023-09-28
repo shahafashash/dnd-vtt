@@ -93,7 +93,9 @@ class Element:
         self.parent = None
         self.frame = None
         self.debug_color = (255, 255, 255)
-        self.name = ''
+        self.name = ""
+
+        self.send_event_on_no_click = False
 
     def step(self):
         pass
@@ -129,7 +131,7 @@ class Elements(Element):
     def __init__(self):
         super().__init__()
         self.elements = []
-    
+
     def append(self, element):
         self.elements.append(element)
 
@@ -237,7 +239,8 @@ class Button(Element):
             GUI.win.blit(self.surf, center)
 
     def click(self):
-        GUI.gui_event_handler({"key": self.key, "text": self.text})
+        # todo: get all values in root of current element collection and return them as dict
+        GUI.gui_event_handler({"key": self.key, "text": self.text, "element": self})
 
 
 class TextBox(Element):
@@ -252,6 +255,7 @@ class TextBox(Element):
         if not self.font:
             self.font = GUI.fonts[0]
         self.surf = self.font.render(initial_text, True, (0, 0, 0))
+        self.cursor_surf = self.font.render("|", True, (0, 0, 0))
         self.size = self.surf.get_size()
         self.typing = False
         self.timer = 0
@@ -298,8 +302,6 @@ class TextBox(Element):
             self.surf = self.font.render(text, True, (0, 0, 0))
             return
         text = self.text
-        if self.cursor_on:
-            text += "|"
         self.surf = self.font.render(text, True, (0, 0, 0))
 
     def step(self):
@@ -337,6 +339,11 @@ class TextBox(Element):
                 pos[1],
             )
         GUI.win.blit(self.surf, alignment)
+        if self.cursor_on:
+            GUI.win.blit(
+                self.cursor_surf,
+                (alignment[0] + self.surf.get_width(), alignment[1]),
+            )
 
 
 class StackPanel(Element):
@@ -601,6 +608,7 @@ class Picture(Element):
             self.surf, (pos[0] + self.size[0] // 2 - self.surf.get_width() // 2, pos[1])
         )
 
+
 class Drawer(Element):
     def __init__(self):
         super().__init__()
@@ -610,10 +618,12 @@ class Drawer(Element):
         self.size = (width, GUI.win.get_height())
         self.open = False
         self.element = None
-        self.element_target_pos = (GUI.win.get_width(),0)
+        self.element_target_pos = (GUI.win.get_width(), 0)
+
     def set_element(self, element):
         self.element = element
         self.element.set_pos(self.element_target_pos)
+
     def step(self):
         super().step()
         mouse_pos = pygame.mouse.get_pos()
@@ -628,9 +638,9 @@ class Drawer(Element):
         if self.open:
             pass
         self.element.step()
+
     def draw(self):
         self.element.draw()
-
 
 
 def test(event):
