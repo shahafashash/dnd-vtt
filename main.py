@@ -17,10 +17,11 @@ import pygame as pg
 import json
 from collections import deque
 from enum import Enum
-from gui import *
-from font import Font
+from frontend.gui import *
+from frontend.font import Font
 from backend.factories import SimpleFactory
-from effects import Effects, DarknessEffect, ColorFilter
+from frontend.effects import Effects, DarknessEffect, ColorFilter
+from frontend.menus import MenuManager
 
 FPS = 60
 
@@ -61,13 +62,21 @@ class GameManager:
         self.screen = screen
         self.clock = clock
 
-        self.current_menu = None
-        self.draw_loading_screen()
+        self.menu_manager = MenuManager()
+
+        self.menu_manager.create_loading_screen(self.screen)
+        # update screen
+        self.screen.blit(get_background(), (0, 0))
+        GUI.step()
+        GUI.draw()
+        pg.display.flip()
+
         self.config = factory.create_config("maps.json")
         self.loader = factory.create_loader(self.config)
         self.map_searcher = factory.create_searcher(self.config)
         self.maps = self.config.maps_names
-
+        self.menu_manager.set_config(self.config)
+        
         self.current_map_name = None
         self.current_map_frames = None
 
@@ -81,8 +90,6 @@ class GameManager:
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
 
-        self.map_menu = None # the gui men of last map searches
-
         self.effects = Effects()
 
     def get_instance():
@@ -90,24 +97,6 @@ class GameManager:
 
     def add_event(self, event):
         self.event_que.append(event)
-
-    def draw_loading_screen(self):
-        cm = StackPanel()
-        label_title = Label("LOADING...", GUI.get_font_at(2))
-        cm.append(label_title)
-        cm.pos = (
-            self.screen.get_width() // 2 - cm.size[0] // 2,
-            self.screen.get_height() // 2 - cm.size[1] // 2,
-        )
-        self.current_menu = cm
-        cm.frame = GUI.frames[0]
-
-        GUI.append(self.current_menu)
-
-        self.screen.blit(get_background(), (0, 0))
-        GUI.step()
-        GUI.draw()
-        pg.display.flip()
 
     def handle_game_events(self):
         while len(self.event_que):
@@ -128,11 +117,11 @@ class GameManager:
                 if self.state == State.GAME_MAIN_MENU:
                     exit(0)
                 elif self.state == State.GAME_RUM_MAP:
-                    if self.current_menu:
-                        GUI.remove(self.current_menu)
-                        self.current_menu = None
+                    if self.menu_manager.current_menu:
+                        GUI.remove(self.menu_manager.current_menu)
+                        self.menu_manager.current_menu = None
                     else:
-                        create_menu_game()
+                        self.menu_manager.create_menu_game(self.screen)
             elif event.key == pg.K_F11:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
 
@@ -145,34 +134,7 @@ class GameManager:
             self.run_map()
 
     def setup(self):
-        GUI.elements.remove(self.current_menu)
-
-        self.current_menu = Elements()
-
-        cm = StackPanel()
-        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(2))
-        cm.append(label_title)
-        label_credits = Label("By Shahaf Ashash and Simon Labunsky", GUI.get_font_at(0))
-        cm.append(label_credits)
-        cm.set_pos(
-            (
-                self.screen.get_width() // 2 - cm.size[0] // 2,
-                self.screen.get_height() // 2 - cm.size[1] // 2 - 100,
-            )
-        )
-        cm.frame = GUI.frames[0]
-        self.current_menu.append(cm)
-
-        button = Button("Start", "start", GUI.get_font_at(0), GUI.get_font_at(1))
-        button.set_pos(
-            (
-                self.screen.get_width() // 2 - button.size[0] // 2,
-                self.screen.get_height() // 2 - button.size[1] // 2 + 100,
-            )
-        )
-        self.current_menu.append(button)
-
-        GUI.append(self.current_menu)
+        self.menu_manager.create_main_menu(self.screen)
 
     def main_menu(self):
         background = get_background()
@@ -245,7 +207,7 @@ class GameManager:
 
             # right click
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
-                create_menu_maps(self.maps)
+                self.menu_manager.create_menu_maps(self.maps)
 
         GUI.step()
         self.effects.step()
@@ -291,46 +253,47 @@ def draw_grid_hex(surf, size=50, color=GridColors.BLACK.value):
 
 def handle_gui_events(event: str):
     print("[GUI EVENT]", event)
-    gameManager = GameManager.get_instance()
+    game_manager = GameManager.get_instance()
+    menu_manager = game_manager.menu_manager
     if event["key"] == "change_map":
         game_event = GameEvent(Event.CHANGE_MAP, event["text"])
-        gameManager.add_event(game_event)
-        GUI.elements.remove(gameManager.current_menu)
-        gameManager.current_menu = None
+        game_manager.add_event(game_event)
+        GUI.elements.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
     elif event["key"] == "search":
-        found_maps = gameManager.map_searcher.search(event["text"])
-        gameManager.maps = found_maps
-        thumbnail_columns = gameManager.current_menu.elements[0]
-        gameManager.current_menu.elements.remove(thumbnail_columns)
-        thumbnail_columns = create_columns_maps(found_maps)
-        gameManager.current_menu.elements.insert(0, thumbnail_columns)
+        found_maps = game_manager.map_searcher.search(event["text"])
+        game_manager.maps = found_maps
+        thumbnail_columns = menu_manager.current_menu.elements[0]
+        menu_manager.current_menu.elements.remove(thumbnail_columns)
+        thumbnail_columns = game_manager.menu_manager.create_columns_maps(found_maps)
+        menu_manager.current_menu.elements.insert(0, thumbnail_columns)
         thumbnail_columns.set_pos(
             (GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200)
         )
     elif event["key"] == "map_menu":
-        create_menu_maps(gameManager.maps)
+        game_manager.menu_manager.create_menu_maps(game_manager.maps)
     elif event["key"] == "start":
-        create_menu_maps(gameManager.maps)
+        game_manager.menu_manager.create_menu_maps(game_manager.maps)
     elif event["key"] == "exit":
         exit(0)
     elif event["key"] == "toggle_darkness":
-        for effect in gameManager.effects:
+        for effect in game_manager.effects:
             if effect.name == "darkness":
-                gameManager.effects.remove(effect)
-                GUI.remove(gameManager.current_menu)
-                gameManager.current_menu = None
+                game_manager.effects.remove(effect)
+                GUI.remove(menu_manager.current_menu)
+                menu_manager.current_menu = None
                 return
-        gameManager.effects.append(DarknessEffect(gameManager.screen))
-        GUI.remove(gameManager.current_menu)
-        gameManager.current_menu = None
+        game_manager.effects.append(DarknessEffect(game_manager.screen))
+        GUI.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
     elif event["key"] == "add_tag_menu":
-        create_menu_add_tag()
+        game_manager.menu_manager.create_menu_add_tag(game_manager.screen)
     elif event["key"] == "add_tags":
         button = event["element"]
         new_tag = button.parent.elements[0].text
-        gameManager.config.add_tags(gameManager.current_map_name, new_tag)
-        GUI.remove(gameManager.current_menu)
-        gameManager.current_menu = None
+        game_manager.config.add_tags(game_manager.current_map_name, new_tag)
+        GUI.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
 
 
 def load_maps(json_path: str):
@@ -345,103 +308,6 @@ def get_background():
     image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
     return image
-
-
-def create_columns_maps(found_maps) -> Columns:
-    """create columns based on found map and return columns object"""
-    thumbnail_columns = Columns(3)
-    for map in found_maps:
-        map_obj = GameManager.get_instance().config.get_map(map)
-        thumbnail = map_obj.thumbnail
-        thumbnail_stackpanel = StackPanel()
-        thumbnail_stackpanel.append(Picture(thumbnail))
-        button = Button(
-            map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4), custom_width=400
-        )
-        thumbnail_stackpanel.linked_button = button
-        thumbnail_stackpanel.append(button)
-        thumbnail_columns.append(thumbnail_stackpanel)
-        thumbnail_columns.scrollable = True
-    return thumbnail_columns
-
-
-def create_menu_maps(maps: list[str]):
-    game_manager = GameManager.get_instance()
-    if game_manager.current_menu and game_manager.current_menu in GUI.elements:
-        GUI.remove(game_manager.current_menu)
-
-    if game_manager.map_menu:
-        GUI.append(game_manager.map_menu)
-        game_manager.current_menu = game_manager.map_menu
-        return
-
-    game_manager.current_menu = Elements()
-
-    search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0))
-    thumbnail_columns = create_columns_maps(maps)
-
-    search_textbox.set_pos(
-        (GUI.win.get_width() // 2 - search_textbox.size[0] // 2, 100)
-    )
-    thumbnail_columns.set_pos(
-        (GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200)
-    )
-
-    game_manager.current_menu.append(thumbnail_columns)
-    game_manager.current_menu.append(search_textbox)
-    game_manager.map_menu = game_manager.current_menu
-
-    GUI.append(game_manager.current_menu)
-
-
-def create_menu_game():
-    game_manager = GameManager.get_instance()
-    if game_manager.current_menu and game_manager.current_menu in GUI.elements:
-        GUI.remove(game_manager.current_menu)
-        if game_manager.current_menu.name == "game_menu":
-            game_manager.current_menu = None
-            return
-
-    font1 = GUI.get_font_at(0)
-    font2 = GUI.get_font_at(1)
-
-    stackPanel = StackPanel()
-    stackPanel.append(Button("Map Menu", "map_menu", font1, font2))
-    stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, font2))
-    stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, font2))
-    stackPanel.append(Button("Exit", "exit", font1, font2))
-
-    stackPanel.set_pos(
-        (
-            game_manager.screen.get_width() // 2 - stackPanel.size[0] // 2,
-            game_manager.screen.get_height() // 2 - stackPanel.size[1] // 2,
-        )
-    )
-    game_manager.current_menu = stackPanel
-    game_manager.current_menu.name = "game_menu"
-    GUI.append(stackPanel)
-
-
-def create_menu_add_tag():
-    game_manager = GameManager.get_instance()
-    if game_manager.current_menu and game_manager.current_menu in GUI.elements:
-        GUI.remove(game_manager.current_menu)
-
-    font1 = GUI.get_font_at(0)
-    font2 = GUI.get_font_at(1)
-
-    stackPanel = StackPanel()
-    stackPanel.append(TextBox("new_tag", "Insert Tags Here", GUI.get_font_at(0)))
-    stackPanel.append(Button("Add", "add_tags", font1, font2))
-
-    stackPanel.set_pos(
-        (
-            game_manager.screen.get_width() // 2 - stackPanel.size[0] // 2,
-            game_manager.screen.get_height() // 2 - stackPanel.size[1] // 2,
-        )
-    )
-    game_manager.current_menu = stackPanel
-    GUI.append(stackPanel)
 
 
 def main():
