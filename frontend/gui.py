@@ -1,7 +1,7 @@
 import pygame
 from enum import Enum
 from typing import Any
-from tools.profilers import time_profiler
+#from tools.profilers import time_profiler
 import json
 
 
@@ -23,7 +23,7 @@ class GUI:
 
     frames = []
 
-    debug = False
+    debug = True
 
     def event_handle(event):
         # pygame left click
@@ -93,6 +93,7 @@ class Element:
         self.parent = None
         self.frame = None
         self.debug_color = (255, 255, 255)
+        self.debug = True
         self.name = ""
 
         self.send_event_on_no_click = False
@@ -101,7 +102,7 @@ class Element:
         pass
 
     def draw(self):
-        if GUI.debug:
+        if GUI.debug and self.debug:
             pygame.draw.rect(
                 GUI.win, self.debug_color, (self.get_abs_pos(), self.size), 1
             )
@@ -133,6 +134,7 @@ class Elements(Element):
         self.elements = []
 
     def append(self, element):
+        element.parent = self
         self.elements.append(element)
 
     def draw(self):
@@ -152,7 +154,6 @@ class Elements(Element):
     def no_click(self):
         for element in self.elements:
             element.no_click()
-
 
 class Label(Element):
     """A free label with no events"""
@@ -199,6 +200,8 @@ class Button(Element):
         self.key = key
         self.size = self.surf.get_size()
 
+        self.event = {"key": self.key, "text": self.text, "element": self}
+
     def render(self, text, font, color):
         rendered_text = font.render(text, True, color)
         self.text_width = rendered_text.get_width()
@@ -240,7 +243,7 @@ class Button(Element):
 
     def click(self):
         # todo: get all values in root of current element collection and return them as dict
-        GUI.gui_event_handler({"key": self.key, "text": self.text, "element": self})
+        GUI.gui_event_handler(self.event)
 
 
 class TextBox(Element):
@@ -358,6 +361,8 @@ class StackPanel(Element):
         # linked button: if stackpanel is focused, the button will be the focused_element
         self.linked_button = None
         self.debug_color = (255, 0, 0)
+        self.scroll_limit_lower = None
+        self.scroll_limit_upper = None
 
     def append(self, element):
         element.parent = self
@@ -384,6 +389,10 @@ class StackPanel(Element):
         super().step()
         if self.scrollable and GUI.gui_scroll_event[1] != 0:
             self.pos = (self.pos[0], self.pos[1] + GUI.gui_scroll_event[1] * 50)
+            if self.scroll_limit_upper and self.pos[1] > self.scroll_limit_upper:
+                self.pos = (self.pos[0], self.scroll_limit_upper)
+            if self.scroll_limit_lower and self.pos[1] < self.scroll_limit_lower:
+                self.pos = (self.pos[0], self.scroll_limit_lower)
         if self.linked_button:
             mouse_pos = pygame.mouse.get_pos()
             # if mouse on button
@@ -424,6 +433,7 @@ class Columns(StackPanel):
 
         self.element_size = (0, 0)
         self.debug_color = (255, 255, 0)
+        self.debug = False
 
     def append(self, element):
         self.element_size = (
@@ -600,12 +610,16 @@ class Picture(Element):
         super().__init__()
         self.surf = surf
         self.size = self.surf.get_size()
+        self.use_parents_size = False
 
     def draw(self):
         pos = self.get_abs_pos()
+        size = self.size
+        if self.use_parents_size:
+            size = self.parent.size
         super().draw()
         GUI.win.blit(
-            self.surf, (pos[0] + self.size[0] // 2 - self.surf.get_width() // 2, pos[1])
+            self.surf, (pos[0] + size[0] // 2 - self.surf.get_width() // 2, pos[1])
         )
 
 
@@ -641,6 +655,46 @@ class Drawer(Element):
 
     def draw(self):
         self.element.draw()
+
+
+class CheckBoxStar(Element):
+    """ temporary class for star shaped favorite button """
+    def __init__(self, key, checked=False):
+        super().__init__()
+        self.checked = checked
+        self.key = key
+        self.points = [(0, 37), (36, 37), (50, 0), (66, 37), (100, 37), (74, 61), (84, 100), (50, 78), (19, 100), (30, 61)]
+        factor = 0.5
+        self.points = [(i[0] * factor, i[1] * factor) for i in self.points]
+        self.size = (100, 100)
+
+        self.event = {"key": self.key, "element": self, 'state': self.checked}
+
+    def step(self):
+        super().step()
+        mouse_pos = pygame.mouse.get_pos()
+        # if mouse on me
+        pos = self.get_abs_pos()
+        if (
+            mouse_pos[0] > pos[0]
+            and mouse_pos[0] < pos[0] + self.size[0]
+            and mouse_pos[1] > pos[1]
+            and mouse_pos[1] < pos[1] + self.size[1]
+        ):
+            GUI.focused_element = self
+
+    def draw(self):
+        pos = self.get_abs_pos()
+        points = [(i[0] + pos[0], i[1] + pos[1]) for i in self.points]
+        if not self.checked:
+            pygame.draw.polygon(GUI.win, (100,100,100), points)
+        else:
+            pygame.draw.polygon(GUI.win, (250,250,100), points)
+
+    def click(self):
+        self.checked = not self.checked
+        self.event['state'] = self.checked
+        GUI.gui_event_handler(self.event)
 
 
 def test(event):
@@ -681,6 +735,10 @@ if __name__ == "__main__":
     cm.append(TextBox("phone", "Enter Phone"))
     cm.append(TextBox("address", "Enter Address"))
     GUI.elements.append(cm)
+
+    cs = CheckBoxStar('check1')
+    cs.set_pos((100,100))
+    GUI.append(cs)
 
     ### main loop
 

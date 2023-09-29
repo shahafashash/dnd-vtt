@@ -1,6 +1,6 @@
 [
   {
-    "favorite": false,
+    "favorite": true,
     "name": "Campfire",
     "path": "assets\\maps\\campfire1.mp4",
     "tags": [
@@ -24,7 +24,7 @@
     "url": "https://youtube.com/watch?v=Xlh6dWAgmvY"
   },
   {
-    "favorite": false,
+    "favorite": true,
     "name": "City Gate Bridge Nightime With Lights",
     "path": "assets\\maps\\City Gate Bridge Nightime with lights.mp4",
     "tags": [
@@ -67,7 +67,7 @@
     "url": "https://youtube.com/watch?v=mL8Mm_h4wI4"
   },
   {
-    "favorite": false,
+    "favorite": true,
     "name": "Broken Bridge Daytime 02",
     "path": "assets\\maps\\Broken Bridge Daytime 02.mp4",
     "tags": [

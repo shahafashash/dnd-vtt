@@ -294,6 +294,17 @@ def handle_gui_events(event: str):
         game_manager.config.add_tags(game_manager.current_map_name, new_tag)
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
+    elif event["key"] == "favorited":
+        map_name = event["map_name"]
+        checked = event["state"]
+        map_object = game_manager.config.get_map(map_name)
+        if checked:
+            # logic for add map to favorites
+            pass
+        else:
+            # logic for remove map from favorites
+            pass
+        
 
 
 def load_maps(json_path: str):
