@@ -81,7 +81,7 @@ class GameManager:
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
 
-        self.map_menu = None
+        self.map_menu = None # the gui men of last map searches
 
         self.effects = Effects()
 
@@ -300,9 +300,10 @@ def handle_gui_events(event: str):
     elif event["key"] == "search":
         found_maps = gameManager.map_searcher.search(event["text"])
         gameManager.maps = found_maps
-        GUI.elements.remove(gameManager.thumbnail_columns)
+        thumbnail_columns = gameManager.current_menu.elements[0]
+        gameManager.current_menu.elements.remove(thumbnail_columns)
         thumbnail_columns = create_columns_maps(found_maps)
-        GUI.elements[0].elements.insert(0, thumbnail_columns)
+        gameManager.current_menu.elements.insert(0, thumbnail_columns)
         thumbnail_columns.set_pos(
             (GUI.win.get_width() // 2 - thumbnail_columns.size[0] // 2, 200)
         )
