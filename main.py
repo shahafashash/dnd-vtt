@@ -92,6 +92,10 @@ class GameManager:
 
         self.effects = Effects()
 
+        self.map_zoom = 1.0
+        self.map_offset = (0,0)
+        self.map_drag = False
+
     def get_instance():
         return GameManager._instance
 
@@ -163,7 +167,41 @@ class GameManager:
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
             self.effects.handle_events(event)
-            if event.type == pg.KEYDOWN:
+            if pygame.key.get_mods() & pygame.KMOD_CTRL:
+                map_orientation_changed = False
+                if event.type == pygame.MOUSEWHEEL:
+                    # zoom map
+                    old_zoom = self.map_zoom
+                    zoom_factor = event.y * 0.05
+                    if self.map_zoom + zoom_factor < 1.0:
+                        zoom_factor = 1.0 - self.map_zoom
+                    self.map_zoom += zoom_factor
+                    center = pygame.mouse.get_pos()
+                    vec = (self.map_offset[0] - center[0], self.map_offset[1] - center[1])
+                    back_factor = 1 / old_zoom
+                    vec = (vec[0] * self.map_zoom * back_factor, vec[1] * self.map_zoom * back_factor)
+                    self.map_offset = (center[0] + vec[0], center[1] + vec[1])
+                    map_orientation_changed = True
+                elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    self.map_drag = True
+                elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                    self.map_drag = False
+                elif event.type == pygame.MOUSEMOTION:
+                    if self.map_drag:
+                        self.map_offset = (self.map_offset[0] + event.rel[0], self.map_offset[1] + event.rel[1])
+                    map_orientation_changed = True
+
+                if map_orientation_changed:
+                    # limit map to screen
+                    if self.map_offset[0] > 0:
+                        self.map_offset = (0, self.map_offset[1])
+                    if self.map_offset[1] > 0:
+                        self.map_offset = (self.map_offset[0], 0)
+                    if self.map_offset[0] <= self.screen.get_width() * (1 - self.map_zoom):
+                        self.map_offset = (self.screen.get_width() * (1 - self.map_zoom), self.map_offset[1])
+                    if self.map_offset[1] <= self.screen.get_height() * (1 - self.map_zoom):
+                        self.map_offset = (self.map_offset[0], self.screen.get_height() * (1 - self.map_zoom))
+            elif event.type == pg.KEYDOWN:
                 # plus and minus of num pad
                 if event.key == pg.K_KP_PLUS:
                     self.grid_size += 5
@@ -214,7 +252,10 @@ class GameManager:
 
         # draw the frame
         frame = next(self.current_map_frames)
-        self.screen.blit(frame, (0, 0))
+        if self.map_zoom > 1.0:
+            frame = pygame.transform.smoothscale_by(frame, self.map_zoom)
+        
+        self.screen.blit(frame, self.map_offset)
 
         self.effects.draw()
 
