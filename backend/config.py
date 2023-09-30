@@ -51,6 +51,10 @@ class Map:
         return self.__thumbnail
 
     @property
+    def thumbnail_path(self) -> str:
+        return self.__thumbnail_path
+
+    @property
     def url(self) -> str:
         return self.__url
 
@@ -316,7 +320,7 @@ class Config:
             new_name,
             map_obj.path,
             map_obj.tags,
-            map_obj.thumbnail,
+            map_obj.thumbnail_path,
             map_obj.url,
             map_obj.favorite,
         )

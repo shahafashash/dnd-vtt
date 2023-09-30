@@ -14,7 +14,6 @@ from typing import Tuple
 from math import cos, sin, pi
 from tools.utils import cycle
 import pygame as pg
-import json
 from collections import deque
 from enum import Enum
 from frontend.gui import *
@@ -60,40 +59,28 @@ class GameManager:
     def __init__(self, factory: AbstractFactory):
         GameManager._instance = self
         self.menu_manager = MenuManager()
-
         self.settings = factory.create_settings("settings.json")
+
+        # Setting up GUI fonts
+        self.__setup_gui_fonts()
+
+        # Creating GUI frame
+        self.__setup_gui_frame()
+
+        # Create the screen
+        self.screen = None
+        self.__setup_screen()
+
+        # Create the clock
+        self.clock = pg.time.Clock()
+
+        self.menu_manager.create_loading_screen(self.screen)
         maps_config_path = self.settings.get("maps_config", default="maps.json")
         self.config = factory.create_config(maps_config_path)
         self.loader = factory.create_loader(self.config)
         self.map_searcher = factory.create_searcher(self.config)
         self.maps = self.config.maps_names
         self.menu_manager.set_config(self.config)
-
-        # Setting up GUI fonts
-        fonts = self.settings.get("fonts", default=[])
-        for path in fonts.values():
-            GUI.fonts.append(Font(path))
-
-        # Creating GUI frame
-        frame = self.settings.get("frame", default="assets/images/frame.json")
-        GUI.frames.append(Frame(frame))
-
-        # Create the screen
-        resolution_width = self.settings.get(
-            "resolution", subname="width", default=1920
-        )
-        resolution_height = self.settings.get(
-            "resolution", subname="height", default=1080
-        )
-        screen = pg.display.set_mode(
-            (resolution_width, resolution_height), pygame.RESIZABLE
-        )
-        self.screen = screen
-        GUI.win = screen
-
-        # Create the clock
-        self.clock = pg.time.Clock()
-        self.menu_manager.create_loading_screen(self.screen)
 
         # update screen
         self.screen.blit(get_background(), (0, 0))
@@ -105,13 +92,12 @@ class GameManager:
         self.current_map_frames = None
 
         # Setting up the grid
-        self.grid_size = self.settings.get("grid", subname="size", default=60)
-        grid_color = self.settings.get("grid", subname="color", default="black")
-        self.grid_color = GridColors[grid_color.upper()].value
-        grid_state = self.settings.get("grid", subname="type", default="grid")
-        self.grid_state = Grid[grid_state.upper()]
-        self.grid_states = cycle([grid_state for grid_state in Grid])
-        self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
+        self.grid_size = None
+        self.grid_color = None
+        self.grid_state = None
+        self.grid_states = None
+        self.grid_colors = None
+        self.__setup_grid()
 
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
@@ -121,6 +107,42 @@ class GameManager:
         self.map_zoom = 1.0
         self.map_offset = (0, 0)
         self.map_drag = False
+
+    def __setup_screen(self) -> None:
+        # Create the screen
+        resolution_width = self.settings.get(
+            "resolution", subname="width", default=1920
+        )
+        resolution_height = self.settings.get(
+            "resolution", subname="height", default=1080
+        )
+        screen = pg.display.set_mode(
+            (resolution_width, resolution_height), pygame.RESIZABLE
+        )
+
+        self.screen = screen
+        GUI.win = screen
+
+    def __setup_gui_fonts(self) -> None:
+        # Setting up GUI fonts
+        fonts = self.settings.get("fonts", default=[])
+        for path in fonts.values():
+            GUI.fonts.append(Font(path))
+
+    def __setup_gui_frame(self) -> None:
+        # Creating GUI frame
+        frame = self.settings.get("frame", default="assets/images/frame.json")
+        GUI.frames.append(Frame(frame))
+
+    def __setup_grid(self) -> None:
+        # Setting up the grid
+        self.grid_size = self.settings.get("grid", subname="size", default=60)
+        grid_color = self.settings.get("grid", subname="color", default="black")
+        self.grid_color = GridColors[grid_color.upper()].value
+        grid_state = self.settings.get("grid", subname="type", default="grid")
+        self.grid_state = Grid[grid_state.upper()]
+        self.grid_states = cycle([grid_state for grid_state in Grid])
+        self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
 
     def get_instance():
         return GameManager._instance
@@ -378,6 +400,14 @@ def handle_gui_events(event: str):
         button = event["element"]
         new_tag = button.parent.elements[0].text
         game_manager.config.add_tags(game_manager.current_map_name, new_tag)
+        GUI.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
+    elif event["key"] == "add_rename_map_menu":
+        game_manager.menu_manager.create_menu_rename_map(game_manager.screen)
+    elif event["key"] == "rename_map":
+        button = event["element"]
+        new_name = button.parent.elements[0].text
+        game_manager.config.rename_map(game_manager.current_map_name, new_name)
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
 
