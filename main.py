@@ -382,14 +382,6 @@ def handle_gui_events(event: str):
         menu_manager.current_menu = None
 
 
-def load_maps(json_path: str):
-    with open(json_path, "r") as f:
-        maps_content = json.load(f)
-
-    maps = [map["name"] for map in maps_content]
-    return maps
-
-
 def get_background():
     image_path = r"assets/images/background.png"
     image = pg.image.load(image_path)
