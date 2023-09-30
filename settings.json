@@ -1,0 +1,15 @@
+{
+  "assets_path": "assets",
+  "grid": {
+    "color": "black",
+    "opacity": 0.5,
+    "size": 60,
+    "type": "hex"
+  },
+  "maps_config": "maps.json",
+  "resolution": {
+    "height": 1080,
+    "width": 1920
+  },
+  "saves_path": "saves"
+}
