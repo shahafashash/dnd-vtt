@@ -13,6 +13,6 @@ A table Top for dragons and dungeons.
 * [X] Night/Darkness mode with dynamic lighting
 * [ ] Objects on map
 * [ ] Favourites maps
-* [ ] Zoom in maps
+* [X] Zoom in maps
 * [ ] Freeze maps
 * [ ] dynamic fog of war with walls and doors
