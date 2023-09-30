@@ -19,5 +19,18 @@
     "CriticalRolePlay30": "assets/fonts/CriticalRolePlay30.json",
     "CriticalRolePlay30B": "assets/fonts/CriticalRolePlay30B.json"
   },
-  "frame": "assets/images/frame.json"
+  "frame": "assets/images/frame.json",
+  "controls": {
+    "zoom_in": ["left ctrl", "mousebuttonwheelup"],
+    "zoom_out": ["left ctrl", "mousebuttonwheeldown"],
+    "drag": ["left ctrl", "mousebuttonleft"],
+    "enlarge_grid": ["[+]"],
+    "reduce_grid": ["[-]"],
+    "change_grid": ["g"],
+    "change_grid_color": ["c"],
+    "darkness_mode": ["left ctrl", "n"],
+    "avernus_mode": ["left ctrl", "a"],
+    "next_map": ["right"],
+    "previous_map": ["left"]
+  }
 }

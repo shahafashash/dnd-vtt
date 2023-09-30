@@ -79,6 +79,7 @@ class GameManager:
         self.config = factory.create_config(maps_config_path)
         self.loader = factory.create_loader(self.config)
         self.map_searcher = factory.create_searcher(self.config)
+        self.controls = factory.create_controls(self.settings)
         self.maps = self.config.maps_names
         self.menu_manager.set_config(self.config)
 
@@ -143,6 +144,12 @@ class GameManager:
         self.grid_state = Grid[grid_state.upper()]
         self.grid_states = cycle([grid_state for grid_state in Grid])
         self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
+
+        # Iterate over the grid states and colors to get to the current one
+        while next(self.grid_states) != self.grid_state:
+            pass
+        while next(self.grid_colors) != self.grid_color:
+            pass
 
     def get_instance():
         return GameManager._instance
@@ -270,39 +277,43 @@ class GameManager:
                         )
             elif event.type == pg.KEYDOWN:
                 # plus and minus of num pad
-                if event.key == pg.K_KP_PLUS:
+                if event.key == self.controls.get("enlarge_grid"):
                     self.grid_size += 5
-                elif event.key == pg.K_KP_MINUS:
+                elif event.key == self.controls.get("reduce_grid"):
                     self.grid_size -= 5
                     if self.grid_size < 5:
                         self.grid_size = 5
-                elif event.key == pg.K_g:
+                elif event.key == self.controls.get("change_grid"):
                     self.grid_state = next(self.grid_states)
-                elif event.key == pg.K_c:
+                elif event.key == self.controls.get("change_grid_color"):
                     self.grid_color = next(self.grid_colors)
-                elif event.key == pg.K_n:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
+                elif event.key == self.controls.get("darkness_mode")[-1]:
+                    keys = self.controls.get("darkness_mode")
+                    ctrl_in_keys = keys[0] in (pygame.K_LCTRL, pygame.K_RCTRL)
+                    if (pygame.key.get_mods() & pygame.KMOD_CTRL) and ctrl_in_keys:
                         for effect in self.effects:
                             if effect.name == "darkness":
                                 self.effects.remove(effect)
                                 return
                         self.effects.append(DarknessEffect(self.screen))
-                elif event.key == pg.K_a:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
+                elif event.key == self.controls.get("avernus_mode")[-1]:
+                    keys = self.controls.get("avernus_mode")
+                    ctrl_in_keys = keys[0] in (pygame.K_LCTRL, pygame.K_RCTRL)
+                    if (pygame.key.get_mods() & pygame.KMOD_CTRL) and ctrl_in_keys:
                         for effect in self.effects:
                             if effect.name == "avernus":
                                 self.effects.remove(effect)
                                 return
                         self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
                         self.effects[-1].name = "avernus"
-                elif event.key == pg.K_RIGHT:
+                elif event.key == self.controls.get("next_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]
                     self.current_map_frames = self.loader.load_map(
                         self.current_map_name
                     )
-                elif event.key == pg.K_LEFT:
+                elif event.key == self.controls.get("previous_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index - 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]

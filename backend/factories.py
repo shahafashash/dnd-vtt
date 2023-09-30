@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from backend.config import Config, Map
 from backend.searchers import Searcher, MapSearcher, BasicSearchingStrategy
 from backend.loader import Loader
-from backend.settings import Settings
+from backend.settings import Settings, Controls
 from tools.downloader import MapsDownloader
 
 
@@ -32,6 +32,11 @@ class AbstractFactory(ABC):
     def create_downloader() -> MapsDownloader:
         raise NotImplementedError("Must implement create_downloader method")
 
+    @staticmethod
+    @abstractmethod
+    def create_controls(settings: Settings) -> Controls:
+        raise NotImplementedError("Must implement create_controls method")
+
 
 class SimpleFactory(AbstractFactory):
     @staticmethod
@@ -54,3 +59,7 @@ class SimpleFactory(AbstractFactory):
     @staticmethod
     def create_downloader() -> MapsDownloader:
         return MapsDownloader()
+
+    @staticmethod
+    def create_controls(settings: Settings) -> Controls:
+        return Controls(settings)
