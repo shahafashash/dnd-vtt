@@ -69,6 +69,15 @@ class GameManager:
         self.maps = self.config.maps_names
         self.menu_manager.set_config(self.config)
 
+        # Setting up GUI fonts
+        fonts = self.settings.get("fonts", default=[])
+        for path in fonts.values():
+            GUI.fonts.append(Font(path))
+
+        # Creating GUI frame
+        frame = self.settings.get("frame", default="assets/images/frame.json")
+        GUI.frames.append(Frame(frame))
+
         # Create the screen
         resolution_width = self.settings.get(
             "resolution", subname="width", default=1920
@@ -110,7 +119,7 @@ class GameManager:
         self.effects = Effects()
 
         self.map_zoom = 1.0
-        self.map_offset = (0,0)
+        self.map_offset = (0, 0)
         self.map_drag = False
 
     def get_instance():
@@ -194,9 +203,15 @@ class GameManager:
                         zoom_factor = 1.0 - self.map_zoom
                     self.map_zoom += zoom_factor
                     center = pygame.mouse.get_pos()
-                    vec = (self.map_offset[0] - center[0], self.map_offset[1] - center[1])
+                    vec = (
+                        self.map_offset[0] - center[0],
+                        self.map_offset[1] - center[1],
+                    )
                     back_factor = 1 / old_zoom
-                    vec = (vec[0] * self.map_zoom * back_factor, vec[1] * self.map_zoom * back_factor)
+                    vec = (
+                        vec[0] * self.map_zoom * back_factor,
+                        vec[1] * self.map_zoom * back_factor,
+                    )
                     self.map_offset = (center[0] + vec[0], center[1] + vec[1])
                     map_orientation_changed = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -205,7 +220,10 @@ class GameManager:
                     self.map_drag = False
                 elif event.type == pygame.MOUSEMOTION:
                     if self.map_drag:
-                        self.map_offset = (self.map_offset[0] + event.rel[0], self.map_offset[1] + event.rel[1])
+                        self.map_offset = (
+                            self.map_offset[0] + event.rel[0],
+                            self.map_offset[1] + event.rel[1],
+                        )
                     map_orientation_changed = True
 
                 if map_orientation_changed:
@@ -214,10 +232,20 @@ class GameManager:
                         self.map_offset = (0, self.map_offset[1])
                     if self.map_offset[1] > 0:
                         self.map_offset = (self.map_offset[0], 0)
-                    if self.map_offset[0] <= self.screen.get_width() * (1 - self.map_zoom):
-                        self.map_offset = (self.screen.get_width() * (1 - self.map_zoom), self.map_offset[1])
-                    if self.map_offset[1] <= self.screen.get_height() * (1 - self.map_zoom):
-                        self.map_offset = (self.map_offset[0], self.screen.get_height() * (1 - self.map_zoom))
+                    if self.map_offset[0] <= self.screen.get_width() * (
+                        1 - self.map_zoom
+                    ):
+                        self.map_offset = (
+                            self.screen.get_width() * (1 - self.map_zoom),
+                            self.map_offset[1],
+                        )
+                    if self.map_offset[1] <= self.screen.get_height() * (
+                        1 - self.map_zoom
+                    ):
+                        self.map_offset = (
+                            self.map_offset[0],
+                            self.screen.get_height() * (1 - self.map_zoom),
+                        )
             elif event.type == pg.KEYDOWN:
                 # plus and minus of num pad
                 if event.key == pg.K_KP_PLUS:
@@ -271,7 +299,7 @@ class GameManager:
         frame = next(self.current_map_frames)
         if self.map_zoom > 1.0:
             frame = pygame.transform.smoothscale_by(frame, self.map_zoom)
-        
+
         self.screen.blit(frame, self.map_offset)
 
         self.effects.draw()
@@ -372,14 +400,6 @@ def main():
     pg.init()
 
     GUI.gui_event_handler = handle_gui_events
-
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72B.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay124.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30B.json"))
-
-    GUI.frames.append(Frame(r"./assets/images/frame.json"))
 
     game_manager = GameManager(factory=SimpleFactory)
 
