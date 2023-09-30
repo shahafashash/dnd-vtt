@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple, Generator, Set
+from typing import overload, Dict, List, Tuple, Generator, Set, Iterable
 import os
 from queue import Queue
 import json
@@ -183,7 +183,7 @@ class Config:
 
         return tags
 
-    def __update_config_file(self) -> None:
+    def __save(self) -> None:
         content = [map_obj.to_dict() for map_obj in self.__maps.values()]
         with open(self.__config_file, "w") as f:
             json.dump(content, f, indent=2, sort_keys=True)
@@ -210,22 +210,48 @@ class Config:
                 matches.append(map_obj)
         return matches
 
+    @overload
+    def add_tags(self, map_name: str, tags: Iterable[str]) -> None:
+        ...
+
+    @overload
     def add_tags(self, map_name: str, tags: str) -> None:
+        ...
+
+    def add_tags(self, map_name: str, tags: Iterable[str] | str) -> None:
         name = map_name.title()
         map_tags = self.__maps[name].tags
-        new_tags = word_tokenize(tags)
+
+        if isinstance(tags, str):
+            new_tags = word_tokenize(tags)
+        else:
+            new_tags = list(map(str.strip, map(str.lower, tags)))
+
         for tag in new_tags:
             tag_lower = tag.lower().strip()
             if tag not in map_tags:
                 map_tags.append(tag_lower)
             self.__tags.add(tag_lower)
 
-        self.__update_config_file()
+        self.__save()
 
-    def remove_tags(self, map_name: str, tags: str) -> None:
+    @overload
+    def remove_tag(self, map_name: str, tags: Iterable[str]) -> None:
+        ...
+
+    @overload
+    def remove_tag(self, map_name: str, tags: str) -> None:
+        ...
+
+    def remove_tags(self, map_name: str, tags: Iterable[str] | str) -> None:
         name = map_name.title()
         map_tags = self.__maps[name].tags
-        tags_to_remove = word_tokenize(tags)
+
+        if isinstance(tags, str):
+            tags_to_remove = word_tokenize(tags)
+        else:
+            tags_to_remove = list(map(str.strip, map(str.lower, tags)))
+
         for tag in tags_to_remove:
             tag_lower = tag.lower()
             if tag in map_tags:
@@ -242,17 +268,17 @@ class Config:
             if count <= 1:
                 self.__tags.discard(tag_lower)
 
-        self.__update_config_file()
+        self.__save()
 
     def set_favorite(self, map_name: str, favorite: bool) -> None:
         name = map_name.title()
         self.__maps[name].favorite = favorite
-        self.__update_config_file()
+        self.__save()
 
     def remove_favorite(self, map_name: str) -> None:
         name = map_name.title()
         self.__maps[name].favorite = False
-        self.__update_config_file()
+        self.__save()
 
     def add_map(self, map_obj: Map) -> None:
         if map_obj.name in self.__maps_names:
@@ -260,7 +286,7 @@ class Config:
         self.__maps[map_obj.name] = map_obj
         self.__maps_names.append(map_obj.name)
         self.__tags |= set(map_obj.tags)
-        self.__update_config_file()
+        self.__save()
 
     def remove_map(self, map_name: str) -> None:
         name = map_name.title()
@@ -274,7 +300,7 @@ class Config:
         # removing the thumbnail and the map file
         Path(map_obj.thumbnail).unlink()
         Path(map_obj.path).unlink()
-        self.__update_config_file()
+        self.__save()
 
     def rename_map(self, map_name: str, new_name: str) -> None:
         name = map_name.title()
@@ -297,4 +323,4 @@ class Config:
         self.__maps[new_name] = new_map_obj
         self.__maps_names.remove(name)
         self.__maps_names.append(new_name)
-        self.__update_config_file()
+        self.__save()
