@@ -2,9 +2,9 @@ import pygame
 from random import randint
 
 class Effects(list):
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         for effect in self:
-            effect.handle_events(event)
+            effect.handle_pygame_events(event)
     def step(self):
         for effect in self:
             effect.step()
@@ -18,7 +18,7 @@ class Effect:
         self.win = win
         self.surf = None
 
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         pass
 
     def step(self):
@@ -46,7 +46,7 @@ class DarknessEffect(Effect):
         light = [pos, radius]
         self.light_sources.append(light)
 
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if self.focused_light:
                 self.dragged_light = self.focused_light

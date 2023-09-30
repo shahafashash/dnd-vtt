@@ -21,6 +21,7 @@ from frontend.gui import *
 from frontend.font import Font
 from backend.factories import SimpleFactory
 from frontend.effects import Effects, DarknessEffect, ColorFilter
+from frontend.tokens import TokenManager, TokenSurf
 from frontend.menus import MenuManager
 
 FPS = 60
@@ -91,6 +92,7 @@ class GameManager:
         self.event_que = deque()
 
         self.effects = Effects()
+        self.tokens = TokenManager(self.screen)
 
         self.map_zoom = 1.0
         self.map_offset = (0,0)
@@ -128,6 +130,11 @@ class GameManager:
                         self.menu_manager.create_menu_game(self.screen)
             elif event.key == pg.K_F11:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
+            elif event.key == pg.K_t:
+                self.test()
+
+    def test(self):
+        pass
 
     def step(self):
         self.handle_game_events()
@@ -166,8 +173,9 @@ class GameManager:
         for event in pg.event.get():
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
-            self.effects.handle_events(event)
-            if pygame.key.get_mods() & pygame.KMOD_CTRL:
+            self.tokens.handle_pygame_events(event)
+            self.effects.handle_pygame_events(event)
+            if pygame.key.get_mods() & pygame.KMOD_ALT:
                 map_orientation_changed = False
                 if event.type == pygame.MOUSEWHEEL:
                     # zoom map
@@ -247,7 +255,17 @@ class GameManager:
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
                 self.menu_manager.create_menu_maps(self.maps)
 
+            # file drop
+            elif event.type == pg.DROPFILE:
+                path = event.file
+                if any([path.endswith(i) for i in ['.png', '.jpg']]):
+                    token_surf = pg.image.load(path)
+                    token = TokenSurf(token_surf, 100)
+                    token.pos = pygame.mouse.get_pos()
+                    self.tokens.append(token)
+            
         GUI.step()
+        self.tokens.step()
         self.effects.step()
 
         # draw the frame
@@ -257,6 +275,7 @@ class GameManager:
         
         self.screen.blit(frame, self.map_offset)
 
+        self.tokens.draw()
         self.effects.draw()
 
         self.draw_grid()
@@ -354,7 +373,7 @@ def get_background():
 def main():
     pg.init()
 
-    screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
+    screen = pg.display.set_mode((1280, 720), pygame.RESIZABLE)
     clock = pg.time.Clock()
 
     GUI.win = screen
