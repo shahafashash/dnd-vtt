@@ -276,7 +276,17 @@ class Config:
 
     def set_favorite(self, map_name: str, favorite: bool) -> None:
         name = map_name.title()
-        self.__maps[name].favorite = favorite
+        # self.__maps[name].favorite = favorite
+        map_obj = self.__maps[name]
+        new_map_obj = Map(
+            map_obj.name,
+            map_obj.path,
+            map_obj.tags,
+            map_obj.thumbnail_path,
+            map_obj.url,
+            favorite,
+        )
+        self.__maps[name] = new_map_obj
         self.__save()
 
     def remove_favorite(self, map_name: str) -> None:
