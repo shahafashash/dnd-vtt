@@ -1,5 +1,6 @@
 {
   "assets_path": "assets",
+  "tokens_path": "assets/tokens",
   "grid": {
     "color": "black",
     "opacity": 0.5,
@@ -21,9 +22,9 @@
   },
   "frame": "assets/images/frame.json",
   "controls": {
-    "zoom_in": ["left ctrl", "mousebuttonwheelup"],
-    "zoom_out": ["left ctrl", "mousebuttonwheeldown"],
-    "drag": ["left ctrl", "mousebuttonleft"],
+    "zoom_in": ["left alt", "mousebuttonwheelup"],
+    "zoom_out": ["left alt", "mousebuttonwheeldown"],
+    "drag": ["left alt", "mousebuttonleft"],
     "enlarge_grid": ["[+]"],
     "reduce_grid": ["[-]"],
     "change_grid": ["g"],
@@ -31,6 +32,7 @@
     "darkness_mode": ["left ctrl", "n"],
     "avernus_mode": ["left ctrl", "a"],
     "next_map": ["right"],
-    "previous_map": ["left"]
+    "previous_map": ["left"],
+    "light": ["l"]
   }
 }

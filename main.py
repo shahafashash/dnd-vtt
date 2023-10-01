@@ -15,6 +15,7 @@ from math import cos, sin, pi
 from tools.utils import cycle
 import pygame as pg
 from collections import deque
+from functools import reduce
 from enum import Enum
 from frontend.gui import *
 from frontend.font import Font
@@ -275,8 +276,7 @@ class GameManager:
                             self.map_offset[0],
                             self.screen.get_height() * (1 - self.map_zoom),
                         )
-            elif event.type == pg.KEYDOWN:
-                # plus and minus of num pad
+            if event.type == pg.KEYDOWN:
                 if event.key == self.controls.get("enlarge_grid"):
                     self.grid_size += 5
                 elif event.key == self.controls.get("reduce_grid"):
@@ -287,25 +287,33 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == self.controls.get("change_grid_color"):
                     self.grid_color = next(self.grid_colors)
-                elif event.key == self.controls.get("darkness_mode")[-1]:
-                    keys = self.controls.get("darkness_mode")
-                    ctrl_in_keys = keys[0] in (pygame.K_LCTRL, pygame.K_RCTRL)
-                    if (pygame.key.get_mods() & pygame.KMOD_CTRL) and ctrl_in_keys:
-                        for effect in self.effects:
-                            if effect.name == "darkness":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(DarknessEffect(self.screen))
-                elif event.key == self.controls.get("avernus_mode")[-1]:
-                    keys = self.controls.get("avernus_mode")
-                    ctrl_in_keys = keys[0] in (pygame.K_LCTRL, pygame.K_RCTRL)
-                    if (pygame.key.get_mods() & pygame.KMOD_CTRL) and ctrl_in_keys:
-                        for effect in self.effects:
-                            if effect.name == "avernus":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
-                        self.effects[-1].name = "avernus"
+                elif event.key == self.controls.get("darkness_mode"):
+                    if self.controls.is_action_a_mode("darkness_mode"):
+                        modes = self.controls.get_action_mode("darkness_mode")
+                        mode = reduce(lambda x, y: x | y, modes)
+                        if not (pygame.key.get_mods() & mode):
+                            continue
+
+                    for effect in self.effects:
+                        if effect.name == "darkness":
+                            self.effects.remove(effect)
+                            return
+                    self.effects.append(DarknessEffect(self.screen))
+                    self.effects[-1].name = "darkness"
+                elif event.key == self.controls.get("avernus_mode"):
+                    if self.controls.is_action_a_mode("avernus_mode"):
+                        modes = self.controls.get_action_mode("avernus_mode")
+                        mode = reduce(lambda x, y: x | y, modes)
+                        print(pg.key.get_mods(), modes, mode)
+                        if not (pygame.key.get_mods() & mode):
+                            continue
+
+                    for effect in self.effects:
+                        if effect.name == "avernus":
+                            self.effects.remove(effect)
+                            return
+                    self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
+                    self.effects[-1].name = "avernus"
                 elif event.key == self.controls.get("next_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
