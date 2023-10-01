@@ -8,8 +8,8 @@
   },
   "maps_config": "maps.json",
   "resolution": {
-    "width": 1280,
-    "height": 720
+    "width": 1920,
+    "height": 1080
   },
   "saves_path": "saves",
   "fonts": {
