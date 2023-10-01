@@ -5,10 +5,9 @@ from backend.settings import Controls
 
 
 class Effects(list):
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         for effect in self:
-            effect.handle_events(event)
-
+            effect.handle_pygame_events(event)
     def step(self):
         for effect in self:
             effect.step()
@@ -25,7 +24,7 @@ class Effect:
         self.surf = None
         self.controls = controls
 
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         pass
 
     def step(self):
@@ -53,7 +52,7 @@ class DarknessEffect(Effect):
         light = [pos, radius]
         self.light_sources.append(light)
 
-    def handle_events(self, event):
+    def handle_pygame_events(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if self.focused_light:
                 self.dragged_light = self.focused_light
@@ -115,7 +114,22 @@ class ColorFilter(Effect):
 
     def draw(self):
         self.win.fill(self.color, special_flags=pygame.BLEND_MULT)
-        self.win.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
+
+
+def screen(win, color):
+    ''' screen blending mode '''
+    win_inv = pygame.Surface(win.get_size())
+    win_inv.fill((255,255,255))
+    win_inv.blit(win, (0,0), special_flags=pygame.BLEND_RGBA_SUB)
+
+    color_inv = pygame.Surface(win.get_size())
+    color_inv.fill((255,255,255))
+    color_inv.fill(color, special_flags=pygame.BLEND_RGBA_SUB)
+
+    win_inv.blit(color_inv, (0,0), special_flags=pygame.BLEND_RGBA_MULT)
+
+    win.fill((255,255,255))
+    win.blit(win_inv, (0,0), special_flags=pygame.BLEND_RGBA_SUB)
 
 
 class Rain(Effect):

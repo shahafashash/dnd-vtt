@@ -21,6 +21,7 @@ from frontend.gui import *
 from frontend.font import Font
 from backend.factories import AbstractFactory, SimpleFactory
 from frontend.effects import Effects, DarknessEffect, ColorFilter
+from frontend.tokens import TokenManager, TokenSurf
 from frontend.menus import MenuManager
 
 FPS = 60
@@ -105,6 +106,7 @@ class GameManager:
         self.event_que = deque()
 
         self.effects = Effects()
+        self.tokens = TokenManager(self.screen)
 
         self.map_zoom = 1.0
         self.map_offset = (0, 0)
@@ -184,6 +186,11 @@ class GameManager:
                         self.menu_manager.create_menu_game(self.screen)
             elif event.key == pg.K_F11:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
+            elif event.key == pg.K_t:
+                self.test()
+
+    def test(self):
+        pass
 
     def step(self):
         self.handle_game_events()
@@ -212,6 +219,14 @@ class GameManager:
         pg.display.flip()
         self.clock.tick(FPS)
 
+    def apply_color_filter(self, color, name):
+        for effect in self.effects:
+            if effect.name == name:
+                self.effects.remove(effect)
+                return
+        self.effects.append(ColorFilter(self.screen, color))
+        self.effects[-1].name = name
+
     def draw_grid(self):
         if self.grid_state == Grid.GRID:
             draw_grid(self.screen, self.grid_size, self.grid_color)
@@ -222,8 +237,9 @@ class GameManager:
         for event in pg.event.get():
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
-            self.effects.handle_events(event)
-            if pygame.key.get_mods() & pygame.KMOD_CTRL:
+            self.tokens.handle_pygame_events(event)
+            self.effects.handle_pygame_events(event)
+            if pygame.key.get_mods() & pygame.KMOD_ALT:
                 map_orientation_changed = False
                 if event.type == pygame.MOUSEWHEEL:
                     # zoom map
@@ -287,33 +303,6 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == self.controls.get("change_grid_color"):
                     self.grid_color = next(self.grid_colors)
-                elif event.key == self.controls.get("darkness_mode"):
-                    if self.controls.is_action_a_mode("darkness_mode"):
-                        modes = self.controls.get_action_mode("darkness_mode")
-                        mode = reduce(lambda x, y: x | y, modes)
-                        if not (pygame.key.get_mods() & mode):
-                            continue
-
-                    for effect in self.effects:
-                        if effect.name == "darkness":
-                            self.effects.remove(effect)
-                            return
-                    self.effects.append(DarknessEffect(self.screen))
-                    self.effects[-1].name = "darkness"
-                elif event.key == self.controls.get("avernus_mode"):
-                    if self.controls.is_action_a_mode("avernus_mode"):
-                        modes = self.controls.get_action_mode("avernus_mode")
-                        mode = reduce(lambda x, y: x | y, modes)
-                        print(pg.key.get_mods(), modes, mode)
-                        if not (pygame.key.get_mods() & mode):
-                            continue
-
-                    for effect in self.effects:
-                        if effect.name == "avernus":
-                            self.effects.remove(effect)
-                            return
-                    self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
-                    self.effects[-1].name = "avernus"
                 elif event.key == self.controls.get("next_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
@@ -333,7 +322,17 @@ class GameManager:
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
                 self.menu_manager.create_menu_maps(self.maps)
 
+            # file drop
+            elif event.type == pg.DROPFILE:
+                path = event.file
+                if any([path.endswith(i) for i in ['.png', '.jpg']]):
+                    token_surf = pg.image.load(path)
+                    token = TokenSurf(token_surf, 100)
+                    token.pos = pygame.mouse.get_pos()
+                    self.tokens.append(token)
+            
         GUI.step()
+        self.tokens.step()
         self.effects.step()
 
         # draw the frame
@@ -343,6 +342,7 @@ class GameManager:
 
         self.screen.blit(frame, self.map_offset)
 
+        self.tokens.draw()
         self.effects.draw()
 
         self.draw_grid()
@@ -429,6 +429,15 @@ def handle_gui_events(event: str):
         game_manager.config.rename_map(game_manager.current_map_name, new_name)
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
+    elif event["key"] == "color_filter":
+        game_manager.menu_manager.create_filters_menu(game_manager.screen)
+    elif event["key"] == "filter":
+        if event["filter"] == "avernus":
+            game_manager.apply_color_filter((228, 117, 117), 'avernus')
+        elif event["filter"] == "mexico":
+            game_manager.apply_color_filter((243, 171, 78), 'mexico')
+        elif event["filter"] == "matrix":
+            game_manager.apply_color_filter((150, 234, 141), 'matrix')
 
 
 def get_background():

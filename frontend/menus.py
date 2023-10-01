@@ -117,6 +117,7 @@ class MenuManager:
         stackPanel = StackPanel()
         stackPanel.append(Button("Map Menu", "map_menu", font1, font2))
         stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, font2))
+        stackPanel.append(Button("Color Filters", "color_filter", font1, font2))
         stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, font2))
         stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, font2))
         stackPanel.append(Button("Exit", "exit", font1, font2))
@@ -163,6 +164,33 @@ class MenuManager:
             TextBox("new_name", "Insert New Name Here", GUI.get_font_at(0))
         )
         stackPanel.append(Button("Confirm", "rename_map", font1, font2))
+
+        stackPanel.set_pos(
+            (
+                win.get_width() // 2 - stackPanel.size[0] // 2,
+                win.get_height() // 2 - stackPanel.size[1] // 2,
+            )
+        )
+        self.current_menu = stackPanel
+        GUI.append(stackPanel)
+
+    def create_filters_menu(self, win):
+        if self.current_menu and self.current_menu in GUI.elements:
+            GUI.remove(self.current_menu)
+
+        font1 = GUI.get_font_at(0)
+        font2 = GUI.get_font_at(1)
+
+        stackPanel = StackPanel()
+        button = Button("Avernus", "filter", font1, font2)
+        button.event['filter'] = 'avernus'
+        stackPanel.append(button)
+        button = Button("Mexico", "filter", font1, font2)
+        button.event['filter'] = 'mexico'
+        stackPanel.append(button)
+        button = Button("Matrix", "filter", font1, font2)
+        button.event['filter'] = 'matrix'
+        stackPanel.append(button)
 
         stackPanel.set_pos(
             (
