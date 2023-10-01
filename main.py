@@ -106,7 +106,10 @@ class GameManager:
         self.event_que = deque()
 
         self.effects = Effects()
-        self.tokens = TokenManager(self.screen)
+        self.tokens = TokenManager(
+            self.screen,
+            self.controls,
+        )
 
         self.map_zoom = 1.0
         self.map_offset = (0, 0)
@@ -224,7 +227,7 @@ class GameManager:
             if effect.name == name:
                 self.effects.remove(effect)
                 return
-        self.effects.append(ColorFilter(self.screen, color))
+        self.effects.append(ColorFilter(self.screen, color, self.controls))
         self.effects[-1].name = name
 
     def draw_grid(self):
@@ -325,27 +328,26 @@ class GameManager:
             # file drop
             elif event.type == pg.DROPFILE:
                 path = event.file
-                if any([path.endswith(i) for i in ['.png', '.jpg']]):
+                if any([path.endswith(i) for i in [".png", ".jpg"]]):
                     token_surf = pg.image.load(path)
                     token = TokenSurf(token_surf, 100)
                     token.pos = pygame.mouse.get_pos()
                     self.tokens.append(token)
-            
+
         GUI.step()
         self.tokens.step()
         self.effects.step()
 
-        # draw the frame
+        # draw the frame,
         frame = next(self.current_map_frames)
         if self.map_zoom > 1.0:
             frame = pygame.transform.smoothscale_by(frame, self.map_zoom)
 
         self.screen.blit(frame, self.map_offset)
 
+        self.draw_grid()
         self.tokens.draw()
         self.effects.draw()
-
-        self.draw_grid()
 
         GUI.draw()
 
@@ -410,7 +412,9 @@ def handle_gui_events(event: str):
                 GUI.remove(menu_manager.current_menu)
                 menu_manager.current_menu = None
                 return
-        game_manager.effects.append(DarknessEffect(game_manager.screen))
+        game_manager.effects.append(
+            DarknessEffect(game_manager.screen, game_manager.controls)
+        )
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
     elif event["key"] == "add_tag_menu":
@@ -433,11 +437,11 @@ def handle_gui_events(event: str):
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
     elif event["key"] == "filter":
         if event["filter"] == "avernus":
-            game_manager.apply_color_filter((228, 117, 117), 'avernus')
+            game_manager.apply_color_filter((228, 117, 117), "avernus")
         elif event["filter"] == "mexico":
-            game_manager.apply_color_filter((243, 171, 78), 'mexico')
+            game_manager.apply_color_filter((243, 171, 78), "mexico")
         elif event["filter"] == "matrix":
-            game_manager.apply_color_filter((150, 234, 141), 'matrix')
+            game_manager.apply_color_filter((150, 234, 141), "matrix")
 
 
 def get_background():
