@@ -23,7 +23,7 @@ class GUI:
 
     frames = []
 
-    debug = True
+    debug = False
 
     def event_handle(event):
         # pygame left click

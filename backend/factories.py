@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 from backend.config import Config, Map
 from backend.searchers import Searcher, MapSearcher, BasicSearchingStrategy
 from backend.loader import Loader
+from backend.settings import Settings, Controls
+from tools.downloader import MapsDownloader
 
 
 class AbstractFactory(ABC):
@@ -20,6 +22,21 @@ class AbstractFactory(ABC):
     def create_searcher(config: Config) -> Searcher:
         raise NotImplementedError("Must implement create_searcher method")
 
+    @staticmethod
+    @abstractmethod
+    def create_settings(settings_file: str) -> Settings:
+        raise NotImplementedError("Must implement create_settings method")
+
+    @staticmethod
+    @abstractmethod
+    def create_downloader() -> MapsDownloader:
+        raise NotImplementedError("Must implement create_downloader method")
+
+    @staticmethod
+    @abstractmethod
+    def create_controls(settings: Settings) -> Controls:
+        raise NotImplementedError("Must implement create_controls method")
+
 
 class SimpleFactory(AbstractFactory):
     @staticmethod
@@ -34,3 +51,15 @@ class SimpleFactory(AbstractFactory):
     def create_searcher(config: Config) -> Searcher:
         strategy = BasicSearchingStrategy(config)
         return MapSearcher(strategy)
+
+    @staticmethod
+    def create_settings(settings_file: str) -> Settings:
+        return Settings(settings_file)
+
+    @staticmethod
+    def create_downloader() -> MapsDownloader:
+        return MapsDownloader()
+
+    @staticmethod
+    def create_controls(settings: Settings) -> Controls:
+        return Controls(settings)

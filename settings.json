@@ -1,0 +1,40 @@
+{
+  "assets_path": "assets",
+  "tokens_path": "assets/tokens",
+  "grid": {
+    "color": "black",
+    "opacity": 0.5,
+    "size": 60,
+    "type": "hex"
+  },
+  "maps_config": "maps.json",
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "saves_path": "saves",
+  "fonts": {
+    "CriticalRolePlay72": "assets/fonts/CriticalRolePlay72.json",
+    "CriticalRolePlay72B": "assets/fonts/CriticalRolePlay72B.json",
+    "CriticalRolePlay124": "assets/fonts/CriticalRolePlay124.json",
+    "CriticalRolePlay30": "assets/fonts/CriticalRolePlay30.json",
+    "CriticalRolePlay30B": "assets/fonts/CriticalRolePlay30B.json"
+  },
+  "frame": "assets/images/frame.json",
+  "controls": {
+    "zoom_in": ["left alt", "mousebuttonwheelup"],
+    "zoom_out": ["left alt", "mousebuttonwheeldown"],
+    "drag": ["left alt", "mousebuttonleft"],
+    "enlarge_grid": ["[+]"],
+    "reduce_grid": ["[-]"],
+    "change_grid": ["g"],
+    "change_grid_color": ["c"],
+    "darkness_mode": ["left ctrl", "n"],
+    "avernus_mode": ["left ctrl", "a"],
+    "next_map": ["right"],
+    "previous_map": ["left"],
+    "light": ["l"],
+    "rotate_token_left": [","],
+    "rotate_token_right": ["."]
+  }
+}

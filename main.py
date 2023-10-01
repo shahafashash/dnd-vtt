@@ -14,13 +14,14 @@ from typing import Tuple
 from math import cos, sin, pi
 from tools.utils import cycle
 import pygame as pg
-import json
 from collections import deque
+from functools import reduce
 from enum import Enum
 from frontend.gui import *
 from frontend.font import Font
-from backend.factories import SimpleFactory
+from backend.factories import AbstractFactory, SimpleFactory
 from frontend.effects import Effects, DarknessEffect, ColorFilter
+from frontend.tokens import TokenManager, TokenSurf
 from frontend.menus import MenuManager
 
 FPS = 60
@@ -57,40 +58,104 @@ class GameEvent:
 class GameManager:
     _instance = None
 
-    def __init__(self, screen, clock, factory):
+    def __init__(self, factory: AbstractFactory):
         GameManager._instance = self
-        self.screen = screen
-        self.clock = clock
-
         self.menu_manager = MenuManager()
+        self.settings = factory.create_settings("settings.json")
+
+        # Setting up GUI fonts
+        self.__setup_gui_fonts()
+
+        # Creating GUI frame
+        self.__setup_gui_frame()
+
+        # Create the screen
+        self.screen = None
+        self.__setup_screen()
+
+        # Create the clock
+        self.clock = pg.time.Clock()
 
         self.menu_manager.create_loading_screen(self.screen)
+        maps_config_path = self.settings.get("maps_config", default="maps.json")
+        self.config = factory.create_config(maps_config_path)
+        self.loader = factory.create_loader(self.config)
+        self.map_searcher = factory.create_searcher(self.config)
+        self.controls = factory.create_controls(self.settings)
+        self.maps = self.config.maps_names
+        self.menu_manager.set_config(self.config)
+
         # update screen
         self.screen.blit(get_background(), (0, 0))
         GUI.step()
         GUI.draw()
         pg.display.flip()
 
-        self.config = factory.create_config("maps.json")
-        self.loader = factory.create_loader(self.config)
-        self.map_searcher = factory.create_searcher(self.config)
-        self.maps = self.config.maps_names
-        self.menu_manager.set_config(self.config)
-        
         self.current_map_name = None
         self.current_map_frames = None
 
-        self.grid_size = 60
-
-        self.grid_states = cycle([grid_state for grid_state in Grid])
-        self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
-        self.grid_state = next(self.grid_states)
-        self.grid_color = next(self.grid_colors)
+        # Setting up the grid
+        self.grid_size = None
+        self.grid_color = None
+        self.grid_state = None
+        self.grid_states = None
+        self.grid_colors = None
+        self.__setup_grid()
 
         self.state = State.GAME_MAIN_MENU
         self.event_que = deque()
 
         self.effects = Effects()
+        self.tokens = TokenManager(
+            self.screen,
+            self.controls,
+        )
+
+        self.map_zoom = 1.0
+        self.map_offset = (0, 0)
+        self.map_drag = False
+
+    def __setup_screen(self) -> None:
+        # Create the screen
+        resolution_width = self.settings.get(
+            "resolution", subname="width", default=1920
+        )
+        resolution_height = self.settings.get(
+            "resolution", subname="height", default=1080
+        )
+        screen = pg.display.set_mode(
+            (resolution_width, resolution_height), pygame.RESIZABLE
+        )
+
+        self.screen = screen
+        GUI.win = screen
+
+    def __setup_gui_fonts(self) -> None:
+        # Setting up GUI fonts
+        fonts = self.settings.get("fonts", default=[])
+        for path in fonts.values():
+            GUI.fonts.append(Font(path))
+
+    def __setup_gui_frame(self) -> None:
+        # Creating GUI frame
+        frame = self.settings.get("frame", default="assets/images/frame.json")
+        GUI.frames.append(Frame(frame))
+
+    def __setup_grid(self) -> None:
+        # Setting up the grid
+        self.grid_size = self.settings.get("grid", subname="size", default=60)
+        grid_color = self.settings.get("grid", subname="color", default="black")
+        self.grid_color = GridColors[grid_color.upper()].value
+        grid_state = self.settings.get("grid", subname="type", default="grid")
+        self.grid_state = Grid[grid_state.upper()]
+        self.grid_states = cycle([grid_state for grid_state in Grid])
+        self.grid_colors = cycle([grid_color.value for grid_color in GridColors])
+
+        # Iterate over the grid states and colors to get to the current one
+        while next(self.grid_states) != self.grid_state:
+            pass
+        while next(self.grid_colors) != self.grid_color:
+            pass
 
     def get_instance():
         return GameManager._instance
@@ -124,6 +189,11 @@ class GameManager:
                         self.menu_manager.create_menu_game(self.screen)
             elif event.key == pg.K_F11:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
+            elif event.key == pg.K_t:
+                self.test()
+
+    def test(self):
+        pass
 
     def step(self):
         self.handle_game_events()
@@ -152,6 +222,14 @@ class GameManager:
         pg.display.flip()
         self.clock.tick(FPS)
 
+    def apply_color_filter(self, color, name):
+        for effect in self.effects:
+            if effect.name == name:
+                self.effects.remove(effect)
+                return
+        self.effects.append(ColorFilter(self.screen, color, self.controls))
+        self.effects[-1].name = name
+
     def draw_grid(self):
         if self.grid_state == Grid.GRID:
             draw_grid(self.screen, self.grid_size, self.grid_color)
@@ -162,42 +240,80 @@ class GameManager:
         for event in pg.event.get():
             GUI.event_handle(event)
             self.global_pygame_event_handler(event)
-            self.effects.handle_events(event)
+            self.tokens.handle_pygame_events(event)
+            self.effects.handle_pygame_events(event)
+            if pygame.key.get_mods() & pygame.KMOD_ALT:
+                map_orientation_changed = False
+                if event.type == pygame.MOUSEWHEEL:
+                    # zoom map
+                    old_zoom = self.map_zoom
+                    zoom_factor = event.y * 0.05
+                    if self.map_zoom + zoom_factor < 1.0:
+                        zoom_factor = 1.0 - self.map_zoom
+                    self.map_zoom += zoom_factor
+                    center = pygame.mouse.get_pos()
+                    vec = (
+                        self.map_offset[0] - center[0],
+                        self.map_offset[1] - center[1],
+                    )
+                    back_factor = 1 / old_zoom
+                    vec = (
+                        vec[0] * self.map_zoom * back_factor,
+                        vec[1] * self.map_zoom * back_factor,
+                    )
+                    self.map_offset = (center[0] + vec[0], center[1] + vec[1])
+                    map_orientation_changed = True
+                elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    self.map_drag = True
+                elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                    self.map_drag = False
+                elif event.type == pygame.MOUSEMOTION:
+                    if self.map_drag:
+                        self.map_offset = (
+                            self.map_offset[0] + event.rel[0],
+                            self.map_offset[1] + event.rel[1],
+                        )
+                    map_orientation_changed = True
+
+                if map_orientation_changed:
+                    # limit map to screen
+                    if self.map_offset[0] > 0:
+                        self.map_offset = (0, self.map_offset[1])
+                    if self.map_offset[1] > 0:
+                        self.map_offset = (self.map_offset[0], 0)
+                    if self.map_offset[0] <= self.screen.get_width() * (
+                        1 - self.map_zoom
+                    ):
+                        self.map_offset = (
+                            self.screen.get_width() * (1 - self.map_zoom),
+                            self.map_offset[1],
+                        )
+                    if self.map_offset[1] <= self.screen.get_height() * (
+                        1 - self.map_zoom
+                    ):
+                        self.map_offset = (
+                            self.map_offset[0],
+                            self.screen.get_height() * (1 - self.map_zoom),
+                        )
             if event.type == pg.KEYDOWN:
-                # plus and minus of num pad
-                if event.key == pg.K_KP_PLUS:
+                if event.key == self.controls.get("enlarge_grid"):
                     self.grid_size += 5
-                elif event.key == pg.K_KP_MINUS:
+                elif event.key == self.controls.get("reduce_grid"):
                     self.grid_size -= 5
                     if self.grid_size < 5:
                         self.grid_size = 5
-                elif event.key == pg.K_g:
+                elif event.key == self.controls.get("change_grid"):
                     self.grid_state = next(self.grid_states)
-                elif event.key == pg.K_c:
+                elif event.key == self.controls.get("change_grid_color"):
                     self.grid_color = next(self.grid_colors)
-                elif event.key == pg.K_n:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
-                        for effect in self.effects:
-                            if effect.name == "darkness":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(DarknessEffect(self.screen))
-                elif event.key == pg.K_a:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
-                        for effect in self.effects:
-                            if effect.name == "avernus":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
-                        self.effects[-1].name = "avernus"
-                elif event.key == pg.K_RIGHT:
+                elif event.key == self.controls.get("next_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]
                     self.current_map_frames = self.loader.load_map(
                         self.current_map_name
                     )
-                elif event.key == pg.K_LEFT:
+                elif event.key == self.controls.get("previous_map"):
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index - 1) % len(self.maps)
                     self.current_map_name = self.maps[next_map_index]
@@ -209,16 +325,29 @@ class GameManager:
             elif event.type == pg.MOUSEBUTTONDOWN and event.button == 3:
                 self.menu_manager.create_menu_maps(self.maps)
 
+            # file drop
+            elif event.type == pg.DROPFILE:
+                path = event.file
+                if any([path.endswith(i) for i in [".png", ".jpg"]]):
+                    token_surf = pg.image.load(path)
+                    token = TokenSurf(token_surf, 100)
+                    token.pos = pygame.mouse.get_pos()
+                    self.tokens.append(token)
+
         GUI.step()
+        self.tokens.step()
         self.effects.step()
 
-        # draw the frame
+        # draw the frame,
         frame = next(self.current_map_frames)
-        self.screen.blit(frame, (0, 0))
+        if self.map_zoom > 1.0:
+            frame = pygame.transform.smoothscale_by(frame, self.map_zoom)
 
-        self.effects.draw()
+        self.screen.blit(frame, self.map_offset)
 
         self.draw_grid()
+        self.tokens.draw()
+        self.effects.draw()
 
         GUI.draw()
 
@@ -283,7 +412,9 @@ def handle_gui_events(event: str):
                 GUI.remove(menu_manager.current_menu)
                 menu_manager.current_menu = None
                 return
-        game_manager.effects.append(DarknessEffect(game_manager.screen))
+        game_manager.effects.append(
+            DarknessEffect(game_manager.screen, game_manager.controls)
+        )
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
     elif event["key"] == "add_tag_menu":
@@ -297,22 +428,24 @@ def handle_gui_events(event: str):
     elif event["key"] == "favorited":
         map_name = event["map_name"]
         checked = event["state"]
-        map_object = game_manager.config.get_map(map_name)
-        if checked:
-            # logic for add map to favorites
-            pass
-        else:
-            # logic for remove map from favorites
-            pass
-        
-
-
-def load_maps(json_path: str):
-    with open(json_path, "r") as f:
-        maps_content = json.load(f)
-
-    maps = [map["name"] for map in maps_content]
-    return maps
+        game_manager.config.set_favorite(map_name, checked)
+    elif event["key"] == "add_rename_map_menu":
+        game_manager.menu_manager.create_menu_rename_map(game_manager.screen)
+    elif event["key"] == "rename_map":
+        button = event["element"]
+        new_name = button.parent.elements[0].text
+        game_manager.config.rename_map(game_manager.current_map_name, new_name)
+        GUI.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
+    elif event["key"] == "color_filter":
+        game_manager.menu_manager.create_filters_menu(game_manager.screen)
+    elif event["key"] == "filter":
+        if event["filter"] == "avernus":
+            game_manager.apply_color_filter((228, 117, 117), "avernus")
+        elif event["filter"] == "mexico":
+            game_manager.apply_color_filter((243, 171, 78), "mexico")
+        elif event["filter"] == "matrix":
+            game_manager.apply_color_filter((150, 234, 141), "matrix")
 
 
 def get_background():
@@ -324,21 +457,9 @@ def get_background():
 def main():
     pg.init()
 
-    screen = pg.display.set_mode((1920, 1080), pygame.RESIZABLE)
-    clock = pg.time.Clock()
-
-    GUI.win = screen
     GUI.gui_event_handler = handle_gui_events
 
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay72B.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay124.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30.json"))
-    GUI.fonts.append(Font(r"./assets/fonts/CriticalRolePlay30B.json"))
-
-    GUI.frames.append(Frame(r"./assets/images/frame.json"))
-
-    game_manager = GameManager(screen, clock, factory=SimpleFactory)
+    game_manager = GameManager(factory=SimpleFactory)
 
     game_manager.setup()
 
@@ -347,4 +468,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print(__debug__)
     main()
