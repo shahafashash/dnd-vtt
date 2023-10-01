@@ -199,6 +199,8 @@ class Button(Element):
         self.key = key
         self.size = self.surf.get_size()
 
+        self.event = {"key": self.key, "text": self.text, "element": self}
+
     def render(self, text, font, color):
         rendered_text = font.render(text, True, color)
         self.text_width = rendered_text.get_width()
@@ -240,7 +242,7 @@ class Button(Element):
 
     def click(self):
         # todo: get all values in root of current element collection and return them as dict
-        GUI.gui_event_handler({"key": self.key, "text": self.text, "element": self})
+        GUI.gui_event_handler(self.event)
 
 
 class TextBox(Element):

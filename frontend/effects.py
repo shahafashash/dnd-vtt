@@ -96,7 +96,22 @@ class ColorFilter(Effect):
         self.color = color
     def draw(self):
         self.win.fill(self.color, special_flags=pygame.BLEND_MULT)
-        self.win.fill((255, 100, 100), special_flags=pygame.BLEND_MULT)
+
+
+def screen(win, color):
+    ''' screen blending mode '''
+    win_inv = pygame.Surface(win.get_size())
+    win_inv.fill((255,255,255))
+    win_inv.blit(win, (0,0), special_flags=pygame.BLEND_RGBA_SUB)
+
+    color_inv = pygame.Surface(win.get_size())
+    color_inv.fill((255,255,255))
+    color_inv.fill(color, special_flags=pygame.BLEND_RGBA_SUB)
+
+    win_inv.blit(color_inv, (0,0), special_flags=pygame.BLEND_RGBA_MULT)
+
+    win.fill((255,255,255))
+    win.blit(win_inv, (0,0), special_flags=pygame.BLEND_RGBA_SUB)
 
 
 class Rain(Effect):
