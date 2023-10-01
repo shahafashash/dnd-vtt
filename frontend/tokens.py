@@ -33,7 +33,11 @@ class TokenManager:
                 self.dargged_token.pos = (event.pos[0] - self.mouse_offset[0], event.pos[1] - self.mouse_offset[1])
         elif event.type == pygame.MOUSEWHEEL:
             if self.selected_token:
-                scale_factor = event.y * 0.01
+                sign = 1 if event.y > 0 else -1
+                print(sign)
+
+                scale_factor = 1 + (event.y / 10)
+                print(scale_factor)
                 self.selected_token.scale(scale_factor)
 
         elif event.type == pygame.KEYDOWN:
@@ -112,9 +116,9 @@ class TokenSurf(Token):
         self.radius = (self.surf.get_width() + self.surf.get_height()) / 4
 
     def scale(self, factor):
-        if self.scale_factor + factor < self.lower_limit_factor:
-            factor = 0
-        self.scale_factor += factor
+        # if self.scale_factor + factor < self.lower_limit_factor:
+        #     factor = 0
+        self.scale_factor *= factor
         
         self.recalculate_surf()
         
