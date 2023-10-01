@@ -296,21 +296,6 @@ class GameManager:
                     self.grid_state = next(self.grid_states)
                 elif event.key == pg.K_c:
                     self.grid_color = next(self.grid_colors)
-                elif event.key == pg.K_n:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
-                        for effect in self.effects:
-                            if effect.name == "darkness":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(DarknessEffect(self.screen))
-                elif event.key == pg.K_a:
-                    if pygame.key.get_mods() & pygame.KMOD_CTRL:
-                        for effect in self.effects:
-                            if effect.name == "avernus":
-                                self.effects.remove(effect)
-                                return
-                        self.effects.append(ColorFilter(self.screen, (255, 100, 100)))
-                        self.effects[-1].name = "avernus"
                 elif event.key == pg.K_RIGHT:
                     map_index = self.maps.index(self.current_map_name)
                     next_map_index = (map_index + 1) % len(self.maps)
@@ -441,11 +426,11 @@ def handle_gui_events(event: str):
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
     elif event["key"] == "filter":
         if event["filter"] == "avernus":
-            game_manager.apply_color_filter((255, 100, 100), 'avernus')
+            game_manager.apply_color_filter((228, 117, 117), 'avernus')
         elif event["filter"] == "mexico":
-            game_manager.apply_color_filter((255, 255, 100), 'mexico')
+            game_manager.apply_color_filter((243, 171, 78), 'mexico')
         elif event["filter"] == "matrix":
-            game_manager.apply_color_filter((0, 255, 0), 'matrix')
+            game_manager.apply_color_filter((150, 234, 141), 'matrix')
 
 
 def get_background():
