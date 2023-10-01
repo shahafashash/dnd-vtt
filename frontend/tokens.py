@@ -34,10 +34,8 @@ class TokenManager:
         elif event.type == pygame.MOUSEWHEEL:
             if self.selected_token:
                 sign = 1 if event.y > 0 else -1
-                print(sign)
 
                 scale_factor = 1 + (event.y / 10)
-                print(scale_factor)
                 self.selected_token.scale(scale_factor)
 
         elif event.type == pygame.KEYDOWN:

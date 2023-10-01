@@ -1,7 +1,8 @@
-''' this module's responsibility is to create gui menus '''
+""" this module's responsibility is to create gui menus """
 
 import pygame
 from frontend.gui import *
+
 
 class MenuManager:
     def __init__(self, config=None):
@@ -24,7 +25,6 @@ class MenuManager:
         cm.frame = GUI.frames[0]
 
         GUI.append(self.current_menu)
-
 
     def create_main_menu(self, win):
         GUI.elements.remove(self.current_menu)
@@ -56,7 +56,6 @@ class MenuManager:
 
         GUI.append(self.current_menu)
 
-
     def create_columns_maps(self, found_maps) -> Columns:
         """create columns based on found map and return columns object"""
         thumbnail_columns = Columns(3)
@@ -66,14 +65,17 @@ class MenuManager:
             thumbnail_stackpanel = StackPanel()
             thumbnail_stackpanel.append(Picture(thumbnail))
             button = Button(
-                map, "change_map", GUI.get_font_at(3), GUI.get_font_at(4), custom_width=400
+                map,
+                "change_map",
+                GUI.get_font_at(3),
+                GUI.get_font_at(4),
+                custom_width=400,
             )
             thumbnail_stackpanel.linked_button = button
             thumbnail_stackpanel.append(button)
             thumbnail_columns.append(thumbnail_stackpanel)
             thumbnail_columns.scrollable = True
         return thumbnail_columns
-
 
     def create_menu_maps(self, maps: list[str]):
         if self.current_menu and self.current_menu in GUI.elements:
@@ -102,7 +104,6 @@ class MenuManager:
 
         GUI.append(self.current_menu)
 
-
     def create_menu_game(self, win):
         if self.current_menu and self.current_menu in GUI.elements:
             GUI.remove(self.current_menu)
@@ -117,6 +118,7 @@ class MenuManager:
         stackPanel.append(Button("Map Menu", "map_menu", font1, font2))
         stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, font2))
         stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, font2))
+        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, font2))
         stackPanel.append(Button("Exit", "exit", font1, font2))
 
         stackPanel.set_pos(
@@ -129,7 +131,6 @@ class MenuManager:
         self.current_menu.name = "game_menu"
         GUI.append(stackPanel)
 
-
     def create_menu_add_tag(self, win):
         if self.current_menu and self.current_menu in GUI.elements:
             GUI.remove(self.current_menu)
@@ -140,6 +141,28 @@ class MenuManager:
         stackPanel = StackPanel()
         stackPanel.append(TextBox("new_tag", "Insert Tags Here", GUI.get_font_at(0)))
         stackPanel.append(Button("Add", "add_tags", font1, font2))
+
+        stackPanel.set_pos(
+            (
+                win.get_width() // 2 - stackPanel.size[0] // 2,
+                win.get_height() // 2 - stackPanel.size[1] // 2,
+            )
+        )
+        self.current_menu = stackPanel
+        GUI.append(stackPanel)
+
+    def create_menu_rename_map(self, win):
+        if self.current_menu and self.current_menu in GUI.elements:
+            GUI.remove(self.current_menu)
+
+        font1 = GUI.get_font_at(0)
+        font2 = GUI.get_font_at(1)
+
+        stackPanel = StackPanel()
+        stackPanel.append(
+            TextBox("new_name", "Insert New Name Here", GUI.get_font_at(0))
+        )
+        stackPanel.append(Button("Confirm", "rename_map", font1, font2))
 
         stackPanel.set_pos(
             (
