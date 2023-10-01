@@ -33,6 +33,8 @@
     "avernus_mode": ["left ctrl", "a"],
     "next_map": ["right"],
     "previous_map": ["left"],
-    "light": ["l"]
+    "light": ["l"],
+    "rotate_token_left": [","],
+    "rotate_token_right": ["."]
   }
 }
