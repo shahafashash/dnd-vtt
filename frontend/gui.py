@@ -189,24 +189,45 @@ class Label(Element):
         )
         GUI.win.blit(self.surf, center)
 
+def gui_art_around_text(text_surf: pygame.Surface, square='square1', custom_width=-1, appendix: pygame.Surface=None) -> pygame.Surface:
+    surf = text_surf
+    art = GUI.gui_config[square]
+    
+    text_surf_width = surf.get_width()
+    if custom_width != -1:
+        text_surf_width = custom_width
+
+    framed_surf = pygame.Surface((art['left'][1][0] + text_surf_width + art['right'][1][0], art['middle'][1][1]), pygame.SRCALPHA)
+    framed_surf.blit(GUI.gui_image, (0, 0), art['left'])
+    framed_surf.blit(GUI.gui_image, (art['left'][1][0] + text_surf_width, 0), art['right'])
+
+    middle_surf = pygame.Surface(art['middle'][1], pygame.SRCALPHA)
+    middle_surf.blit(GUI.gui_image, (0, 0), art['middle'])
+    middle_surf = pygame.transform.smoothscale(middle_surf, (text_surf_width, middle_surf.get_height()))
+    
+    framed_surf.blit(middle_surf, (art['left'][1][0], 0))
+
+    # blit text on the final surf
+    framed_surf.blit(surf, (framed_surf.get_width() // 2 - surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
+    if appendix:
+        framed_surf.blit(appendix, (framed_surf.get_width() // 2 + surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
+
+    return framed_surf
 
 class Button(Element):
     """a button, send event: {'key': _, 'text': _}"""
 
-    def __init__(self, text, key, font=None, selected_font=None, custom_width=-1):
+    def __init__(self, text, key, font=None, custom_width=-1):
         super().__init__()
         self.text = text
         self.font = font
-        self.selected_font = selected_font
         if not self.font:
             self.font = GUI.fonts[0]
-        if not self.selected_font:
-            self.selected_font = GUI.fonts[0]
 
         self.surf = self.font.render(text, True, (0, 0, 0))
         self.custom_width = custom_width
         self.surf = self.render(self.text, self.font, (0, 0, 0))
-        self.surf_selected = self.render(text, self.selected_font, (100, 100, 100))
+        self.surf_selected = self.render(text, self.font, (0, 0, 0), True)
 
         self.key = key
         self.size = self.surf.get_size()
@@ -214,34 +235,18 @@ class Button(Element):
         self.event = {"key": self.key, "text": self.text, "element": self}
         self.use_parents_size = True
 
-    def render(self, text, font, color):
+    def render(self, text, font, color, selected=False):
         rendered_text = font.render(text, True, color)
-        # self.text_width = rendered_text.get_width()
-        # if self.custom_width != -1:
-        #     self.text_width = min(rendered_text.get_width(), self.custom_width)
-        #     surf = pygame.Surface(
-        #         (self.custom_width, rendered_text.get_height()), pygame.SRCALPHA
-        #     )
-        #     surf.blit(rendered_text, (0, 0))
-        # else:
-        #     surf = rendered_text
+        if self.custom_width != -1:
+            surf = pygame.Surface(
+                (self.custom_width, rendered_text.get_height()), pygame.SRCALPHA
+            )
+            surf.blit(rendered_text, (self.custom_width // 2 - rendered_text.get_width() // 2, 0))
+        else:
+            surf = rendered_text
 
-        surf = rendered_text
-
-        art = GUI.gui_config['square']
-        framed_surf = pygame.Surface((art['left'][1][0] + surf.get_width() + art['right'][1][0], art['middle'][1][1]), pygame.SRCALPHA)
-        framed_surf.blit(GUI.gui_image, (0, 0), art['left'])
-        framed_surf.blit(GUI.gui_image, (art['left'][1][0] + surf.get_width(), 0), art['right'])
-
-        middle_surf = pygame.Surface(art['middle'][1], pygame.SRCALPHA)
-        middle_surf.blit(GUI.gui_image, (0, 0), art['middle'])
-        middle_surf = pygame.transform.smoothscale(middle_surf, (surf.get_width(), middle_surf.get_height()))
-        
-        framed_surf.blit(middle_surf, (art['left'][1][0], 0))
-
-        framed_surf.blit(surf, (framed_surf.get_width() // 2 - surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
-
-        return framed_surf
+        framed = gui_art_around_text(surf, 'square1' if not selected else 'square2')
+        return framed
 
     def step(self):
         super().step()
@@ -260,16 +265,9 @@ class Button(Element):
         super().draw()
         pos = self.get_abs_pos()
         center = (
-            # pos[0] + self.size[0] // 2 - self.text_width // 2,
-            pos[0],
+            pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
             pos[1],
         )
-        # if self.use_parents_size:
-        #     parents_size = self.parent.get_size()
-        #     center = (
-        #         pos[0] + parents_size[0] // 2 - self.size[0] // 2,
-        #         pos[1]
-        #     )
 
         if self is GUI.focused_element:
             GUI.win.blit(self.surf_selected, center)
@@ -285,7 +283,7 @@ class Button(Element):
 class TextBox(Element):
     """editable textbox, send event: {'key': _, 'text': _, 'state': ['typing', 'done']}"""
 
-    def __init__(self, key, initial_text, font=None, alignment="c"):
+    def __init__(self, key, initial_text, font=None, custom_width=400, alignment="c"):
         super().__init__()
         self.key = key
         self.initial_text = initial_text
@@ -293,17 +291,22 @@ class TextBox(Element):
         self.font = font
         if not self.font:
             self.font = GUI.fonts[0]
-        self.surf = self.font.render(initial_text, True, (0, 0, 0))
+        self.custom_width = custom_width
+        self.cursor_on = False
         self.cursor_surf = self.font.render("|", True, (0, 0, 0))
+        self.surf = self.render(initial_text)
+        # self.font.render(initial_text, True, (0, 0, 0))
+        
         self.size = self.surf.get_size()
         self.typing = False
         self.timer = 0
-        self.cursor_on = False
+        self.time_interval = 10
+        
         self.alignment = alignment
 
     def start_typing(self):
         self.typing = True
-        self.timer = 20
+        self.timer = self.time_interval
         self.refresh()
 
     def stop_typing(self):
@@ -331,6 +334,11 @@ class TextBox(Element):
         if self.typing:
             self.stop_typing()
 
+    def render(self, text):
+        text_surf = self.font.render(text, True, (0, 0, 0))
+        surf = gui_art_around_text(text_surf, 'square1', self.custom_width, self.cursor_surf if self.cursor_on else None)
+        return surf
+
     def refresh(self):
         if not self.typing:
             text = ""
@@ -338,10 +346,10 @@ class TextBox(Element):
                 text = self.text
             else:
                 text = self.initial_text
-            self.surf = self.font.render(text, True, (0, 0, 0))
+            self.surf = self.render(text)
             return
         text = self.text
-        self.surf = self.font.render(text, True, (0, 0, 0))
+        self.surf = self.render(text)
 
     def step(self):
         super().step()
@@ -360,7 +368,7 @@ class TextBox(Element):
             self.timer -= 1
             if self.timer == 0:
                 self.cursor_on = not self.cursor_on
-                self.timer = 20
+                self.timer = self.time_interval
                 self.refresh()
 
     def draw(self):
@@ -379,10 +387,7 @@ class TextBox(Element):
             )
         GUI.win.blit(self.surf, alignment)
         if self.cursor_on:
-            GUI.win.blit(
-                self.cursor_surf,
-                (alignment[0] + self.surf.get_width(), alignment[1]),
-            )
+            self.refresh()
 
 
 class StackPanel(Element):

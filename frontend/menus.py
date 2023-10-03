@@ -47,7 +47,7 @@ class MenuManager:
         cm.frame = GUI.frames[0]
         self.current_menu.append(cm)
 
-        button = Button("Start", "start", GUI.get_font_at(0), GUI.get_font_at(1))
+        button = Button("Start", "start", GUI.get_font_at(0))
         button.set_pos(
             (
                 win.get_width() // 2 - button.size[0] // 2,
@@ -85,7 +85,6 @@ class MenuManager:
                 map,
                 "change_map",
                 GUI.get_font_at(3),
-                GUI.get_font_at(4),
                 custom_width=400,
             )
             thumbnail_stackpanel.linked_button = button
@@ -133,12 +132,12 @@ class MenuManager:
         font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
-        stackPanel.append(Button("Map Menu", "map_menu", font1, font2))
-        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, font2))
-        stackPanel.append(Button("Color Filters", "color_filter", font1, font2))
-        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, font2))
-        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, font2))
-        stackPanel.append(Button("Exit", "exit", font1, font2))
+        stackPanel.append(Button("Map Menu", "map_menu", font1))
+        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1))
+        stackPanel.append(Button("Color Filters", "color_filter", font1))
+        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1))
+        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1))
+        stackPanel.append(Button("Exit", "exit", font1))
 
         stackPanel.set_pos(
             (
@@ -159,7 +158,7 @@ class MenuManager:
 
         stackPanel = StackPanel()
         stackPanel.append(TextBox("new_tag", "Insert Tags Here", GUI.get_font_at(0)))
-        stackPanel.append(Button("Add", "add_tags", font1, font2))
+        stackPanel.append(Button("Add", "add_tags", font1))
 
         stackPanel.set_pos(
             (
@@ -181,7 +180,7 @@ class MenuManager:
         stackPanel.append(
             TextBox("new_name", "Insert New Name Here", GUI.get_font_at(0))
         )
-        stackPanel.append(Button("Confirm", "rename_map", font1, font2))
+        stackPanel.append(Button("Confirm", "rename_map", font1))
 
         stackPanel.set_pos(
             (
@@ -200,13 +199,13 @@ class MenuManager:
         font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
-        button = Button("Avernus", "filter", font1, font2)
+        button = Button("Avernus", "filter", font1)
         button.event['filter'] = 'avernus'
         stackPanel.append(button)
-        button = Button("Mexico", "filter", font1, font2)
+        button = Button("Mexico", "filter", font1)
         button.event['filter'] = 'mexico'
         stackPanel.append(button)
-        button = Button("Matrix", "filter", font1, font2)
+        button = Button("Matrix", "filter", font1)
         button.event['filter'] = 'matrix'
         stackPanel.append(button)
 
