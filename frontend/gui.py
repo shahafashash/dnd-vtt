@@ -22,8 +22,15 @@ class GUI:
     gui_scroll_event = (0, 0)
 
     frames = []
+    gui_config = None
+    gui_image = None
 
     debug = False
+
+    def set_config(json_path):
+        with open(json_path, "r") as f:
+            GUI.gui_config = json.load(f)
+        GUI.gui_image = pygame.image.load(GUI.gui_config['path'])
 
     def event_handle(event):
         # pygame left click
@@ -97,6 +104,7 @@ class Element:
         self.name = ""
 
         self.send_event_on_no_click = False
+        self.use_parents_size = False
 
     def step(self):
         pass
@@ -120,6 +128,9 @@ class Element:
 
     def set_size(self, size):
         self.size = size
+
+    def get_size(self):
+        return self.size
 
     def get_abs_pos(self):
         if self.parent is None:
@@ -201,19 +212,36 @@ class Button(Element):
         self.size = self.surf.get_size()
 
         self.event = {"key": self.key, "text": self.text, "element": self}
+        self.use_parents_size = True
 
     def render(self, text, font, color):
         rendered_text = font.render(text, True, color)
-        self.text_width = rendered_text.get_width()
-        if self.custom_width != -1:
-            self.text_width = min(rendered_text.get_width(), self.custom_width)
-            surf = pygame.Surface(
-                (self.custom_width, rendered_text.get_height()), pygame.SRCALPHA
-            )
-            surf.blit(rendered_text, (0, 0))
-        else:
-            surf = rendered_text
-        return surf
+        # self.text_width = rendered_text.get_width()
+        # if self.custom_width != -1:
+        #     self.text_width = min(rendered_text.get_width(), self.custom_width)
+        #     surf = pygame.Surface(
+        #         (self.custom_width, rendered_text.get_height()), pygame.SRCALPHA
+        #     )
+        #     surf.blit(rendered_text, (0, 0))
+        # else:
+        #     surf = rendered_text
+
+        surf = rendered_text
+
+        art = GUI.gui_config['square']
+        framed_surf = pygame.Surface((art['left'][1][0] + surf.get_width() + art['right'][1][0], art['middle'][1][1]), pygame.SRCALPHA)
+        framed_surf.blit(GUI.gui_image, (0, 0), art['left'])
+        framed_surf.blit(GUI.gui_image, (art['left'][1][0] + surf.get_width(), 0), art['right'])
+
+        middle_surf = pygame.Surface(art['middle'][1], pygame.SRCALPHA)
+        middle_surf.blit(GUI.gui_image, (0, 0), art['middle'])
+        middle_surf = pygame.transform.smoothscale(middle_surf, (surf.get_width(), middle_surf.get_height()))
+        
+        framed_surf.blit(middle_surf, (art['left'][1][0], 0))
+
+        framed_surf.blit(surf, (framed_surf.get_width() // 2 - surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
+
+        return framed_surf
 
     def step(self):
         super().step()
@@ -232,14 +260,22 @@ class Button(Element):
         super().draw()
         pos = self.get_abs_pos()
         center = (
-            pos[0] + self.size[0] // 2 - self.text_width // 2,
+            # pos[0] + self.size[0] // 2 - self.text_width // 2,
+            pos[0],
             pos[1],
         )
+        # if self.use_parents_size:
+        #     parents_size = self.parent.get_size()
+        #     center = (
+        #         pos[0] + parents_size[0] // 2 - self.size[0] // 2,
+        #         pos[1]
+        #     )
 
         if self is GUI.focused_element:
             GUI.win.blit(self.surf_selected, center)
         else:
             GUI.win.blit(self.surf, center)
+
 
     def click(self):
         # todo: get all values in root of current element collection and return them as dict
@@ -610,7 +646,6 @@ class Picture(Element):
         super().__init__()
         self.surf = surf
         self.size = self.surf.get_size()
-        self.use_parents_size = False
 
     def draw(self):
         pos = self.get_abs_pos()

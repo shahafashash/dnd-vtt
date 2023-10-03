@@ -42,6 +42,12 @@ class Font:
                 char_size = self.cords[index][1][0]
                 surf.blit(self.atlas, (offset, 0), self.cords[index])
             offset += char_size + tracking
+
+        if len(color) == 3:
+            color = (color[0], color[1], color[2], 0)
+        
+        surf.fill(color, special_flags=pygame.BLEND_RGBA_ADD)
+        
         return surf
         
         
