@@ -425,6 +425,10 @@ def handle_gui_events(event: str):
         game_manager.config.add_tags(game_manager.current_map_name, new_tag)
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
+    elif event["key"] == "favorited":
+        map_name = event["map_name"]
+        checked = event["state"]
+        game_manager.config.set_favorite(map_name, checked)
     elif event["key"] == "add_rename_map_menu":
         game_manager.menu_manager.create_menu_rename_map(game_manager.screen)
     elif event["key"] == "rename_map":
@@ -464,4 +468,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print(__debug__)
     main()

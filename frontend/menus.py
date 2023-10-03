@@ -10,8 +10,10 @@ class MenuManager:
         self.map_menu = None
         self.config = config
 
+
     def set_config(self, config):
         self.config = config
+
 
     def create_loading_screen(self, win):
         cm = StackPanel()
@@ -58,12 +60,27 @@ class MenuManager:
 
     def create_columns_maps(self, found_maps) -> Columns:
         """create columns based on found map and return columns object"""
+
+        # create columns
         thumbnail_columns = Columns(3)
         for map in found_maps:
             map_obj = self.config.get_map(map)
             thumbnail = map_obj.thumbnail
+            # inside columns: create stackpanel per map
             thumbnail_stackpanel = StackPanel()
-            thumbnail_stackpanel.append(Picture(thumbnail))
+            # inside stackpanel: elements
+            elements = Elements()
+            picture = Picture(thumbnail)
+            picture.use_parents_size = True
+            elements.append(picture)
+            favorite_button = CheckBoxStar("favorited")
+            favorite_button.event["map_name"] = map
+            if map_obj.favorite:
+                favorite_button.checked = True
+            elements.append(favorite_button)
+
+            elements.set_size(elements.elements[0].size)
+            thumbnail_stackpanel.append(elements)
             button = Button(
                 map,
                 "change_map",
@@ -75,6 +92,7 @@ class MenuManager:
             thumbnail_stackpanel.append(button)
             thumbnail_columns.append(thumbnail_stackpanel)
             thumbnail_columns.scrollable = True
+            thumbnail_columns.scroll_limit_upper = 200
         return thumbnail_columns
 
     def create_menu_maps(self, maps: list[str]):
