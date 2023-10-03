@@ -105,7 +105,7 @@ class MenuManager:
 
         self.current_menu = Elements()
 
-        search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0))
+        search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0), 600)
         thumbnail_columns = self.create_columns_maps(maps)
 
         search_textbox.set_pos(
@@ -196,7 +196,6 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
         button = Button("Avernus", "filter", font1)

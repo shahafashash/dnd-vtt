@@ -10,7 +10,7 @@ class NoFonts(Exception):
 
 
 class GUI:
-    win = None
+    win: pygame.Surface = None
     fonts = []
 
     elements = []
@@ -24,13 +24,28 @@ class GUI:
     frames = []
     gui_config = None
     gui_image = None
+    
+    checkbox_surf: pygame.Surface = None
+    checkbox_surf_checked: pygame.Surface = None
+    star_surf: pygame.Surface = None
+    star_surf_checked: pygame.Surface = None
 
     debug = False
 
-    def set_config(json_path):
+    def initialize(json_path: str):
         with open(json_path, "r") as f:
             GUI.gui_config = json.load(f)
         GUI.gui_image = pygame.image.load(GUI.gui_config['path'])
+
+        GUI.checkbox_surf = pygame.Surface(GUI.gui_config['check1'][1], pygame.SRCALPHA)
+        GUI.checkbox_surf.blit(GUI.gui_image, (0,0), GUI.gui_config['check1'])
+        GUI.checkbox_surf_checked = pygame.Surface(GUI.gui_config['check2'][1], pygame.SRCALPHA)
+        GUI.checkbox_surf_checked.blit(GUI.gui_image, (0,0), GUI.gui_config['check2'])
+
+        GUI.star_surf = pygame.Surface(GUI.gui_config['star1'][1], pygame.SRCALPHA)
+        GUI.star_surf.blit(GUI.gui_image, (0,0), GUI.gui_config['star1'])
+        GUI.star_surf_checked = pygame.Surface(GUI.gui_config['star2'][1], pygame.SRCALPHA)
+        GUI.star_surf_checked.blit(GUI.gui_image, (0,0), GUI.gui_config['star2'])
 
     def event_handle(event):
         # pygame left click
@@ -295,7 +310,6 @@ class TextBox(Element):
         self.cursor_on = False
         self.cursor_surf = self.font.render("|", True, (0, 0, 0))
         self.surf = self.render(initial_text)
-        # self.font.render(initial_text, True, (0, 0, 0))
         
         self.size = self.surf.get_size()
         self.typing = False
@@ -697,17 +711,15 @@ class Drawer(Element):
         self.element.draw()
 
 
-class CheckBoxStar(Element):
-    """ temporary class for star shaped favorite button """
+class CheckBox(Element):
+    """ Check box """
     def __init__(self, key, checked=False):
         super().__init__()
         self.checked = checked
         self.key = key
-        self.points = [(0, 37), (36, 37), (50, 0), (66, 37), (100, 37), (74, 61), (84, 100), (50, 78), (19, 100), (30, 61)]
-        factor = 0.5
-        self.points = [(i[0] * factor, i[1] * factor) for i in self.points]
-        self.size = (100, 100)
-
+        self.surf = GUI.checkbox_surf
+        self.surf_checked = GUI.checkbox_surf_checked
+        self.size = self.surf.get_size()
         self.event = {"key": self.key, "element": self, 'state': self.checked}
 
     def step(self):
@@ -725,16 +737,22 @@ class CheckBoxStar(Element):
 
     def draw(self):
         pos = self.get_abs_pos()
-        points = [(i[0] + pos[0], i[1] + pos[1]) for i in self.points]
-        if not self.checked:
-            pygame.draw.polygon(GUI.win, (100,100,100), points)
-        else:
-            pygame.draw.polygon(GUI.win, (250,250,100), points)
+        surf = self.surf if not self.checked else self.surf_checked
+
+        GUI.win.blit(surf, pos)
 
     def click(self):
         self.checked = not self.checked
         self.event['state'] = self.checked
         GUI.gui_event_handler(self.event)
+
+class CheckBoxStar(CheckBox):
+    """ check box star """
+    def __init__(self, key, checked=False):
+        super().__init__(key, checked)
+        self.surf = GUI.star_surf
+        self.surf_checked = GUI.star_surf_checked
+        self.size = self.surf.get_size()
 
 
 def test(event):

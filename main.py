@@ -458,7 +458,7 @@ def main():
     pg.init()
 
     GUI.gui_event_handler = handle_gui_events
-    GUI.set_config("./assets/images/gui_config.json")
+    GUI.initialize("./assets/images/gui_config.json")
 
     game_manager = GameManager(factory=SimpleFactory)
 
