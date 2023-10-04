@@ -25,34 +25,6 @@
   },
   {
     "favorite": false,
-    "name": "City Streets 14 Docks Bridge Nightime",
-    "path": "assets\\maps\\City Streets 14 Docks Bridge Nightime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "14",
-      "docks",
-      "bridge",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 14 Docks Bridge Nightime.jpg",
-    "url": "https://youtube.com/watch?v=mL8Mm_h4wI4"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Nightime With Lights",
-    "path": "assets\\maps\\Bridge Nightime with Lights.mp4",
-    "tags": [
-      "bridge",
-      "nightime",
-      "with",
-      "lights"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Nightime With Lights.jpg",
-    "url": "https://youtube.com/watch?v=E732CHbbI5g"
-  },
-  {
-    "favorite": false,
     "name": "City Gate Nightime With Lights",
     "path": "assets\\maps\\City Gate Nightime with lights.mp4",
     "tags": [
@@ -64,21 +36,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\City Gate Nightime With Lights.jpg",
     "url": "https://youtube.com/watch?v=2LWZwAcVWT0"
-  },
-  {
-    "favorite": false,
-    "name": "City Gate Bridge Nightime With Lights",
-    "path": "assets\\maps\\City Gate Bridge Nightime with lights.mp4",
-    "tags": [
-      "city",
-      "gate",
-      "bridge",
-      "nightime",
-      "with",
-      "lights"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Gate Bridge Nightime With Lights.jpg",
-    "url": "https://youtube.com/watch?v=fvjNR2BHQMs"
   },
   {
     "favorite": false,
@@ -108,19 +65,33 @@
   },
   {
     "favorite": false,
-    "name": "Broken Bridge Daytime 02",
-    "path": "assets\\maps\\Broken Bridge Daytime 02.mp4",
+    "name": "City Gate Bridge Nightime With Lights",
+    "path": "assets\\maps\\City Gate Bridge Nightime with lights.mp4",
     "tags": [
-      "broken",
+      "city",
+      "gate",
       "bridge",
-      "daytime",
-      "02",
-      "water",
-      "sea",
-      "sand"
+      "nightime",
+      "with",
+      "lights"
     ],
-    "thumbnail": "assets\\thumbnails\\Broken Bridge Daytime 02.jpg",
-    "url": "https://youtube.com/watch?v=BwVTRcBA7b4"
+    "thumbnail": "assets\\thumbnails\\City Gate Bridge Nightime With Lights.jpg",
+    "url": "https://youtube.com/watch?v=fvjNR2BHQMs"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 14 Docks Bridge Nightime",
+    "path": "assets\\maps\\City Streets 14 Docks Bridge Nightime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "14",
+      "docks",
+      "bridge",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 14 Docks Bridge Nightime.jpg",
+    "url": "https://youtube.com/watch?v=mL8Mm_h4wI4"
   },
   {
     "favorite": false,
@@ -150,6 +121,19 @@
   },
   {
     "favorite": false,
+    "name": "Bridge Nightime With Lights",
+    "path": "assets\\maps\\Bridge Nightime with Lights.mp4",
+    "tags": [
+      "bridge",
+      "nightime",
+      "with",
+      "lights"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Nightime With Lights.jpg",
+    "url": "https://youtube.com/watch?v=E732CHbbI5g"
+  },
+  {
+    "favorite": false,
     "name": "City Gates Bridge Daytime",
     "path": "assets\\maps\\City Gates Bridge Daytime.mp4",
     "tags": [
@@ -160,19 +144,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\City Gates Bridge Daytime.jpg",
     "url": "https://youtube.com/watch?v=MguO-LJ3Zn4"
-  },
-  {
-    "favorite": false,
-    "name": "Broken Bridge 01 Daytime",
-    "path": "assets\\maps\\Broken Bridge 01 Daytime.mp4",
-    "tags": [
-      "broken",
-      "bridge",
-      "01",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Broken Bridge 01 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=a1hA9RoMhKU"
   },
   {
     "favorite": false,
@@ -189,6 +160,22 @@
   },
   {
     "favorite": false,
+    "name": "Broken Bridge Daytime 02",
+    "path": "assets\\maps\\Broken Bridge Daytime 02.mp4",
+    "tags": [
+      "broken",
+      "bridge",
+      "daytime",
+      "02",
+      "water",
+      "sea",
+      "sand"
+    ],
+    "thumbnail": "assets\\thumbnails\\Broken Bridge Daytime 02.jpg",
+    "url": "https://youtube.com/watch?v=BwVTRcBA7b4"
+  },
+  {
+    "favorite": false,
     "name": "Broken Bridge Daytime 03",
     "path": "assets\\maps\\Broken Bridge Daytime 03.mp4",
     "tags": [
@@ -202,16 +189,16 @@
   },
   {
     "favorite": false,
-    "name": "City Market Daytime 01",
-    "path": "assets\\maps\\City Market Daytime 01.mp4",
+    "name": "Broken Bridge 01 Daytime",
+    "path": "assets\\maps\\Broken Bridge 01 Daytime.mp4",
     "tags": [
-      "city",
-      "market",
-      "daytime",
-      "01"
+      "broken",
+      "bridge",
+      "01",
+      "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\City Market Daytime 01.jpg",
-    "url": "https://youtube.com/watch?v=GAnwyMVeCTU"
+    "thumbnail": "assets\\thumbnails\\Broken Bridge 01 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=a1hA9RoMhKU"
   },
   {
     "favorite": false,
@@ -241,6 +228,75 @@
   },
   {
     "favorite": false,
+    "name": "City Market Daytime 01",
+    "path": "assets\\maps\\City Market Daytime 01.mp4",
+    "tags": [
+      "city",
+      "market",
+      "daytime",
+      "01"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Market Daytime 01.jpg",
+    "url": "https://youtube.com/watch?v=GAnwyMVeCTU"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 11 Market Nightime",
+    "path": "assets\\maps\\City Streets 11 Market Nightime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "11",
+      "market",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 11 Market Nightime.jpg",
+    "url": "https://youtube.com/watch?v=N3j_zcrllUA"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 24 Outside Of Building Nightime",
+    "path": "assets\\maps\\City Streets 24 Outside of Building Nightime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "24",
+      "outside",
+      "of",
+      "building",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 24 Outside Of Building Nightime.jpg",
+    "url": "https://youtube.com/watch?v=58dqSbV5nQg"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Beach 01 Daytime",
+    "path": "assets\\maps\\Coastal Beach 01 Daytime.mp4",
+    "tags": [
+      "coastal",
+      "beach",
+      "01",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Beach 01 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=C60NYVYx8Zc"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 18 Daytime",
+    "path": "assets\\maps\\City Streets 18 Daytime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "18",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 18 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=8NFvO3sjRDQ"
+  },
+  {
+    "favorite": false,
     "name": "City Streets 05 Bridge Nightime",
     "path": "assets\\maps\\City Streets 05 Bridge Nightime.mp4",
     "tags": [
@@ -265,90 +321,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\City Streets 08 Nightime.jpg",
     "url": "https://youtube.com/watch?v=4XfhXnGmLUA"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 11 Market Nightime",
-    "path": "assets\\maps\\City Streets 11 Market Nightime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "11",
-      "market",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 11 Market Nightime.jpg",
-    "url": "https://youtube.com/watch?v=N3j_zcrllUA"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 18 Daytime",
-    "path": "assets\\maps\\City Streets 18 Daytime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "18",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 18 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=8NFvO3sjRDQ"
-  },
-  {
-    "favorite": false,
-    "name": "Coastal Beach 01 Daytime",
-    "path": "assets\\maps\\Coastal Beach 01 Daytime.mp4",
-    "tags": [
-      "coastal",
-      "beach",
-      "01",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Coastal Beach 01 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=C60NYVYx8Zc"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 24 Outside Of Building Nightime",
-    "path": "assets\\maps\\City Streets 24 Outside of Building Nightime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "24",
-      "outside",
-      "of",
-      "building",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 24 Outside Of Building Nightime.jpg",
-    "url": "https://youtube.com/watch?v=58dqSbV5nQg"
-  },
-  {
-    "favorite": false,
-    "name": "City Part 1 Docks And Marketplace",
-    "path": "assets\\maps\\City Part 1 Docks and Marketplace.mp4",
-    "tags": [
-      "city",
-      "part",
-      "1",
-      "docks",
-      "and",
-      "marketplace"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Part 1 Docks And Marketplace.jpg",
-    "url": "https://youtube.com/watch?v=4IdufWmn_6o"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 04 Nightime",
-    "path": "assets\\maps\\City Streets 04 Nightime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "04",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 04 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=Fcb52TwABIw"
   },
   {
     "favorite": false,
@@ -380,6 +352,19 @@
   },
   {
     "favorite": false,
+    "name": "City Streets 04 Nightime",
+    "path": "assets\\maps\\City Streets 04 Nightime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "04",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 04 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=Fcb52TwABIw"
+  },
+  {
+    "favorite": false,
     "name": "Coastal Path 04 Nightime",
     "path": "assets\\maps\\Coastal Path 04 Nightime.mp4",
     "tags": [
@@ -390,6 +375,20 @@
     ],
     "thumbnail": "assets\\thumbnails\\Coastal Path 04 Nightime.jpg",
     "url": "https://youtube.com/watch?v=L_K3TFgJtAo"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Path 03 Pier Daytime",
+    "path": "assets\\maps\\Coastal Path 03 Pier Daytime.mp4",
+    "tags": [
+      "coastal",
+      "path",
+      "03",
+      "pier",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Path 03 Pier Daytime.jpg",
+    "url": "https://youtube.com/watch?v=ny_XrjC3F9Q"
   },
   {
     "favorite": false,
@@ -406,19 +405,6 @@
   },
   {
     "favorite": false,
-    "name": "City Streets 20 Daytime",
-    "path": "assets\\maps\\City Streets 20 Daytime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "20",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 20 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=MIZNlImgfeo"
-  },
-  {
-    "favorite": false,
     "name": "City Streets 03 Nightime",
     "path": "assets\\maps\\City Streets 03 Nightime.mp4",
     "tags": [
@@ -429,6 +415,34 @@
     ],
     "thumbnail": "assets\\thumbnails\\City Streets 03 Nightime.jpg",
     "url": "https://youtube.com/watch?v=C2X-puD4eM0"
+  },
+  {
+    "favorite": false,
+    "name": "City Part 1 Docks And Marketplace",
+    "path": "assets\\maps\\City Part 1 Docks and Marketplace.mp4",
+    "tags": [
+      "city",
+      "part",
+      "1",
+      "docks",
+      "and",
+      "marketplace"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Part 1 Docks And Marketplace.jpg",
+    "url": "https://youtube.com/watch?v=4IdufWmn_6o"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 20 Daytime",
+    "path": "assets\\maps\\City Streets 20 Daytime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "20",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 20 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=MIZNlImgfeo"
   },
   {
     "favorite": false,
@@ -446,17 +460,45 @@
   },
   {
     "favorite": false,
-    "name": "Coastal Path 03 Pier Daytime",
-    "path": "assets\\maps\\Coastal Path 03 Pier Daytime.mp4",
+    "name": "City Streets 16 Docks Bridge Daytime",
+    "path": "assets\\maps\\City Streets 16 Docks Bridge Daytime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "16",
+      "docks",
+      "bridge",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 16 Docks Bridge Daytime.jpg",
+    "url": "https://youtube.com/watch?v=pEsk0_v8RV0"
+  },
+  {
+    "favorite": false,
+    "name": "City Streets 19 Daytime",
+    "path": "assets\\maps\\City Streets 19 Daytime.mp4",
+    "tags": [
+      "city",
+      "streets",
+      "19",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\City Streets 19 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=FW5TDl7pJzA"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Path 05 Cliff Daytime",
+    "path": "assets\\maps\\Coastal Path 05 Cliff Daytime.mp4",
     "tags": [
       "coastal",
       "path",
-      "03",
-      "pier",
+      "05",
+      "cliff",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Coastal Path 03 Pier Daytime.jpg",
-    "url": "https://youtube.com/watch?v=ny_XrjC3F9Q"
+    "thumbnail": "assets\\thumbnails\\Coastal Path 05 Cliff Daytime.jpg",
+    "url": "https://youtube.com/watch?v=PvCceyzceHw"
   },
   {
     "favorite": false,
@@ -490,87 +532,6 @@
   },
   {
     "favorite": false,
-    "name": "City Streets 16 Docks Bridge Daytime",
-    "path": "assets\\maps\\City Streets 16 Docks Bridge Daytime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "16",
-      "docks",
-      "bridge",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 16 Docks Bridge Daytime.jpg",
-    "url": "https://youtube.com/watch?v=pEsk0_v8RV0"
-  },
-  {
-    "favorite": false,
-    "name": "Coastal Path 05 Cliff Daytime",
-    "path": "assets\\maps\\Coastal Path 05 Cliff Daytime.mp4",
-    "tags": [
-      "coastal",
-      "path",
-      "05",
-      "cliff",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Coastal Path 05 Cliff Daytime.jpg",
-    "url": "https://youtube.com/watch?v=PvCceyzceHw"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 05 Daytime",
-    "path": "assets\\maps\\Country Road 05 Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "05",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 05 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=1xGV2PSO8LE"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 19 Daytime",
-    "path": "assets\\maps\\City Streets 19 Daytime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "19",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 19 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=FW5TDl7pJzA"
-  },
-  {
-    "favorite": false,
-    "name": "Coastal Village Nightime",
-    "path": "assets\\maps\\Coastal Village Nightime.mp4",
-    "tags": [
-      "coastal",
-      "village",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Coastal Village Nightime.jpg",
-    "url": "https://youtube.com/watch?v=MU1BY0ftEMo"
-  },
-  {
-    "favorite": false,
-    "name": "Coastal Beach 03 Desert Daytime",
-    "path": "assets\\maps\\Coastal Beach 03 Desert Daytime.mp4",
-    "tags": [
-      "coastal",
-      "beach",
-      "03",
-      "desert",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Coastal Beach 03 Desert Daytime.jpg",
-    "url": "https://youtube.com/watch?v=XyhXNkmwUA0"
-  },
-  {
-    "favorite": false,
     "name": "Countryside 01 Daytime",
     "path": "assets\\maps\\Countryside 01 Daytime.mp4",
     "tags": [
@@ -593,6 +554,45 @@
     ],
     "thumbnail": "assets\\thumbnails\\City Streets 10 Nightime.jpg",
     "url": "https://youtube.com/watch?v=RiVl_cTSU9g"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Beach 03 Desert Daytime",
+    "path": "assets\\maps\\Coastal Beach 03 Desert Daytime.mp4",
+    "tags": [
+      "coastal",
+      "beach",
+      "03",
+      "desert",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Beach 03 Desert Daytime.jpg",
+    "url": "https://youtube.com/watch?v=XyhXNkmwUA0"
+  },
+  {
+    "favorite": false,
+    "name": "Country Road 05 Daytime",
+    "path": "assets\\maps\\Country Road 05 Daytime.mp4",
+    "tags": [
+      "country",
+      "road",
+      "05",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Country Road 05 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=1xGV2PSO8LE"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Village Nightime",
+    "path": "assets\\maps\\Coastal Village Nightime.mp4",
+    "tags": [
+      "coastal",
+      "village",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Village Nightime.jpg",
+    "url": "https://youtube.com/watch?v=MU1BY0ftEMo"
   },
   {
     "favorite": false,
@@ -624,44 +624,18 @@
   },
   {
     "favorite": false,
-    "name": "Coastal Path 08 Hut Daytime",
-    "path": "assets\\maps\\Coastal Path 08 Hut Daytime.mp4",
+    "name": "City Streets 21 Walled Garden Daytime",
+    "path": "assets\\maps\\City Streets 21 Walled Garden Daytime.mp4",
     "tags": [
-      "coastal",
-      "path",
-      "08",
-      "hut",
+      "city",
+      "streets",
+      "21",
+      "walled",
+      "garden",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Coastal Path 08 Hut Daytime.jpg",
-    "url": "https://youtube.com/watch?v=GxV0hS0VkAw"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 04 Daytime",
-    "path": "assets\\maps\\Country Road 04 Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "04",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 04 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=eRDT3jq8pGg"
-  },
-  {
-    "favorite": false,
-    "name": "Coastal Path 06 Cliff  Daytime",
-    "path": "assets\\maps\\Coastal Path 06 Cliff  Daytime.mp4",
-    "tags": [
-      "coastal",
-      "path",
-      "06",
-      "cliff",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Coastal Path 06 Cliff  Daytime.jpg",
-    "url": "https://youtube.com/watch?v=ZYsFNhVeJYk"
+    "thumbnail": "assets\\thumbnails\\City Streets 21 Walled Garden Daytime.jpg",
+    "url": "https://youtube.com/watch?v=UbTZWb2IXlQ"
   },
   {
     "favorite": false,
@@ -680,6 +654,48 @@
   },
   {
     "favorite": false,
+    "name": "Coastal Path 08 Hut Daytime",
+    "path": "assets\\maps\\Coastal Path 08 Hut Daytime.mp4",
+    "tags": [
+      "coastal",
+      "path",
+      "08",
+      "hut",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Path 08 Hut Daytime.jpg",
+    "url": "https://youtube.com/watch?v=GxV0hS0VkAw"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Path 02 Pier Daytime",
+    "path": "assets\\maps\\Coastal Path 02 Pier Daytime.mp4",
+    "tags": [
+      "coastal",
+      "path",
+      "02",
+      "pier",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Path 02 Pier Daytime.jpg",
+    "url": "https://youtube.com/watch?v=F7JON54Brus"
+  },
+  {
+    "favorite": false,
+    "name": "Countryside 09 Ambush Site Daytime",
+    "path": "assets\\maps\\Countryside 09 Ambush Site Daytime.mp4",
+    "tags": [
+      "countryside",
+      "09",
+      "ambush",
+      "site",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Countryside 09 Ambush Site Daytime.jpg",
+    "url": "https://youtube.com/watch?v=vZkzMm6dABU"
+  },
+  {
+    "favorite": false,
     "name": "Countryside 03 Daytime",
     "path": "assets\\maps\\Countryside 03 Daytime.mp4",
     "tags": [
@@ -689,6 +705,47 @@
     ],
     "thumbnail": "assets\\thumbnails\\Countryside 03 Daytime.jpg",
     "url": "https://youtube.com/watch?v=5XcYm4Vqxkg"
+  },
+  {
+    "favorite": false,
+    "name": "Coastal Path 06 Cliff  Daytime",
+    "path": "assets\\maps\\Coastal Path 06 Cliff  Daytime.mp4",
+    "tags": [
+      "coastal",
+      "path",
+      "06",
+      "cliff",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Coastal Path 06 Cliff  Daytime.jpg",
+    "url": "https://youtube.com/watch?v=ZYsFNhVeJYk"
+  },
+  {
+    "favorite": false,
+    "name": "Country Road 04 Daytime",
+    "path": "assets\\maps\\Country Road 04 Daytime.mp4",
+    "tags": [
+      "country",
+      "road",
+      "04",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Country Road 04 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=eRDT3jq8pGg"
+  },
+  {
+    "favorite": false,
+    "name": "Countryside 11 Walled Garden Daytime",
+    "path": "assets\\maps\\Countryside 11 Walled Garden Daytime.mp4",
+    "tags": [
+      "countryside",
+      "11",
+      "walled",
+      "garden",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Countryside 11 Walled Garden Daytime.jpg",
+    "url": "https://youtube.com/watch?v=-V-zHTrh7Ks"
   },
   {
     "favorite": false,
@@ -705,32 +762,32 @@
   },
   {
     "favorite": false,
-    "name": "City Streets 21 Walled Garden Daytime",
-    "path": "assets\\maps\\City Streets 21 Walled Garden Daytime.mp4",
+    "name": "Country Road 12 Ambush Site",
+    "path": "assets\\maps\\Country Road 12 Ambush Site.mp4",
     "tags": [
-      "city",
-      "streets",
-      "21",
-      "walled",
-      "garden",
-      "daytime"
+      "country",
+      "road",
+      "12",
+      "ambush",
+      "site"
     ],
-    "thumbnail": "assets\\thumbnails\\City Streets 21 Walled Garden Daytime.jpg",
-    "url": "https://youtube.com/watch?v=UbTZWb2IXlQ"
+    "thumbnail": "assets\\thumbnails\\Country Road 12 Ambush Site.jpg",
+    "url": "https://youtube.com/watch?v=uFgqqDRyuPc"
   },
   {
     "favorite": false,
-    "name": "Coastal Path 02 Pier Daytime",
-    "path": "assets\\maps\\Coastal Path 02 Pier Daytime.mp4",
+    "name": "Country Road 14 Broken Bridge Daytime",
+    "path": "assets\\maps\\Country Road 14 Broken Bridge Daytime.mp4",
     "tags": [
-      "coastal",
-      "path",
-      "02",
-      "pier",
+      "country",
+      "road",
+      "14",
+      "broken",
+      "bridge",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Coastal Path 02 Pier Daytime.jpg",
-    "url": "https://youtube.com/watch?v=F7JON54Brus"
+    "thumbnail": "assets\\thumbnails\\Country Road 14 Broken Bridge Daytime.jpg",
+    "url": "https://youtube.com/watch?v=xq1f35UYd9k"
   },
   {
     "favorite": false,
@@ -750,91 +807,6 @@
   },
   {
     "favorite": false,
-    "name": "Countryside 09 Ambush Site Daytime",
-    "path": "assets\\maps\\Countryside 09 Ambush Site Daytime.mp4",
-    "tags": [
-      "countryside",
-      "09",
-      "ambush",
-      "site",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Countryside 09 Ambush Site Daytime.jpg",
-    "url": "https://youtube.com/watch?v=vZkzMm6dABU"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 07 Bridge Daytime",
-    "path": "assets\\maps\\Country Road 07 Bridge Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "07",
-      "bridge",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 07 Bridge Daytime.jpg",
-    "url": "https://youtube.com/watch?v=JuMAzL0W5_U"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 12 Ambush Site",
-    "path": "assets\\maps\\Country Road 12 Ambush Site.mp4",
-    "tags": [
-      "country",
-      "road",
-      "12",
-      "ambush",
-      "site"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 12 Ambush Site.jpg",
-    "url": "https://youtube.com/watch?v=uFgqqDRyuPc"
-  },
-  {
-    "favorite": false,
-    "name": "Countryside 11 Walled Garden Daytime",
-    "path": "assets\\maps\\Countryside 11 Walled Garden Daytime.mp4",
-    "tags": [
-      "countryside",
-      "11",
-      "walled",
-      "garden",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Countryside 11 Walled Garden Daytime.jpg",
-    "url": "https://youtube.com/watch?v=-V-zHTrh7Ks"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 14 Broken Bridge Daytime",
-    "path": "assets\\maps\\Country Road 14 Broken Bridge Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "14",
-      "broken",
-      "bridge",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 14 Broken Bridge Daytime.jpg",
-    "url": "https://youtube.com/watch?v=xq1f35UYd9k"
-  },
-  {
-    "favorite": false,
-    "name": "Countryside 08 River Crossing Daytime",
-    "path": "assets\\maps\\Countryside 08 River Crossing Daytime.mp4",
-    "tags": [
-      "countryside",
-      "08",
-      "river",
-      "crossing",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Countryside 08 River Crossing Daytime.jpg",
-    "url": "https://youtube.com/watch?v=Q9ZpXEXGXbA"
-  },
-  {
-    "favorite": false,
     "name": "Country Road 10 Vendors Tents Daytime",
     "path": "assets\\maps\\Country Road 10 Vendors Tents Daytime.mp4",
     "tags": [
@@ -850,45 +822,17 @@
   },
   {
     "favorite": false,
-    "name": "Country Road 13 Ambush Site",
-    "path": "assets\\maps\\Country Road 13 Ambush Site.mp4",
+    "name": "Countryside 08 River Crossing Daytime",
+    "path": "assets\\maps\\Countryside 08 River Crossing Daytime.mp4",
     "tags": [
-      "country",
-      "road",
-      "13",
-      "ambush",
-      "site"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 13 Ambush Site.jpg",
-    "url": "https://youtube.com/watch?v=mhtNCN_oySc"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 16 Ruined Huts Daytime",
-    "path": "assets\\maps\\Country Road 16 Ruined Huts Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "16",
-      "ruined",
-      "huts",
+      "countryside",
+      "08",
+      "river",
+      "crossing",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Country Road 16 Ruined Huts Daytime.jpg",
-    "url": "https://youtube.com/watch?v=G_Z6fySrIvM"
-  },
-  {
-    "favorite": false,
-    "name": "Country Road 03 Daytime",
-    "path": "assets\\maps\\Country Road 03 Daytime.mp4",
-    "tags": [
-      "country",
-      "road",
-      "03",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Country Road 03 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=zJaG2QEnTD0"
+    "thumbnail": "assets\\thumbnails\\Countryside 08 River Crossing Daytime.jpg",
+    "url": "https://youtube.com/watch?v=Q9ZpXEXGXbA"
   },
   {
     "favorite": false,
@@ -907,6 +851,20 @@
   },
   {
     "favorite": false,
+    "name": "Countryside 05 River Crossing Daytime",
+    "path": "assets\\maps\\Countryside 05 River Crossing Daytime.mp4",
+    "tags": [
+      "countryside",
+      "05",
+      "river",
+      "crossing",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Countryside 05 River Crossing Daytime.jpg",
+    "url": "https://youtube.com/watch?v=_9PHhi5EQlc"
+  },
+  {
+    "favorite": false,
     "name": "Country Road 17  Rest Stop Nightime",
     "path": "assets\\maps\\Country Road 17  Rest Stop Nightime.mp4",
     "tags": [
@@ -922,20 +880,6 @@
   },
   {
     "favorite": false,
-    "name": "Countryside 06 River Crossing Daytime",
-    "path": "assets\\maps\\Countryside 06 River Crossing Daytime.mp4",
-    "tags": [
-      "countryside",
-      "06",
-      "river",
-      "crossing",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Countryside 06 River Crossing Daytime.jpg",
-    "url": "https://youtube.com/watch?v=fqpp1zgnjrQ"
-  },
-  {
-    "favorite": false,
     "name": "Forest Day1",
     "path": "assets\\maps\\forest day1.mp4",
     "tags": [
@@ -947,29 +891,29 @@
   },
   {
     "favorite": false,
-    "name": "Countryside 05 River Crossing Daytime",
-    "path": "assets\\maps\\Countryside 05 River Crossing Daytime.mp4",
+    "name": "Country Road 16 Ruined Huts Daytime",
+    "path": "assets\\maps\\Country Road 16 Ruined Huts Daytime.mp4",
     "tags": [
-      "countryside",
-      "05",
-      "river",
-      "crossing",
+      "country",
+      "road",
+      "16",
+      "ruined",
+      "huts",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Countryside 05 River Crossing Daytime.jpg",
-    "url": "https://youtube.com/watch?v=_9PHhi5EQlc"
+    "thumbnail": "assets\\thumbnails\\Country Road 16 Ruined Huts Daytime.jpg",
+    "url": "https://youtube.com/watch?v=G_Z6fySrIvM"
   },
   {
     "favorite": false,
-    "name": "Forest Path Day2",
-    "path": "assets\\maps\\forest path day2.mp4",
+    "name": "Forest Day5",
+    "path": "assets\\maps\\forest day5.mp4",
     "tags": [
       "forest",
-      "path",
-      "day2"
+      "day5"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Path Day2.jpg",
-    "url": "https://youtube.com/watch?v=4JEy6kTrnDo"
+    "thumbnail": "assets\\thumbnails\\Forest Day5.jpg",
+    "url": "https://youtube.com/watch?v=1p2hpEezZ6s"
   },
   {
     "favorite": false,
@@ -987,15 +931,30 @@
   },
   {
     "favorite": false,
-    "name": "Forest Road Day5",
-    "path": "assets\\maps\\forest road day5.mp4",
+    "name": "Country Road 03 Daytime",
+    "path": "assets\\maps\\Country Road 03 Daytime.mp4",
     "tags": [
-      "forest",
+      "country",
       "road",
-      "day5"
+      "03",
+      "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Road Day5.jpg",
-    "url": "https://youtube.com/watch?v=7meu9Val5SI"
+    "thumbnail": "assets\\thumbnails\\Country Road 03 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=zJaG2QEnTD0"
+  },
+  {
+    "favorite": false,
+    "name": "Country Road 07 Bridge Daytime",
+    "path": "assets\\maps\\Country Road 07 Bridge Daytime.mp4",
+    "tags": [
+      "country",
+      "road",
+      "07",
+      "bridge",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Country Road 07 Bridge Daytime.jpg",
+    "url": "https://youtube.com/watch?v=JuMAzL0W5_U"
   },
   {
     "favorite": false,
@@ -1013,14 +972,29 @@
   },
   {
     "favorite": false,
-    "name": "Forest Day5",
-    "path": "assets\\maps\\forest day5.mp4",
+    "name": "Forest Path Day2",
+    "path": "assets\\maps\\forest path day2.mp4",
     "tags": [
       "forest",
-      "day5"
+      "path",
+      "day2"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Day5.jpg",
-    "url": "https://youtube.com/watch?v=1p2hpEezZ6s"
+    "thumbnail": "assets\\thumbnails\\Forest Path Day2.jpg",
+    "url": "https://youtube.com/watch?v=4JEy6kTrnDo"
+  },
+  {
+    "favorite": false,
+    "name": "Countryside 06 River Crossing Daytime",
+    "path": "assets\\maps\\Countryside 06 River Crossing Daytime.mp4",
+    "tags": [
+      "countryside",
+      "06",
+      "river",
+      "crossing",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Countryside 06 River Crossing Daytime.jpg",
+    "url": "https://youtube.com/watch?v=fqpp1zgnjrQ"
   },
   {
     "favorite": false,
@@ -1037,6 +1011,20 @@
     ],
     "thumbnail": "assets\\thumbnails\\Country Road 15 Bridge River Crossing Daytime.jpg",
     "url": "https://youtube.com/watch?v=feWrrxSemIs"
+  },
+  {
+    "favorite": false,
+    "name": "Country Road 13 Ambush Site",
+    "path": "assets\\maps\\Country Road 13 Ambush Site.mp4",
+    "tags": [
+      "country",
+      "road",
+      "13",
+      "ambush",
+      "site"
+    ],
+    "thumbnail": "assets\\thumbnails\\Country Road 13 Ambush Site.jpg",
+    "url": "https://youtube.com/watch?v=mhtNCN_oySc"
   },
   {
     "favorite": false,
@@ -1064,41 +1052,15 @@
   },
   {
     "favorite": false,
-    "name": "Countryside 07 River Crossing Daytime",
-    "path": "assets\\maps\\Countryside 07 River Crossing Daytime.mp4",
-    "tags": [
-      "countryside",
-      "07",
-      "river",
-      "crossing",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Countryside 07 River Crossing Daytime.jpg",
-    "url": "https://youtube.com/watch?v=lzQCMn9twCM"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Night Bonfire1",
-    "path": "assets\\maps\\forest night bonfire1.mp4",
+    "name": "Forest Road Day5",
+    "path": "assets\\maps\\forest road day5.mp4",
     "tags": [
       "forest",
-      "night",
-      "bonfire1"
+      "road",
+      "day5"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Night Bonfire1.jpg",
-    "url": "https://youtube.com/watch?v=7Hyc5BdSx4o"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Clearing Day3",
-    "path": "assets\\maps\\forest clearing day3.mp4",
-    "tags": [
-      "forest",
-      "clearing",
-      "day3"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Clearing Day3.jpg",
-    "url": "https://youtube.com/watch?v=_XngvrIbElU"
+    "thumbnail": "assets\\thumbnails\\Forest Road Day5.jpg",
+    "url": "https://youtube.com/watch?v=7meu9Val5SI"
   },
   {
     "favorite": false,
@@ -1127,21 +1089,6 @@
   },
   {
     "favorite": false,
-    "name": "Desert - Motion Map Pack 4Kuhd",
-    "path": "assets\\maps\\Desert - Motion map Pack 4KUHD.mp4",
-    "tags": [
-      "desert",
-      "-",
-      "motion",
-      "map",
-      "pack",
-      "4kuhd"
-    ],
-    "thumbnail": "assets\\thumbnails\\Desert - Motion Map Pack 4Kuhd.jpg",
-    "url": "https://youtube.com/watch?v=1swyJZAZrNw"
-  },
-  {
-    "favorite": false,
     "name": "Fighting Pit 02 Daytime",
     "path": "assets\\maps\\Fighting Pit 02 Daytime.mp4",
     "tags": [
@@ -1152,6 +1099,18 @@
     ],
     "thumbnail": "assets\\thumbnails\\Fighting Pit 02 Daytime.jpg",
     "url": "https://youtube.com/watch?v=oeXdizGzCqw"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Night Bonfire1",
+    "path": "assets\\maps\\forest night bonfire1.mp4",
+    "tags": [
+      "forest",
+      "night",
+      "bonfire1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Night Bonfire1.jpg",
+    "url": "https://youtube.com/watch?v=7Hyc5BdSx4o"
   },
   {
     "favorite": false,
@@ -1167,16 +1126,30 @@
   },
   {
     "favorite": false,
-    "name": "Forest Clearing 04 Daytime",
-    "path": "assets\\maps\\Forest Clearing 04 Daytime.mp4",
+    "name": "Misc 04 Sea",
+    "path": "assets\\maps\\Misc 04 Sea.mp4",
     "tags": [
-      "forest",
-      "clearing",
+      "misc",
       "04",
-      "daytime"
+      "sea"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Clearing 04 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=X8el8C_OtPY"
+    "thumbnail": "assets\\thumbnails\\Misc 04 Sea.jpg",
+    "url": "https://youtube.com/watch?v=EnAXNHGlsuE"
+  },
+  {
+    "favorite": false,
+    "name": "Desert - Motion Map Pack 4Kuhd",
+    "path": "assets\\maps\\Desert - Motion map Pack 4KUHD.mp4",
+    "tags": [
+      "desert",
+      "-",
+      "motion",
+      "map",
+      "pack",
+      "4kuhd"
+    ],
+    "thumbnail": "assets\\thumbnails\\Desert - Motion Map Pack 4Kuhd.jpg",
+    "url": "https://youtube.com/watch?v=1swyJZAZrNw"
   },
   {
     "favorite": false,
@@ -1193,15 +1166,15 @@
   },
   {
     "favorite": false,
-    "name": "Forest Road Day3",
-    "path": "assets\\maps\\forest road day3.mp4",
+    "name": "Forest Clearing Day3",
+    "path": "assets\\maps\\forest clearing day3.mp4",
     "tags": [
       "forest",
-      "road",
+      "clearing",
       "day3"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Road Day3.jpg",
-    "url": "https://youtube.com/watch?v=kyOmY9582iQ"
+    "thumbnail": "assets\\thumbnails\\Forest Clearing Day3.jpg",
+    "url": "https://youtube.com/watch?v=_XngvrIbElU"
   },
   {
     "favorite": false,
@@ -1216,18 +1189,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Forest Path Past Hut Day.jpg",
     "url": "https://youtube.com/watch?v=T-iMkmiBKwI"
-  },
-  {
-    "favorite": false,
-    "name": "Misc 04 Sea",
-    "path": "assets\\maps\\Misc 04 Sea.mp4",
-    "tags": [
-      "misc",
-      "04",
-      "sea"
-    ],
-    "thumbnail": "assets\\thumbnails\\Misc 04 Sea.jpg",
-    "url": "https://youtube.com/watch?v=EnAXNHGlsuE"
   },
   {
     "favorite": false,
@@ -1255,6 +1216,30 @@
   },
   {
     "favorite": false,
+    "name": "Forest Clearing 04 Daytime",
+    "path": "assets\\maps\\Forest Clearing 04 Daytime.mp4",
+    "tags": [
+      "forest",
+      "clearing",
+      "04",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Clearing 04 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=X8el8C_OtPY"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Day4",
+    "path": "assets\\maps\\forest day4.mp4",
+    "tags": [
+      "forest",
+      "day4"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Day4.jpg",
+    "url": "https://youtube.com/watch?v=CZGxl2UNmKM"
+  },
+  {
+    "favorite": false,
     "name": "Forest Day2",
     "path": "assets\\maps\\forest day2.mp4",
     "tags": [
@@ -1263,18 +1248,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Forest Day2.jpg",
     "url": "https://youtube.com/watch?v=EA9kaq-smI8"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Clearing Day2",
-    "path": "assets\\maps\\forest clearing day2.mp4",
-    "tags": [
-      "forest",
-      "clearing",
-      "day2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Clearing Day2.jpg",
-    "url": "https://youtube.com/watch?v=Kf5wGmEmfgA"
   },
   {
     "favorite": false,
@@ -1287,28 +1260,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Forest Trails Nightime.jpg",
     "url": "https://youtube.com/watch?v=qDjcwPwlP88"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Path2",
-    "path": "assets\\maps\\forest path2.mp4",
-    "tags": [
-      "forest",
-      "path2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Path2.jpg",
-    "url": "https://youtube.com/watch?v=9yWzOxS1Yn4"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Day4",
-    "path": "assets\\maps\\forest day4.mp4",
-    "tags": [
-      "forest",
-      "day4"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Day4.jpg",
-    "url": "https://youtube.com/watch?v=CZGxl2UNmKM"
   },
   {
     "favorite": false,
@@ -1328,18 +1279,6 @@
   },
   {
     "favorite": false,
-    "name": "Forest Road Day2",
-    "path": "assets\\maps\\forest road day2.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "day2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road Day2.jpg",
-    "url": "https://youtube.com/watch?v=buwUtI-Gqdg"
-  },
-  {
-    "favorite": false,
     "name": "Forest Clearing Daytime",
     "path": "assets\\maps\\Forest Clearing Daytime.mp4",
     "tags": [
@@ -1352,18 +1291,126 @@
   },
   {
     "favorite": false,
-    "name": "Forest Road 09 River Crossing Nightime",
-    "path": "assets\\maps\\Forest Road 09 River Crossing Nightime.mp4",
+    "name": "Forest Path2",
+    "path": "assets\\maps\\forest path2.mp4",
+    "tags": [
+      "forest",
+      "path2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Path2.jpg",
+    "url": "https://youtube.com/watch?v=9yWzOxS1Yn4"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Day6",
+    "path": "assets\\maps\\forest day6.mp4",
+    "tags": [
+      "forest",
+      "day6"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Day6.jpg",
+    "url": "https://youtube.com/watch?v=L8pKPMqNK1s"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road Day2",
+    "path": "assets\\maps\\forest road day2.mp4",
     "tags": [
       "forest",
       "road",
-      "09",
+      "day2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Road Day2.jpg",
+    "url": "https://youtube.com/watch?v=buwUtI-Gqdg"
+  },
+  {
+    "favorite": false,
+    "name": "Countryside 07 River Crossing Daytime",
+    "path": "assets\\maps\\Countryside 07 River Crossing Daytime.mp4",
+    "tags": [
+      "countryside",
+      "07",
       "river",
       "crossing",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Countryside 07 River Crossing Daytime.jpg",
+    "url": "https://youtube.com/watch?v=lzQCMn9twCM"
+  },
+  {
+    "favorite": false,
+    "name": "Icelands 05 Tundra Daytime",
+    "path": "assets\\maps\\Icelands 05 Tundra Daytime.mp4",
+    "tags": [
+      "icelands",
+      "05",
+      "tundra",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Icelands 05 Tundra Daytime.jpg",
+    "url": "https://youtube.com/watch?v=cVXJg90wtTM"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Path Day1",
+    "path": "assets\\maps\\forest path day1.mp4",
+    "tags": [
+      "forest",
+      "path",
+      "day1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Path Day1.jpg",
+    "url": "https://youtube.com/watch?v=oxGnlVFV0b0"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road Day3",
+    "path": "assets\\maps\\forest road day3.mp4",
+    "tags": [
+      "forest",
+      "road",
+      "day3"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Road Day3.jpg",
+    "url": "https://youtube.com/watch?v=kyOmY9582iQ"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road 08 Nightime",
+    "path": "assets\\maps\\Forest Road 08 Nightime.mp4",
+    "tags": [
+      "forest",
+      "road",
+      "08",
       "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Road 09 River Crossing Nightime.jpg",
-    "url": "https://youtube.com/watch?v=9e7drzYrAQU"
+    "thumbnail": "assets\\thumbnails\\Forest Road 08 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=vC1JzSAutRU"
+  },
+  {
+    "favorite": false,
+    "name": "Icelands 04 Tundra Daytime",
+    "path": "assets\\maps\\Icelands 04 Tundra Daytime.mp4",
+    "tags": [
+      "icelands",
+      "04",
+      "tundra",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Icelands 04 Tundra Daytime.jpg",
+    "url": "https://youtube.com/watch?v=-Qg5FL9_Yrc"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road Night",
+    "path": "assets\\maps\\forest road night.mp4",
+    "tags": [
+      "forest",
+      "road",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Road Night.jpg",
+    "url": "https://youtube.com/watch?v=FKFQ2Qqj1uk"
   },
   {
     "favorite": false,
@@ -1384,14 +1431,164 @@
   },
   {
     "favorite": false,
-    "name": "Forest Day6",
-    "path": "assets\\maps\\forest day6.mp4",
+    "name": "Icelands 03 Tundra Daytime",
+    "path": "assets\\maps\\Icelands 03 Tundra Daytime.mp4",
+    "tags": [
+      "icelands",
+      "03",
+      "tundra",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Icelands 03 Tundra Daytime.jpg",
+    "url": "https://youtube.com/watch?v=Web3KxYPC8M"
+  },
+  {
+    "favorite": false,
+    "name": "Pretty Village 06 Nightime",
+    "path": "assets\\maps\\Pretty Village 06 Nightime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "06",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 06 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=WIX3HlNVH3k"
+  },
+  {
+    "favorite": false,
+    "name": "Forestclearing",
+    "path": "assets\\maps\\forestclearing.mp4",
+    "tags": [
+      "forestclearing"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forestclearing.jpg",
+    "url": "https://youtube.com/watch?v=po-Q7a_cVgU"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road 09 River Crossing Nightime",
+    "path": "assets\\maps\\Forest Road 09 River Crossing Nightime.mp4",
     "tags": [
       "forest",
-      "day6"
+      "road",
+      "09",
+      "river",
+      "crossing",
+      "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Day6.jpg",
-    "url": "https://youtube.com/watch?v=L8pKPMqNK1s"
+    "thumbnail": "assets\\thumbnails\\Forest Road 09 River Crossing Nightime.jpg",
+    "url": "https://youtube.com/watch?v=9e7drzYrAQU"
+  },
+  {
+    "favorite": false,
+    "name": "Grassland 02 Daytime",
+    "path": "assets\\maps\\Grassland 02 Daytime.mp4",
+    "tags": [
+      "grassland",
+      "02",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Grassland 02 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=k5mtCrNUeL4"
+  },
+  {
+    "favorite": false,
+    "name": "Icelands 06 Tundra Nightime",
+    "path": "assets\\maps\\Icelands 06 Tundra Nightime.mp4",
+    "tags": [
+      "icelands",
+      "06",
+      "tundra",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Icelands 06 Tundra Nightime.jpg",
+    "url": "https://youtube.com/watch?v=WzySwJy2qtQ"
+  },
+  {
+    "favorite": false,
+    "name": "Misc 08 Seascape",
+    "path": "assets\\maps\\Misc 08 seascape.mp4",
+    "tags": [
+      "misc",
+      "08",
+      "seascape"
+    ],
+    "thumbnail": "assets\\thumbnails\\Misc 08 Seascape.jpg",
+    "url": "https://youtube.com/watch?v=mwNeMz2ogmE"
+  },
+  {
+    "favorite": false,
+    "name": "Misc 01 Arena",
+    "path": "assets\\maps\\Misc 01 Arena.mp4",
+    "tags": [
+      "misc",
+      "01",
+      "arena"
+    ],
+    "thumbnail": "assets\\thumbnails\\Misc 01 Arena.jpg",
+    "url": "https://youtube.com/watch?v=9I0NGlGNu3Y"
+  },
+  {
+    "favorite": false,
+    "name": "Rural 03 Path Daytime",
+    "path": "assets\\maps\\Rural 03 Path Daytime.mp4",
+    "tags": [
+      "rural",
+      "03",
+      "path",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Rural 03 Path Daytime.jpg",
+    "url": "https://youtube.com/watch?v=9FnfQYLSICA"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road Day4",
+    "path": "assets\\maps\\forest road day4.mp4",
+    "tags": [
+      "forest",
+      "road",
+      "day4"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Road Day4.jpg",
+    "url": "https://youtube.com/watch?v=C2-CaYLyeF4"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Road",
+    "path": "assets\\maps\\forest road.mp4",
+    "tags": [
+      "forest",
+      "road"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Road.jpg",
+    "url": "https://youtube.com/watch?v=yHXCm84E7BU"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Clearing Day2",
+    "path": "assets\\maps\\forest clearing day2.mp4",
+    "tags": [
+      "forest",
+      "clearing",
+      "day2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Clearing Day2.jpg",
+    "url": "https://youtube.com/watch?v=Kf5wGmEmfgA"
+  },
+  {
+    "favorite": false,
+    "name": "Pretty Village 04 Daytime",
+    "path": "assets\\maps\\Pretty Village 04 Daytime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "04",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 04 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=pS-o69YFQpE"
   },
   {
     "favorite": false,
@@ -1409,252 +1606,27 @@
   },
   {
     "favorite": false,
-    "name": "Icelands 05 Tundra Daytime",
-    "path": "assets\\maps\\Icelands 05 Tundra Daytime.mp4",
+    "name": "Just Cruisin",
+    "path": "assets\\maps\\Just Cruisin.mp4",
     "tags": [
-      "icelands",
-      "05",
-      "tundra",
-      "daytime"
+      "just",
+      "cruisin"
     ],
-    "thumbnail": "assets\\thumbnails\\Icelands 05 Tundra Daytime.jpg",
-    "url": "https://youtube.com/watch?v=cVXJg90wtTM"
+    "thumbnail": "assets\\thumbnails\\Just Cruisin.jpg",
+    "url": "https://youtube.com/watch?v=M2FTZpfvSTU"
   },
   {
     "favorite": false,
-    "name": "Forest Road 08 Nightime",
-    "path": "assets\\maps\\Forest Road 08 Nightime.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "08",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road 08 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=vC1JzSAutRU"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Path Day1",
-    "path": "assets\\maps\\forest path day1.mp4",
-    "tags": [
-      "forest",
-      "path",
-      "day1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Path Day1.jpg",
-    "url": "https://youtube.com/watch?v=oxGnlVFV0b0"
-  },
-  {
-    "favorite": false,
-    "name": "Icelands 04 Tundra Daytime",
-    "path": "assets\\maps\\Icelands 04 Tundra Daytime.mp4",
-    "tags": [
-      "icelands",
-      "04",
-      "tundra",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Icelands 04 Tundra Daytime.jpg",
-    "url": "https://youtube.com/watch?v=-Qg5FL9_Yrc"
-  },
-  {
-    "favorite": false,
-    "name": "Grassland 02 Daytime",
-    "path": "assets\\maps\\Grassland 02 Daytime.mp4",
-    "tags": [
-      "grassland",
-      "02",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Grassland 02 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=k5mtCrNUeL4"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Road 07 Nightime",
-    "path": "assets\\maps\\Forest Road 07 Nightime.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "07",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road 07 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=4qXq-_xVmsM"
-  },
-  {
-    "favorite": false,
-    "name": "Forestclearing",
-    "path": "assets\\maps\\forestclearing.mp4",
-    "tags": [
-      "forestclearing"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forestclearing.jpg",
-    "url": "https://youtube.com/watch?v=po-Q7a_cVgU"
-  },
-  {
-    "favorite": false,
-    "name": "Icelands 06 Tundra Nightime",
-    "path": "assets\\maps\\Icelands 06 Tundra Nightime.mp4",
-    "tags": [
-      "icelands",
-      "06",
-      "tundra",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Icelands 06 Tundra Nightime.jpg",
-    "url": "https://youtube.com/watch?v=WzySwJy2qtQ"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Road Night",
-    "path": "assets\\maps\\forest road night.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road Night.jpg",
-    "url": "https://youtube.com/watch?v=FKFQ2Qqj1uk"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 06 Nightime",
-    "path": "assets\\maps\\Pretty Village 06 Nightime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "06",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 06 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=WIX3HlNVH3k"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Road Day4",
-    "path": "assets\\maps\\forest road day4.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "day4"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road Day4.jpg",
-    "url": "https://youtube.com/watch?v=C2-CaYLyeF4"
-  },
-  {
-    "favorite": false,
-    "name": "Icelands 03 Tundra Daytime",
-    "path": "assets\\maps\\Icelands 03 Tundra Daytime.mp4",
-    "tags": [
-      "icelands",
-      "03",
-      "tundra",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Icelands 03 Tundra Daytime.jpg",
-    "url": "https://youtube.com/watch?v=Web3KxYPC8M"
-  },
-  {
-    "favorite": false,
-    "name": "Icelands 01 Ice Dragon Lair",
-    "path": "assets\\maps\\Icelands 01 Ice Dragon Lair.mp4",
-    "tags": [
-      "icelands",
-      "01",
-      "ice",
-      "dragon",
-      "lair"
-    ],
-    "thumbnail": "assets\\thumbnails\\Icelands 01 Ice Dragon Lair.jpg",
-    "url": "https://youtube.com/watch?v=aFwzDK9wyH8"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Road 5",
-    "path": "assets\\maps\\forest road 5.mp4",
-    "tags": [
-      "forest",
-      "road",
-      "5"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road 5.jpg",
-    "url": "https://youtube.com/watch?v=J7LFc-fci0c"
-  },
-  {
-    "favorite": false,
-    "name": "Rural 03 Path Daytime",
-    "path": "assets\\maps\\Rural 03 Path Daytime.mp4",
+    "name": "Rural 04 Village Nightime",
+    "path": "assets\\maps\\Rural 04 Village Nightime.mp4",
     "tags": [
       "rural",
-      "03",
-      "path",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Rural 03 Path Daytime.jpg",
-    "url": "https://youtube.com/watch?v=9FnfQYLSICA"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 05 Daytime",
-    "path": "assets\\maps\\Pretty Village 05 Daytime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "05",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 05 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=jqdQ-BTdRDs"
-  },
-  {
-    "favorite": false,
-    "name": "Misc 01 Arena",
-    "path": "assets\\maps\\Misc 01 Arena.mp4",
-    "tags": [
-      "misc",
-      "01",
-      "arena"
-    ],
-    "thumbnail": "assets\\thumbnails\\Misc 01 Arena.jpg",
-    "url": "https://youtube.com/watch?v=9I0NGlGNu3Y"
-  },
-  {
-    "favorite": false,
-    "name": "Misc 08 Seascape",
-    "path": "assets\\maps\\Misc 08 seascape.mp4",
-    "tags": [
-      "misc",
-      "08",
-      "seascape"
-    ],
-    "thumbnail": "assets\\thumbnails\\Misc 08 Seascape.jpg",
-    "url": "https://youtube.com/watch?v=mwNeMz2ogmE"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 04 Daytime",
-    "path": "assets\\maps\\Pretty Village 04 Daytime.mp4",
-    "tags": [
-      "pretty",
-      "village",
       "04",
-      "daytime"
+      "village",
+      "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 04 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=pS-o69YFQpE"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Road",
-    "path": "assets\\maps\\forest road.mp4",
-    "tags": [
-      "forest",
-      "road"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Road.jpg",
-    "url": "https://youtube.com/watch?v=yHXCm84E7BU"
+    "thumbnail": "assets\\thumbnails\\Rural 04 Village Nightime.jpg",
+    "url": "https://youtube.com/watch?v=PkNmh_zUV7Q"
   },
   {
     "favorite": false,
@@ -1672,22 +1644,6 @@
   },
   {
     "favorite": false,
-    "name": "Living Maps   A Split In The Road",
-    "path": "assets\\maps\\Living Maps   A split in the road.mp4",
-    "tags": [
-      "living",
-      "maps",
-      "a",
-      "split",
-      "in",
-      "the",
-      "road"
-    ],
-    "thumbnail": "assets\\thumbnails\\Living Maps   A Split In The Road.jpg",
-    "url": "https://youtube.com/watch?v=xEzvBJOUlv4"
-  },
-  {
-    "favorite": false,
     "name": "Fighting Pit 01 Daytime",
     "path": "assets\\maps\\Fighting Pit 01 Daytime.mp4",
     "tags": [
@@ -1701,28 +1657,17 @@
   },
   {
     "favorite": false,
-    "name": "Misc 06 Seascape",
-    "path": "assets\\maps\\Misc 06 Seascape.mp4",
+    "name": "Icelands 01 Ice Dragon Lair",
+    "path": "assets\\maps\\Icelands 01 Ice Dragon Lair.mp4",
     "tags": [
-      "misc",
-      "06",
-      "seascape"
+      "icelands",
+      "01",
+      "ice",
+      "dragon",
+      "lair"
     ],
-    "thumbnail": "assets\\thumbnails\\Misc 06 Seascape.jpg",
-    "url": "https://youtube.com/watch?v=BZe1r65-Tio"
-  },
-  {
-    "favorite": false,
-    "name": "Rural 04 Village Nightime",
-    "path": "assets\\maps\\Rural 04 Village Nightime.mp4",
-    "tags": [
-      "rural",
-      "04",
-      "village",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Rural 04 Village Nightime.jpg",
-    "url": "https://youtube.com/watch?v=PkNmh_zUV7Q"
+    "thumbnail": "assets\\thumbnails\\Icelands 01 Ice Dragon Lair.jpg",
+    "url": "https://youtube.com/watch?v=aFwzDK9wyH8"
   },
   {
     "favorite": false,
@@ -1739,81 +1684,15 @@
   },
   {
     "favorite": false,
-    "name": "The Red Road 04 Night",
-    "path": "assets\\maps\\The Red Road 04 Night.mp4",
-    "tags": [
-      "the",
-      "red",
-      "road",
-      "04",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\The Red Road 04 Night.jpg",
-    "url": "https://youtube.com/watch?v=h4vwNrNpxMI"
-  },
-  {
-    "favorite": false,
-    "name": "Just Cruisin",
-    "path": "assets\\maps\\Just Cruisin.mp4",
-    "tags": [
-      "just",
-      "cruisin"
-    ],
-    "thumbnail": "assets\\thumbnails\\Just Cruisin.jpg",
-    "url": "https://youtube.com/watch?v=M2FTZpfvSTU"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 02 Bridge Daytime",
-    "path": "assets\\maps\\Pretty Village 02 Bridge Daytime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "02",
-      "bridge",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 02 Bridge Daytime.jpg",
-    "url": "https://youtube.com/watch?v=Qo9qobii6Wc"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Clearing Day1",
-    "path": "assets\\maps\\forest clearing day1.mp4",
+    "name": "Forest Road 5",
+    "path": "assets\\maps\\forest road 5.mp4",
     "tags": [
       "forest",
-      "clearing",
-      "day1"
+      "road",
+      "5"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Clearing Day1.jpg",
-    "url": "https://youtube.com/watch?v=N_BDQi2EZlM"
-  },
-  {
-    "favorite": false,
-    "name": "Dynamic Battle Map - The Black Dog Tavern",
-    "path": "assets\\maps\\Dynamic Battle Map - The Black Dog Tavern.mp4",
-    "tags": [
-      "dynamic",
-      "battle",
-      "map",
-      "-",
-      "the",
-      "black",
-      "dog",
-      "tavern"
-    ],
-    "thumbnail": "assets\\thumbnails\\Dynamic Battle Map - The Black Dog Tavern.jpg",
-    "url": "https://youtube.com/watch?v=DQXOiGKhI2k"
-  },
-  {
-    "favorite": false,
-    "name": "Forestclearing2",
-    "path": "assets\\maps\\forestclearing2.mp4",
-    "tags": [
-      "forestclearing2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forestclearing2.jpg",
-    "url": "https://youtube.com/watch?v=04kFssLjK-o"
+    "thumbnail": "assets\\thumbnails\\Forest Road 5.jpg",
+    "url": "https://youtube.com/watch?v=J7LFc-fci0c"
   },
   {
     "favorite": false,
@@ -1827,19 +1706,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Village 01 Gate Nightime.jpg",
     "url": "https://youtube.com/watch?v=c8fQ-G9IrzQ"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 10 Nightime",
-    "path": "assets\\maps\\Pretty Village 10 Nightime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "10",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 10 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=CwN42n8E-Z8"
   },
   {
     "favorite": false,
@@ -1865,6 +1731,49 @@
   },
   {
     "favorite": false,
+    "name": "Dynamic Battle Map - The Black Dog Tavern",
+    "path": "assets\\maps\\Dynamic Battle Map - The Black Dog Tavern.mp4",
+    "tags": [
+      "dynamic",
+      "battle",
+      "map",
+      "-",
+      "the",
+      "black",
+      "dog",
+      "tavern"
+    ],
+    "thumbnail": "assets\\thumbnails\\Dynamic Battle Map - The Black Dog Tavern.jpg",
+    "url": "https://youtube.com/watch?v=DQXOiGKhI2k"
+  },
+  {
+    "favorite": false,
+    "name": "Misc 06 Seascape",
+    "path": "assets\\maps\\Misc 06 Seascape.mp4",
+    "tags": [
+      "misc",
+      "06",
+      "seascape"
+    ],
+    "thumbnail": "assets\\thumbnails\\Misc 06 Seascape.jpg",
+    "url": "https://youtube.com/watch?v=BZe1r65-Tio"
+  },
+  {
+    "favorite": false,
+    "name": "The Red Road 04 Night",
+    "path": "assets\\maps\\The Red Road 04 Night.mp4",
+    "tags": [
+      "the",
+      "red",
+      "road",
+      "04",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\The Red Road 04 Night.jpg",
+    "url": "https://youtube.com/watch?v=h4vwNrNpxMI"
+  },
+  {
+    "favorite": false,
     "name": "Rural 02 River Crossing Daytime",
     "path": "assets\\maps\\Rural 02 River Crossing Daytime.mp4",
     "tags": [
@@ -1879,6 +1788,29 @@
   },
   {
     "favorite": false,
+    "name": "Pretty Village 10 Nightime",
+    "path": "assets\\maps\\Pretty Village 10 Nightime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "10",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 10 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=CwN42n8E-Z8"
+  },
+  {
+    "favorite": false,
+    "name": "Forestclearing3",
+    "path": "assets\\maps\\forestclearing3.mp4",
+    "tags": [
+      "forestclearing3"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forestclearing3.jpg",
+    "url": "https://youtube.com/watch?v=9OVCUm_Vtrc"
+  },
+  {
+    "favorite": false,
     "name": "Pretty Village 07 Nightime",
     "path": "assets\\maps\\Pretty Village 07 Nightime.mp4",
     "tags": [
@@ -1889,20 +1821,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Pretty Village 07 Nightime.jpg",
     "url": "https://youtube.com/watch?v=j3uj6iRhT18"
-  },
-  {
-    "favorite": false,
-    "name": "Mountain Ruins Animated Action Scene",
-    "path": "assets\\maps\\Mountain Ruins animated action scene.mp4",
-    "tags": [
-      "mountain",
-      "ruins",
-      "animated",
-      "action",
-      "scene"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mountain Ruins Animated Action Scene.jpg",
-    "url": "https://youtube.com/watch?v=htWlukhguGE"
   },
   {
     "favorite": false,
@@ -1920,26 +1838,29 @@
   },
   {
     "favorite": false,
-    "name": "Animated Battlemap Snowy Road",
-    "path": "assets\\maps\\Animated Battlemap Snowy Road.mp4",
+    "name": "Pretty Village 03 Daytime",
+    "path": "assets\\maps\\Pretty Village 03 Daytime.mp4",
     "tags": [
-      "animated",
-      "battlemap",
-      "snowy",
-      "road"
+      "pretty",
+      "village",
+      "03",
+      "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Animated Battlemap Snowy Road.jpg",
-    "url": "https://youtube.com/watch?v=Jpf8USA_kp0"
+    "thumbnail": "assets\\thumbnails\\Pretty Village 03 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=xL4hKCPoNnw"
   },
   {
     "favorite": false,
-    "name": "Forestclearing3",
-    "path": "assets\\maps\\forestclearing3.mp4",
+    "name": "Pretty Village 05 Daytime",
+    "path": "assets\\maps\\Pretty Village 05 Daytime.mp4",
     "tags": [
-      "forestclearing3"
+      "pretty",
+      "village",
+      "05",
+      "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Forestclearing3.jpg",
-    "url": "https://youtube.com/watch?v=9OVCUm_Vtrc"
+    "thumbnail": "assets\\thumbnails\\Pretty Village 05 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=jqdQ-BTdRDs"
   },
   {
     "favorite": false,
@@ -1955,79 +1876,41 @@
   },
   {
     "favorite": false,
-    "name": "Swamp Marsh 01 Daytime",
-    "path": "assets\\maps\\Swamp Marsh 01 Daytime.mp4",
-    "tags": [
-      "swamp",
-      "marsh",
-      "01",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Swamp Marsh 01 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=U-PeYDw7L0Q"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 03 Daytime",
-    "path": "assets\\maps\\Pretty Village 03 Daytime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "03",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 03 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=xL4hKCPoNnw"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Ruined Tower Daytime",
-    "path": "assets\\maps\\Forest Ruined Tower Daytime.mp4",
+    "name": "Forest Road 07 Nightime",
+    "path": "assets\\maps\\Forest Road 07 Nightime.mp4",
     "tags": [
       "forest",
-      "ruined",
-      "tower",
-      "daytime"
+      "road",
+      "07",
+      "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Ruined Tower Daytime.jpg",
-    "url": "https://youtube.com/watch?v=7ycdDD_pWgs"
+    "thumbnail": "assets\\thumbnails\\Forest Road 07 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=4qXq-_xVmsM"
   },
   {
     "favorite": false,
-    "name": "Blacksmith D&D Animated Map",
-    "path": "assets\\maps\\BlackSmith D&D Animated Map.mp4",
+    "name": "Forest Clearing Day1",
+    "path": "assets\\maps\\forest clearing day1.mp4",
     "tags": [
-      "blacksmith",
-      "d&d",
+      "forest",
+      "clearing",
+      "day1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Clearing Day1.jpg",
+    "url": "https://youtube.com/watch?v=N_BDQi2EZlM"
+  },
+  {
+    "favorite": false,
+    "name": "Animated Battlemap Snowy Road",
+    "path": "assets\\maps\\Animated Battlemap Snowy Road.mp4",
+    "tags": [
       "animated",
-      "map"
+      "battlemap",
+      "snowy",
+      "road"
     ],
-    "thumbnail": "assets\\thumbnails\\Blacksmith D&D Animated Map.jpg",
-    "url": "https://youtube.com/watch?v=IKNA8dM-iR0"
-  },
-  {
-    "favorite": false,
-    "name": "Abyssal Action Scene",
-    "path": "assets\\maps\\Abyssal action scene.mp4",
-    "tags": [
-      "abyssal",
-      "action",
-      "scene"
-    ],
-    "thumbnail": "assets\\thumbnails\\Abyssal Action Scene.jpg",
-    "url": "https://youtube.com/watch?v=KfkNcAziPdg"
-  },
-  {
-    "favorite": false,
-    "name": "Dungeon Of Skulls",
-    "path": "assets\\maps\\Dungeon of Skulls.mp4",
-    "tags": [
-      "dungeon",
-      "of",
-      "skulls"
-    ],
-    "thumbnail": "assets\\thumbnails\\Dungeon Of Skulls.jpg",
-    "url": ""
+    "thumbnail": "assets\\thumbnails\\Animated Battlemap Snowy Road.jpg",
+    "url": "https://youtube.com/watch?v=Jpf8USA_kp0"
   },
   {
     "favorite": false,
@@ -2057,6 +1940,45 @@
   },
   {
     "favorite": false,
+    "name": "Abyssal Action Scene",
+    "path": "assets\\maps\\Abyssal action scene.mp4",
+    "tags": [
+      "abyssal",
+      "action",
+      "scene"
+    ],
+    "thumbnail": "assets\\thumbnails\\Abyssal Action Scene.jpg",
+    "url": "https://youtube.com/watch?v=KfkNcAziPdg"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Marsh 01 Daytime",
+    "path": "assets\\maps\\Swamp Marsh 01 Daytime.mp4",
+    "tags": [
+      "swamp",
+      "marsh",
+      "01",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Marsh 01 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=U-PeYDw7L0Q"
+  },
+  {
+    "favorite": false,
+    "name": "Pretty Village 02 Bridge Daytime",
+    "path": "assets\\maps\\Pretty Village 02 Bridge Daytime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "02",
+      "bridge",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 02 Bridge Daytime.jpg",
+    "url": "https://youtube.com/watch?v=Qo9qobii6Wc"
+  },
+  {
+    "favorite": false,
     "name": "Forest Trails Daytime",
     "path": "assets\\maps\\Forest Trails Daytime.mp4",
     "tags": [
@@ -2082,32 +2004,6 @@
   },
   {
     "favorite": false,
-    "name": "Pretty Village 09 Nightime",
-    "path": "assets\\maps\\Pretty Village 09 Nightime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "09",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 09 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=JeUfEeqVHuc"
-  },
-  {
-    "favorite": false,
-    "name": "Temple Ward 01 Nightime",
-    "path": "assets\\maps\\Temple Ward 01 Nightime.mp4",
-    "tags": [
-      "temple",
-      "ward",
-      "01",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Temple Ward 01 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=TpsEWAETnZ8"
-  },
-  {
-    "favorite": false,
     "name": "Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong)",
     "path": "assets\\maps\\Animated Battle Map For Dnd ( Beach, Pirate Bury Treasure Gone Wrong).mp4",
     "tags": [
@@ -2130,17 +2026,19 @@
   },
   {
     "favorite": false,
-    "name": "Village Street Night Snowing Nosound",
-    "path": "assets\\maps\\village street night snowing nosound.mp4",
+    "name": "Living Maps   A Split In The Road",
+    "path": "assets\\maps\\Living Maps   A split in the road.mp4",
     "tags": [
-      "village",
-      "street",
-      "night",
-      "snowing",
-      "nosound"
+      "living",
+      "maps",
+      "a",
+      "split",
+      "in",
+      "the",
+      "road"
     ],
-    "thumbnail": "assets\\thumbnails\\Village Street Night Snowing Nosound.jpg",
-    "url": "https://youtube.com/watch?v=zcSJnYF8n_w"
+    "thumbnail": "assets\\thumbnails\\Living Maps   A Split In The Road.jpg",
+    "url": "https://youtube.com/watch?v=xEzvBJOUlv4"
   },
   {
     "favorite": false,
@@ -2162,27 +2060,26 @@
   },
   {
     "favorite": false,
-    "name": "Rural 01 Fields Daytime",
-    "path": "assets\\maps\\Rural 01 Fields Daytime.mp4",
+    "name": "Pretty Village 09 Nightime",
+    "path": "assets\\maps\\Pretty Village 09 Nightime.mp4",
     "tags": [
-      "rural",
-      "01",
-      "fields",
-      "daytime"
+      "pretty",
+      "village",
+      "09",
+      "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Rural 01 Fields Daytime.jpg",
-    "url": "https://youtube.com/watch?v=h5d0G5PT8l0"
+    "thumbnail": "assets\\thumbnails\\Pretty Village 09 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=JeUfEeqVHuc"
   },
   {
     "favorite": false,
-    "name": "Undead Graveyard",
-    "path": "assets\\maps\\Undead graveyard.mp4",
+    "name": "Forestclearing2",
+    "path": "assets\\maps\\forestclearing2.mp4",
     "tags": [
-      "undead",
-      "graveyard"
+      "forestclearing2"
     ],
-    "thumbnail": "assets\\thumbnails\\Undead Graveyard.jpg",
-    "url": "https://youtube.com/watch?v=1NclUESZ_Kw"
+    "thumbnail": "assets\\thumbnails\\Forestclearing2.jpg",
+    "url": "https://youtube.com/watch?v=04kFssLjK-o"
   },
   {
     "favorite": false,
@@ -2197,57 +2094,30 @@
   },
   {
     "favorite": false,
-    "name": "The Red Road 08 Night",
-    "path": "assets\\maps\\The Red Road 08 Night.mp4",
+    "name": "Rural 01 Fields Daytime",
+    "path": "assets\\maps\\Rural 01 Fields Daytime.mp4",
     "tags": [
-      "the",
-      "red",
-      "road",
-      "08",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\The Red Road 08 Night.jpg",
-    "url": "https://youtube.com/watch?v=9QyxYmAklko"
-  },
-  {
-    "favorite": false,
-    "name": "Living Maps - Rainy Jungle",
-    "path": "assets\\maps\\Living Maps - Rainy Jungle.mp4",
-    "tags": [
-      "living",
-      "maps",
-      "-",
-      "rainy",
-      "jungle"
-    ],
-    "thumbnail": "assets\\thumbnails\\Living Maps - Rainy Jungle.jpg",
-    "url": "https://youtube.com/watch?v=x_zXvl0CXhE"
-  },
-  {
-    "favorite": false,
-    "name": "Swamp Marsh 02 Daytime",
-    "path": "assets\\maps\\Swamp Marsh 02 Daytime.mp4",
-    "tags": [
-      "swamp",
-      "marsh",
-      "02",
+      "rural",
+      "01",
+      "fields",
       "daytime"
     ],
-    "thumbnail": "assets\\thumbnails\\Swamp Marsh 02 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=QWHsfD2gUcQ"
+    "thumbnail": "assets\\thumbnails\\Rural 01 Fields Daytime.jpg",
+    "url": "https://youtube.com/watch?v=h5d0G5PT8l0"
   },
   {
     "favorite": false,
-    "name": "Pretty Village 08 Nightime",
-    "path": "assets\\maps\\Pretty Village 08 Nightime.mp4",
+    "name": "Village Street Night Snowing Nosound",
+    "path": "assets\\maps\\village street night snowing nosound.mp4",
     "tags": [
-      "pretty",
       "village",
-      "08",
-      "nightime"
+      "street",
+      "night",
+      "snowing",
+      "nosound"
     ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 08 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=axL-70Ns7Vs"
+    "thumbnail": "assets\\thumbnails\\Village Street Night Snowing Nosound.jpg",
+    "url": "https://youtube.com/watch?v=zcSJnYF8n_w"
   },
   {
     "favorite": false,
@@ -2279,6 +2149,55 @@
   },
   {
     "favorite": false,
+    "name": "Blacksmith D&D Animated Map",
+    "path": "assets\\maps\\BlackSmith D&D Animated Map.mp4",
+    "tags": [
+      "blacksmith",
+      "d&d",
+      "animated",
+      "map"
+    ],
+    "thumbnail": "assets\\thumbnails\\Blacksmith D&D Animated Map.jpg",
+    "url": "https://youtube.com/watch?v=IKNA8dM-iR0"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Marsh 02 Daytime",
+    "path": "assets\\maps\\Swamp Marsh 02 Daytime.mp4",
+    "tags": [
+      "swamp",
+      "marsh",
+      "02",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Marsh 02 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=QWHsfD2gUcQ"
+  },
+  {
+    "favorite": false,
+    "name": "Dungeon Of Skulls",
+    "path": "assets\\maps\\Dungeon of Skulls.mp4",
+    "tags": [
+      "dungeon",
+      "of",
+      "skulls"
+    ],
+    "thumbnail": "assets\\thumbnails\\Dungeon Of Skulls.jpg",
+    "url": ""
+  },
+  {
+    "favorite": false,
+    "name": "Undead Graveyard",
+    "path": "assets\\maps\\Undead graveyard.mp4",
+    "tags": [
+      "undead",
+      "graveyard"
+    ],
+    "thumbnail": "assets\\thumbnails\\Undead Graveyard.jpg",
+    "url": "https://youtube.com/watch?v=1NclUESZ_Kw"
+  },
+  {
+    "favorite": false,
     "name": "Living Map  Woodland Path",
     "path": "assets\\maps\\Living map  woodland path.mp4",
     "tags": [
@@ -2292,6 +2211,19 @@
   },
   {
     "favorite": false,
+    "name": "Dai Burning Fort 02",
+    "path": "assets\\maps\\DAI Burning Fort 02.mp4",
+    "tags": [
+      "dai",
+      "burning",
+      "fort",
+      "02"
+    ],
+    "thumbnail": "assets\\thumbnails\\Dai Burning Fort 02.jpg",
+    "url": "https://youtube.com/watch?v=-ozrv5VD4F8"
+  },
+  {
+    "favorite": false,
     "name": "Animated Battle Map ( Dirt Road )",
     "path": "assets\\maps\\animated Battle map ( dirt road ).mp4",
     "tags": [
@@ -2301,10 +2233,23 @@
       "(",
       "dirt",
       "road",
-      ")"
+      ")",
+      "woods"
     ],
     "thumbnail": "assets\\thumbnails\\Animated Battle Map ( Dirt Road ).jpg",
     "url": "https://youtube.com/watch?v=7FFy6YXPqkI"
+  },
+  {
+    "favorite": false,
+    "name": "Dai Waterfall 01",
+    "path": "assets\\maps\\DAI waterfall 01.mp4",
+    "tags": [
+      "dai",
+      "waterfall",
+      "01"
+    ],
+    "thumbnail": "assets\\thumbnails\\Dai Waterfall 01.jpg",
+    "url": "https://youtube.com/watch?v=276B35MSIvc"
   },
   {
     "favorite": false,
@@ -2325,28 +2270,57 @@
   },
   {
     "favorite": false,
-    "name": "Village Road Night",
-    "path": "assets\\maps\\village road night.mp4",
+    "name": "The Red Road 06 Night",
+    "path": "assets\\maps\\The Red Road 06 Night.mp4",
     "tags": [
-      "village",
+      "the",
+      "red",
       "road",
+      "06",
       "night"
     ],
-    "thumbnail": "assets\\thumbnails\\Village Road Night.jpg",
-    "url": "https://youtube.com/watch?v=McpvYTio-LA"
+    "thumbnail": "assets\\thumbnails\\The Red Road 06 Night.jpg",
+    "url": "https://youtube.com/watch?v=NIK6gW01vBc"
   },
   {
     "favorite": false,
-    "name": "Dai Burning Fort 02",
-    "path": "assets\\maps\\DAI Burning Fort 02.mp4",
+    "name": "Mountain Ruins Animated Action Scene",
+    "path": "assets\\maps\\Mountain Ruins animated action scene.mp4",
     "tags": [
-      "dai",
-      "burning",
-      "fort",
-      "02"
+      "mountain",
+      "ruins",
+      "animated",
+      "action",
+      "scene"
     ],
-    "thumbnail": "assets\\thumbnails\\Dai Burning Fort 02.jpg",
-    "url": "https://youtube.com/watch?v=-ozrv5VD4F8"
+    "thumbnail": "assets\\thumbnails\\Mountain Ruins Animated Action Scene.jpg",
+    "url": "https://youtube.com/watch?v=htWlukhguGE"
+  },
+  {
+    "favorite": false,
+    "name": "River Bridge Night Raining",
+    "path": "assets\\maps\\river bridge night raining.mp4",
+    "tags": [
+      "river",
+      "bridge",
+      "night",
+      "raining"
+    ],
+    "thumbnail": "assets\\thumbnails\\River Bridge Night Raining.jpg",
+    "url": "https://youtube.com/watch?v=yUoYNWEyMs4"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Ruined Tower Daytime",
+    "path": "assets\\maps\\Forest Ruined Tower Daytime.mp4",
+    "tags": [
+      "forest",
+      "ruined",
+      "tower",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Ruined Tower Daytime.jpg",
+    "url": "https://youtube.com/watch?v=7ycdDD_pWgs"
   },
   {
     "favorite": false,
@@ -2363,29 +2337,89 @@
   },
   {
     "favorite": false,
-    "name": "Dai Waterfall 01",
-    "path": "assets\\maps\\DAI waterfall 01.mp4",
+    "name": "Village Road Dusk",
+    "path": "assets\\maps\\village road dusk.mp4",
     "tags": [
-      "dai",
-      "waterfall",
-      "01"
+      "village",
+      "road",
+      "dusk"
     ],
-    "thumbnail": "assets\\thumbnails\\Dai Waterfall 01.jpg",
-    "url": "https://youtube.com/watch?v=276B35MSIvc"
+    "thumbnail": "assets\\thumbnails\\Village Road Dusk.jpg",
+    "url": "https://youtube.com/watch?v=4oSkKN1nAOc"
   },
   {
     "favorite": false,
-    "name": "The Red Road 06 Night",
-    "path": "assets\\maps\\The Red Road 06 Night.mp4",
+    "name": "Animated Battle Map (Wooden Bridge)",
+    "path": "assets\\maps\\Animated Battle map (wooden bridge).mp4",
+    "tags": [
+      "animated",
+      "battle",
+      "map",
+      "(",
+      "wooden",
+      "bridge",
+      ")",
+      "river",
+      "waterfall"
+    ],
+    "thumbnail": "assets\\thumbnails\\Animated Battle Map (Wooden Bridge).jpg",
+    "url": "https://youtube.com/watch?v=18pRUdKNlGw"
+  },
+  {
+    "favorite": false,
+    "name": "The Red Road 05 Night",
+    "path": "assets\\maps\\The Red Road 05 Night.mp4",
     "tags": [
       "the",
       "red",
       "road",
-      "06",
+      "05",
       "night"
     ],
-    "thumbnail": "assets\\thumbnails\\The Red Road 06 Night.jpg",
-    "url": "https://youtube.com/watch?v=NIK6gW01vBc"
+    "thumbnail": "assets\\thumbnails\\The Red Road 05 Night.jpg",
+    "url": "https://youtube.com/watch?v=rP64XcqLB_Y"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Raining Thunder",
+    "path": "assets\\maps\\swamp raining thunder.mp4",
+    "tags": [
+      "swamp",
+      "raining",
+      "thunder"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Raining Thunder.jpg",
+    "url": "https://youtube.com/watch?v=TfA8jLqGseU"
+  },
+  {
+    "favorite": false,
+    "name": "Animated Battle Map",
+    "path": "assets\\maps\\Animated Battle map.mp4",
+    "tags": [
+      "animated",
+      "battle",
+      "map",
+      "cliff",
+      "windy",
+      "trees"
+    ],
+    "thumbnail": "assets\\thumbnails\\Animated Battle Map.jpg",
+    "url": "https://youtube.com/watch?v=zhpcmBp0kFM"
+  },
+  {
+    "favorite": false,
+    "name": "Winter Forest Road Straight Square 3",
+    "path": "assets\\maps\\Winter Forest Road Straight Square 3.mp4",
+    "tags": [
+      "winter",
+      "forest",
+      "road",
+      "straight",
+      "square",
+      "3"
+    ],
+    "thumbnail": "assets\\thumbnails\\Winter Forest Road Straight Square 3.jpg",
+    "url": "https://youtube.com/watch?v=Kek_c1PtYoc"
   },
   {
     "favorite": false,
@@ -2403,16 +2437,389 @@
   },
   {
     "favorite": false,
-    "name": "River Bridge Night Raining",
-    "path": "assets\\maps\\river bridge night raining.mp4",
+    "name": "Bridge Rain Night",
+    "path": "assets\\maps\\bridge rain night.mp4",
     "tags": [
-      "river",
       "bridge",
+      "rain",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Rain Night.jpg",
+    "url": "https://youtube.com/watch?v=U0OdsKtB59w"
+  },
+  {
+    "favorite": false,
+    "name": "Winter Forest Road Bend Square 1",
+    "path": "assets\\maps\\Winter Forest Road Bend Square 1.mp4",
+    "tags": [
+      "winter",
+      "forest",
+      "road",
+      "bend",
+      "square",
+      "1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Winter Forest Road Bend Square 1.jpg",
+    "url": "https://youtube.com/watch?v=d-4ohU2DBHs"
+  },
+  {
+    "favorite": false,
+    "name": "Pretty Village 08 Nightime",
+    "path": "assets\\maps\\Pretty Village 08 Nightime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "08",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 08 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=axL-70Ns7Vs"
+  },
+  {
+    "favorite": false,
+    "name": "Living Maps - Rainy Jungle",
+    "path": "assets\\maps\\Living Maps - Rainy Jungle.mp4",
+    "tags": [
+      "living",
+      "maps",
+      "-",
+      "rainy",
+      "jungle"
+    ],
+    "thumbnail": "assets\\thumbnails\\Living Maps - Rainy Jungle.jpg",
+    "url": "https://youtube.com/watch?v=x_zXvl0CXhE"
+  },
+  {
+    "favorite": false,
+    "name": "Village Street Day Snowing Nosound",
+    "path": "assets\\maps\\village street day snowing nosound.mp4",
+    "tags": [
+      "village",
+      "street",
+      "day",
+      "snowing",
+      "nosound"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Street Day Snowing Nosound.jpg",
+    "url": "https://youtube.com/watch?v=rIbDhEhB63M"
+  },
+  {
+    "favorite": false,
+    "name": "Village Road Night Raining",
+    "path": "assets\\maps\\village road night raining.mp4",
+    "tags": [
+      "village",
+      "road",
       "night",
       "raining"
     ],
-    "thumbnail": "assets\\thumbnails\\River Bridge Night Raining.jpg",
-    "url": "https://youtube.com/watch?v=yUoYNWEyMs4"
+    "thumbnail": "assets\\thumbnails\\Village Road Night Raining.jpg",
+    "url": "https://youtube.com/watch?v=EyHI1qx8J-c"
+  },
+  {
+    "favorite": false,
+    "name": "Temple Ward 01 Nightime",
+    "path": "assets\\maps\\Temple Ward 01 Nightime.mp4",
+    "tags": [
+      "temple",
+      "ward",
+      "01",
+      "nightime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Temple Ward 01 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=TpsEWAETnZ8"
+  },
+  {
+    "favorite": false,
+    "name": "Bridge Dusk",
+    "path": "assets\\maps\\bridge dusk.mp4",
+    "tags": [
+      "bridge",
+      "dusk"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Dusk.jpg",
+    "url": "https://youtube.com/watch?v=SAtmpRyzYuI"
+  },
+  {
+    "favorite": false,
+    "name": "The Red Road 08 Night",
+    "path": "assets\\maps\\The Red Road 08 Night.mp4",
+    "tags": [
+      "the",
+      "red",
+      "road",
+      "08",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\The Red Road 08 Night.jpg",
+    "url": "https://youtube.com/watch?v=9QyxYmAklko"
+  },
+  {
+    "favorite": false,
+    "name": "Red Rocks Conifer, Desert And Underdark Versions",
+    "path": "assets\\maps\\Red Rocks Conifer, Desert And Underdark Versions.mp4",
+    "tags": [
+      "red",
+      "rocks",
+      "conifer,",
+      "desert",
+      "and",
+      "underdark",
+      "versions"
+    ],
+    "thumbnail": "assets\\thumbnails\\Red Rocks Conifer Desert And Underdark Versions.jpg",
+    "url": "https://youtube.com/watch?v=TeyHcpz0G1s"
+  },
+  {
+    "favorite": false,
+    "name": "Rural 06 Ruined Circle Daytime",
+    "path": "assets\\maps\\Rural 06 Ruined Circle Daytime.mp4",
+    "tags": [
+      "rural",
+      "06",
+      "ruined",
+      "circle",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Rural 06 Ruined Circle Daytime.jpg",
+    "url": "https://youtube.com/watch?v=GyFMVOpqZyc"
+  },
+  {
+    "favorite": false,
+    "name": "Cathedral",
+    "path": "assets\\maps\\Cathedral.mp4",
+    "tags": [
+      "cathedral"
+    ],
+    "thumbnail": "assets\\thumbnails\\Cathedral.jpg",
+    "url": "https://youtube.com/watch?v=YBicTWSP5zk"
+  },
+  {
+    "favorite": false,
+    "name": "River Bridge Night",
+    "path": "assets\\maps\\river bridge night.mp4",
+    "tags": [
+      "river",
+      "bridge",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\River Bridge Night.jpg",
+    "url": "https://youtube.com/watch?v=TzAdDDTYsvs"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Night",
+    "path": "assets\\maps\\swamp night.mp4",
+    "tags": [
+      "swamp",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Night.jpg",
+    "url": "https://youtube.com/watch?v=w3mjfKJVL20"
+  },
+  {
+    "favorite": false,
+    "name": "Cjg",
+    "path": "assets\\maps\\CJG.mp4",
+    "tags": [
+      "cjg"
+    ],
+    "thumbnail": "assets\\thumbnails\\Cjg.jpg",
+    "url": "https://youtube.com/watch?v=0p66tedVg4w"
+  },
+  {
+    "favorite": false,
+    "name": "(Battlefield) Animated Battlemaps Roll",
+    "path": "assets\\maps\\(battlefield) animated battlemaps roll.mp4",
+    "tags": [
+      "(",
+      "battlefield",
+      ")",
+      "animated",
+      "battlemaps",
+      "roll",
+      "dead",
+      "bodies",
+      "field",
+      "soldiers",
+      "blood"
+    ],
+    "thumbnail": "assets\\thumbnails\\(Battlefield) Animated Battlemaps Roll.jpg",
+    "url": "https://youtube.com/watch?v=mXOHi7o0Wyw"
+  },
+  {
+    "favorite": false,
+    "name": "Village Street Midday Nosound Mp4",
+    "path": "assets\\maps\\village street midday nosound mp4.mp4",
+    "tags": [
+      "village",
+      "street",
+      "midday",
+      "nosound",
+      "mp4"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Street Midday Nosound Mp4.jpg",
+    "url": "https://youtube.com/watch?v=93A6mOjhXEM"
+  },
+  {
+    "favorite": false,
+    "name": "House By Water Dusk",
+    "path": "assets\\maps\\house by water dusk.mp4",
+    "tags": [
+      "house",
+      "by",
+      "water",
+      "dusk"
+    ],
+    "thumbnail": "assets\\thumbnails\\House By Water Dusk.jpg",
+    "url": "https://youtube.com/watch?v=D8_hrs5w02E"
+  },
+  {
+    "favorite": false,
+    "name": "Icelands 07 Tundra Daytime",
+    "path": "assets\\maps\\Icelands 07 Tundra Daytime.mp4",
+    "tags": [
+      "icelands",
+      "07",
+      "tundra",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Icelands 07 Tundra Daytime.jpg",
+    "url": "https://youtube.com/watch?v=qSU9sbTCRao"
+  },
+  {
+    "favorite": false,
+    "name": "Village Road Night",
+    "path": "assets\\maps\\village road night.mp4",
+    "tags": [
+      "village",
+      "road",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Road Night.jpg",
+    "url": "https://youtube.com/watch?v=McpvYTio-LA"
+  },
+  {
+    "favorite": false,
+    "name": "River Bridge Midday",
+    "path": "assets\\maps\\river bridge midday.mp4",
+    "tags": [
+      "river",
+      "bridge",
+      "midday"
+    ],
+    "thumbnail": "assets\\thumbnails\\River Bridge Midday.jpg",
+    "url": "https://youtube.com/watch?v=L5ibz83_mC4"
+  },
+  {
+    "favorite": false,
+    "name": "Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered)",
+    "path": "assets\\maps\\Animated Dungeon Maps - Cave campsite near a chasm (remastered).mp4",
+    "tags": [
+      "animated",
+      "dungeon",
+      "maps",
+      "-",
+      "cave",
+      "campsite",
+      "near",
+      "a",
+      "chasm",
+      "(",
+      "remastered",
+      ")"
+    ],
+    "thumbnail": "assets\\thumbnails\\Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).jpg",
+    "url": "https://youtube.com/watch?v=39ow4NbFkSY"
+  },
+  {
+    "favorite": false,
+    "name": "[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside",
+    "path": "assets\\maps\\[Skyrim - Vanilla] Animated Battlemap - Waterfall roadside.mp4",
+    "tags": [
+      "[",
+      "skyrim",
+      "-",
+      "vanilla",
+      "]",
+      "animated",
+      "battlemap",
+      "-",
+      "waterfall",
+      "roadside"
+    ],
+    "thumbnail": "assets\\thumbnails\\[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.jpg",
+    "url": "https://youtube.com/watch?v=uG5fKGfQgUY"
+  },
+  {
+    "favorite": false,
+    "name": "Bridge Night",
+    "path": "assets\\maps\\bridge night.mp4",
+    "tags": [
+      "bridge",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Night.jpg",
+    "url": "https://youtube.com/watch?v=A7NefEGewFw"
+  },
+  {
+    "favorite": false,
+    "name": "Cathedral Road Raining Thunder",
+    "path": "assets\\maps\\cathedral road raining thunder.mp4",
+    "tags": [
+      "cathedral",
+      "road",
+      "raining",
+      "thunder"
+    ],
+    "thumbnail": "assets\\thumbnails\\Cathedral Road Raining Thunder.jpg",
+    "url": "https://youtube.com/watch?v=lcJL_9xlRmM"
+  },
+  {
+    "favorite": false,
+    "name": "Jungle Night Clear",
+    "path": "assets\\maps\\Jungle Night Clear.mp4",
+    "tags": [
+      "jungle",
+      "night",
+      "clear"
+    ],
+    "thumbnail": "assets\\thumbnails\\Jungle Night Clear.jpg",
+    "url": "https://youtube.com/watch?v=S88yAbKawmI"
+  },
+  {
+    "favorite": false,
+    "name": "Temple",
+    "path": "assets\\maps\\Temple.mp4",
+    "tags": [
+      "temple"
+    ],
+    "thumbnail": "assets\\thumbnails\\Temple.jpg",
+    "url": "https://youtube.com/watch?v=gI92wgZfB-s"
+  },
+  {
+    "favorite": false,
+    "name": "Bridge Day Humid",
+    "path": "assets\\maps\\bridge day humid.mp4",
+    "tags": [
+      "bridge",
+      "day",
+      "humid"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Day Humid.jpg",
+    "url": "https://youtube.com/watch?v=3SY-ya3trvM"
+  },
+  {
+    "favorite": false,
+    "name": "Village Road Morning",
+    "path": "assets\\maps\\village road morning.mp4",
+    "tags": [
+      "village",
+      "road",
+      "morning"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Road Morning.jpg",
+    "url": "https://youtube.com/watch?v=nagvxWQ_Qbc"
   },
   {
     "favorite": false,
@@ -2438,115 +2845,25 @@
   },
   {
     "favorite": false,
-    "name": "Cathedral Road Raining Thunder",
-    "path": "assets\\maps\\cathedral road raining thunder.mp4",
+    "name": "Antennae Tower",
+    "path": "assets\\maps\\Antennae tower.mp4",
     "tags": [
-      "cathedral",
-      "road",
-      "raining",
-      "thunder"
+      "antennae",
+      "tower"
     ],
-    "thumbnail": "assets\\thumbnails\\Cathedral Road Raining Thunder.jpg",
-    "url": "https://youtube.com/watch?v=lcJL_9xlRmM"
+    "thumbnail": "assets\\thumbnails\\Antennae Tower.jpg",
+    "url": "https://youtube.com/watch?v=PA7nP7qwEo0"
   },
   {
     "favorite": false,
-    "name": "The Red Road 05 Night",
-    "path": "assets\\maps\\The Red Road 05 Night.mp4",
+    "name": "Bridge Rain",
+    "path": "assets\\maps\\bridge rain.mp4",
     "tags": [
-      "the",
-      "red",
-      "road",
-      "05",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\The Red Road 05 Night.jpg",
-    "url": "https://youtube.com/watch?v=rP64XcqLB_Y"
-  },
-  {
-    "favorite": false,
-    "name": "Icelands 07 Tundra Daytime",
-    "path": "assets\\maps\\Icelands 07 Tundra Daytime.mp4",
-    "tags": [
-      "icelands",
-      "07",
-      "tundra",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Icelands 07 Tundra Daytime.jpg",
-    "url": "https://youtube.com/watch?v=qSU9sbTCRao"
-  },
-  {
-    "favorite": false,
-    "name": "Animated Battle Map (Wooden Bridge)",
-    "path": "assets\\maps\\Animated Battle map (wooden bridge).mp4",
-    "tags": [
-      "animated",
-      "battle",
-      "map",
-      "(",
-      "wooden",
       "bridge",
-      ")",
-      "river",
-      "waterfall"
+      "rain"
     ],
-    "thumbnail": "assets\\thumbnails\\Animated Battle Map (Wooden Bridge).jpg",
-    "url": "https://youtube.com/watch?v=18pRUdKNlGw"
-  },
-  {
-    "favorite": false,
-    "name": "Village Road Dusk",
-    "path": "assets\\maps\\village road dusk.mp4",
-    "tags": [
-      "village",
-      "road",
-      "dusk"
-    ],
-    "thumbnail": "assets\\thumbnails\\Village Road Dusk.jpg",
-    "url": "https://youtube.com/watch?v=4oSkKN1nAOc"
-  },
-  {
-    "favorite": false,
-    "name": "Animated Battle Map",
-    "path": "assets\\maps\\Animated Battle map.mp4",
-    "tags": [
-      "animated",
-      "battle",
-      "map",
-      "cliff",
-      "windy",
-      "trees"
-    ],
-    "thumbnail": "assets\\thumbnails\\Animated Battle Map.jpg",
-    "url": "https://youtube.com/watch?v=zhpcmBp0kFM"
-  },
-  {
-    "favorite": false,
-    "name": "Swamp Raining Thunder",
-    "path": "assets\\maps\\swamp raining thunder.mp4",
-    "tags": [
-      "swamp",
-      "raining",
-      "thunder"
-    ],
-    "thumbnail": "assets\\thumbnails\\Swamp Raining Thunder.jpg",
-    "url": "https://youtube.com/watch?v=TfA8jLqGseU"
-  },
-  {
-    "favorite": false,
-    "name": "Winter Forest Road Straight Square 3",
-    "path": "assets\\maps\\Winter Forest Road Straight Square 3.mp4",
-    "tags": [
-      "winter",
-      "forest",
-      "road",
-      "straight",
-      "square",
-      "3"
-    ],
-    "thumbnail": "assets\\thumbnails\\Winter Forest Road Straight Square 3.jpg",
-    "url": "https://youtube.com/watch?v=Kek_c1PtYoc"
+    "thumbnail": "assets\\thumbnails\\Bridge Rain.jpg",
+    "url": "https://youtube.com/watch?v=Krde6rEVm_A"
   },
   {
     "favorite": false,
@@ -2565,119 +2882,6 @@
   },
   {
     "favorite": false,
-    "name": "Winter Forest Road Bend Square 1",
-    "path": "assets\\maps\\Winter Forest Road Bend Square 1.mp4",
-    "tags": [
-      "winter",
-      "forest",
-      "road",
-      "bend",
-      "square",
-      "1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Winter Forest Road Bend Square 1.jpg",
-    "url": "https://youtube.com/watch?v=d-4ohU2DBHs"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Dusk",
-    "path": "assets\\maps\\bridge dusk.mp4",
-    "tags": [
-      "bridge",
-      "dusk"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Dusk.jpg",
-    "url": "https://youtube.com/watch?v=SAtmpRyzYuI"
-  },
-  {
-    "favorite": false,
-    "name": "Village Street Day Snowing Nosound",
-    "path": "assets\\maps\\village street day snowing nosound.mp4",
-    "tags": [
-      "village",
-      "street",
-      "day",
-      "snowing",
-      "nosound"
-    ],
-    "thumbnail": "assets\\thumbnails\\Village Street Day Snowing Nosound.jpg",
-    "url": "https://youtube.com/watch?v=rIbDhEhB63M"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Rain Night",
-    "path": "assets\\maps\\bridge rain night.mp4",
-    "tags": [
-      "bridge",
-      "rain",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Rain Night.jpg",
-    "url": "https://youtube.com/watch?v=U0OdsKtB59w"
-  },
-  {
-    "favorite": false,
-    "name": "Cjg",
-    "path": "assets\\maps\\CJG.mp4",
-    "tags": [
-      "cjg"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cjg.jpg",
-    "url": "https://youtube.com/watch?v=0p66tedVg4w"
-  },
-  {
-    "favorite": false,
-    "name": "Village Road Night Raining",
-    "path": "assets\\maps\\village road night raining.mp4",
-    "tags": [
-      "village",
-      "road",
-      "night",
-      "raining"
-    ],
-    "thumbnail": "assets\\thumbnails\\Village Road Night Raining.jpg",
-    "url": "https://youtube.com/watch?v=EyHI1qx8J-c"
-  },
-  {
-    "favorite": false,
-    "name": "Pretty Village 01 Daytime",
-    "path": "assets\\maps\\Pretty Village 01 Daytime.mp4",
-    "tags": [
-      "pretty",
-      "village",
-      "01",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Pretty Village 01 Daytime.jpg",
-    "url": "https://youtube.com/watch?v=fCQAdkfD6bo"
-  },
-  {
-    "favorite": false,
-    "name": "River Bridge Day Snow",
-    "path": "assets\\maps\\river bridge day snow.mp4",
-    "tags": [
-      "river",
-      "bridge",
-      "day",
-      "snow"
-    ],
-    "thumbnail": "assets\\thumbnails\\River Bridge Day Snow.jpg",
-    "url": "https://youtube.com/watch?v=yd_xMLCcrk8"
-  },
-  {
-    "favorite": false,
-    "name": "River Bridge Night",
-    "path": "assets\\maps\\river bridge night.mp4",
-    "tags": [
-      "river",
-      "bridge",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\River Bridge Night.jpg",
-    "url": "https://youtube.com/watch?v=TzAdDDTYsvs"
-  },
-  {
-    "favorite": false,
     "name": "Lakeside Dusk",
     "path": "assets\\maps\\Lakeside Dusk.mp4",
     "tags": [
@@ -2686,254 +2890,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Lakeside Dusk.jpg",
     "url": "https://youtube.com/watch?v=_fAW0ufeH_Y"
-  },
-  {
-    "favorite": false,
-    "name": "Rural 06 Ruined Circle Daytime",
-    "path": "assets\\maps\\Rural 06 Ruined Circle Daytime.mp4",
-    "tags": [
-      "rural",
-      "06",
-      "ruined",
-      "circle",
-      "daytime"
-    ],
-    "thumbnail": "assets\\thumbnails\\Rural 06 Ruined Circle Daytime.jpg",
-    "url": "https://youtube.com/watch?v=GyFMVOpqZyc"
-  },
-  {
-    "favorite": false,
-    "name": "Red Rocks Conifer, Desert And Underdark Versions",
-    "path": "assets\\maps\\Red Rocks Conifer, Desert And Underdark Versions.mp4",
-    "tags": [
-      "red",
-      "rocks",
-      "conifer,",
-      "desert",
-      "and",
-      "underdark",
-      "versions"
-    ],
-    "thumbnail": "assets\\thumbnails\\Red Rocks Conifer Desert And Underdark Versions.jpg",
-    "url": "https://youtube.com/watch?v=TeyHcpz0G1s"
-  },
-  {
-    "favorite": false,
-    "name": "(Battlefield) Animated Battlemaps Roll",
-    "path": "assets\\maps\\(battlefield) animated battlemaps roll.mp4",
-    "tags": [
-      "(",
-      "battlefield",
-      ")",
-      "animated",
-      "battlemaps",
-      "roll",
-      "dead",
-      "bodies",
-      "field",
-      "soldiers",
-      "blood"
-    ],
-    "thumbnail": "assets\\thumbnails\\(Battlefield) Animated Battlemaps Roll.jpg",
-    "url": "https://youtube.com/watch?v=mXOHi7o0Wyw"
-  },
-  {
-    "favorite": false,
-    "name": "Cathedral",
-    "path": "assets\\maps\\Cathedral.mp4",
-    "tags": [
-      "cathedral"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cathedral.jpg",
-    "url": "https://youtube.com/watch?v=YBicTWSP5zk"
-  },
-  {
-    "favorite": false,
-    "name": "Village Street Midday Nosound Mp4",
-    "path": "assets\\maps\\village street midday nosound mp4.mp4",
-    "tags": [
-      "village",
-      "street",
-      "midday",
-      "nosound",
-      "mp4"
-    ],
-    "thumbnail": "assets\\thumbnails\\Village Street Midday Nosound Mp4.jpg",
-    "url": "https://youtube.com/watch?v=93A6mOjhXEM"
-  },
-  {
-    "favorite": false,
-    "name": "City Streets 02 Nightime",
-    "path": "assets\\maps\\City Streets 02 Nightime.mp4",
-    "tags": [
-      "city",
-      "streets",
-      "02",
-      "nightime"
-    ],
-    "thumbnail": "assets\\thumbnails\\City Streets 02 Nightime.jpg",
-    "url": "https://youtube.com/watch?v=Zjhu1tg7CN8"
-  },
-  {
-    "favorite": false,
-    "name": "Swamp Night",
-    "path": "assets\\maps\\swamp night.mp4",
-    "tags": [
-      "swamp",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Swamp Night.jpg",
-    "url": "https://youtube.com/watch?v=w3mjfKJVL20"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Night",
-    "path": "assets\\maps\\bridge night.mp4",
-    "tags": [
-      "bridge",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Night.jpg",
-    "url": "https://youtube.com/watch?v=A7NefEGewFw"
-  },
-  {
-    "favorite": false,
-    "name": "Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered)",
-    "path": "assets\\maps\\Animated Dungeon Maps - Cave campsite near a chasm (remastered).mp4",
-    "tags": [
-      "animated",
-      "dungeon",
-      "maps",
-      "-",
-      "cave",
-      "campsite",
-      "near",
-      "a",
-      "chasm",
-      "(",
-      "remastered",
-      ")"
-    ],
-    "thumbnail": "assets\\thumbnails\\Animated Dungeon Maps - Cave Campsite Near A Chasm (Remastered).jpg",
-    "url": "https://youtube.com/watch?v=39ow4NbFkSY"
-  },
-  {
-    "favorite": false,
-    "name": "River Bridge Midday",
-    "path": "assets\\maps\\river bridge midday.mp4",
-    "tags": [
-      "river",
-      "bridge",
-      "midday"
-    ],
-    "thumbnail": "assets\\thumbnails\\River Bridge Midday.jpg",
-    "url": "https://youtube.com/watch?v=L5ibz83_mC4"
-  },
-  {
-    "favorite": false,
-    "name": "Temple",
-    "path": "assets\\maps\\Temple.mp4",
-    "tags": [
-      "temple"
-    ],
-    "thumbnail": "assets\\thumbnails\\Temple.jpg",
-    "url": "https://youtube.com/watch?v=gI92wgZfB-s"
-  },
-  {
-    "favorite": false,
-    "name": "House By Water Dusk",
-    "path": "assets\\maps\\house by water dusk.mp4",
-    "tags": [
-      "house",
-      "by",
-      "water",
-      "dusk"
-    ],
-    "thumbnail": "assets\\thumbnails\\House By Water Dusk.jpg",
-    "url": "https://youtube.com/watch?v=D8_hrs5w02E"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Day",
-    "path": "assets\\maps\\bridge day.mp4",
-    "tags": [
-      "bridge",
-      "day"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Day.jpg",
-    "url": "https://youtube.com/watch?v=cqplpxaSve8"
-  },
-  {
-    "favorite": false,
-    "name": "Dnd Battle Map - Night At The Swamp",
-    "path": "assets\\maps\\Dnd battle map - night at the swamp.mp4",
-    "tags": [
-      "dnd",
-      "battle",
-      "map",
-      "-",
-      "night",
-      "at",
-      "the",
-      "swamp"
-    ],
-    "thumbnail": "assets\\thumbnails\\Dnd Battle Map - Night At The Swamp.jpg",
-    "url": "https://youtube.com/watch?v=y8PiTfwMGak"
-  },
-  {
-    "favorite": false,
-    "name": "Jungle Night Clear",
-    "path": "assets\\maps\\Jungle Night Clear.mp4",
-    "tags": [
-      "jungle",
-      "night",
-      "clear"
-    ],
-    "thumbnail": "assets\\thumbnails\\Jungle Night Clear.jpg",
-    "url": "https://youtube.com/watch?v=S88yAbKawmI"
-  },
-  {
-    "favorite": false,
-    "name": "River Bridge Day",
-    "path": "assets\\maps\\river bridge day.mp4",
-    "tags": [
-      "river",
-      "bridge",
-      "day"
-    ],
-    "thumbnail": "assets\\thumbnails\\River Bridge Day.jpg",
-    "url": "https://youtube.com/watch?v=ylDtX4VBlYE"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Day Humid",
-    "path": "assets\\maps\\bridge day humid.mp4",
-    "tags": [
-      "bridge",
-      "day",
-      "humid"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Day Humid.jpg",
-    "url": "https://youtube.com/watch?v=3SY-ya3trvM"
-  },
-  {
-    "favorite": false,
-    "name": "[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside",
-    "path": "assets\\maps\\[Skyrim - Vanilla] Animated Battlemap - Waterfall roadside.mp4",
-    "tags": [
-      "[",
-      "skyrim",
-      "-",
-      "vanilla",
-      "]",
-      "animated",
-      "battlemap",
-      "-",
-      "waterfall",
-      "roadside"
-    ],
-    "thumbnail": "assets\\thumbnails\\[Skyrim - Vanilla] Animated Battlemap - Waterfall Roadside.jpg",
-    "url": "https://youtube.com/watch?v=uG5fKGfQgUY"
   },
   {
     "favorite": false,
@@ -2955,61 +2911,16 @@
   },
   {
     "favorite": false,
-    "name": "Village Road Morning",
-    "path": "assets\\maps\\village road morning.mp4",
+    "name": "Forest Stream Foggy Day",
+    "path": "assets\\maps\\forest stream foggy day.mp4",
     "tags": [
-      "village",
-      "road",
-      "morning"
+      "forest",
+      "stream",
+      "foggy",
+      "day"
     ],
-    "thumbnail": "assets\\thumbnails\\Village Road Morning.jpg",
-    "url": "https://youtube.com/watch?v=nagvxWQ_Qbc"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Rain",
-    "path": "assets\\maps\\bridge rain.mp4",
-    "tags": [
-      "bridge",
-      "rain"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Rain.jpg",
-    "url": "https://youtube.com/watch?v=Krde6rEVm_A"
-  },
-  {
-    "favorite": false,
-    "name": "Cathedral Road Midday",
-    "path": "assets\\maps\\cathedral road midday.mp4",
-    "tags": [
-      "cathedral",
-      "road",
-      "midday"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cathedral Road Midday.jpg",
-    "url": "https://youtube.com/watch?v=drMjAleiyok"
-  },
-  {
-    "favorite": false,
-    "name": "Antennae Tower",
-    "path": "assets\\maps\\Antennae tower.mp4",
-    "tags": [
-      "antennae",
-      "tower"
-    ],
-    "thumbnail": "assets\\thumbnails\\Antennae Tower.jpg",
-    "url": "https://youtube.com/watch?v=PA7nP7qwEo0"
-  },
-  {
-    "favorite": false,
-    "name": "Cathedral Road Night",
-    "path": "assets\\maps\\cathedral road night.mp4",
-    "tags": [
-      "cathedral",
-      "road",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cathedral Road Night.jpg",
-    "url": "https://youtube.com/watch?v=PvUwwd_VeUQ"
+    "thumbnail": "assets\\thumbnails\\Forest Stream Foggy Day.jpg",
+    "url": "https://youtube.com/watch?v=dPksluV3p88"
   },
   {
     "favorite": false,
@@ -3030,15 +2941,52 @@
   },
   {
     "favorite": false,
-    "name": "Cathedral Road Raining",
-    "path": "assets\\maps\\cathedral road raining.mp4",
+    "name": "Village Road Midday",
+    "path": "assets\\maps\\village road midday.mp4",
+    "tags": [
+      "village",
+      "road",
+      "midday"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Road Midday.jpg",
+    "url": "https://youtube.com/watch?v=T3HpFOe1Xt8"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Night Foggy",
+    "path": "assets\\maps\\swamp night foggy.mp4",
+    "tags": [
+      "swamp",
+      "night",
+      "foggy"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Night Foggy.jpg",
+    "url": "https://youtube.com/watch?v=iCelOolFZk4"
+  },
+  {
+    "favorite": false,
+    "name": "Village Street Day Nosound",
+    "path": "assets\\maps\\village street day nosound.mp4",
+    "tags": [
+      "village",
+      "street",
+      "day",
+      "nosound"
+    ],
+    "thumbnail": "assets\\thumbnails\\Village Street Day Nosound.jpg",
+    "url": "https://youtube.com/watch?v=crr4aYa5nMg"
+  },
+  {
+    "favorite": false,
+    "name": "Cathedral Road Night",
+    "path": "assets\\maps\\cathedral road night.mp4",
     "tags": [
       "cathedral",
       "road",
-      "raining"
+      "night"
     ],
-    "thumbnail": "assets\\thumbnails\\Cathedral Road Raining.jpg",
-    "url": "https://youtube.com/watch?v=cm6ZncW5uYc"
+    "thumbnail": "assets\\thumbnails\\Cathedral Road Night.jpg",
+    "url": "https://youtube.com/watch?v=PvUwwd_VeUQ"
   },
   {
     "favorite": false,
@@ -3056,68 +3004,41 @@
   },
   {
     "favorite": false,
-    "name": "Forest Stream Foggy Day",
-    "path": "assets\\maps\\forest stream foggy day.mp4",
+    "name": "Cathedral Road Raining",
+    "path": "assets\\maps\\cathedral road raining.mp4",
     "tags": [
-      "forest",
-      "stream",
-      "foggy",
-      "day"
+      "cathedral",
+      "road",
+      "raining"
     ],
-    "thumbnail": "assets\\thumbnails\\Forest Stream Foggy Day.jpg",
-    "url": "https://youtube.com/watch?v=dPksluV3p88"
+    "thumbnail": "assets\\thumbnails\\Cathedral Road Raining.jpg",
+    "url": "https://youtube.com/watch?v=cm6ZncW5uYc"
   },
   {
     "favorite": false,
-    "name": "Swamp Day",
-    "path": "assets\\maps\\swamp day.mp4",
+    "name": "City Streets 02 Nightime",
+    "path": "assets\\maps\\City Streets 02 Nightime.mp4",
     "tags": [
-      "swamp",
-      "day"
+      "city",
+      "streets",
+      "02",
+      "nightime"
     ],
-    "thumbnail": "assets\\thumbnails\\Swamp Day.jpg",
-    "url": "https://youtube.com/watch?v=SGiYFZxythM"
+    "thumbnail": "assets\\thumbnails\\City Streets 02 Nightime.jpg",
+    "url": "https://youtube.com/watch?v=Zjhu1tg7CN8"
   },
   {
     "favorite": false,
-    "name": "House By Water Day",
-    "path": "assets\\maps\\house by water day.mp4",
+    "name": "River Bridge Day Snow",
+    "path": "assets\\maps\\river bridge day snow.mp4",
     "tags": [
-      "house",
-      "by",
-      "water",
-      "day"
-    ],
-    "thumbnail": "assets\\thumbnails\\House By Water Day.jpg",
-    "url": "https://youtube.com/watch?v=lC8pWf-M-Ww"
-  },
-  {
-    "favorite": false,
-    "name": "Village Street Day Nosound",
-    "path": "assets\\maps\\village street day nosound.mp4",
-    "tags": [
-      "village",
-      "street",
+      "river",
+      "bridge",
       "day",
-      "nosound"
+      "snow"
     ],
-    "thumbnail": "assets\\thumbnails\\Village Street Day Nosound.jpg",
-    "url": "https://youtube.com/watch?v=crr4aYa5nMg"
-  },
-  {
-    "favorite": false,
-    "name": "Las Vegas Top Left Rotated Day",
-    "path": "assets\\maps\\Las Vegas Top Left Rotated Day.mp4",
-    "tags": [
-      "las",
-      "vegas",
-      "top",
-      "left",
-      "rotated",
-      "day"
-    ],
-    "thumbnail": "assets\\thumbnails\\Las Vegas Top Left Rotated Day.jpg",
-    "url": "https://youtube.com/watch?v=RNF0jdkTCVI"
+    "thumbnail": "assets\\thumbnails\\River Bridge Day Snow.jpg",
+    "url": "https://youtube.com/watch?v=yd_xMLCcrk8"
   },
   {
     "favorite": false,
@@ -3132,15 +3053,51 @@
   },
   {
     "favorite": false,
-    "name": "Village Road Midday",
-    "path": "assets\\maps\\village road midday.mp4",
+    "name": "Cathedral Road Morning",
+    "path": "assets\\maps\\cathedral road morning.mp4",
     "tags": [
-      "village",
+      "cathedral",
       "road",
-      "midday"
+      "morning"
     ],
-    "thumbnail": "assets\\thumbnails\\Village Road Midday.jpg",
-    "url": "https://youtube.com/watch?v=T3HpFOe1Xt8"
+    "thumbnail": "assets\\thumbnails\\Cathedral Road Morning.jpg",
+    "url": "https://youtube.com/watch?v=isKm4EKzVc4"
+  },
+  {
+    "favorite": false,
+    "name": "Pretty Village 01 Daytime",
+    "path": "assets\\maps\\Pretty Village 01 Daytime.mp4",
+    "tags": [
+      "pretty",
+      "village",
+      "01",
+      "daytime"
+    ],
+    "thumbnail": "assets\\thumbnails\\Pretty Village 01 Daytime.jpg",
+    "url": "https://youtube.com/watch?v=fCQAdkfD6bo"
+  },
+  {
+    "favorite": false,
+    "name": "River Bridge Day",
+    "path": "assets\\maps\\river bridge day.mp4",
+    "tags": [
+      "river",
+      "bridge",
+      "day"
+    ],
+    "thumbnail": "assets\\thumbnails\\River Bridge Day.jpg",
+    "url": "https://youtube.com/watch?v=ylDtX4VBlYE"
+  },
+  {
+    "favorite": false,
+    "name": "Bravil 2",
+    "path": "assets\\maps\\Bravil 2.mp4",
+    "tags": [
+      "bravil",
+      "2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bravil 2.jpg",
+    "url": "https://youtube.com/watch?v=6yTxqpw4lZQ"
   },
   {
     "favorite": false,
@@ -3158,101 +3115,6 @@
   },
   {
     "favorite": false,
-    "name": "Cathedral Road Morning",
-    "path": "assets\\maps\\cathedral road morning.mp4",
-    "tags": [
-      "cathedral",
-      "road",
-      "morning"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cathedral Road Morning.jpg",
-    "url": "https://youtube.com/watch?v=isKm4EKzVc4"
-  },
-  {
-    "favorite": false,
-    "name": "Bravil 2",
-    "path": "assets\\maps\\Bravil 2.mp4",
-    "tags": [
-      "bravil",
-      "2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bravil 2.jpg",
-    "url": "https://youtube.com/watch?v=6yTxqpw4lZQ"
-  },
-  {
-    "favorite": false,
-    "name": "Winter Forest Square 1",
-    "path": "assets\\maps\\Winter Forest Square 1.mp4",
-    "tags": [
-      "winter",
-      "forest",
-      "square",
-      "1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Winter Forest Square 1.jpg",
-    "url": "https://youtube.com/watch?v=dO0_3rAr7iM"
-  },
-  {
-    "favorite": false,
-    "name": "Swamp Night Foggy",
-    "path": "assets\\maps\\swamp night foggy.mp4",
-    "tags": [
-      "swamp",
-      "night",
-      "foggy"
-    ],
-    "thumbnail": "assets\\thumbnails\\Swamp Night Foggy.jpg",
-    "url": "https://youtube.com/watch?v=iCelOolFZk4"
-  },
-  {
-    "favorite": false,
-    "name": "Hut",
-    "path": "assets\\maps\\Hut.mp4",
-    "tags": [
-      "hut"
-    ],
-    "thumbnail": "assets\\thumbnails\\Hut.jpg",
-    "url": "https://youtube.com/watch?v=QEoATRI9Hgg"
-  },
-  {
-    "favorite": false,
-    "name": "House By Water Night Raining",
-    "path": "assets\\maps\\house by water night raining.mp4",
-    "tags": [
-      "house",
-      "by",
-      "water",
-      "night",
-      "raining"
-    ],
-    "thumbnail": "assets\\thumbnails\\House By Water Night Raining.jpg",
-    "url": "https://youtube.com/watch?v=zqZxvKrl-FY"
-  },
-  {
-    "favorite": false,
-    "name": "Bridge Foggy Night",
-    "path": "assets\\maps\\bridge foggy night.mp4",
-    "tags": [
-      "bridge",
-      "foggy",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bridge Foggy Night.jpg",
-    "url": "https://youtube.com/watch?v=Rpw4cQW0YWI"
-  },
-  {
-    "favorite": false,
-    "name": "Cave Entrance",
-    "path": "assets\\maps\\Cave Entrance.mp4",
-    "tags": [
-      "cave",
-      "entrance"
-    ],
-    "thumbnail": "assets\\thumbnails\\Cave Entrance.jpg",
-    "url": "https://youtube.com/watch?v=W7vU-EQzPiM"
-  },
-  {
-    "favorite": false,
     "name": "Winter Hillside",
     "path": "assets\\maps\\Winter Hillside.mp4",
     "tags": [
@@ -3264,64 +3126,6 @@
   },
   {
     "favorite": false,
-    "name": "Prison Camp Top Left",
-    "path": "assets\\maps\\prison camp top left.mp4",
-    "tags": [
-      "prison",
-      "camp",
-      "top",
-      "left"
-    ],
-    "thumbnail": "assets\\thumbnails\\Prison Camp Top Left.jpg",
-    "url": "https://youtube.com/watch?v=SA-HrjlKN9g"
-  },
-  {
-    "favorite": false,
-    "name": "Radar Station",
-    "path": "assets\\maps\\Radar Station.mp4",
-    "tags": [
-      "radar",
-      "station"
-    ],
-    "thumbnail": "assets\\thumbnails\\Radar Station.jpg",
-    "url": "https://youtube.com/watch?v=1GLdTjRtsQ8"
-  },
-  {
-    "favorite": false,
-    "name": "Village Road Foggy",
-    "path": "assets\\maps\\village road foggy.mp4",
-    "tags": [
-      "village",
-      "road",
-      "foggy"
-    ],
-    "thumbnail": "assets\\thumbnails\\Village Road Foggy.jpg",
-    "url": "https://youtube.com/watch?v=WmOOG9_net8"
-  },
-  {
-    "favorite": false,
-    "name": "Rubble",
-    "path": "assets\\maps\\Rubble.mp4",
-    "tags": [
-      "rubble"
-    ],
-    "thumbnail": "assets\\thumbnails\\Rubble.jpg",
-    "url": "https://youtube.com/watch?v=d8KzmK0K5n8"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Wide 2",
-    "path": "assets\\maps\\Forest Wide 2.mp4",
-    "tags": [
-      "forest",
-      "wide",
-      "2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Wide 2.jpg",
-    "url": "https://youtube.com/watch?v=sf4b8Zdo_MM"
-  },
-  {
-    "favorite": false,
     "name": "Jungle Road",
     "path": "assets\\maps\\Jungle Road.mp4",
     "tags": [
@@ -3330,51 +3134,6 @@
     ],
     "thumbnail": "assets\\thumbnails\\Jungle Road.jpg",
     "url": "https://youtube.com/watch?v=gVT1BPSge2I"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Clearing",
-    "path": "assets\\maps\\Forest Clearing.mp4",
-    "tags": [
-      "forest",
-      "clearing"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Clearing.jpg",
-    "url": "https://youtube.com/watch?v=wFkenD6XbVY"
-  },
-  {
-    "favorite": false,
-    "name": "Jungle Night Foggy",
-    "path": "assets\\maps\\Jungle Night Foggy.mp4",
-    "tags": [
-      "jungle",
-      "night",
-      "foggy"
-    ],
-    "thumbnail": "assets\\thumbnails\\Jungle Night Foggy.jpg",
-    "url": "https://youtube.com/watch?v=mALmICNF9Ic"
-  },
-  {
-    "favorite": false,
-    "name": "Forest Pathway",
-    "path": "assets\\maps\\Forest Pathway.mp4",
-    "tags": [
-      "forest",
-      "pathway"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Pathway.jpg",
-    "url": "https://youtube.com/watch?v=uVcLeud0764"
-  },
-  {
-    "favorite": false,
-    "name": "Jungle Fort",
-    "path": "assets\\maps\\Jungle Fort.mp4",
-    "tags": [
-      "jungle",
-      "fort"
-    ],
-    "thumbnail": "assets\\thumbnails\\Jungle Fort.jpg",
-    "url": "https://youtube.com/watch?v=K-F2P7JgXxk"
   },
   {
     "favorite": false,
@@ -3393,14 +3152,219 @@
   },
   {
     "favorite": false,
-    "name": "River Bridge",
-    "path": "assets\\maps\\River Bridge.mp4",
+    "name": "Village Road Foggy",
+    "path": "assets\\maps\\village road foggy.mp4",
     "tags": [
-      "river",
-      "bridge"
+      "village",
+      "road",
+      "foggy"
     ],
-    "thumbnail": "assets\\thumbnails\\River Bridge.jpg",
-    "url": "https://youtube.com/watch?v=QlamyVSFJVg"
+    "thumbnail": "assets\\thumbnails\\Village Road Foggy.jpg",
+    "url": "https://youtube.com/watch?v=WmOOG9_net8"
+  },
+  {
+    "favorite": false,
+    "name": "House By Water Night Raining",
+    "path": "assets\\maps\\house by water night raining.mp4",
+    "tags": [
+      "house",
+      "by",
+      "water",
+      "night",
+      "raining"
+    ],
+    "thumbnail": "assets\\thumbnails\\House By Water Night Raining.jpg",
+    "url": "https://youtube.com/watch?v=zqZxvKrl-FY"
+  },
+  {
+    "favorite": false,
+    "name": "Cave Entrance",
+    "path": "assets\\maps\\Cave Entrance.mp4",
+    "tags": [
+      "cave",
+      "entrance"
+    ],
+    "thumbnail": "assets\\thumbnails\\Cave Entrance.jpg",
+    "url": "https://youtube.com/watch?v=W7vU-EQzPiM"
+  },
+  {
+    "favorite": false,
+    "name": "Bridge Foggy Night",
+    "path": "assets\\maps\\bridge foggy night.mp4",
+    "tags": [
+      "bridge",
+      "foggy",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Foggy Night.jpg",
+    "url": "https://youtube.com/watch?v=Rpw4cQW0YWI"
+  },
+  {
+    "favorite": false,
+    "name": "Dnd Battle Map - Night At The Swamp",
+    "path": "assets\\maps\\Dnd battle map - night at the swamp.mp4",
+    "tags": [
+      "dnd",
+      "battle",
+      "map",
+      "-",
+      "night",
+      "at",
+      "the",
+      "swamp"
+    ],
+    "thumbnail": "assets\\thumbnails\\Dnd Battle Map - Night At The Swamp.jpg",
+    "url": "https://youtube.com/watch?v=y8PiTfwMGak"
+  },
+  {
+    "favorite": false,
+    "name": "Jungle Night Foggy",
+    "path": "assets\\maps\\Jungle Night Foggy.mp4",
+    "tags": [
+      "jungle",
+      "night",
+      "foggy"
+    ],
+    "thumbnail": "assets\\thumbnails\\Jungle Night Foggy.jpg",
+    "url": "https://youtube.com/watch?v=mALmICNF9Ic"
+  },
+  {
+    "favorite": false,
+    "name": "Hut",
+    "path": "assets\\maps\\Hut.mp4",
+    "tags": [
+      "hut"
+    ],
+    "thumbnail": "assets\\thumbnails\\Hut.jpg",
+    "url": "https://youtube.com/watch?v=QEoATRI9Hgg"
+  },
+  {
+    "favorite": false,
+    "name": "Bridge Day",
+    "path": "assets\\maps\\bridge day.mp4",
+    "tags": [
+      "bridge",
+      "day"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bridge Day.jpg",
+    "url": "https://youtube.com/watch?v=cqplpxaSve8"
+  },
+  {
+    "favorite": false,
+    "name": "Las Vegas Top Left Rotated Day",
+    "path": "assets\\maps\\Las Vegas Top Left Rotated Day.mp4",
+    "tags": [
+      "las",
+      "vegas",
+      "top",
+      "left",
+      "rotated",
+      "day"
+    ],
+    "thumbnail": "assets\\thumbnails\\Las Vegas Top Left Rotated Day.jpg",
+    "url": "https://youtube.com/watch?v=RNF0jdkTCVI"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Wide 2",
+    "path": "assets\\maps\\Forest Wide 2.mp4",
+    "tags": [
+      "forest",
+      "wide",
+      "2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Wide 2.jpg",
+    "url": "https://youtube.com/watch?v=sf4b8Zdo_MM"
+  },
+  {
+    "favorite": false,
+    "name": "Cathedral Road Midday",
+    "path": "assets\\maps\\cathedral road midday.mp4",
+    "tags": [
+      "cathedral",
+      "road",
+      "midday"
+    ],
+    "thumbnail": "assets\\thumbnails\\Cathedral Road Midday.jpg",
+    "url": "https://youtube.com/watch?v=drMjAleiyok"
+  },
+  {
+    "favorite": false,
+    "name": "Docks",
+    "path": "assets\\maps\\Docks.mp4",
+    "tags": [
+      "docks"
+    ],
+    "thumbnail": "assets\\thumbnails\\Docks.jpg",
+    "url": "https://youtube.com/watch?v=jKSStH3z8Ag"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Longhouse Landing - Shore - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Longhouse Landing - Shore - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "longhouse",
+      "landing",
+      "-",
+      "shore",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Longhouse Landing - Shore - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=61HCZQNc_fk"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Clearing",
+    "path": "assets\\maps\\Forest Clearing.mp4",
+    "tags": [
+      "forest",
+      "clearing"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Clearing.jpg",
+    "url": "https://youtube.com/watch?v=wFkenD6XbVY"
+  },
+  {
+    "favorite": false,
+    "name": "Winter Road Wide 2",
+    "path": "assets\\maps\\Winter Road Wide 2.mp4",
+    "tags": [
+      "winter",
+      "road",
+      "wide",
+      "2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Winter Road Wide 2.jpg",
+    "url": "https://youtube.com/watch?v=fjrdJYlN7PA"
+  },
+  {
+    "favorite": false,
+    "name": "Swamp Town Dock 1 Foggy Morning",
+    "path": "assets\\maps\\swamp town dock 1 foggy morning.mp4",
+    "tags": [
+      "swamp",
+      "town",
+      "dock",
+      "1",
+      "foggy",
+      "morning"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Town Dock 1 Foggy Morning.jpg",
+    "url": "https://youtube.com/watch?v=aeFCqFC_eu0"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Pathway",
+    "path": "assets\\maps\\Forest Pathway.mp4",
+    "tags": [
+      "forest",
+      "pathway"
+    ],
+    "thumbnail": "assets\\thumbnails\\Forest Pathway.jpg",
+    "url": "https://youtube.com/watch?v=uVcLeud0764"
   },
   {
     "favorite": false,
@@ -3414,6 +3378,20 @@
     ],
     "thumbnail": "assets\\thumbnails\\Floral Grove Foggy Day.jpg",
     "url": "https://youtube.com/watch?v=1X-Opvd5SJk"
+  },
+  {
+    "favorite": false,
+    "name": "Las Vegas Top Left Night",
+    "path": "assets\\maps\\Las Vegas Top Left Night.mp4",
+    "tags": [
+      "las",
+      "vegas",
+      "top",
+      "left",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Las Vegas Top Left Night.jpg",
+    "url": "https://youtube.com/watch?v=nL9dvmkQc7w"
   },
   {
     "favorite": false,
@@ -3441,98 +3419,61 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Longhouse Landing - Shore - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Longhouse Landing - Shore - Animated Battlemap.mp4",
+    "name": "River Bridge",
+    "path": "assets\\maps\\River Bridge.mp4",
     "tags": [
-      "mapguffin",
-      "-",
-      "longhouse",
-      "landing",
-      "-",
-      "shore",
-      "-",
-      "animated",
-      "battlemap"
+      "river",
+      "bridge"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Longhouse Landing - Shore - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=61HCZQNc_fk"
+    "thumbnail": "assets\\thumbnails\\River Bridge.jpg",
+    "url": "https://youtube.com/watch?v=QlamyVSFJVg"
   },
   {
     "favorite": false,
-    "name": "Winter Road 2",
-    "path": "assets\\maps\\Winter Road 2.mp4",
+    "name": "Swamp Day",
+    "path": "assets\\maps\\swamp day.mp4",
+    "tags": [
+      "swamp",
+      "day"
+    ],
+    "thumbnail": "assets\\thumbnails\\Swamp Day.jpg",
+    "url": "https://youtube.com/watch?v=SGiYFZxythM"
+  },
+  {
+    "favorite": false,
+    "name": "Winter Forest Square 1",
+    "path": "assets\\maps\\Winter Forest Square 1.mp4",
     "tags": [
       "winter",
-      "road",
-      "2"
+      "forest",
+      "square",
+      "1"
     ],
-    "thumbnail": "assets\\thumbnails\\Winter Road 2.jpg",
-    "url": "https://youtube.com/watch?v=O9QO35IifRI"
+    "thumbnail": "assets\\thumbnails\\Winter Forest Square 1.jpg",
+    "url": "https://youtube.com/watch?v=dO0_3rAr7iM"
   },
   {
     "favorite": false,
-    "name": "House By Water Lightning Night",
-    "path": "assets\\maps\\house by water lightning night.mp4",
+    "name": "Rubble",
+    "path": "assets\\maps\\Rubble.mp4",
+    "tags": [
+      "rubble"
+    ],
+    "thumbnail": "assets\\thumbnails\\Rubble.jpg",
+    "url": "https://youtube.com/watch?v=d8KzmK0K5n8"
+  },
+  {
+    "favorite": false,
+    "name": "House By Water Day",
+    "path": "assets\\maps\\house by water day.mp4",
     "tags": [
       "house",
       "by",
       "water",
-      "lightning",
-      "night"
+      "day"
     ],
-    "thumbnail": "assets\\thumbnails\\House By Water Lightning Night.jpg",
-    "url": "https://youtube.com/watch?v=8kpyUff7VeQ"
-  },
-  {
-    "favorite": false,
-    "name": "Swamp Town Dock 1 Foggy Morning",
-    "path": "assets\\maps\\swamp town dock 1 foggy morning.mp4",
-    "tags": [
-      "swamp",
-      "town",
-      "dock",
-      "1",
-      "foggy",
-      "morning"
-    ],
-    "thumbnail": "assets\\thumbnails\\Swamp Town Dock 1 Foggy Morning.jpg",
-    "url": "https://youtube.com/watch?v=aeFCqFC_eu0"
-  },
-  {
-    "favorite": false,
-    "name": "Island Coast",
-    "path": "assets\\maps\\island coast.mp4",
-    "tags": [
-      "island",
-      "coast"
-    ],
-    "thumbnail": "assets\\thumbnails\\Island Coast.jpg",
-    "url": "https://youtube.com/watch?v=Rjs2qVkicGI"
-  },
-  {
-    "favorite": false,
-    "name": "Castle Courtyard West",
-    "path": "assets\\maps\\Castle Courtyard West.mp4",
-    "tags": [
-      "castle",
-      "courtyard",
-      "west"
-    ],
-    "thumbnail": "assets\\thumbnails\\Castle Courtyard West.jpg",
-    "url": "https://youtube.com/watch?v=e4Wre1whFhc"
-  },
-  {
-    "favorite": false,
-    "name": "Winter Road Wide 2",
-    "path": "assets\\maps\\Winter Road Wide 2.mp4",
-    "tags": [
-      "winter",
-      "road",
-      "wide",
-      "2"
-    ],
-    "thumbnail": "assets\\thumbnails\\Winter Road Wide 2.jpg",
-    "url": "https://youtube.com/watch?v=fjrdJYlN7PA"
+    "thumbnail": "assets\\thumbnails\\House By Water Day.jpg",
+    "url": "https://youtube.com/watch?v=lC8pWf-M-Ww"
   },
   {
     "favorite": false,
@@ -3551,80 +3492,80 @@
   },
   {
     "favorite": false,
-    "name": "Las Vegas Top Left Night",
-    "path": "assets\\maps\\Las Vegas Top Left Night.mp4",
+    "name": "Castle Courtyard West",
+    "path": "assets\\maps\\Castle Courtyard West.mp4",
     "tags": [
-      "las",
-      "vegas",
-      "top",
-      "left",
-      "night"
+      "castle",
+      "courtyard",
+      "west"
     ],
-    "thumbnail": "assets\\thumbnails\\Las Vegas Top Left Night.jpg",
-    "url": "https://youtube.com/watch?v=nL9dvmkQc7w"
+    "thumbnail": "assets\\thumbnails\\Castle Courtyard West.jpg",
+    "url": "https://youtube.com/watch?v=e4Wre1whFhc"
   },
   {
     "favorite": false,
-    "name": "Forest Wide 1",
-    "path": "assets\\maps\\Forest Wide 1.mp4",
-    "tags": [
-      "forest",
-      "wide",
-      "1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest Wide 1.jpg",
-    "url": "https://youtube.com/watch?v=-6qMDdEt9wY"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Hilltop Tomb - Animated Battlemap - Updated Audio",
-    "path": "assets\\maps\\MapGuffin - Hilltop Tomb - Animated Battlemap - Updated Audio.mp4",
+    "name": "Mapguffin - Saltwater Sails - Captains Quarters  - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Captains Quarters  - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "hilltop",
-      "tomb",
+      "saltwater",
+      "sails",
+      "-",
+      "captains",
+      "quarters",
       "-",
       "animated",
-      "battlemap",
-      "-",
-      "updated",
-      "audio"
+      "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Hilltop Tomb - Animated Battlemap - Updated Audio.jpg",
-    "url": "https://www.youtube.com/watch?v=76_26MMDnwo"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Captains Quarters  - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=kizfAlm03U8"
   },
   {
     "favorite": false,
-    "name": "Docks",
-    "path": "assets\\maps\\Docks.mp4",
+    "name": "Playground 1",
+    "path": "assets\\maps\\playground 1.mp4",
     "tags": [
-      "docks"
+      "playground",
+      "1"
     ],
-    "thumbnail": "assets\\thumbnails\\Docks.jpg",
-    "url": "https://youtube.com/watch?v=jKSStH3z8Ag"
+    "thumbnail": "assets\\thumbnails\\Playground 1.jpg",
+    "url": "https://youtube.com/watch?v=y6sZCNa5eNI"
   },
   {
     "favorite": false,
-    "name": "Archipelego Day",
-    "path": "assets\\maps\\Archipelego Day.mp4",
+    "name": "Castle Courtyard",
+    "path": "assets\\maps\\Castle Courtyard.mp4",
     "tags": [
-      "archipelego",
+      "castle",
+      "courtyard"
+    ],
+    "thumbnail": "assets\\thumbnails\\Castle Courtyard.jpg",
+    "url": "https://youtube.com/watch?v=7xXv_lA-zs0"
+  },
+  {
+    "favorite": false,
+    "name": "Winter Road Wide 1",
+    "path": "assets\\maps\\Winter Road Wide 1.mp4",
+    "tags": [
+      "winter",
+      "road",
+      "wide",
+      "1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Winter Road Wide 1.jpg",
+    "url": "https://youtube.com/watch?v=nuvuAJaq0SI"
+  },
+  {
+    "favorite": false,
+    "name": "Lakeside Day",
+    "path": "assets\\maps\\Lakeside Day.mp4",
+    "tags": [
+      "lakeside",
       "day"
     ],
-    "thumbnail": "assets\\thumbnails\\Archipelego Day.jpg",
-    "url": "https://youtube.com/watch?v=OoRUQ5BCiZk"
-  },
-  {
-    "favorite": false,
-    "name": "Courtyard Midday",
-    "path": "assets\\maps\\courtyard midday.mp4",
-    "tags": [
-      "courtyard",
-      "midday"
-    ],
-    "thumbnail": "assets\\thumbnails\\Courtyard Midday.jpg",
-    "url": "https://youtube.com/watch?v=cD4jA7iZJrA"
+    "thumbnail": "assets\\thumbnails\\Lakeside Day.jpg",
+    "url": "https://youtube.com/watch?v=ODFsfZk0-ak"
   },
   {
     "favorite": false,
@@ -3648,73 +3589,14 @@
   },
   {
     "favorite": false,
-    "name": "Jungle Day Clear",
-    "path": "assets\\maps\\Jungle Day Clear.mp4",
+    "name": "Courtyard Midday",
+    "path": "assets\\maps\\courtyard midday.mp4",
     "tags": [
-      "jungle",
-      "day",
-      "clear"
+      "courtyard",
+      "midday"
     ],
-    "thumbnail": "assets\\thumbnails\\Jungle Day Clear.jpg",
-    "url": "https://youtube.com/watch?v=ZcoLObi_KCE"
-  },
-  {
-    "favorite": false,
-    "name": "Playground 1",
-    "path": "assets\\maps\\playground 1.mp4",
-    "tags": [
-      "playground",
-      "1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Playground 1.jpg",
-    "url": "https://youtube.com/watch?v=y6sZCNa5eNI"
-  },
-  {
-    "favorite": false,
-    "name": "Bravil 3",
-    "path": "assets\\maps\\Bravil 3.mp4",
-    "tags": [
-      "bravil",
-      "3"
-    ],
-    "thumbnail": "assets\\thumbnails\\Bravil 3.jpg",
-    "url": "https://youtube.com/watch?v=ZOeYhAqtBD8"
-  },
-  {
-    "favorite": false,
-    "name": "House By Water Night",
-    "path": "assets\\maps\\house by water night.mp4",
-    "tags": [
-      "house",
-      "by",
-      "water",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\House By Water Night.jpg",
-    "url": "https://youtube.com/watch?v=4YBJC55lo0w"
-  },
-  {
-    "favorite": false,
-    "name": "Castle Courtyard",
-    "path": "assets\\maps\\Castle Courtyard.mp4",
-    "tags": [
-      "castle",
-      "courtyard"
-    ],
-    "thumbnail": "assets\\thumbnails\\Castle Courtyard.jpg",
-    "url": "https://youtube.com/watch?v=7xXv_lA-zs0"
-  },
-  {
-    "favorite": false,
-    "name": "Winter Road 1",
-    "path": "assets\\maps\\Winter Road 1.mp4",
-    "tags": [
-      "winter",
-      "road",
-      "1"
-    ],
-    "thumbnail": "assets\\thumbnails\\Winter Road 1.jpg",
-    "url": "https://youtube.com/watch?v=LOXAqWWzj4o"
+    "thumbnail": "assets\\thumbnails\\Courtyard Midday.jpg",
+    "url": "https://youtube.com/watch?v=cD4jA7iZJrA"
   },
   {
     "favorite": false,
@@ -3729,16 +3611,73 @@
   },
   {
     "favorite": false,
-    "name": "Winter Road Wide 1",
-    "path": "assets\\maps\\Winter Road Wide 1.mp4",
+    "name": "Archipelego Day",
+    "path": "assets\\maps\\Archipelego Day.mp4",
     "tags": [
-      "winter",
-      "road",
+      "archipelego",
+      "day"
+    ],
+    "thumbnail": "assets\\thumbnails\\Archipelego Day.jpg",
+    "url": "https://youtube.com/watch?v=OoRUQ5BCiZk"
+  },
+  {
+    "favorite": false,
+    "name": "Forest Wide 1",
+    "path": "assets\\maps\\Forest Wide 1.mp4",
+    "tags": [
+      "forest",
       "wide",
       "1"
     ],
-    "thumbnail": "assets\\thumbnails\\Winter Road Wide 1.jpg",
-    "url": "https://youtube.com/watch?v=nuvuAJaq0SI"
+    "thumbnail": "assets\\thumbnails\\Forest Wide 1.jpg",
+    "url": "https://youtube.com/watch?v=-6qMDdEt9wY"
+  },
+  {
+    "favorite": false,
+    "name": "Jungle Day Clear",
+    "path": "assets\\maps\\Jungle Day Clear.mp4",
+    "tags": [
+      "jungle",
+      "day",
+      "clear"
+    ],
+    "thumbnail": "assets\\thumbnails\\Jungle Day Clear.jpg",
+    "url": "https://youtube.com/watch?v=ZcoLObi_KCE"
+  },
+  {
+    "favorite": false,
+    "name": "Prison Camp Top Left",
+    "path": "assets\\maps\\prison camp top left.mp4",
+    "tags": [
+      "prison",
+      "camp",
+      "top",
+      "left"
+    ],
+    "thumbnail": "assets\\thumbnails\\Prison Camp Top Left.jpg",
+    "url": "https://youtube.com/watch?v=SA-HrjlKN9g"
+  },
+  {
+    "favorite": false,
+    "name": "Jungle Fort",
+    "path": "assets\\maps\\Jungle Fort.mp4",
+    "tags": [
+      "jungle",
+      "fort"
+    ],
+    "thumbnail": "assets\\thumbnails\\Jungle Fort.jpg",
+    "url": "https://youtube.com/watch?v=K-F2P7JgXxk"
+  },
+  {
+    "favorite": false,
+    "name": "Island Coast",
+    "path": "assets\\maps\\island coast.mp4",
+    "tags": [
+      "island",
+      "coast"
+    ],
+    "thumbnail": "assets\\thumbnails\\Island Coast.jpg",
+    "url": "https://youtube.com/watch?v=Rjs2qVkicGI"
   },
   {
     "favorite": false,
@@ -3753,54 +3692,84 @@
   },
   {
     "favorite": false,
-    "name": "Lakeside Day",
-    "path": "assets\\maps\\Lakeside Day.mp4",
+    "name": "Radar Station",
+    "path": "assets\\maps\\Radar Station.mp4",
     "tags": [
-      "lakeside",
-      "day"
+      "radar",
+      "station"
     ],
-    "thumbnail": "assets\\thumbnails\\Lakeside Day.jpg",
-    "url": "https://youtube.com/watch?v=ODFsfZk0-ak"
+    "thumbnail": "assets\\thumbnails\\Radar Station.jpg",
+    "url": "https://youtube.com/watch?v=1GLdTjRtsQ8"
   },
   {
     "favorite": false,
-    "name": "Forest",
-    "path": "assets\\maps\\Forest.mp4",
-    "tags": [
-      "forest"
-    ],
-    "thumbnail": "assets\\thumbnails\\Forest.jpg",
-    "url": "https://youtube.com/watch?v=TQ2YOm-y6A4"
-  },
-  {
-    "favorite": false,
-    "name": "Ghomorrah Road",
-    "path": "assets\\maps\\Ghomorrah Road.mp4",
-    "tags": [
-      "ghomorrah",
-      "road"
-    ],
-    "thumbnail": "assets\\thumbnails\\Ghomorrah Road.jpg",
-    "url": "https://youtube.com/watch?v=i7kDuY90iPE"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Saltwater Sails - Captains Quarters  - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Captains Quarters  - Animated Battlemap.mp4",
+    "name": "Mapguffin - Barbarian Barricade - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Barbarian Barricade - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "saltwater",
-      "sails",
-      "-",
-      "captains",
-      "quarters",
+      "barbarian",
+      "barricade",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Captains Quarters  - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=kizfAlm03U8"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Barbarian Barricade - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=5E3Z1XvkIek"
+  },
+  {
+    "favorite": false,
+    "name": "Bravil 1",
+    "path": "assets\\maps\\Bravil 1.mp4",
+    "tags": [
+      "bravil",
+      "1"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bravil 1.jpg",
+    "url": "https://youtube.com/watch?v=d_2F98P0y2E"
+  },
+  {
+    "favorite": false,
+    "name": "Prison Camp Bottom Right",
+    "path": "assets\\maps\\prison camp bottom right.mp4",
+    "tags": [
+      "prison",
+      "camp",
+      "bottom",
+      "right"
+    ],
+    "thumbnail": "assets\\thumbnails\\Prison Camp Bottom Right.jpg",
+    "url": "https://youtube.com/watch?v=m0uudILe5vs"
+  },
+  {
+    "favorite": false,
+    "name": "Prison Camp Birdseye",
+    "path": "assets\\maps\\prison camp birdseye.mp4",
+    "tags": [
+      "prison",
+      "camp",
+      "birdseye"
+    ],
+    "thumbnail": "assets\\thumbnails\\Prison Camp Birdseye.jpg",
+    "url": "https://youtube.com/watch?v=wpBBeJMdlYw"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Cabotage Cutter - Deck - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Deck - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "cabotage",
+      "cutter",
+      "-",
+      "deck",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Deck - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=-uq-tIQGMaY"
   },
   {
     "favorite": false,
@@ -3826,21 +3795,19 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Cabotage Cutter - Deck - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Deck - Animated Battlemap.mp4",
+    "name": "Mapguffin - Snowy Span - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Snowy Span - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "cabotage",
-      "cutter",
-      "-",
-      "deck",
+      "snowy",
+      "span",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Deck - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=-uq-tIQGMaY"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Snowy Span - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=NkMc8lJhSuM"
   },
   {
     "favorite": false,
@@ -3875,73 +3842,15 @@
   },
   {
     "favorite": false,
-    "name": "Bravil 1",
-    "path": "assets\\maps\\Bravil 1.mp4",
+    "name": "Winter Road 1",
+    "path": "assets\\maps\\Winter Road 1.mp4",
     "tags": [
-      "bravil",
+      "winter",
+      "road",
       "1"
     ],
-    "thumbnail": "assets\\thumbnails\\Bravil 1.jpg",
-    "url": "https://youtube.com/watch?v=d_2F98P0y2E"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Saltwater Sails - Ships Hold- Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Ships Hold- Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "saltwater",
-      "sails",
-      "-",
-      "ships",
-      "hold-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Ships Hold- Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=O-7emGXWf88&t=1s"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Saltwater Sails - Deck  - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Deck  - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "saltwater",
-      "sails",
-      "-",
-      "deck",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Deck  - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=uWTUQUYHH50"
-  },
-  {
-    "favorite": false,
-    "name": "Prison Camp Birdseye",
-    "path": "assets\\maps\\prison camp birdseye.mp4",
-    "tags": [
-      "prison",
-      "camp",
-      "birdseye"
-    ],
-    "thumbnail": "assets\\thumbnails\\Prison Camp Birdseye.jpg",
-    "url": "https://youtube.com/watch?v=wpBBeJMdlYw"
-  },
-  {
-    "favorite": false,
-    "name": "Courtyard Night",
-    "path": "assets\\maps\\courtyard night.mp4",
-    "tags": [
-      "courtyard",
-      "night"
-    ],
-    "thumbnail": "assets\\thumbnails\\Courtyard Night.jpg",
-    "url": "https://youtube.com/watch?v=WKXYlgSzlkI"
+    "thumbnail": "assets\\thumbnails\\Winter Road 1.jpg",
+    "url": "https://youtube.com/watch?v=LOXAqWWzj4o"
   },
   {
     "favorite": false,
@@ -3964,16 +3873,65 @@
   },
   {
     "favorite": false,
-    "name": "Prison Camp Bottom Right",
-    "path": "assets\\maps\\prison camp bottom right.mp4",
+    "name": "Forest",
+    "path": "assets\\maps\\Forest.mp4",
     "tags": [
-      "prison",
-      "camp",
-      "bottom",
-      "right"
+      "forest"
     ],
-    "thumbnail": "assets\\thumbnails\\Prison Camp Bottom Right.jpg",
-    "url": "https://youtube.com/watch?v=m0uudILe5vs"
+    "thumbnail": "assets\\thumbnails\\Forest.jpg",
+    "url": "https://youtube.com/watch?v=TQ2YOm-y6A4"
+  },
+  {
+    "favorite": false,
+    "name": "House By Water Lightning Night",
+    "path": "assets\\maps\\house by water lightning night.mp4",
+    "tags": [
+      "house",
+      "by",
+      "water",
+      "lightning",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\House By Water Lightning Night.jpg",
+    "url": "https://youtube.com/watch?v=8kpyUff7VeQ"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Hilltop Tomb - Animated Battlemap - Updated Audio",
+    "path": "assets\\maps\\MapGuffin - Hilltop Tomb - Animated Battlemap - Updated Audio.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "hilltop",
+      "tomb",
+      "-",
+      "animated",
+      "battlemap",
+      "-",
+      "updated",
+      "audio"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Hilltop Tomb - Animated Battlemap - Updated Audio.jpg",
+    "url": "https://www.youtube.com/watch?v=76_26MMDnwo"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - River Ramparts - Level 02 - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - River Ramparts - Level 02 - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "river",
+      "ramparts",
+      "-",
+      "level",
+      "02",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Level 02 - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=y0MIXSj3HvM"
   },
   {
     "favorite": false,
@@ -3996,70 +3954,87 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Snowy Span - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Snowy Span - Animated Battlemap.mp4",
+    "name": "Mapguffin - Sandy Seafarer - Upper Deck - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Upper Deck - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "snowy",
-      "span",
+      "sandy",
+      "seafarer",
+      "-",
+      "upper",
+      "deck",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Snowy Span - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=NkMc8lJhSuM"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Upper Deck - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=GE5vYc5WYGw"
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Boreal Bite - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Boreal Bite - Animated Battlemap.mp4",
+    "name": "Mapguffin - Cabotage Cutter - Storage - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Storage - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "boreal",
-      "bite",
+      "cabotage",
+      "cutter",
+      "-",
+      "storage",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Boreal Bite - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=CgeCLZJ87iQ"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Storage - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=_bSF9L3Pwr0"
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Sodden Spire - Level 03 - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 03 - Animated Battlemap.mp4",
+    "name": "Winter Road 2",
+    "path": "assets\\maps\\Winter Road 2.mp4",
+    "tags": [
+      "winter",
+      "road",
+      "2"
+    ],
+    "thumbnail": "assets\\thumbnails\\Winter Road 2.jpg",
+    "url": "https://youtube.com/watch?v=O9QO35IifRI"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Multure Mill - Lower Level - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Multure Mill - Lower Level - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "sodden",
-      "spire",
+      "multure",
+      "mill",
       "-",
+      "lower",
       "level",
-      "03",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 03 - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=Px0442Ux1kU"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Lower Level - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=BDxsOajoWl8"
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Barbarian Barricade - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Barbarian Barricade - Animated Battlemap.mp4",
+    "name": "Mapguffin - Divergent Direction - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Divergent Direction - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "barbarian",
-      "barricade",
+      "divergent",
+      "direction",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Barbarian Barricade - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=5E3Z1XvkIek"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Divergent Direction - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=bUMk5UajOJ8"
   },
   {
     "favorite": false,
@@ -4082,19 +4057,193 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Divergent Direction - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Divergent Direction - Animated Battlemap.mp4",
+    "name": "Mapguffin - Cabotage Cutter - Sails - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Sails - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "divergent",
-      "direction",
+      "cabotage",
+      "cutter",
+      "-",
+      "sails",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Divergent Direction - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=bUMk5UajOJ8"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Sails - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=lFnkmIKRuaY"
+  },
+  {
+    "favorite": false,
+    "name": "House By Water Night",
+    "path": "assets\\maps\\house by water night.mp4",
+    "tags": [
+      "house",
+      "by",
+      "water",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\House By Water Night.jpg",
+    "url": "https://youtube.com/watch?v=4YBJC55lo0w"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Boreal Bite - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Boreal Bite - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "boreal",
+      "bite",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Boreal Bite - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=CgeCLZJ87iQ"
+  },
+  {
+    "favorite": false,
+    "name": "Ghomorrah Road",
+    "path": "assets\\maps\\Ghomorrah Road.mp4",
+    "tags": [
+      "ghomorrah",
+      "road"
+    ],
+    "thumbnail": "assets\\thumbnails\\Ghomorrah Road.jpg",
+    "url": "https://youtube.com/watch?v=i7kDuY90iPE"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Yule Grove - Tavern Exterior - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Yule Grove - Tavern Exterior - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "yule",
+      "grove",
+      "-",
+      "tavern",
+      "exterior",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Yule Grove - Tavern Exterior - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=IoxfylWvQ9k"
+  },
+  {
+    "favorite": false,
+    "name": "Courtyard Night",
+    "path": "assets\\maps\\courtyard night.mp4",
+    "tags": [
+      "courtyard",
+      "night"
+    ],
+    "thumbnail": "assets\\thumbnails\\Courtyard Night.jpg",
+    "url": "https://youtube.com/watch?v=WKXYlgSzlkI"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sodden Spire - Level 02 - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 02 - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sodden",
+      "spire",
+      "-",
+      "level",
+      "02",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 02 - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=uX96zqtFg3c"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Hallowed Holt - Animated Map",
+    "path": "assets\\maps\\MapGuffin - Hallowed Holt - Animated Map.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "hallowed",
+      "holt",
+      "-",
+      "animated",
+      "map"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Hallowed Holt - Animated Map.jpg",
+    "url": "https://www.youtube.com/watch?v=topFGp4yn2w"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Multure Mill - Rafters - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Multure Mill - Rafters - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "multure",
+      "mill",
+      "-",
+      "rafters",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Rafters - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=drAZjDEknuQ"
+  },
+  {
+    "favorite": false,
+    "name": "Bravil 3",
+    "path": "assets\\maps\\Bravil 3.mp4",
+    "tags": [
+      "bravil",
+      "3"
+    ],
+    "thumbnail": "assets\\thumbnails\\Bravil 3.jpg",
+    "url": "https://youtube.com/watch?v=ZOeYhAqtBD8"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Goblin Ambush - Animated Battlemap - Updated Audio",
+    "path": "assets\\maps\\MapGuffin - Goblin Ambush - Animated Battlemap - Updated Audio.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "goblin",
+      "ambush",
+      "-",
+      "animated",
+      "battlemap",
+      "-",
+      "updated",
+      "audio"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Goblin Ambush - Animated Battlemap - Updated Audio.jpg",
+    "url": "https://www.youtube.com/watch?v=LhCcu7JdRBY"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Earthen Excavation - Base Map - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Earthen Excavation - Base Map - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "earthen",
+      "excavation",
+      "-",
+      "base",
+      "map",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Earthen Excavation - Base Map - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=caXKtuXg2X4"
   },
   {
     "favorite": false,
@@ -4116,40 +4265,328 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Cabotage Cutter - Sails - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Sails - Animated Battlemap.mp4",
+    "name": "Mapguffin - Peasants Pasture - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Peasants Pasture - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "cabotage",
-      "cutter",
-      "-",
-      "sails",
+      "peasants",
+      "pasture",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Sails - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=lFnkmIKRuaY"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Peasants Pasture - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=8WY1GUtpjBg"
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Sandy Seafarer - Upper Deck - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Upper Deck - Animated Battlemap.mp4",
+    "name": "Mapguffin - Sandy Seafarer - Sails - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Sails - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
       "sandy",
       "seafarer",
       "-",
-      "upper",
+      "sails",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Sails - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=PN0P8fTwp1U"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sodden Spire - Ground Floor - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sodden Spire - Ground Floor - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sodden",
+      "spire",
+      "-",
+      "ground",
+      "floor",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Ground Floor - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=9jLWcytKEMk"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sandy Seafarer - Lower Deck - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Lower Deck - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sandy",
+      "seafarer",
+      "-",
+      "lower",
       "deck",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Upper Deck - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=GE5vYc5WYGw"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Lower Deck - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=3kcXlUbC4Bg"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Yule Grove - Under - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Yule Grove - Under - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "yule",
+      "grove",
+      "-",
+      "under",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Yule Grove - Under - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=FxiPROBCJJc"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sodden Spire - Level 03 - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 03 - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sodden",
+      "spire",
+      "-",
+      "level",
+      "03",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 03 - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=Px0442Ux1kU"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Saltwater Sails - Deck  - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Deck  - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "saltwater",
+      "sails",
+      "-",
+      "deck",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Deck  - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=uWTUQUYHH50"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Broken Bridge - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Broken Bridge - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "broken",
+      "bridge",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Broken Bridge - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=LMZGt5W4fZ0"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - River Ramparts - Level 01 - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - River Ramparts - Level 01 - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "river",
+      "ramparts",
+      "-",
+      "level",
+      "01",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Level 01 - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=jt3y4FIbdS0"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Hags Hovel - Exterior - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Hags Hovel - Exterior - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "hags",
+      "hovel",
+      "-",
+      "exterior",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Hags Hovel - Exterior - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=NZxE-yuGZs8"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Saltwater Sails - Ships Hold- Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Saltwater Sails - Ships Hold- Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "saltwater",
+      "sails",
+      "-",
+      "ships",
+      "hold-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltwater Sails - Ships Hold- Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=O-7emGXWf88&t=1s"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Barbarian Encampment - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Barbarian Encampment - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "barbarian",
+      "encampment",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Barbarian Encampment - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=tsD8WCmpuiM"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Cultivation Corral - Interior Lower - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Cultivation Corral - Interior Lower - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "cultivation",
+      "corral",
+      "-",
+      "interior",
+      "lower",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Cultivation Corral - Interior Lower - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=YaqG58EtpO4"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Saltspray Shipwreck - Exterior - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Saltspray Shipwreck - Exterior - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "saltspray",
+      "shipwreck",
+      "-",
+      "exterior",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltspray Shipwreck - Exterior - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=QMe1HZhssrg"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sandy Seafarer - Storage - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Storage - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sandy",
+      "seafarer",
+      "-",
+      "storage",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Storage - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=FeF4GAppR4A"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - River Ramparts - Exterior - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - River Ramparts - Exterior - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "river",
+      "ramparts",
+      "-",
+      "exterior",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Exterior - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=_kSPC_JdRgM"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Multure Mill - Upper Level - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Multure Mill - Upper Level - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "multure",
+      "mill",
+      "-",
+      "upper",
+      "level",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Upper Level - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=ZqMorMOHfjA"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Sodden Spire - Level 04 - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 04 - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "sodden",
+      "spire",
+      "-",
+      "level",
+      "04",
+      "-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 04 - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=4tS3tN11uQ4"
   },
   {
     "favorite": false,
@@ -4190,256 +4627,56 @@
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Multure Mill - Lower Level - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Multure Mill - Lower Level - Animated Battlemap.mp4",
+    "name": "Mapguffin - Hags Hovel - Interior- Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Hags Hovel - Interior- Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
-      "multure",
-      "mill",
+      "hags",
+      "hovel",
       "-",
-      "lower",
-      "level",
+      "interior-",
+      "animated",
+      "battlemap"
+    ],
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Hags Hovel - Interior- Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=dPECKnteee8"
+  },
+  {
+    "favorite": false,
+    "name": "Mapguffin - Savage Stadium - Internal - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Savage Stadium - Internal - Animated Battlemap.mp4",
+    "tags": [
+      "mapguffin",
+      "-",
+      "savage",
+      "stadium",
+      "-",
+      "internal",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Lower Level - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=BDxsOajoWl8"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Savage Stadium - Internal - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=Sf9OYX2LRzQ"
   },
   {
     "favorite": false,
-    "name": "Mapguffin - Sandy Seafarer - Lower Deck - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Lower Deck - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sandy",
-      "seafarer",
-      "-",
-      "lower",
-      "deck",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Lower Deck - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=3kcXlUbC4Bg"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Yule Grove - Tavern Exterior - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Yule Grove - Tavern Exterior - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "yule",
-      "grove",
-      "-",
-      "tavern",
-      "exterior",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Yule Grove - Tavern Exterior - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=IoxfylWvQ9k"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Cabotage Cutter - Storage - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Cabotage Cutter - Storage - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "cabotage",
-      "cutter",
-      "-",
-      "storage",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Cabotage Cutter - Storage - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=_bSF9L3Pwr0"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sodden Spire - Level 02 - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 02 - Animated Battlemap.mp4",
+    "name": "Mapguffin - Sodden Spire - Roof - Animated Battlemap",
+    "path": "assets\\maps\\MapGuffin - Sodden Spire - Roof - Animated Battlemap.mp4",
     "tags": [
       "mapguffin",
       "-",
       "sodden",
       "spire",
       "-",
-      "level",
-      "02",
+      "roof",
       "-",
       "animated",
       "battlemap"
     ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 02 - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=uX96zqtFg3c"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Multure Mill - Rafters - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Multure Mill - Rafters - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "multure",
-      "mill",
-      "-",
-      "rafters",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Rafters - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=drAZjDEknuQ"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - River Ramparts - Level 01 - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - River Ramparts - Level 01 - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "river",
-      "ramparts",
-      "-",
-      "level",
-      "01",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Level 01 - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=jt3y4FIbdS0"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sandy Seafarer - Storage - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Storage - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sandy",
-      "seafarer",
-      "-",
-      "storage",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Storage - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=FeF4GAppR4A"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - River Ramparts - Level 02 - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - River Ramparts - Level 02 - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "river",
-      "ramparts",
-      "-",
-      "level",
-      "02",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Level 02 - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=y0MIXSj3HvM"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sandy Seafarer - Sails - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sandy Seafarer - Sails - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sandy",
-      "seafarer",
-      "-",
-      "sails",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sandy Seafarer - Sails - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=PN0P8fTwp1U"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Broken Bridge - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Broken Bridge - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "broken",
-      "bridge",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Broken Bridge - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=LMZGt5W4fZ0"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Barbarian Encampment - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Barbarian Encampment - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "barbarian",
-      "encampment",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Barbarian Encampment - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=tsD8WCmpuiM"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sodden Spire - Ground Floor - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sodden Spire - Ground Floor - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sodden",
-      "spire",
-      "-",
-      "ground",
-      "floor",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Ground Floor - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=9jLWcytKEMk"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Hallowed Holt - Animated Map",
-    "path": "assets\\maps\\MapGuffin - Hallowed Holt - Animated Map.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "hallowed",
-      "holt",
-      "-",
-      "animated",
-      "map"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Hallowed Holt - Animated Map.jpg",
-    "url": "https://www.youtube.com/watch?v=topFGp4yn2w"
+    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Roof - Animated Battlemap.jpg",
+    "url": "https://www.youtube.com/watch?v=kZ0_byZXsNs"
   },
   {
     "favorite": false,
@@ -4471,241 +4708,5 @@
     ],
     "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 01 - Animated Battlemap.jpg",
     "url": "https://www.youtube.com/watch?v=o_ObMv1PVNU"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Earthen Excavation - Base Map - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Earthen Excavation - Base Map - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "earthen",
-      "excavation",
-      "-",
-      "base",
-      "map",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Earthen Excavation - Base Map - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=caXKtuXg2X4"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Multure Mill - Upper Level - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Multure Mill - Upper Level - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "multure",
-      "mill",
-      "-",
-      "upper",
-      "level",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Multure Mill - Upper Level - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=ZqMorMOHfjA"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Yule Grove - Under - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Yule Grove - Under - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "yule",
-      "grove",
-      "-",
-      "under",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Yule Grove - Under - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=FxiPROBCJJc"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Goblin Ambush - Animated Battlemap - Updated Audio",
-    "path": "assets\\maps\\MapGuffin - Goblin Ambush - Animated Battlemap - Updated Audio.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "goblin",
-      "ambush",
-      "-",
-      "animated",
-      "battlemap",
-      "-",
-      "updated",
-      "audio"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Goblin Ambush - Animated Battlemap - Updated Audio.jpg",
-    "url": "https://www.youtube.com/watch?v=LhCcu7JdRBY"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Hags Hovel - Exterior - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Hags Hovel - Exterior - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "hags",
-      "hovel",
-      "-",
-      "exterior",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Hags Hovel - Exterior - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=NZxE-yuGZs8"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Cultivation Corral - Interior Lower - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Cultivation Corral - Interior Lower - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "cultivation",
-      "corral",
-      "-",
-      "interior",
-      "lower",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Cultivation Corral - Interior Lower - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=YaqG58EtpO4"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sodden Spire - Level 04 - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sodden Spire - Level 04 - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sodden",
-      "spire",
-      "-",
-      "level",
-      "04",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Level 04 - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=4tS3tN11uQ4"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Sodden Spire - Roof - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Sodden Spire - Roof - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "sodden",
-      "spire",
-      "-",
-      "roof",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Sodden Spire - Roof - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=kZ0_byZXsNs"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Peasants Pasture - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Peasants Pasture - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "peasants",
-      "pasture",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Peasants Pasture - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=8WY1GUtpjBg"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Saltspray Shipwreck - Exterior - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Saltspray Shipwreck - Exterior - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "saltspray",
-      "shipwreck",
-      "-",
-      "exterior",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Saltspray Shipwreck - Exterior - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=QMe1HZhssrg"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Savage Stadium - Internal - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Savage Stadium - Internal - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "savage",
-      "stadium",
-      "-",
-      "internal",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Savage Stadium - Internal - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=Sf9OYX2LRzQ"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - Hags Hovel - Interior- Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - Hags Hovel - Interior- Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "hags",
-      "hovel",
-      "-",
-      "interior-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - Hags Hovel - Interior- Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=dPECKnteee8"
-  },
-  {
-    "favorite": false,
-    "name": "Mapguffin - River Ramparts - Exterior - Animated Battlemap",
-    "path": "assets\\maps\\MapGuffin - River Ramparts - Exterior - Animated Battlemap.mp4",
-    "tags": [
-      "mapguffin",
-      "-",
-      "river",
-      "ramparts",
-      "-",
-      "exterior",
-      "-",
-      "animated",
-      "battlemap"
-    ],
-    "thumbnail": "assets\\thumbnails\\Mapguffin - River Ramparts - Exterior - Animated Battlemap.jpg",
-    "url": "https://www.youtube.com/watch?v=_kSPC_JdRgM"
   }
 ]
