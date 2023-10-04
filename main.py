@@ -11,7 +11,7 @@
 __version__ = "1.0.0"
 
 from typing import Tuple
-from math import cos, sin, pi
+from math import cos, sin, pi, atan2, degrees, sqrt
 from tools.utils import cycle
 import pygame as pg
 from collections import deque
@@ -115,6 +115,11 @@ class GameManager:
         self.map_offset = (0, 0)
         self.map_drag = False
 
+        self.cursor = pg.image.load(r'./assets/images/cursor.png')
+
+        self.cursor_length = 50
+        self.cursor_edge = (0,0)
+
     def __setup_screen(self) -> None:
         # Create the screen
         resolution_width = self.settings.get(
@@ -126,6 +131,7 @@ class GameManager:
         screen = pg.display.set_mode(
             (resolution_width, resolution_height), pygame.RESIZABLE
         )
+        pg.mouse.set_visible(False)
 
         self.screen = screen
         GUI.win = screen
@@ -191,6 +197,10 @@ class GameManager:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
             elif event.key == pg.K_t:
                 self.test()
+        elif event.type == pg.MOUSEMOTION:
+            dir_to_cursor_edge = (self.cursor_edge[0] - event.pos[0], self.cursor_edge[1] - event.pos[1])
+            length = sqrt(dir_to_cursor_edge[0]**2 + dir_to_cursor_edge[1]**2)
+            self.cursor_edge = (event.pos[0] + dir_to_cursor_edge[0] * (1 / length) * self.cursor_length, event.pos[1] + dir_to_cursor_edge[1] * (1 / length) * self.cursor_length)
 
     def test(self):
         pass
@@ -218,6 +228,7 @@ class GameManager:
         self.screen.blit(background, (0, 0))
         GUI.draw()
 
+        self.draw_cursor()
         # update the display and tick the clock
         pg.display.flip()
         self.clock.tick(FPS)
@@ -236,6 +247,13 @@ class GameManager:
         elif self.grid_state == Grid.HEX:
             draw_grid_hex(self.screen, self.grid_size * 0.7, self.grid_color)
 
+    def draw_cursor(self):
+        mouse_pos = pg.mouse.get_pos()
+        dir = (mouse_pos[0] - self.cursor_edge[0], mouse_pos[1] - self.cursor_edge[1])
+        cursor_angle = atan2(dir[1], dir[0])
+        cursor = pg.transform.rotate(self.cursor, degrees(-cursor_angle))
+        self.screen.blit(cursor, (mouse_pos[0] - cursor.get_width() // 2, mouse_pos[1] - cursor.get_height() // 2))
+    
     def run_map(self):
         for event in pg.event.get():
             GUI.event_handle(event)
@@ -351,6 +369,7 @@ class GameManager:
 
         GUI.draw()
 
+        self.draw_cursor()
         # update the display and tick the clock
         pg.display.flip()
         self.clock.tick(FPS)

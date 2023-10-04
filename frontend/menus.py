@@ -131,13 +131,15 @@ class MenuManager:
         font1 = GUI.get_font_at(0)
         font2 = GUI.get_font_at(1)
 
+        button_width = 450
+
         stackPanel = StackPanel()
-        stackPanel.append(Button("Map Menu", "map_menu", font1))
-        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1))
-        stackPanel.append(Button("Color Filters", "color_filter", font1))
-        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1))
-        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1))
-        stackPanel.append(Button("Exit", "exit", font1))
+        stackPanel.append(Button("Map Menu", "map_menu", font1, button_width))
+        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, button_width))
+        stackPanel.append(Button("Color Filters", "color_filter", font1, button_width))
+        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, button_width))
+        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, button_width))
+        stackPanel.append(Button("Exit", "exit", font1, button_width))
 
         stackPanel.set_pos(
             (

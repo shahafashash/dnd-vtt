@@ -30,6 +30,8 @@ class GUI:
     star_surf: pygame.Surface = None
     star_surf_checked: pygame.Surface = None
 
+    default_text_color = None
+
     debug = False
 
     def initialize(json_path: str):
@@ -46,6 +48,8 @@ class GUI:
         GUI.star_surf.blit(GUI.gui_image, (0,0), GUI.gui_config['star1'])
         GUI.star_surf_checked = pygame.Surface(GUI.gui_config['star2'][1], pygame.SRCALPHA)
         GUI.star_surf_checked.blit(GUI.gui_image, (0,0), GUI.gui_config['star2'])
+
+        GUI.default_text_color = GUI.gui_config['default_text_color']
 
     def event_handle(event):
         # pygame left click
@@ -190,7 +194,7 @@ class Label(Element):
         self.font = font
         if not self.font:
             self.font = GUI.fonts[0]
-        self.surf = self.font.render(self.text, True, (0, 0, 0))
+        self.surf = self.font.render(self.text, True, GUI.default_text_color)
         self.size = self.surf.get_size()
 
         self.debug_color = (0, 255, 0)
@@ -239,10 +243,9 @@ class Button(Element):
         if not self.font:
             self.font = GUI.fonts[0]
 
-        self.surf = self.font.render(text, True, (0, 0, 0))
         self.custom_width = custom_width
-        self.surf = self.render(self.text, self.font, (0, 0, 0))
-        self.surf_selected = self.render(text, self.font, (0, 0, 0), True)
+        self.surf = self.render(self.text, self.font, GUI.default_text_color)
+        self.surf_selected = self.render(text, self.font, GUI.default_text_color, True)
 
         self.key = key
         self.size = self.surf.get_size()
@@ -298,7 +301,7 @@ class Button(Element):
 class TextBox(Element):
     """editable textbox, send event: {'key': _, 'text': _, 'state': ['typing', 'done']}"""
 
-    def __init__(self, key, initial_text, font=None, custom_width=400, alignment="c"):
+    def __init__(self, key, initial_text, font=None, custom_width=600, alignment="c"):
         super().__init__()
         self.key = key
         self.initial_text = initial_text
@@ -308,7 +311,7 @@ class TextBox(Element):
             self.font = GUI.fonts[0]
         self.custom_width = custom_width
         self.cursor_on = False
-        self.cursor_surf = self.font.render("|", True, (0, 0, 0))
+        self.cursor_surf = self.font.render("|", True, GUI.default_text_color)
         self.surf = self.render(initial_text)
         
         self.size = self.surf.get_size()
@@ -349,7 +352,7 @@ class TextBox(Element):
             self.stop_typing()
 
     def render(self, text):
-        text_surf = self.font.render(text, True, (0, 0, 0))
+        text_surf = self.font.render(text, True, GUI.default_text_color)
         surf = gui_art_around_text(text_surf, 'square1', self.custom_width, self.cursor_surf if self.cursor_on else None)
         return surf
 
@@ -406,8 +409,10 @@ class TextBox(Element):
 
 class StackPanel(Element):
     """container for elements. elements are stacked vertically"""
+    HORIZONTAL = 0
+    VERTICAL = 1
 
-    def __init__(self, pos=(0, 0)):
+    def __init__(self, pos=(0, 0), orientation=0):
         super().__init__()
         self.pos = pos
         self.elements = []
@@ -418,6 +423,7 @@ class StackPanel(Element):
         self.debug_color = (255, 0, 0)
         self.scroll_limit_lower = None
         self.scroll_limit_upper = None
+        self.orientation = orientation
 
     def append(self, element):
         element.parent = self
