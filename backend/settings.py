@@ -105,11 +105,11 @@ class Controls:
                 mapping[name] = pg_key
 
         # add some missing keys
-        mapping["mousebuttonleft"] = pg.MOUSEBUTTONDOWN  # 1
-        mapping["mousebuttonmiddle"] = pg.MOUSEBUTTONDOWN  # 2
-        mapping["mousebuttonright"] = pg.MOUSEBUTTONDOWN  # 3
-        mapping["mousebuttonwheelup"] = pg.MOUSEWHEEL  # 4
-        mapping["mousebuttonwheeldown"] = pg.MOUSEWHEEL  # 5
+        # mapping["mousebuttonleft"] = pg.MOUSEBUTTONDOWN  # 1
+        # mapping["mousebuttonmiddle"] = pg.MOUSEBUTTONDOWN  # 2
+        # mapping["mousebuttonright"] = pg.MOUSEBUTTONDOWN  # 3
+        # mapping["mousebuttonwheelup"] = pg.MOUSEWHEEL  # 4
+        # mapping["mousebuttonwheeldown"] = pg.MOUSEWHEEL  # 5
 
         return mapping
 
