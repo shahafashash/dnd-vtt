@@ -109,6 +109,12 @@ class GUI:
     def remove(element):
         GUI.elements.remove(element)
 
+    def get_values():
+        values = {}
+        for element in GUI.elements:
+            element_value = element.get_values()
+            values = values | element_value
+        return values
 
 class Element:
     """Gui Element base class"""
@@ -156,6 +162,9 @@ class Element:
             return self.pos
         parent_pos = self.parent.get_abs_pos()
         return (parent_pos[0] + self.pos[0], parent_pos[1] + self.pos[1])
+    
+    def get_values(self):
+        return {}
 
 
 class Elements(Element):
@@ -184,6 +193,13 @@ class Elements(Element):
     def no_click(self):
         for element in self.elements:
             element.no_click()
+
+    def get_values(self):
+        values = {}
+        for element in self.elements:
+            values = values | element.get_values()
+        return values
+            
 
 class Label(Element):
     """A free label with no events"""
@@ -406,13 +422,16 @@ class TextBox(Element):
         if self.cursor_on:
             self.refresh()
 
+    def get_values(self):
+        return {self.key: self.text}
+
 
 class StackPanel(Element):
     """container for elements. elements are stacked vertically"""
     HORIZONTAL = 0
     VERTICAL = 1
 
-    def __init__(self, pos=(0, 0), orientation=0):
+    def __init__(self, pos=(0, 0), orientation=1):
         super().__init__()
         self.pos = pos
         self.elements = []
@@ -428,23 +447,41 @@ class StackPanel(Element):
     def append(self, element):
         element.parent = self
         self.elements.append(element)
-        self.size = (
-            max(self.size[0], element.size[0]),
-            self.size[1] + element.size[1] + self.margin,
-        )
+        if self.orientation == StackPanel.VERTICAL:
+            self.size = (
+                max(self.size[0], element.size[0]),
+                self.size[1] + element.size[1] + self.margin,
+            )
 
-        height_offset = 0
-        for element in self.elements:
-            element.pos = (0, height_offset)
-            element.set_size((self.size[0], element.size[1]))
-            height_offset += element.size[1] + self.margin
+            height_offset = 0
+            for element in self.elements:
+                element.pos = (0, height_offset)
+                element.set_size((self.size[0], element.size[1]))
+                height_offset += element.size[1] + self.margin
 
-        self.size = (self.size[0], height_offset - self.margin)
+            self.size = (self.size[0], height_offset - self.margin)
+
+        else:
+            self.size = (
+                self.size[0] + element.size[0] + self.margin,
+                max(self.size[1], element.size[1]),
+            )
+
+            width_offset = 0
+            for element in self.elements:
+                element.pos = (width_offset, 0)
+                element.set_size((element.size[0], self.size[1]))
+                width_offset += element.size[0] + self.margin
+
+            self.size = (width_offset - self.margin, self.size[1]) 
 
     def set_size(self, size):
         self.size = size
         for e in self.elements:
-            e.set_size((size[0], e.size[1]))
+            if self.orientation == StackPanel.VERTICAL:
+                e.set_size((size[0], e.size[1]))
+            else:
+                e.set_size((e.size[0], size[1]))
 
     def step(self):
         super().step()
@@ -480,6 +517,12 @@ class StackPanel(Element):
     def no_click(self):
         for element in self.elements:
             element.no_click()
+
+    def get_values(self):
+        values = {}
+        for element in self.elements:
+            values = values | element.get_values()
+        return values
 
 
 class Columns(StackPanel):
@@ -751,6 +794,9 @@ class CheckBox(Element):
         self.checked = not self.checked
         self.event['state'] = self.checked
         GUI.gui_event_handler(self.event)
+
+    def get_values(self):    
+        return {self.key: self.checked}
 
 class CheckBoxStar(CheckBox):
     """ check box star """

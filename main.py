@@ -69,6 +69,8 @@ class GameManager:
         # Creating GUI frame
         self.__setup_gui_frame()
 
+        self.draw_custom_cursor = True
+
         # Create the screen
         self.screen = None
         self.__setup_screen()
@@ -116,7 +118,6 @@ class GameManager:
         self.map_drag = False
 
         self.cursor = pg.image.load(r'./assets/images/cursor.png')
-
         self.cursor_length = 50
         self.cursor_edge = (0,0)
 
@@ -131,7 +132,8 @@ class GameManager:
         screen = pg.display.set_mode(
             (resolution_width, resolution_height), pygame.RESIZABLE
         )
-        pg.mouse.set_visible(False)
+        if self.draw_custom_cursor:
+            pg.mouse.set_visible(False)
 
         self.screen = screen
         GUI.win = screen
@@ -248,6 +250,8 @@ class GameManager:
             draw_grid_hex(self.screen, self.grid_size * 0.7, self.grid_color)
 
     def draw_cursor(self):
+        if not self.draw_custom_cursor:
+            return
         mouse_pos = pg.mouse.get_pos()
         dir = (mouse_pos[0] - self.cursor_edge[0], mouse_pos[1] - self.cursor_edge[1])
         cursor_angle = atan2(dir[1], dir[0])
@@ -401,6 +405,7 @@ def draw_grid_hex(surf, size=50, color=GridColors.BLACK.value):
 
 def handle_gui_events(event: str):
     print("[GUI EVENT]", event)
+    values = GUI.get_values()
     game_manager = GameManager.get_instance()
     menu_manager = game_manager.menu_manager
     if event["key"] == "change_map":
@@ -458,12 +463,12 @@ def handle_gui_events(event: str):
         menu_manager.current_menu = None
     elif event["key"] == "color_filter":
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
-    elif event["key"] == "filter":
-        if event["filter"] == "avernus":
+    elif "fileter_check" in event["key"]:
+        if values["fileter_check_avernus"]:
             game_manager.apply_color_filter((228, 117, 117), "avernus")
-        elif event["filter"] == "mexico":
+        elif values["fileter_check_mexico"]:
             game_manager.apply_color_filter((243, 171, 78), "mexico")
-        elif event["filter"] == "matrix":
+        elif values["fileter_check_matrix"]:
             game_manager.apply_color_filter((150, 234, 141), "matrix")
 
 

@@ -17,7 +17,7 @@ class MenuManager:
 
     def create_loading_screen(self, win):
         cm = StackPanel()
-        label_title = Label("LOADING...", GUI.get_font_at(2))
+        label_title = Label("LOADING...", GUI.get_font_at(1))
         cm.append(label_title)
         cm.pos = (
             win.get_width() // 2 - cm.size[0] // 2,
@@ -34,7 +34,7 @@ class MenuManager:
         self.current_menu = Elements()
 
         cm = StackPanel()
-        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(2))
+        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(1))
         cm.append(label_title)
         label_credits = Label("By Shahaf Ashash and Simon Labunsky", GUI.get_font_at(0))
         cm.append(label_credits)
@@ -73,7 +73,7 @@ class MenuManager:
             picture = Picture(thumbnail)
             picture.use_parents_size = True
             elements.append(picture)
-            favorite_button = CheckBoxStar("favorited")
+            favorite_button = CheckBoxStar(map)
             favorite_button.event["map_name"] = map
             if map_obj.favorite:
                 favorite_button.checked = True
@@ -84,7 +84,7 @@ class MenuManager:
             button = Button(
                 map,
                 "change_map",
-                GUI.get_font_at(3),
+                GUI.get_font_at(2),
                 custom_width=400,
             )
             thumbnail_stackpanel.linked_button = button
@@ -200,15 +200,26 @@ class MenuManager:
         font1 = GUI.get_font_at(0)
 
         stackPanel = StackPanel()
-        button = Button("Avernus", "filter", font1)
-        button.event['filter'] = 'avernus'
-        stackPanel.append(button)
-        button = Button("Mexico", "filter", font1)
-        button.event['filter'] = 'mexico'
-        stackPanel.append(button)
-        button = Button("Matrix", "filter", font1)
-        button.event['filter'] = 'matrix'
-        stackPanel.append(button)
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_avernus")
+        button = Button("Avernus", "filter", font1, 400)
+        button_stack.append(check)
+        button_stack.append(button)
+        stackPanel.append(button_stack)
+
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_mexico")
+        button = Button("Mexico", "filter", font1, 400)
+        button_stack.append(check)
+        button_stack.append(button)
+        stackPanel.append(button_stack)
+
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_matrix")
+        button = Button("Matrix", "filter", font1, 400)
+        button_stack.append(check)
+        button_stack.append(button)
+        stackPanel.append(button_stack)
 
         stackPanel.set_pos(
             (
