@@ -3,4 +3,5 @@ __pycache__
 .gitignore
 *.mp4
 assets/thumbnails/*.jpg
+assets/tokens/*.png
 venv
