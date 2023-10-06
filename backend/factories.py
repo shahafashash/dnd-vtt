@@ -1,6 +1,11 @@
 from abc import ABC, abstractmethod
 from backend.config import Config, Map
-from backend.searchers import Searcher, MapSearcher, BasicSearchingStrategy
+from backend.searchers import (
+    Searcher,
+    MapSearcher,
+    BasicMapSearchingStrategy,
+    ScoredMapSearchingStrategy,
+)
 from backend.loader import Loader
 from backend.settings import Settings, Controls
 from tools.downloader import MapsDownloader
@@ -49,7 +54,7 @@ class SimpleFactory(AbstractFactory):
 
     @staticmethod
     def create_searcher(config: Config) -> Searcher:
-        strategy = BasicSearchingStrategy(config)
+        strategy = ScoredMapSearchingStrategy(config)
         return MapSearcher(strategy)
 
     @staticmethod
