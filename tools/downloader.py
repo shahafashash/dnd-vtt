@@ -31,18 +31,20 @@ class MapsDownloader:
     ) -> None:
         total_size = stream.filesize
         bytes_downloaded = total_size - bytes_remaining
+        mb_downloaded = bytes_downloaded / 2**20
         percentage_of_completion = bytes_downloaded / total_size
         percentage_of_completion = round(percentage_of_completion, 2)
         map_name = self.__get_map_name(stream)
         self.__downloads.put((map_name, percentage_of_completion))
-        pbar.update(percentage_of_completion * 100 - pbar.n)
+        pbar.update(round(mb_downloaded - pbar.n, 3))
 
-    def __on_complete(self, stream: YouTube, file_path: str, pbar: tqdm) -> None:
+    def __on_complete(
+        self, stream: YouTube, file_path: str, pbar: tqdm, url: str
+    ) -> None:
         map_name = self.__get_map_name(stream)
-        map_path = Path(file_path)
-        thumbnail_path = self.__generate_thumbnail(map_path)
+        thumbnail_path = self.__generate_thumbnail(file_path)
         tags = self.__generate_default_tags(map_name)
-        map_obj = Map(map_name, map_path, tags, thumbnail_path, stream.url)
+        map_obj = Map(map_name, file_path, tags, thumbnail_path, url)
         self.__finished.put((map_obj.url, map_obj))
         pbar.close()
 
@@ -89,20 +91,21 @@ class MapsDownloader:
         else:
             url = input_
 
-        pbar = tqdm(total=100, desc="Downloading map", unit="%", leave=False, ncols=80)
-        on_progress = partial(self.__on_progress, pbar=pbar)
-        on_complete = partial(self.__on_complete, pbar=pbar)
-
-        yt = YouTube(
-            url,
-            on_progress_callback=on_progress,
-            on_complete_callback=on_complete,
-        )
+        yt = YouTube(url)
         stream = yt.streams.filter(file_extension="mp4").get_highest_resolution()
         filename = stream.default_filename
+        size_mb = stream.filesize_mb
+        pbar = tqdm(
+            total=size_mb, desc="Downloading map", unit="MB", leave=True, ncols=80
+        )
         maps_path = self.__get_maps_path()
 
-        stream.download(output_path=maps_path, filename=filename)
+        yt.register_on_progress_callback(partial(self.__on_progress, pbar=pbar))
+        yt.register_on_complete_callback(
+            partial(self.__on_complete, pbar=pbar, url=url)
+        )
+
+        stream.download(output_path=maps_path, filename=filename, skip_existing=False)
 
     @overload
     def download(self, map_obj: Map) -> None:
@@ -156,7 +159,9 @@ if __name__ == "__main__":
     args = parser.parse_known_args()[0]
     url = args.url
     downloader = MapsDownloader()
-    map_obj = downloader.download(url)
+    downloader.download(url)
     downloader.wait()
+    finished = downloader.get_finished()
+    map_obj = finished[0]
     config = Config(str(Path(__file__).parent.parent.absolute().joinpath("maps.json")))
     config.add_map(map_obj)
