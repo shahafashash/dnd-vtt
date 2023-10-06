@@ -5,9 +5,12 @@ from backend.searchers import (
     MapSearcher,
     BasicMapSearchingStrategy,
     ScoredMapSearchingStrategy,
+    ScoredTokenSearchingStrategy,
+    TokenSearcher,
 )
 from backend.loader import Loader
 from backend.settings import Settings, Controls
+from backend.tokens import TokensManager
 from tools.downloader import MapsDownloader
 
 
@@ -42,6 +45,16 @@ class AbstractFactory(ABC):
     def create_controls(settings: Settings) -> Controls:
         raise NotImplementedError("Must implement create_controls method")
 
+    @staticmethod
+    @abstractmethod
+    def create_tokens_manager(tokens_dir: str) -> TokensManager:
+        raise NotImplementedError("Must implement create_tokens_manager method")
+
+    @staticmethod
+    @abstractmethod
+    def create_token_searcher(config: Config) -> TokenSearcher:
+        raise NotImplementedError("Must implement create_token_searcher method")
+
 
 class SimpleFactory(AbstractFactory):
     @staticmethod
@@ -68,3 +81,12 @@ class SimpleFactory(AbstractFactory):
     @staticmethod
     def create_controls(settings: Settings) -> Controls:
         return Controls(settings)
+
+    @staticmethod
+    def create_tokens_manager(tokens_dir: str) -> TokensManager:
+        return TokensManager(tokens_dir)
+
+    @staticmethod
+    def create_token_searcher(config: Config) -> TokenSearcher:
+        strategy = ScoredTokenSearchingStrategy(config)
+        return TokenSearcher(strategy)
