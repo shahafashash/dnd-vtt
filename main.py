@@ -112,6 +112,7 @@ class GameManager:
             self.screen,
             self.controls,
         )
+        self.tokens.load_tokens(r'./assets/tokens')
 
         self.map_zoom = 1.0
         self.map_offset = (0, 0)
@@ -472,6 +473,16 @@ def handle_gui_events(event: str):
                 game_manager.apply_color_filter((243, 171, 78), "mexico", values["fileter_check_mexico"])
             if event["key"] == "fileter_check_matrix":
                 game_manager.apply_color_filter((150, 234, 141), "matrix", values["fileter_check_matrix"])
+    elif event["key"] == "token_menu":
+        game_manager.menu_manager.create_menu_tokens(game_manager.screen, game_manager.tokens.available_tokens)
+    elif event["key"] == "insert_token":
+        path = event["token"]["path"]
+        token_surf = pg.image.load(path)
+        token = TokenSurf(token_surf, 100)
+        token.pos = (game_manager.screen.get_width() // 2, game_manager.screen.get_height() // 2)
+        game_manager.tokens.append(token)
+        GUI.remove(menu_manager.current_menu)
+        menu_manager.current_menu = None
 
 
 def get_background():

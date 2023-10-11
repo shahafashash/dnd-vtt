@@ -1,6 +1,7 @@
 """ module for adding and managing tokens on screen """
 
 import pygame
+import os
 from backend.settings import Controls
 
 
@@ -16,6 +17,27 @@ class TokenManager:
         self.selected_token = None
         self.dargged_token = None
         self.mouse_offset = None
+
+        self.available_tokens = []
+
+    def load_tokens(self, path: str):
+        tokens_dir = path
+        for root, _, files in os.walk(tokens_dir):
+            for file in files:
+                if not file.endswith('.png'):
+                    continue
+                path = os.path.join(root, file)
+                thumbnail = pygame.image.load(path)
+                # fit in 300x300 box
+                size = max(thumbnail.get_width(), thumbnail.get_height())
+                factor = 300 / size
+                thumbnail = pygame.transform.smoothscale_by(thumbnail, factor)
+                token = {
+                    'path': path,
+                    'name': os.path.basename(file),
+                    'thumbnail': thumbnail
+                    }
+                self.available_tokens.append(token)
 
     @staticmethod
     def get_instance():

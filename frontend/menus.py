@@ -136,6 +136,7 @@ class MenuManager:
         stackPanel.append(Button("Map Menu", "map_menu", font1, button_width))
         stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, button_width))
         stackPanel.append(Button("Color Filters", "color_filter", font1, button_width))
+        stackPanel.append(Button("Insert Token", "token_menu", font1, button_width))
         stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, button_width))
         stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, button_width))
         stackPanel.append(Button("Exit", "exit", font1, button_width))
@@ -226,3 +227,41 @@ class MenuManager:
         )
         self.current_menu = stackPanel
         GUI.append(stackPanel)
+
+    def create_menu_tokens(self, win, available_tokens):
+        if self.current_menu and self.current_menu in GUI.elements:
+            GUI.remove(self.current_menu)
+
+        # create columns
+        token_columns = Columns(cols=3)
+
+        for token in available_tokens:
+            thumbnail = token['thumbnail']
+            # inside columns: create stackpanel per map
+            thumbnail_stackpanel = StackPanel()
+            # inside stackpanel: elements
+            picture = Picture(thumbnail)
+            picture.use_parents_size = True
+            thumbnail_stackpanel.append(picture)
+            button = Button(
+                token['name'],
+                "insert_token",
+                GUI.get_font_at(2),
+                custom_width=400,
+            )
+            button.event['token'] = token
+            thumbnail_stackpanel.linked_button = button
+            thumbnail_stackpanel.append(button)
+            token_columns.append(thumbnail_stackpanel)
+            token_columns.scrollable = True
+            token_columns.scroll_limit_upper = 200
+
+        token_columns.set_pos(
+            (
+            win.get_width() // 2 - token_columns.size[0] // 2,
+            win.get_height() // 2 - token_columns.size[1] // 2,
+            )
+        )
+        self.current_menu = token_columns
+        GUI.append(token_columns)
+        
