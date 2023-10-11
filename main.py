@@ -69,7 +69,7 @@ class GameManager:
         # Creating GUI frame
         self.__setup_gui_frame()
 
-        self.draw_custom_cursor = True
+        self.draw_custom_cursor = False
 
         # Create the screen
         self.screen = None
@@ -235,13 +235,15 @@ class GameManager:
         pg.display.flip()
         self.clock.tick(FPS)
 
-    def apply_color_filter(self, color, name):
-        for effect in self.effects:
-            if effect.name == name:
-                self.effects.remove(effect)
-                return
-        self.effects.append(ColorFilter(self.screen, color, self.controls))
-        self.effects[-1].name = name
+    def apply_color_filter(self, color, name, apply):
+        if not apply:
+            for effect in self.effects:
+                if effect.name == name:
+                    self.effects.remove(effect)
+                    return
+        else:
+            self.effects.append(ColorFilter(self.screen, color, self.controls))
+            self.effects[-1].name = name
 
     def draw_grid(self):
         if self.grid_state == Grid.GRID:
@@ -464,12 +466,12 @@ def handle_gui_events(event: str):
     elif event["key"] == "color_filter":
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
     elif "fileter_check" in event["key"]:
-        if values["fileter_check_avernus"]:
-            game_manager.apply_color_filter((228, 117, 117), "avernus")
-        elif values["fileter_check_mexico"]:
-            game_manager.apply_color_filter((243, 171, 78), "mexico")
-        elif values["fileter_check_matrix"]:
-            game_manager.apply_color_filter((150, 234, 141), "matrix")
+            if event["key"] == "fileter_check_avernus":
+                game_manager.apply_color_filter((228, 117, 117), "avernus", values["fileter_check_avernus"])
+            if event["key"] == "fileter_check_mexico":
+                game_manager.apply_color_filter((243, 171, 78), "mexico", values["fileter_check_mexico"])
+            if event["key"] == "fileter_check_matrix":
+                game_manager.apply_color_filter((150, 234, 141), "matrix", values["fileter_check_matrix"])
 
 
 def get_background():

@@ -62,7 +62,7 @@ class MenuManager:
         """create columns based on found map and return columns object"""
 
         # create columns
-        thumbnail_columns = Columns(3)
+        thumbnail_columns = Columns(cols=3)
         for map in found_maps:
             map_obj = self.config.get_map(map)
             thumbnail = map_obj.thumbnail
@@ -73,7 +73,7 @@ class MenuManager:
             picture = Picture(thumbnail)
             picture.use_parents_size = True
             elements.append(picture)
-            favorite_button = CheckBoxStar(map)
+            favorite_button = CheckBoxStar('favorited')
             favorite_button.event["map_name"] = map
             if map_obj.favorite:
                 favorite_button.checked = True
@@ -129,7 +129,6 @@ class MenuManager:
                 return
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         button_width = 450
 
@@ -156,7 +155,6 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
         stackPanel.append(TextBox("new_tag", "Insert Tags Here", GUI.get_font_at(0)))
@@ -176,7 +174,6 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
         stackPanel.append(
@@ -202,23 +199,23 @@ class MenuManager:
         stackPanel = StackPanel()
         button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
         check = CheckBox("fileter_check_avernus")
-        button = Button("Avernus", "filter", font1, 400)
+        label = Label("Avernus", font1)
         button_stack.append(check)
-        button_stack.append(button)
+        button_stack.append(label)
         stackPanel.append(button_stack)
 
         button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
         check = CheckBox("fileter_check_mexico")
-        button = Button("Mexico", "filter", font1, 400)
+        label = Label("Mexico", font1)
         button_stack.append(check)
-        button_stack.append(button)
+        button_stack.append(label)
         stackPanel.append(button_stack)
 
         button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
         check = CheckBox("fileter_check_matrix")
-        button = Button("Matrix", "filter", font1, 400)
+        label = Label("Matrix", font1)
         button_stack.append(check)
-        button_stack.append(button)
+        button_stack.append(label)
         stackPanel.append(button_stack)
 
         stackPanel.set_pos(
