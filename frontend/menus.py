@@ -17,7 +17,7 @@ class MenuManager:
 
     def create_loading_screen(self, win):
         cm = StackPanel()
-        label_title = Label("LOADING...", GUI.get_font_at(2))
+        label_title = Label("LOADING...", GUI.get_font_at(1))
         cm.append(label_title)
         cm.pos = (
             win.get_width() // 2 - cm.size[0] // 2,
@@ -34,7 +34,7 @@ class MenuManager:
         self.current_menu = Elements()
 
         cm = StackPanel()
-        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(2))
+        label_title = Label("DND VIRTUAL TABLE TOP", GUI.get_font_at(1))
         cm.append(label_title)
         label_credits = Label("By Shahaf Ashash and Simon Labunsky", GUI.get_font_at(0))
         cm.append(label_credits)
@@ -47,7 +47,7 @@ class MenuManager:
         cm.frame = GUI.frames[0]
         self.current_menu.append(cm)
 
-        button = Button("Start", "start", GUI.get_font_at(0), GUI.get_font_at(1))
+        button = Button("Start", "start", GUI.get_font_at(0))
         button.set_pos(
             (
                 win.get_width() // 2 - button.size[0] // 2,
@@ -62,7 +62,7 @@ class MenuManager:
         """create columns based on found map and return columns object"""
 
         # create columns
-        thumbnail_columns = Columns(3)
+        thumbnail_columns = Columns(cols=3)
         for map in found_maps:
             map_obj = self.config.get_map(map)
             thumbnail = map_obj.thumbnail
@@ -73,7 +73,7 @@ class MenuManager:
             picture = Picture(thumbnail)
             picture.use_parents_size = True
             elements.append(picture)
-            favorite_button = CheckBoxStar("favorited")
+            favorite_button = CheckBoxStar('favorited')
             favorite_button.event["map_name"] = map
             if map_obj.favorite:
                 favorite_button.checked = True
@@ -84,8 +84,7 @@ class MenuManager:
             button = Button(
                 map,
                 "change_map",
-                GUI.get_font_at(3),
-                GUI.get_font_at(4),
+                GUI.get_font_at(2),
                 custom_width=400,
             )
             thumbnail_stackpanel.linked_button = button
@@ -106,7 +105,7 @@ class MenuManager:
 
         self.current_menu = Elements()
 
-        search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0))
+        search_textbox = TextBox("search", "search for maps", GUI.get_font_at(0), 600)
         thumbnail_columns = self.create_columns_maps(maps)
 
         search_textbox.set_pos(
@@ -130,15 +129,16 @@ class MenuManager:
                 return
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
+
+        button_width = 450
 
         stackPanel = StackPanel()
-        stackPanel.append(Button("Map Menu", "map_menu", font1, font2))
-        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, font2))
-        stackPanel.append(Button("Color Filters", "color_filter", font1, font2))
-        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, font2))
-        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, font2))
-        stackPanel.append(Button("Exit", "exit", font1, font2))
+        stackPanel.append(Button("Map Menu", "map_menu", font1, button_width))
+        stackPanel.append(Button("Toggle Darkness", "toggle_darkness", font1, button_width))
+        stackPanel.append(Button("Color Filters", "color_filter", font1, button_width))
+        stackPanel.append(Button("Add Map Tags", "add_tag_menu", font1, button_width))
+        stackPanel.append(Button("Rename Map", "add_rename_map_menu", font1, button_width))
+        stackPanel.append(Button("Exit", "exit", font1, button_width))
 
         stackPanel.set_pos(
             (
@@ -155,11 +155,10 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
         stackPanel.append(TextBox("new_tag", "Insert Tags Here", GUI.get_font_at(0)))
-        stackPanel.append(Button("Add", "add_tags", font1, font2))
+        stackPanel.append(Button("Add", "add_tags", font1))
 
         stackPanel.set_pos(
             (
@@ -175,13 +174,12 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
         stackPanel.append(
             TextBox("new_name", "Insert New Name Here", GUI.get_font_at(0))
         )
-        stackPanel.append(Button("Confirm", "rename_map", font1, font2))
+        stackPanel.append(Button("Confirm", "rename_map", font1))
 
         stackPanel.set_pos(
             (
@@ -197,18 +195,28 @@ class MenuManager:
             GUI.remove(self.current_menu)
 
         font1 = GUI.get_font_at(0)
-        font2 = GUI.get_font_at(1)
 
         stackPanel = StackPanel()
-        button = Button("Avernus", "filter", font1, font2)
-        button.event['filter'] = 'avernus'
-        stackPanel.append(button)
-        button = Button("Mexico", "filter", font1, font2)
-        button.event['filter'] = 'mexico'
-        stackPanel.append(button)
-        button = Button("Matrix", "filter", font1, font2)
-        button.event['filter'] = 'matrix'
-        stackPanel.append(button)
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_avernus")
+        label = Label("Avernus", font1)
+        button_stack.append(check)
+        button_stack.append(label)
+        stackPanel.append(button_stack)
+
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_mexico")
+        label = Label("Mexico", font1)
+        button_stack.append(check)
+        button_stack.append(label)
+        stackPanel.append(button_stack)
+
+        button_stack = StackPanel(orientation=StackPanel.HORIZONTAL)
+        check = CheckBox("fileter_check_matrix")
+        label = Label("Matrix", font1)
+        button_stack.append(check)
+        button_stack.append(label)
+        stackPanel.append(button_stack)
 
         stackPanel.set_pos(
             (

@@ -11,7 +11,7 @@
 __version__ = "1.0.0"
 
 from typing import Tuple
-from math import cos, sin, pi
+from math import cos, sin, pi, atan2, degrees, sqrt
 from tools.utils import cycle
 import pygame as pg
 from collections import deque
@@ -69,6 +69,8 @@ class GameManager:
         # Creating GUI frame
         self.__setup_gui_frame()
 
+        self.draw_custom_cursor = False
+
         # Create the screen
         self.screen = None
         self.__setup_screen()
@@ -115,6 +117,10 @@ class GameManager:
         self.map_offset = (0, 0)
         self.map_drag = False
 
+        self.cursor = pg.image.load(r'./assets/images/cursor.png')
+        self.cursor_length = 50
+        self.cursor_edge = (0,0)
+
     def __setup_screen(self) -> None:
         # Create the screen
         resolution_width = self.settings.get(
@@ -126,6 +132,8 @@ class GameManager:
         screen = pg.display.set_mode(
             (resolution_width, resolution_height), pygame.RESIZABLE
         )
+        if self.draw_custom_cursor:
+            pg.mouse.set_visible(False)
 
         self.screen = screen
         GUI.win = screen
@@ -191,6 +199,10 @@ class GameManager:
                 pygame.display.set_mode(self.screen.get_size(), pygame.FULLSCREEN)
             elif event.key == pg.K_t:
                 self.test()
+        elif event.type == pg.MOUSEMOTION:
+            dir_to_cursor_edge = (self.cursor_edge[0] - event.pos[0], self.cursor_edge[1] - event.pos[1])
+            length = sqrt(dir_to_cursor_edge[0]**2 + dir_to_cursor_edge[1]**2)
+            self.cursor_edge = (event.pos[0] + dir_to_cursor_edge[0] * (1 / length) * self.cursor_length, event.pos[1] + dir_to_cursor_edge[1] * (1 / length) * self.cursor_length)
 
     def test(self):
         pass
@@ -218,17 +230,20 @@ class GameManager:
         self.screen.blit(background, (0, 0))
         GUI.draw()
 
+        self.draw_cursor()
         # update the display and tick the clock
         pg.display.flip()
         self.clock.tick(FPS)
 
-    def apply_color_filter(self, color, name):
-        for effect in self.effects:
-            if effect.name == name:
-                self.effects.remove(effect)
-                return
-        self.effects.append(ColorFilter(self.screen, color, self.controls))
-        self.effects[-1].name = name
+    def apply_color_filter(self, color, name, apply):
+        if not apply:
+            for effect in self.effects:
+                if effect.name == name:
+                    self.effects.remove(effect)
+                    return
+        else:
+            self.effects.append(ColorFilter(self.screen, color, self.controls))
+            self.effects[-1].name = name
 
     def draw_grid(self):
         if self.grid_state == Grid.GRID:
@@ -236,6 +251,15 @@ class GameManager:
         elif self.grid_state == Grid.HEX:
             draw_grid_hex(self.screen, self.grid_size * 0.7, self.grid_color)
 
+    def draw_cursor(self):
+        if not self.draw_custom_cursor:
+            return
+        mouse_pos = pg.mouse.get_pos()
+        dir = (mouse_pos[0] - self.cursor_edge[0], mouse_pos[1] - self.cursor_edge[1])
+        cursor_angle = atan2(dir[1], dir[0])
+        cursor = pg.transform.rotate(self.cursor, degrees(-cursor_angle))
+        self.screen.blit(cursor, (mouse_pos[0] - cursor.get_width() // 2, mouse_pos[1] - cursor.get_height() // 2))
+    
     def run_map(self):
         for event in pg.event.get():
             GUI.event_handle(event)
@@ -351,6 +375,7 @@ class GameManager:
 
         GUI.draw()
 
+        self.draw_cursor()
         # update the display and tick the clock
         pg.display.flip()
         self.clock.tick(FPS)
@@ -382,6 +407,7 @@ def draw_grid_hex(surf, size=50, color=GridColors.BLACK.value):
 
 def handle_gui_events(event: str):
     print("[GUI EVENT]", event)
+    values = GUI.get_values()
     game_manager = GameManager.get_instance()
     menu_manager = game_manager.menu_manager
     if event["key"] == "change_map":
@@ -439,13 +465,13 @@ def handle_gui_events(event: str):
         menu_manager.current_menu = None
     elif event["key"] == "color_filter":
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
-    elif event["key"] == "filter":
-        if event["filter"] == "avernus":
-            game_manager.apply_color_filter((228, 117, 117), "avernus")
-        elif event["filter"] == "mexico":
-            game_manager.apply_color_filter((243, 171, 78), "mexico")
-        elif event["filter"] == "matrix":
-            game_manager.apply_color_filter((150, 234, 141), "matrix")
+    elif "fileter_check" in event["key"]:
+            if event["key"] == "fileter_check_avernus":
+                game_manager.apply_color_filter((228, 117, 117), "avernus", values["fileter_check_avernus"])
+            if event["key"] == "fileter_check_mexico":
+                game_manager.apply_color_filter((243, 171, 78), "mexico", values["fileter_check_mexico"])
+            if event["key"] == "fileter_check_matrix":
+                game_manager.apply_color_filter((150, 234, 141), "matrix", values["fileter_check_matrix"])
 
 
 def get_background():
@@ -458,6 +484,7 @@ def main():
     pg.init()
 
     GUI.gui_event_handler = handle_gui_events
+    GUI.initialize("./assets/images/gui_config.json")
 
     game_manager = GameManager(factory=SimpleFactory)
 
@@ -468,5 +495,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print(__debug__)
     main()

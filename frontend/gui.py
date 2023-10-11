@@ -10,7 +10,7 @@ class NoFonts(Exception):
 
 
 class GUI:
-    win = None
+    win: pygame.Surface = None
     fonts = []
 
     elements = []
@@ -22,8 +22,34 @@ class GUI:
     gui_scroll_event = (0, 0)
 
     frames = []
+    gui_config = None
+    gui_image = None
+    
+    checkbox_surf: pygame.Surface = None
+    checkbox_surf_checked: pygame.Surface = None
+    star_surf: pygame.Surface = None
+    star_surf_checked: pygame.Surface = None
+
+    default_text_color = None
 
     debug = False
+
+    def initialize(json_path: str):
+        with open(json_path, "r") as f:
+            GUI.gui_config = json.load(f)
+        GUI.gui_image = pygame.image.load(GUI.gui_config['path'])
+
+        GUI.checkbox_surf = pygame.Surface(GUI.gui_config['check1'][1], pygame.SRCALPHA)
+        GUI.checkbox_surf.blit(GUI.gui_image, (0,0), GUI.gui_config['check1'])
+        GUI.checkbox_surf_checked = pygame.Surface(GUI.gui_config['check2'][1], pygame.SRCALPHA)
+        GUI.checkbox_surf_checked.blit(GUI.gui_image, (0,0), GUI.gui_config['check2'])
+
+        GUI.star_surf = pygame.Surface(GUI.gui_config['star1'][1], pygame.SRCALPHA)
+        GUI.star_surf.blit(GUI.gui_image, (0,0), GUI.gui_config['star1'])
+        GUI.star_surf_checked = pygame.Surface(GUI.gui_config['star2'][1], pygame.SRCALPHA)
+        GUI.star_surf_checked.blit(GUI.gui_image, (0,0), GUI.gui_config['star2'])
+
+        GUI.default_text_color = GUI.gui_config['default_text_color']
 
     def event_handle(event):
         # pygame left click
@@ -83,6 +109,12 @@ class GUI:
     def remove(element):
         GUI.elements.remove(element)
 
+    def get_values():
+        values = {}
+        for element in GUI.elements:
+            element_value = element.get_values()
+            values = values | element_value
+        return values
 
 class Element:
     """Gui Element base class"""
@@ -97,6 +129,7 @@ class Element:
         self.name = ""
 
         self.send_event_on_no_click = False
+        self.use_parents_size = False
 
     def step(self):
         pass
@@ -121,11 +154,17 @@ class Element:
     def set_size(self, size):
         self.size = size
 
+    def get_size(self):
+        return self.size
+
     def get_abs_pos(self):
         if self.parent is None:
             return self.pos
         parent_pos = self.parent.get_abs_pos()
         return (parent_pos[0] + self.pos[0], parent_pos[1] + self.pos[1])
+    
+    def get_values(self):
+        return {}
 
 
 class Elements(Element):
@@ -155,6 +194,13 @@ class Elements(Element):
         for element in self.elements:
             element.no_click()
 
+    def get_values(self):
+        values = {}
+        for element in self.elements:
+            values = values | element.get_values()
+        return values
+            
+
 class Label(Element):
     """A free label with no events"""
 
@@ -164,7 +210,7 @@ class Label(Element):
         self.font = font
         if not self.font:
             self.font = GUI.fonts[0]
-        self.surf = self.font.render(self.text, True, (0, 0, 0))
+        self.surf = self.font.render(self.text, True, GUI.default_text_color)
         self.size = self.surf.get_size()
 
         self.debug_color = (0, 255, 0)
@@ -178,42 +224,63 @@ class Label(Element):
         )
         GUI.win.blit(self.surf, center)
 
+def gui_art_around_text(text_surf: pygame.Surface, square='square1', custom_width=-1, appendix: pygame.Surface=None) -> pygame.Surface:
+    surf = text_surf
+    art = GUI.gui_config[square]
+    
+    text_surf_width = surf.get_width()
+    if custom_width != -1:
+        text_surf_width = custom_width
+
+    framed_surf = pygame.Surface((art['left'][1][0] + text_surf_width + art['right'][1][0], art['middle'][1][1]), pygame.SRCALPHA)
+    framed_surf.blit(GUI.gui_image, (0, 0), art['left'])
+    framed_surf.blit(GUI.gui_image, (art['left'][1][0] + text_surf_width, 0), art['right'])
+
+    middle_surf = pygame.Surface(art['middle'][1], pygame.SRCALPHA)
+    middle_surf.blit(GUI.gui_image, (0, 0), art['middle'])
+    middle_surf = pygame.transform.smoothscale(middle_surf, (text_surf_width, middle_surf.get_height()))
+    
+    framed_surf.blit(middle_surf, (art['left'][1][0], 0))
+
+    # blit text on the final surf
+    framed_surf.blit(surf, (framed_surf.get_width() // 2 - surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
+    if appendix:
+        framed_surf.blit(appendix, (framed_surf.get_width() // 2 + surf.get_width() // 2, framed_surf.get_height() // 2 - surf.get_height() // 2 - 0.05 * surf.get_height()))
+
+    return framed_surf
 
 class Button(Element):
     """a button, send event: {'key': _, 'text': _}"""
 
-    def __init__(self, text, key, font=None, selected_font=None, custom_width=-1):
+    def __init__(self, text, key, font=None, custom_width=-1):
         super().__init__()
         self.text = text
         self.font = font
-        self.selected_font = selected_font
         if not self.font:
             self.font = GUI.fonts[0]
-        if not self.selected_font:
-            self.selected_font = GUI.fonts[0]
 
-        self.surf = self.font.render(text, True, (0, 0, 0))
         self.custom_width = custom_width
-        self.surf = self.render(self.text, self.font, (0, 0, 0))
-        self.surf_selected = self.render(text, self.selected_font, (100, 100, 100))
+        self.surf = self.render(self.text, self.font, GUI.default_text_color)
+        self.surf_selected = self.render(text, self.font, GUI.default_text_color, True)
 
         self.key = key
         self.size = self.surf.get_size()
 
         self.event = {"key": self.key, "text": self.text, "element": self}
+        self.use_parents_size = True
 
-    def render(self, text, font, color):
+    def render(self, text, font, color, selected=False):
         rendered_text = font.render(text, True, color)
-        self.text_width = rendered_text.get_width()
         if self.custom_width != -1:
-            self.text_width = min(rendered_text.get_width(), self.custom_width)
             surf = pygame.Surface(
                 (self.custom_width, rendered_text.get_height()), pygame.SRCALPHA
             )
-            surf.blit(rendered_text, (0, 0))
+            surf.blit(rendered_text, (self.custom_width // 2 - rendered_text.get_width() // 2, 0))
         else:
             surf = rendered_text
-        return surf
+
+        framed = gui_art_around_text(surf, 'square1' if not selected else 'square2')
+        return framed
 
     def step(self):
         super().step()
@@ -232,7 +299,7 @@ class Button(Element):
         super().draw()
         pos = self.get_abs_pos()
         center = (
-            pos[0] + self.size[0] // 2 - self.text_width // 2,
+            pos[0] + self.size[0] // 2 - self.surf.get_width() // 2,
             pos[1],
         )
 
@@ -240,6 +307,7 @@ class Button(Element):
             GUI.win.blit(self.surf_selected, center)
         else:
             GUI.win.blit(self.surf, center)
+
 
     def click(self):
         # todo: get all values in root of current element collection and return them as dict
@@ -249,7 +317,7 @@ class Button(Element):
 class TextBox(Element):
     """editable textbox, send event: {'key': _, 'text': _, 'state': ['typing', 'done']}"""
 
-    def __init__(self, key, initial_text, font=None, alignment="c"):
+    def __init__(self, key, initial_text, font=None, custom_width=600, alignment="c"):
         super().__init__()
         self.key = key
         self.initial_text = initial_text
@@ -257,17 +325,21 @@ class TextBox(Element):
         self.font = font
         if not self.font:
             self.font = GUI.fonts[0]
-        self.surf = self.font.render(initial_text, True, (0, 0, 0))
-        self.cursor_surf = self.font.render("|", True, (0, 0, 0))
+        self.custom_width = custom_width
+        self.cursor_on = False
+        self.cursor_surf = self.font.render("|", True, GUI.default_text_color)
+        self.surf = self.render(initial_text)
+        
         self.size = self.surf.get_size()
         self.typing = False
         self.timer = 0
-        self.cursor_on = False
+        self.time_interval = 10
+        
         self.alignment = alignment
 
     def start_typing(self):
         self.typing = True
-        self.timer = 20
+        self.timer = self.time_interval
         self.refresh()
 
     def stop_typing(self):
@@ -295,6 +367,11 @@ class TextBox(Element):
         if self.typing:
             self.stop_typing()
 
+    def render(self, text):
+        text_surf = self.font.render(text, True, GUI.default_text_color)
+        surf = gui_art_around_text(text_surf, 'square1', self.custom_width, self.cursor_surf if self.cursor_on else None)
+        return surf
+
     def refresh(self):
         if not self.typing:
             text = ""
@@ -302,10 +379,10 @@ class TextBox(Element):
                 text = self.text
             else:
                 text = self.initial_text
-            self.surf = self.font.render(text, True, (0, 0, 0))
+            self.surf = self.render(text)
             return
         text = self.text
-        self.surf = self.font.render(text, True, (0, 0, 0))
+        self.surf = self.render(text)
 
     def step(self):
         super().step()
@@ -324,7 +401,7 @@ class TextBox(Element):
             self.timer -= 1
             if self.timer == 0:
                 self.cursor_on = not self.cursor_on
-                self.timer = 20
+                self.timer = self.time_interval
                 self.refresh()
 
     def draw(self):
@@ -343,16 +420,18 @@ class TextBox(Element):
             )
         GUI.win.blit(self.surf, alignment)
         if self.cursor_on:
-            GUI.win.blit(
-                self.cursor_surf,
-                (alignment[0] + self.surf.get_width(), alignment[1]),
-            )
+            self.refresh()
+
+    def get_values(self):
+        return {self.key: self.text}
 
 
 class StackPanel(Element):
     """container for elements. elements are stacked vertically"""
+    HORIZONTAL = 0
+    VERTICAL = 1
 
-    def __init__(self, pos=(0, 0)):
+    def __init__(self, pos=(0, 0), orientation=1):
         super().__init__()
         self.pos = pos
         self.elements = []
@@ -363,27 +442,46 @@ class StackPanel(Element):
         self.debug_color = (255, 0, 0)
         self.scroll_limit_lower = None
         self.scroll_limit_upper = None
+        self.orientation = orientation
 
     def append(self, element):
         element.parent = self
         self.elements.append(element)
-        self.size = (
-            max(self.size[0], element.size[0]),
-            self.size[1] + element.size[1] + self.margin,
-        )
+        if self.orientation == StackPanel.VERTICAL:
+            self.size = (
+                max(self.size[0], element.size[0]),
+                self.size[1] + element.size[1] + self.margin,
+            )
 
-        height_offset = 0
-        for element in self.elements:
-            element.pos = (0, height_offset)
-            element.set_size((self.size[0], element.size[1]))
-            height_offset += element.size[1] + self.margin
+            height_offset = 0
+            for element in self.elements:
+                element.pos = (0, height_offset)
+                element.set_size((self.size[0], element.size[1]))
+                height_offset += element.size[1] + self.margin
 
-        self.size = (self.size[0], height_offset - self.margin)
+            self.size = (self.size[0], height_offset - self.margin)
+
+        else:
+            self.size = (
+                self.size[0] + element.size[0] + self.margin,
+                max(self.size[1], element.size[1]),
+            )
+
+            width_offset = 0
+            for element in self.elements:
+                element.pos = (width_offset, 0)
+                element.set_size((element.size[0], self.size[1]))
+                width_offset += element.size[0] + self.margin
+
+            self.size = (width_offset - self.margin, self.size[1]) 
 
     def set_size(self, size):
         self.size = size
         for e in self.elements:
-            e.set_size((size[0], e.size[1]))
+            if self.orientation == StackPanel.VERTICAL:
+                e.set_size((size[0], e.size[1]))
+            else:
+                e.set_size((e.size[0], size[1]))
 
     def step(self):
         super().step()
@@ -419,6 +517,12 @@ class StackPanel(Element):
     def no_click(self):
         for element in self.elements:
             element.no_click()
+
+    def get_values(self):
+        values = {}
+        for element in self.elements:
+            values = values | element.get_values()
+        return values
 
 
 class Columns(StackPanel):
@@ -610,7 +714,6 @@ class Picture(Element):
         super().__init__()
         self.surf = surf
         self.size = self.surf.get_size()
-        self.use_parents_size = False
 
     def draw(self):
         pos = self.get_abs_pos()
@@ -657,17 +760,15 @@ class Drawer(Element):
         self.element.draw()
 
 
-class CheckBoxStar(Element):
-    """ temporary class for star shaped favorite button """
+class CheckBox(Element):
+    """ Check box """
     def __init__(self, key, checked=False):
         super().__init__()
         self.checked = checked
         self.key = key
-        self.points = [(0, 37), (36, 37), (50, 0), (66, 37), (100, 37), (74, 61), (84, 100), (50, 78), (19, 100), (30, 61)]
-        factor = 0.5
-        self.points = [(i[0] * factor, i[1] * factor) for i in self.points]
-        self.size = (100, 100)
-
+        self.surf = GUI.checkbox_surf
+        self.surf_checked = GUI.checkbox_surf_checked
+        self.size = self.surf.get_size()
         self.event = {"key": self.key, "element": self, 'state': self.checked}
 
     def step(self):
@@ -685,16 +786,25 @@ class CheckBoxStar(Element):
 
     def draw(self):
         pos = self.get_abs_pos()
-        points = [(i[0] + pos[0], i[1] + pos[1]) for i in self.points]
-        if not self.checked:
-            pygame.draw.polygon(GUI.win, (100,100,100), points)
-        else:
-            pygame.draw.polygon(GUI.win, (250,250,100), points)
+        surf = self.surf if not self.checked else self.surf_checked
+
+        GUI.win.blit(surf, pos)
 
     def click(self):
         self.checked = not self.checked
         self.event['state'] = self.checked
         GUI.gui_event_handler(self.event)
+
+    def get_values(self):    
+        return {self.key: self.checked}
+
+class CheckBoxStar(CheckBox):
+    """ check box star """
+    def __init__(self, key, checked=False):
+        super().__init__(key, checked)
+        self.surf = GUI.star_surf
+        self.surf_checked = GUI.star_surf_checked
+        self.size = self.surf.get_size()
 
 
 def test(event):

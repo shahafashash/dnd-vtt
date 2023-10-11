@@ -63,7 +63,8 @@ class DarknessEffect(Effect):
                 self.dragged_light[0] = event.pos
         elif event.type == pygame.MOUSEWHEEL:
             if self.focused_light:
-                self.focused_light[1] += event.y * 5
+                scale_factor = 1 + (event.y / 10)
+                self.focused_light[1] *= scale_factor
                 if self.focused_light[1] <= 0:
                     self.focused_light[1] = 1
         elif event.type == pygame.KEYDOWN:
