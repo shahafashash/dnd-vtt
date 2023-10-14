@@ -87,6 +87,6 @@ class SimpleFactory(AbstractFactory):
         return TokensManager(tokens_dir)
 
     @staticmethod
-    def create_token_searcher(config: Config) -> TokenSearcher:
-        strategy = ScoredTokenSearchingStrategy(config)
+    def create_token_searcher(manager: TokensManager) -> TokenSearcher:
+        strategy = ScoredTokenSearchingStrategy(manager)
         return TokenSearcher(strategy)
