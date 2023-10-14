@@ -173,10 +173,10 @@ class Config:
             for chunk in chunks:
                 executor.submit(self.__worker_load_maps, chunk, results)
 
-            maps = {}
-            for _ in range(n):
-                map_obj = results.get()
-                maps[map_obj.name] = map_obj
+        maps = {}
+        for _ in range(n):
+            map_obj = results.get()
+            maps[map_obj.name] = map_obj
 
         return maps
 
@@ -299,6 +299,7 @@ class Config:
             raise ValueError(f"Map {map_obj.name} already exists")
         self.__maps[map_obj.name] = map_obj
         self.__maps_names.append(map_obj.name)
+        self.__maps_names.sort()
         self.__tags |= set(map_obj.tags)
         self.__save()
 
@@ -337,4 +338,5 @@ class Config:
         self.__maps[new_name] = new_map_obj
         self.__maps_names.remove(name)
         self.__maps_names.append(new_name)
+        self.__maps_names.sort()
         self.__save()

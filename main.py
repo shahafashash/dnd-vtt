@@ -80,10 +80,13 @@ class GameManager:
 
         self.menu_manager.create_loading_screen(self.screen)
         maps_config_path = self.settings.get("maps_config", default="maps.json")
+        tokens_dir = self.settings.get("tokens_path", default="assets/tokens")
         self.config = factory.create_config(maps_config_path)
         self.loader = factory.create_loader(self.config)
         self.map_searcher = factory.create_searcher(self.config)
         self.controls = factory.create_controls(self.settings)
+        self.tokens_manager = factory.create_tokens_manager(tokens_dir)
+        self.token_searcher = factory.create_token_searcher(self.tokens_manager)
         self.maps = self.config.maps_names
         self.menu_manager.set_config(self.config)
 
