@@ -1,12 +1,11 @@
 from abc import ABC, abstractmethod
-from backend.config import Config, Map
-from backend.searchers import (
-    Searcher,
-    MapSearcher,
-    BasicMapSearchingStrategy,
+from backend.config import Config
+from backend.database.dnd_db import DndDatabase
+from backend.searchers.searchers import Searcher, MapSearcher, TokenSearcher, DBSearcher
+from backend.searchers.strategies import (
     ScoredMapSearchingStrategy,
     ScoredTokenSearchingStrategy,
-    TokenSearcher,
+    DBSearchingStrategy,
 )
 from backend.loader import Loader
 from backend.settings import Settings, Controls
@@ -90,3 +89,9 @@ class SimpleFactory(AbstractFactory):
     def create_token_searcher(manager: TokensManager) -> TokenSearcher:
         strategy = ScoredTokenSearchingStrategy(manager)
         return TokenSearcher(strategy)
+
+    @staticmethod
+    def create_db_searcher() -> DBSearcher:
+        db = DndDatabase()
+        strategy = DBSearchingStrategy(db)
+        return DBSearcher(strategy)
