@@ -15,7 +15,6 @@ from math import cos, sin, pi, atan2, degrees, sqrt
 from tools.utils import cycle
 import pygame as pg
 from collections import deque
-from functools import reduce
 from enum import Enum
 from frontend.gui import *
 from frontend.font import Font
@@ -87,6 +86,7 @@ class GameManager:
         self.controls = factory.create_controls(self.settings)
         self.tokens_manager = factory.create_tokens_manager(tokens_dir)
         self.token_searcher = factory.create_token_searcher(self.tokens_manager)
+        self.db_searcher = factory.create_db_searcher()
         self.maps = self.config.maps_names
         self.menu_manager.set_config(self.config)
 
@@ -115,15 +115,15 @@ class GameManager:
             self.screen,
             self.controls,
         )
-        self.tokens.load_tokens(r'./assets/tokens')
+        self.tokens.load_tokens(r"./assets/tokens")
 
         self.map_zoom = 1.0
         self.map_offset = (0, 0)
         self.map_drag = False
 
-        self.cursor = pg.image.load(r'./assets/images/cursor.png')
+        self.cursor = pg.image.load(r"./assets/images/cursor.png")
         self.cursor_length = 50
-        self.cursor_edge = (0,0)
+        self.cursor_edge = (0, 0)
 
     def __setup_screen(self) -> None:
         # Create the screen
@@ -204,9 +204,17 @@ class GameManager:
             elif event.key == pg.K_t:
                 self.test()
         elif event.type == pg.MOUSEMOTION:
-            dir_to_cursor_edge = (self.cursor_edge[0] - event.pos[0], self.cursor_edge[1] - event.pos[1])
-            length = sqrt(dir_to_cursor_edge[0]**2 + dir_to_cursor_edge[1]**2)
-            self.cursor_edge = (event.pos[0] + dir_to_cursor_edge[0] * (1 / length) * self.cursor_length, event.pos[1] + dir_to_cursor_edge[1] * (1 / length) * self.cursor_length)
+            dir_to_cursor_edge = (
+                self.cursor_edge[0] - event.pos[0],
+                self.cursor_edge[1] - event.pos[1],
+            )
+            length = sqrt(dir_to_cursor_edge[0] ** 2 + dir_to_cursor_edge[1] ** 2)
+            self.cursor_edge = (
+                event.pos[0]
+                + dir_to_cursor_edge[0] * (1 / length) * self.cursor_length,
+                event.pos[1]
+                + dir_to_cursor_edge[1] * (1 / length) * self.cursor_length,
+            )
 
     def test(self):
         pass
@@ -262,8 +270,14 @@ class GameManager:
         dir = (mouse_pos[0] - self.cursor_edge[0], mouse_pos[1] - self.cursor_edge[1])
         cursor_angle = atan2(dir[1], dir[0])
         cursor = pg.transform.rotate(self.cursor, degrees(-cursor_angle))
-        self.screen.blit(cursor, (mouse_pos[0] - cursor.get_width() // 2, mouse_pos[1] - cursor.get_height() // 2))
-    
+        self.screen.blit(
+            cursor,
+            (
+                mouse_pos[0] - cursor.get_width() // 2,
+                mouse_pos[1] - cursor.get_height() // 2,
+            ),
+        )
+
     def run_map(self):
         for event in pg.event.get():
             GUI.event_handle(event)
@@ -470,19 +484,30 @@ def handle_gui_events(event: str):
     elif event["key"] == "color_filter":
         game_manager.menu_manager.create_filters_menu(game_manager.screen)
     elif "fileter_check" in event["key"]:
-            if event["key"] == "fileter_check_avernus":
-                game_manager.apply_color_filter((228, 117, 117), "avernus", values["fileter_check_avernus"])
-            if event["key"] == "fileter_check_mexico":
-                game_manager.apply_color_filter((243, 171, 78), "mexico", values["fileter_check_mexico"])
-            if event["key"] == "fileter_check_matrix":
-                game_manager.apply_color_filter((150, 234, 141), "matrix", values["fileter_check_matrix"])
+        if event["key"] == "fileter_check_avernus":
+            game_manager.apply_color_filter(
+                (228, 117, 117), "avernus", values["fileter_check_avernus"]
+            )
+        if event["key"] == "fileter_check_mexico":
+            game_manager.apply_color_filter(
+                (243, 171, 78), "mexico", values["fileter_check_mexico"]
+            )
+        if event["key"] == "fileter_check_matrix":
+            game_manager.apply_color_filter(
+                (150, 234, 141), "matrix", values["fileter_check_matrix"]
+            )
     elif event["key"] == "token_menu":
-        game_manager.menu_manager.create_menu_tokens(game_manager.screen, game_manager.tokens.available_tokens)
+        game_manager.menu_manager.create_menu_tokens(
+            game_manager.screen, game_manager.tokens.available_tokens
+        )
     elif event["key"] == "insert_token":
         path = event["token"]["path"]
         token_surf = pg.image.load(path)
         token = TokenSurf(token_surf, 100)
-        token.pos = (game_manager.screen.get_width() // 2, game_manager.screen.get_height() // 2)
+        token.pos = (
+            game_manager.screen.get_width() // 2,
+            game_manager.screen.get_height() // 2,
+        )
         game_manager.tokens.append(token)
         GUI.remove(menu_manager.current_menu)
         menu_manager.current_menu = None
