@@ -1,5 +1,6 @@
 from typing import Dict, List, Any
 import pymongo
+import certifi
 
 
 class Database:
@@ -28,7 +29,9 @@ class Database:
 
     def __create_connection(self) -> pymongo.database.Database:
         try:
-            self.__con = pymongo.MongoClient(self.__connection_string)
+            self.__con = pymongo.MongoClient(
+                self.__connection_string, connect=True, tlsCAFile=certifi.where()
+            )
         except pymongo.errors.ConnectionFailure as e:
             print(f"Could not connect to server: {e}")
             return None
@@ -55,7 +58,6 @@ class Database:
             self.__create_connection()
 
         collection = self.__database.get_collection(collection_name)
-
         if isinstance(data, list):
             collection.insert_many(data)
         else:
