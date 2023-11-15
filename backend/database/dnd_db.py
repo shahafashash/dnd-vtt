@@ -1,4 +1,3 @@
-from typing import List
 import os
 from dotenv import load_dotenv
 from backend.database.db import Database

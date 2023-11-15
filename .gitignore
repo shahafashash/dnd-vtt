@@ -5,3 +5,5 @@ __pycache__
 assets/thumbnails/*.jpg
 assets/tokens/*.png
 venv
+.env
+.vscode
